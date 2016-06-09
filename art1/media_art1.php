@@ -234,6 +234,14 @@
 						            	<img src="/images/art1/mediaart1_img05.jpg" alt="" data-idx="5">
 						            	<img src="/images/art1/mediaart1_img06.jpg" alt="" data-idx="6">
 						            </div>
+						            <div class="swiper-slide">
+						            	<img src="/images/art1/mediaart1_img07.jpg" alt="" data-idx="7">
+						            	<img src="/images/art1/mediaart1_img08.jpg" alt="" data-idx="8">
+						            </div>
+						            <div class="swiper-slide">
+						            	<img src="/images/art1/mediaart1_img09.jpg" alt="" data-idx="9">
+						            	<img src="/images/art1/mediaart1_img10.jpg" alt="" data-idx="10">
+						            </div>
 						        </div>
 						        <!-- Add Pagination -->
 						        <div class="pagination">
@@ -467,6 +475,10 @@
 							            <div class="swiper-slide"><img src="/images/art1/mediaart1_img04.jpg" alt=""></div>
 							            <div class="swiper-slide"><img src="/images/art1/mediaart1_img05.jpg" alt=""></div>
 							            <div class="swiper-slide"><img src="/images/art1/mediaart1_img06.jpg" alt=""></div>
+							            <div class="swiper-slide"><img src="/images/art1/mediaart1_img07.jpg" alt=""></div>
+							            <div class="swiper-slide"><img src="/images/art1/mediaart1_img08.jpg" alt=""></div>
+							            <div class="swiper-slide"><img src="/images/art1/mediaart1_img09.jpg" alt=""></div>
+							            <div class="swiper-slide"><img src="/images/art1/mediaart1_img10.jpg" alt=""></div>
 							        </div>
 								</div>
 								<div class="pageing">
