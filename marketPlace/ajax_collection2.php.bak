@@ -1,0 +1,108 @@
+<article id="focused2"  class="lst_horizontal style2">
+      <ul class="wide-slide-child">
+        <li>
+          <div class="item">
+            <a href="#"><img src="/images/market/tmp1_7.jpg" alt=""></a>
+            <div class="link">
+              <ul>
+                <li><a href="#" class="zoom">자세히 보기</a></li>
+                <li><a href="#" class="nlink">관련링크</a></li>
+                <li><a href="#" class="basket">장바구니</a></li>
+                <li><a href="#" class="mark">찜하기</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="cont">
+            <p class="t1">신현임</p>
+            <p class="t2">생명의 숲22</p>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <span class="ico_red_circle">sold out</span>
+            <a href="#"><img src="/images/market/tmp1_6.jpg" alt=""></a>
+            <div class="link">
+              <ul>
+                <li><a href="#" class="zoom">자세히 보기</a></li>
+                <li><a href="#" class="nlink">관련링크</a></li>
+                <li><a href="#" class="basket">장바구니</a></li>
+                <li><a href="#" class="mark">찜하기</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="cont">
+            <p class="t1">신현임</p>
+            <p class="t2">생명의 숲22</p>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <span class="ico_blue_circle">rental 가능</span>
+            <a href="#"><img src="/images/market/tmp1_9.jpg" alt=""></a>
+            <div class="link">
+              <ul>
+                <li><a href="#" class="zoom">자세히 보기</a></li>
+                <li><a href="#" class="nlink">관련링크</a></li>
+                <li><a href="#" class="basket">장바구니</a></li>
+                <li><a href="#" class="mark">찜하기</a></li>
+              </ul>
+            </div>
+          </div>
+          <div class="cont">
+            <p class="t1">신현임</p>
+            <p class="t2">생명의 숲22</p>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <a href="#"><img src="/images/market/tmp1_8.jpg" alt=""></a>
+            <div class="link">
+              <ul>
+                <li><a href="#" class="zoom">자세히 보기</a></li>
+                <li><a href="#" class="nlink">관련링크</a></li>
+                <li><a href="#" class="basket">장바구니</a></li>
+                <li><a href="#" class="mark">찜하기</a></li>
+              </ul>
+            </div>
+          </div>
+         <div class="cont">
+            <p class="t1">신현임</p>
+            <p class="t2">생명의 숲22</p>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <a href="#"><img src="/images/market/tmp1_9.jpg" alt=""></a>
+            <div class="link">
+              <ul>
+                <li><a href="#" class="zoom">자세히 보기</a></li>
+                <li><a href="#" class="nlink">관련링크</a></li>
+                <li><a href="#" class="basket">장바구니</a></li>
+                <li><a href="#" class="mark">찜하기</a></li>
+              </ul>
+            </div>
+          </div>
+         <div class="cont">
+            <p class="t1">신현임</p>
+            <p class="t2">생명의 숲</p>
+          </div>
+        </li>
+        <li>
+          <div class="item">
+            <a href="#"><img src="/images/market/tmp1_14.jpg" alt=""></a>
+            <div class="link">
+              <ul>
+                <li><a href="#" class="zoom">자세히 보기</a></li>
+                <li><a href="#" class="nlink">관련링크</a></li>
+                <li><a href="#" class="basket">장바구니</a></li>
+                <li><a href="#" class="mark">찜하기</a></li>
+              </ul>
+            </div>
+          </div>
+         <div class="cont">
+            <p class="t1">신현임</p>
+            <p class="t2">생명의 숲</p>
+          </div>
+        </li>
+      </ul>
+  </article>

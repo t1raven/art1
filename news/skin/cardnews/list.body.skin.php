@@ -1,0 +1,1 @@
+			<li><a class="img" href="javascript:;" onclick="getCardView('<?php echo $row['news_idx'];?>');"><img src="<?php echo $list_img;?>" /></a></li>

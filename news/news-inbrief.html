@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<title>gnb</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="http://appledm.com/default/css/default.css" />
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+<script src="http://appledm.com/default/js/jquery.easing.1.3.js"></script>
+<script src="http://appledm.com/default/js/common.js"></script>
+<!--[if lt IE 9]>
+ <script src="http://appledm.com/default/js/html5.js"></script>
+ <script src="http://appledm.com/default/js/respond.min.js"></script>
+  <![endif]-->
+  <style>
+   #newWrapper{ width: 1180px; }
+	.newsBox{width:286px; font-family:"나눔고딕";}
+	.newsBox .newsBox_inner{padding:10px 10px 29px ; border:1px solid #ccc; }
+
+	.newsBox .newsBox_inner .news_cont{margin-top:28px; padding-left:6px;}
+	.newsBox .newsBox_inner .news_cont > h1 {font-size:14px; color:#3ea9ad; font-weight:700; }
+	.newsBox .newsBox_inner .news_cont > h2 {margin-top:13px; font-size:20px; color:#666; font-weight:600; }
+	.newsBox .newsBox_inner .news_cont .text_cont{margin-top:26px; margin-bottom:22px;font-size:13px; color:#7d7d7d; line-height:19px; }
+	.newsBox .newsBox_inner .news_cont .news_date > p{padding-left:23px; padding-bottom:3px; font-size:13px; color:#7d7d7d; background:url(images/news/ico_clock.jpg) 0px 0 no-repeat;}
+  </style>
+ </head>
+<body>
+<dl class="accessibilityWrap">
+  <dt class="blind"><strong> 바로가기  메뉴</strong></dt>
+  <dd><a href="#container">컨텐츠바로가기</a></dd>   
+  <dd><a href="#lnb">주메뉴바로가기</a></dd>
+  <dd><a href="#footer">하단메뉴바로가기</a></dd>
+</dl>
+<div id="wrap">
+	<section id="newWrapper">
+		<p class="noProduct">상품이 존재하지 않습니다.</p>
+
+		
+	</section>	
+	<button class="btn_ajax">더보기</button>
+
+</div>
+<script src="/js/isotope.pkgd.min.js"></script>
+<script>
+			$(function(){
+				ajaxData();
+					$(".bottom_btn btn_ajax").bind("click",function(){
+						getItemElement();
+					});
+			})
+			
+			var $container = $("#newWrapper");
+			function ajaxData(num)
+				{
+					
+					 $.ajax({
+							 type:"GET",
+							 url:"./ajax-isotope.html",
+							 ansync : false,
+							 dataType:"html",
+							 success : function(data) {
+									var $container2;
+									$container.children().remove();
+										$("<div id='tmpData'></div>").html(data).appendTo($container);
+										var data2 = $container.find("#tmpData").html();
+										$container.append(data2);
+										$("#tmpData").remove();
+										  $container.isotope({
+										    itemSelector: '.newsBox',
+										    masonry: {
+										      columnWidth: 20
+										    }
+										  });
+							 },
+							 complete : function(data) {
+
+							 },
+							 error : function(xhr, status, error) {
+								alert(error);
+								$container.children().remove();
+								$('<p class="noProduct">상품이 존재하지 않습니다.</p>').appendTo($container);
+
+							 }
+					});
+				}//ajaxData
+
+		function getItemElement() {
+			  $.ajax({
+					type:"GET",
+					url:"./ajax-isotope.html",
+					dataType:"html",
+					success : function(data) {
+						  		$("<div id='tmpData'></div>").html(data).appendTo($container);
+						 		var $data2 = $($container.find("#tmpData").html());
+						 		$container.append($data2);
+						 		$("#tmpData").remove();
+						      $container.isotope( 'appended',$data2).isotope('layout');
+						      
+					},
+					 complete : function(data) {
+
+					 },error : function(xhr, status, error) {
+						alert(error);
+						$container.children().remove();
+						$('<p class="noProduct">상품이 존재하지 않습니다.</p>').appendTo($container);
+					 }
+			})
+	}//getItemElement
+
+
+
+
+
+
+</script>
+</body>
+</html>
+
+
+
+

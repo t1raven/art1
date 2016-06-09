@@ -1,0 +1,34 @@
+/* //리스트 체크리스트  (radio) */
+
+#mainInfoPopup.layer_popup1{width: 330px;}
+#RecommendedListPopup.layer_popup1{width: 330px;}
+#bbsType.layer_popup1 {width:420px}
+
+.layer_popup1{ padding: 20px; position: absolute; left: 0; top: 0; border: 5px solid #e2e7eb; background-color: #fff; z-index: 100; display: none;  }
+.layer_popup1 .close{position: absolute; right: 10px; top: 10px;}
+.layer_popup1 .searchBox{ margin-bottom: 20px; text-align: center;  }
+.layer_popup1 .cont > h1{ font-size: 16px; text-align: center;  margin-bottom: 20px; color: #333; font-weight: bold; }
+.layer_popup1 .scrollBox1{margin-bottom: 20px; background: url(/oktomato/images/bg/bg_dot_line.gif) 0 100% repeat-x; }
+.layer_popup1 .scrollBox1 > ul{padding-bottom: 20px; *zoom:1;}
+.layer_popup1 .scrollBox1 > ul:after{display: block;clear: both;content:"";height: 0; visibility: hidden;}
+.layer_popup1 .scrollBox1 > ul > li{padding-bottom: 10px; display: inline-block; *display: inline; *zoom: 1; width: 45%; padding-right: 1%; margin-right: 3%; margin-left: -5px; min-height: 20px; border-right: 1px solid #ededed; vertical-align: top; }
+.layer_popup1 .scrollBox1 > ul > li.rgh{ margin-right: 0; width: 50%; border-right: 0;}
+.layer_popup1 .scrollBox1 > ul > li button{ height: 20px; line-height: 20px; }
+
+.layer_popup1 .scrollBox2{margin-bottom: 20px; background: url(/oktomato/images/bg/bg_dot_line.gif) 0 100% repeat-x; }
+.layer_popup1 .scrollBox2 > ul{padding-bottom: 20px; *zoom:1;}
+.layer_popup1 .scrollBox2 > ul:after{display: block;clear: both;content:"";height: 0; visibility: hidden;}
+.layer_popup1 .scrollBox2 > ul > li{display: inline-block; *display: inline; *zoom: 1; width: 29%; padding-left: 3%; margin-bottom: 10px;}
+.layer_popup1 .scrollBox2 > ul > li button{ height: 20px; line-height: 20px; }
+
+.layer_popup1.trea {width:210px !important; padding-bottom:10px !important;}
+.layer_popup1.trea .scrollBox2 {background:none; }
+.layer_popup1.trea .scrollBox2 > ul {padding:0;}
+.layer_popup1.trea .scrollBox2 > ul > li {width:49px; text-align:center; padding:0; line-height:20px; vertical-align:middle;}
+
+#bbsType.layer_popup1 header h1 {text-align:left;  font-size: 16px;  margin-bottom: 20px; color: #333; font-weight: bold;}
+#bbsType.layer_popup1 ul.bbs_type_list {background:url(/oktomato/images/news/bg_dot_line.gif) 0 top repeat-x;}
+#bbsType.layer_popup1 ul.bbs_type_list li {background:url(/oktomato/images/news/bg_dot_line.gif) 0 bottom repeat-x; padding:7px; cursor:pointer;}
+#bbsType.layer_popup1 ul.bbs_type_list li:hover {background:#eff0f5;}
+#bbsType.layer_popup1 ul.bbs_type_list li p.tit {float:left;line-height:103px; color:#242a30; font-weight:bold; font-size:13px;}
+#bbsType.layer_popup1 ul.bbs_type_list li .img {display:block;margin-left:140px ; }

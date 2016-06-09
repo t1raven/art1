@@ -1,0 +1,25 @@
+<article id="issued1" class="lst_horizontal style1">
+    <ul class="wide-slide-child">
+      <li class="on">
+        <div class="item"><a href="/marketPlace/market_view2.php"><img src="/images/market/tmp1_1.jpg" alt=""></a></div>
+        <div class="cont">
+          <p class="h">Chicago Fragments XVI</p>
+          <p class="by">by Sven Pfrommer </p>
+        </div>
+      </li>
+      <li>
+        <div class="item"><a href="/marketPlace/market_view2.php"><img src="/images/market/tmp1_2.jpg" alt=""></a></div>
+        <div class="cont">
+          <p class="h">Chicago Fragments XVI</p>
+          <p class="by">by Sven Pfrommer </p>
+        </div>
+      </li>
+      <li>
+        <div class="item"><a href="/marketPlace/market_view2.php"><img src="/images/market/tmp1_3.jpg" alt=""></a></div>
+        <div class="cont">
+          <p class="h">Chicago Fragments XVI</p>
+          <p class="by">by Sven Pfrommer </p>
+        </div>
+      </li>
+    </ul>
+</article>

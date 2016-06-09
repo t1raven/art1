@@ -1,0 +1,3 @@
+#archiveSearch {z-index:999; background:#fff; width:100%; padding-top:40px; padding-bottom:40px; border-top:1px solid #ddd; border-bottom:1px solid #ddd;-webkit-box-shadow: -1px 10px 14px -8px rgba(0,0,0,0.22);-moz-box-shadow: -1px 10px 14px -8px rgba(0,0,0,0.22);box-shadow: -1px 10px 14px -8px rgba(0,0,0,0.22);}
+#archiveSearch .inner{ max-width:700px; margin-left: auto; margin-right: auto;  }
+#archiveSearch .inner > h1{ text-align: center; font-size: 40px; color: #505050; line-height: 44px; font-family:"Lato"; font-weight: 700; }
