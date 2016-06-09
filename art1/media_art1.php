@@ -223,24 +223,19 @@
 						    <div class="swiper-container">
 						        <div class="swiper-wrapper">
 						            <div class="swiper-slide">
-						            	<img src="/images/art1/mediaart1_img01.jpg" alt="" data-idx="1">
-						            	<img src="/images/art1/mediaart1_img02.jpg" alt="" data-idx="2">
+						            	<div class="imgBox"><img src="/images/art1/mediaart1_img01.jpg" alt="" data-idx="1"></div>
+						            	<div class="imgBox"><img src="/images/art1/mediaart1_img02.jpg" alt="" data-idx="2"></div>
+						            	<div class="imgBox"><img src="/images/art1/mediaart1_img03.jpg" alt="" data-idx="3"></div>
+						            	<div class="imgBox"><img src="/images/art1/mediaart1_img04.jpg" alt="" data-idx="4"></div>
+						            	<div class="imgBox"><img src="/images/art1/mediaart1_img05.jpg" alt="" data-idx="5"></div>
+						            	<div class="imgBox"><img src="/images/art1/mediaart1_img06.jpg" alt="" data-idx="6"></div>
 						            </div>
 						            <div class="swiper-slide">
-						            	<img src="/images/art1/mediaart1_img03.jpg" alt="" data-idx="3">
-						            	<img src="/images/art1/mediaart1_img04.jpg" alt="" data-idx="4">
-						            </div>
-						            <div class="swiper-slide">
-						            	<img src="/images/art1/mediaart1_img05.jpg" alt="" data-idx="5">
-						            	<img src="/images/art1/mediaart1_img06.jpg" alt="" data-idx="6">
-						            </div>
-						            <div class="swiper-slide">
-						            	<img src="/images/art1/mediaart1_img07.jpg" alt="" data-idx="7">
-						            	<img src="/images/art1/mediaart1_img08.jpg" alt="" data-idx="8">
-						            </div>
-						            <div class="swiper-slide">
-						            	<img src="/images/art1/mediaart1_img09.jpg" alt="" data-idx="9">
-						            	<img src="/images/art1/mediaart1_img10.jpg" alt="" data-idx="10">
+						            	<div class="imgBox"><img src="/images/art1/mediaart1_img07.jpg" alt="" data-idx="7"></div>
+						            	<div class="imgBox"><img src="/images/art1/mediaart1_img08.jpg" alt="" data-idx="8"></div>
+						            	<div class="imgBox"><img src="/images/art1/mediaart1_img09.jpg" alt="" data-idx="9"></div>
+						            	<div class="imgBox"><img src="/images/art1/mediaart1_img10.jpg" alt="" data-idx="10"></div>
+						            	<div class="imgBox"><img src="/images/art1/mediaart1_img11.jpg" alt="" data-idx="11"></div>
 						            </div>
 						        </div>
 						        <!-- Add Pagination -->
@@ -252,7 +247,6 @@
 							   	$(function(){
 								    var swiper = new Swiper('.imageList .swiper-container', {
 								        pagination: '.imageList .pagination > .inner',
-								        slidesPerView: 3,
 								        loop:true,
 								        simulateTouch:false,
 								        paginationClickable: true,
@@ -349,9 +343,9 @@
 										전화 및 메일 문의<br/>
 										<a class="ico tel" href="tel:02-6325-9271">02-6325-9271</a><br/>
 										<a class="ico email" href="mailto:mediaart1@art1.com">mediaart1@art1.com</a><br/>
-										<a class="ico site" href="https://www.mediaart1.com">www.mediaart1.com</a><br/>
-										<a class="ico youtube" href="https://www.youtube.com/channel/UCkF9iU4uAsB91IV-XkJrUjw">http://www.youtube.com/channel/UCkF9iU4uAsB91IV-XkJrUjw</a><br/>
-										<a class="ico naver" href="http://blog.naver.com/media_art1">http://blog.naver.com/media_art1</a>
+										<a class="ico site" href="https://www.mediaart1.com" target="_blank">www.mediaart1.com</a><br/>
+										<a class="ico youtube" href="https://www.youtube.com/channel/UCkF9iU4uAsB91IV-XkJrUjw" target="_blank">http://www.youtube.com/channel/UCkF9iU4uAsB91IV-XkJrUjw</a><br/>
+										<a class="ico naver" href="http://blog.naver.com/media_art1" target="_blank">http://blog.naver.com/media_art1</a>
 									</p>
 								</li>
 								<li>
@@ -445,6 +439,7 @@
 				</section>
 				<section id="mediaBottom">
 					<img src="/images/art1/media-art1.jpg" alt="">
+					<!-- <a href="http://blog.naver.com/media_art1" target="_blank"><img src="/images/art1/media-art1.jpg" alt=""></a> -->
 				</section>
 
 				<section id="mov_pop" onclick="closeMovPop();"><!-- 동영상 팝업 -->
@@ -479,6 +474,7 @@
 							            <div class="swiper-slide"><img src="/images/art1/mediaart1_img08.jpg" alt=""></div>
 							            <div class="swiper-slide"><img src="/images/art1/mediaart1_img09.jpg" alt=""></div>
 							            <div class="swiper-slide"><img src="/images/art1/mediaart1_img10.jpg" alt=""></div>
+							            <div class="swiper-slide"><img src="/images/art1/mediaart1_img11.jpg" alt=""></div>
 							        </div>
 								</div>
 								<div class="pageing">
