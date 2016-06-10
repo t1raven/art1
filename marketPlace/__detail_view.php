@@ -621,6 +621,7 @@ function marketViewOpen(){
             }else{
                 var outsideSize = $("#header .header_inner").offset().left;
             }
+            console.log(outsideSize);
 
             marketViewViewport.css({
               "display":"block"
@@ -638,7 +639,7 @@ function marketViewOpen(){
                   });
             /*marketViewViewport.find(".header").css("top",$("#header").height());*/
 		if(winWidth > 1250){
-			marketViewViewport.stop().animate({"width":marketViewViewportInner.outerWidth(true) + outsideSize},500,function(){});
+			marketViewViewport.stop().animate({"width":marketViewViewportInner.outerWidth(true) + 40/*outsideSize*/},500,function(){});
 			marketViewViewport.css("padding-right","");
 		}else if(winWidth <= 1250 && winWidth > 960  ){
 			marketViewViewport.stop().animate({"width":marketViewViewportInner.outerWidth(true)},500,function(){});
@@ -648,22 +649,21 @@ function marketViewOpen(){
                 // con(winParsent(96));
                 marketViewViewportInner.css({
                       "padding-top":$("#header").height(),
-                      "width":winParsent(92)
+                      "width":winParsent(96)
                     });
                 marketViewViewport.stop().animate({
-                  "width":"92%"
+                  "width":"96%"
                 },500,function(){}).css({
-			"padding":"0 2% 2%"
-			});
+          			  "padding":"0 2% 2%"
+          			});
                 marketViewViewportInner.find(".product_info").css({
                  "padding-top":"0"
-              });
-
-                  marketViewViewport.find(".header").css({
+                });
+                marketViewViewport.find(".header").css({
                     "position":"relative",
                     "left":"",
                     "top":"",
-                  });
+                });
 
 		}
 		//con("outsideSize:::::"+outsideSize);

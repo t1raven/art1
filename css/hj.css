@@ -390,7 +390,7 @@ textarea.normal_txtarea {border:1px solid #c9c9c9; width:95%;}
 
 @media (max-width: 1200px){
 	.comentArea .inputBox {margin-right:5px;margin-left:5px;}
-	.comentArea ~ .btn_bot {margin-right:5px;margin-left:5px;}
+	/* .comentArea ~ .btn_bot {margin-right:5px;margin-left:5px;} */
 }
 @media screen and (max-width: 1200px){
 #headerArea > .inner {max-width: 1004px;}

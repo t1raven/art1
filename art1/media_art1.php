@@ -571,7 +571,6 @@
 					function closeViewPop(){
 					    fadePlayMotion($("#view_pop > .inner"), false, 400);
 					}
-
 				    
 				</script>
 

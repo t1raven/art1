@@ -19,7 +19,7 @@
        var offsetTop = $(this).offset().top;
        var scrollT = $(this).scrollTop();
        if(!$(this).hasClass("n2")){
-            bg.css({ top:((_currentScrollTop-offsetTop) / 10) * 4.2});
+          bg.css({ top:((_currentScrollTop-offsetTop) / 10) * 4.2});
         }
       });
   }

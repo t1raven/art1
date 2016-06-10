@@ -1680,7 +1680,10 @@ Pagination Styles
       .content-mediaBox,
       #spot_sub .cont,
       #footer .fooer_inner,
-      #newIndexArea .bot_banner
+      #newIndexArea .bot_banner,
+      .btn_bot,
+      #bbs_view_ty1,
+      .comentArea
       { max-width: 1004px; margin-left:auto; margin-right:auto; } 
 
             /*footer*/
@@ -1806,7 +1809,10 @@ Pagination Styles
       .content-mediaBox,
       #spot_sub .cont,
       #footer .fooer_inner,
-      #newIndexArea .bot_banner
+      #newIndexArea .bot_banner,
+      .btn_bot,
+      #bbs_view_ty1,
+      .comentArea
       { max-width: 900px; margin-left:auto; margin-right:auto;  }
 
 
@@ -1913,7 +1919,10 @@ Pagination Styles
       #header .header_inner,
       .content-mediaBox,
       #footer .fooer_inner,
-      #newIndexArea .bot_banner
+      #newIndexArea .bot_banner,
+      .btn_bot,
+      #bbs_view_ty1,
+      .comentArea
       { max-width: 728px; width: 728px; margin-left:auto; margin-right:auto; }
      #spot_sub .cont{width: 100%; margin: 0;}
      .tabBox ul li {padding-left:15px; margin-left:10px;}
@@ -2218,7 +2227,9 @@ Pagination Styles
       */
      col.ssearchTh {width:50px}
      #container_sub.mt0{margin-top: 0;}
-     .btn_bot{ margin-top: 10px;}
+     #bbs_view_ty1,
+     .comentArea,
+     .btn_bot{ margin-top: 10px; width: auto; margin-left: 3%; margin-right: 3%;}
       /* 모바일 모드 불필요한 요소 */
       col.data{width: 100px; }
       col.data2{width: 100px; }

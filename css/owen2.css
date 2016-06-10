@@ -853,6 +853,9 @@ span.h100{height:100%;vertical-align: middle;display: inline-block;}
 	#view_pop .swiper-pagination { bottom: 10px; }
 	#view_pop .pageing button { width: 40px; }
 
+	#area_about .sec_service ul.list > li h4 { font-size: 20px; }
+
+
 }
 
 @media screen and (max-width : 600px){
