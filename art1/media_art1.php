@@ -223,19 +223,63 @@
 						    <div class="swiper-container">
 						        <div class="swiper-wrapper">
 						            <div class="swiper-slide">
-						            	<div class="imgBox"><img src="/images/art1/mediaart1_img01.jpg" alt="" data-idx="1"></div>
-						            	<div class="imgBox"><img src="/images/art1/mediaart1_img02.jpg" alt="" data-idx="2"></div>
-						            	<div class="imgBox"><img src="/images/art1/mediaart1_img03.jpg" alt="" data-idx="3"></div>
-						            	<div class="imgBox"><img src="/images/art1/mediaart1_img04.jpg" alt="" data-idx="4"></div>
-						            	<div class="imgBox"><img src="/images/art1/mediaart1_img05.jpg" alt="" data-idx="5"></div>
-						            	<div class="imgBox"><img src="/images/art1/mediaart1_img06.jpg" alt="" data-idx="6"></div>
+						            	<div class="imgBox">
+						            		<div class="out_cover">
+						            			<img class="area_zoom" src="/images/art1/mediaart1_img01.jpg" alt="" data-idx="1">
+						            		</div>
+						            	</div>
+						            	<div class="imgBox">
+						            		<div class="out_cover">
+						            			<img class="area_zoom" src="/images/art1/mediaart1_img02.jpg" alt="" data-idx="2">
+						            		</div>
+						            	</div>
+						            	<div class="imgBox">
+						            		<div class="out_cover">
+						            			<img class="area_zoom" src="/images/art1/mediaart1_img03.jpg" alt="" data-idx="3">
+						            		</div>
+						            	</div>
+						            	<div class="imgBox">
+						            		<div class="out_cover">
+						            			<img class="area_zoom" src="/images/art1/mediaart1_img04.jpg" alt="" data-idx="4">
+						            		</div>
+						            	</div>
+						            	<div class="imgBox">
+						            		<div class="out_cover">
+						            			<img class="area_zoom" src="/images/art1/mediaart1_img05.jpg" alt="" data-idx="5">
+						            		</div>
+						            	</div>
+						            	<div class="imgBox">
+						            		<div class="out_cover">
+						            			<img class="area_zoom" src="/images/art1/mediaart1_img06.jpg" alt="" data-idx="6">
+						            		</div>
+						            	</div>
 						            </div>
 						            <div class="swiper-slide">
-						            	<div class="imgBox"><img src="/images/art1/mediaart1_img07.jpg" alt="" data-idx="7"></div>
-						            	<div class="imgBox"><img src="/images/art1/mediaart1_img08.jpg" alt="" data-idx="8"></div>
-						            	<div class="imgBox"><img src="/images/art1/mediaart1_img09.jpg" alt="" data-idx="9"></div>
-						            	<div class="imgBox"><img src="/images/art1/mediaart1_img10.jpg" alt="" data-idx="10"></div>
-						            	<div class="imgBox"><img src="/images/art1/mediaart1_img11.jpg" alt="" data-idx="11"></div>
+						            	<div class="imgBox">
+						            		<div class="out_cover">
+						            			<img class="area_zoom" src="/images/art1/mediaart1_img07.jpg" alt="" data-idx="7">
+						            		</div>
+						            	</div>
+						            	<div class="imgBox">
+						            		<div class="out_cover">
+						            			<img class="area_zoom" src="/images/art1/mediaart1_img08.jpg" alt="" data-idx="8">
+						            		</div>
+						            	</div>
+						            	<div class="imgBox">
+						            		<div class="out_cover">
+						            			<img class="area_zoom" src="/images/art1/mediaart1_img09.jpg" alt="" data-idx="3">
+						            		</div>
+						            	</div>
+						            	<div class="imgBox">
+						            		<div class="out_cover">
+						            			<img class="area_zoom" src="/images/art1/mediaart1_img10.jpg" alt="" data-idx="10">
+						            		</div>
+						            	</div>
+						            	<div class="imgBox">
+						            		<div class="out_cover">
+						            			<img class="area_zoom" src="/images/art1/mediaart1_img11.jpg" alt="" data-idx="11">
+						            		</div>
+						            	</div>
 						            </div>
 						        </div>
 						        <!-- Add Pagination -->
