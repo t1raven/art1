@@ -302,8 +302,8 @@ a .fc_blue:hover{ color: #348fe2; border-bottom: 1px solid #348fe2; }
 
 
 /********************** form **********************/
-input.inp_txt{ border-style: solid; border-width: 1px; border-color: #e2e7eb; height: 27px; line-height: 27px; padding: 0 10px;  font-size: 1em; color: #515151; border-radius: 3px; }
-input.inp_txt2{ border-style: solid; border-width: 1px; border-color: #cfcfcf; height: 38px; line-height: 38px; padding: 0 10px;  font-size: 1em; color: #515151;  border-radius: 3px; }
+input.inp_txt{ border-style: solid; border-width: 1px; border-color: #e2e7eb; height: 27px; line-height: 27px; padding: 0 10px;  font-size: 1em; color: #515151; border-radius: 3px; box-sizing: border-box; }
+input.inp_txt2{ border-style: solid; border-width: 1px; border-color: #cfcfcf; height: 38px; line-height: 38px; padding: 0 10px;  font-size: 1em; color: #515151;  border-radius: 3px; box-sizing: border-box; }
 
 .inpBox{display: inline-block; *display: inline; *zoom: 1; width: 204px; height: 33px; border: 1px solid #d9d9d9; position: relative;}
 .inpBox input[type="text"]{width: 160px; height: 33px; line-height: 33px; padding: 0 40px 0 4px; border: 0; }

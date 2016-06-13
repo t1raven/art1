@@ -120,17 +120,17 @@
 									<div class="listTit">2) Premium</div>
 									<div class="listCont">
 										<ul class="movList">
-											<li class="videoItem" data-video="Standard-Simple" data-img="/images/art1/mediaart1_mov01.jpg" data-idx="1">
+											<!-- <li class="videoItem" data-video="Standard-Simple" data-img="/images/art1/mediaart1_mov01.jpg" data-idx="1">
 												<a href="#">
 													<img src="/images/art1/mediaart1_mov01.jpg" alt="">
 												</a>
 												<p>SIMPLE / 국내작가</p>
-											</li>
+											</li> -->
 											<li class="videoItem" data-video="Premium-Classic" data-img="/images/art1/mediaart1_mov02.jpg" data-idx="2">
 												<a href="#">
 													<img src="/images/art1/mediaart1_mov02.jpg" alt="">
 												</a>
-												<p>CLASSIC / 외국작가</p>
+												<p>CLASSIC / 국외작가</p>
 											</li>
 											<li class="videoItem" data-video="Premium-Majestic" data-img="/images/art1/mediaart1_mov03.jpg" data-idx="3">
 												<a href="#">
@@ -141,24 +141,20 @@
 										</ul>
 										<ul class="spacList">
 											<li>
-												<strong>Theme</strong>
-												<div class="cont">Simple, Classic, Majestic 중 택 1</div>
+												<strong>Interviewee</strong>
+												<div class="cont">국내작가, 국외작가, 기획자 중 택1 (*영어 번역 및 자막 서비스. 단, 영어권 외 언어는 서비스 불가)</div>
 											</li>
 											<li>
 												<strong>Take</strong>
-												<div class="cont">전시장 내·외부 전경, 전시 작품 디테일, 공간 디테일</div>
+												<div class="cont">전시장 내·외부 전경, 전시 작품 디테일, 공간 디테일, 전시 테마(인쇄물, 인물), 전시 홍보 아카이브 메시지, 작가나 기획자 인터뷰</div>
 											</li>
 											<li>
 												<strong>Running time</strong>
 												<div class="cont">약 180 sec</div>
 											</li>
 											<li>
-												<strong>Cost</strong>
-												<div class="cont">₩ 800,000 (VAT별도)</div>
-											</li>
-											<li>
 												<strong>Shooting time</strong>
-												<div class="cont">약 80 min</div>
+												<div class="cont">약 150 min</div>
 											</li>
 											<li>
 												<strong>Delivery time</strong>
@@ -166,7 +162,7 @@
 											</li>
 											<li>
 												<strong>Use</strong>
-												<div class="cont">각종 SNS, 모바일 Invitation 영상, 전시 미디어 퍼포먼스, 자체 아카이브 등</div>
+												<div class="cont">각종 SNS, 모바일 Invitation 영상, 전시 미디어 퍼포먼스, 해외 아트페어 참가지원 포트폴리오, 홈페이지 프로필 영상, 자체 아카이브 등</div>
 											</li>
 										</ul>
 										<div class="em">* 수정 1회 가능</div>
@@ -176,14 +172,14 @@
 									<div class="listTit">3) Customizing</div>
 									<div class="listCont">
 										<ul class="movList">
-											<li class="videoItem" data-video="Standard-Simple" data-img="/images/art1/mediaart1_mov00.jpg" data-idx="1">
+											<li class="videoItem" data-video="Customizing-01" data-img="/images/art1/mediaart1_mov00.jpg" data-idx="1">
 												<a href="#">
-													<img src="/images/art1/mediaart1_mov00.jpg" alt="">
+													<img src="/images/art1/mediaart1_mov04.jpg" alt="">
 												</a>
 											</li class="videoItem">
-											<li class="videoItem" data-video="Standard-Simple" data-img="/images/art1/mediaart1_mov00.jpg" data-idx="2">
+											<li class="videoItem" data-video="Customizing-02" data-img="/images/art1/mediaart1_mov00.jpg" data-idx="2">
 												<a href="#">
-													<img src="/images/art1/mediaart1_mov00.jpg" alt="">
+													<img src="/images/art1/mediaart1_mov05.jpg" alt="">
 												</a>
 											</li>
 										</ul>
@@ -210,7 +206,7 @@
 											</li>
 										</ul>
 										<div class="em">* Cost, Shooting time, Delivery time 별도문의</div>
-										<div class="em">* heme와 Interviewee 중복 선택 가능</div>
+										<div class="em">* Theme와 Interviewee 중복 선택 가능</div>
 										<div class="em">* 요청사항 별도 문의</div>
 									</div>
 								</li>
@@ -225,59 +221,64 @@
 						            <div class="swiper-slide">
 						            	<div class="imgBox">
 						            		<div class="out_cover">
-						            			<img class="area_zoom" src="/images/art1/mediaart1_img01.jpg" alt="" data-idx="1">
+						            			<img class="" src="/images/art1/mediaart1_img01_thum.jpg" alt="" data-idx="1">
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
-						            			<img class="area_zoom" src="/images/art1/mediaart1_img02.jpg" alt="" data-idx="2">
+						            			<img class="" src="/images/art1/mediaart1_img02_thum.jpg" alt="" data-idx="2">
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
-						            			<img class="area_zoom" src="/images/art1/mediaart1_img03.jpg" alt="" data-idx="3">
+						            			<img class="" src="/images/art1/mediaart1_img03_thum.jpg" alt="" data-idx="3">
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
-						            			<img class="area_zoom" src="/images/art1/mediaart1_img04.jpg" alt="" data-idx="4">
+						            			<img class="" src="/images/art1/mediaart1_img04_thum.jpg" alt="" data-idx="4">
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
-						            			<img class="area_zoom" src="/images/art1/mediaart1_img05.jpg" alt="" data-idx="5">
+						            			<img class="" src="/images/art1/mediaart1_img05_thum.jpg" alt="" data-idx="5">
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
-						            			<img class="area_zoom" src="/images/art1/mediaart1_img06.jpg" alt="" data-idx="6">
+						            			<img class="" src="/images/art1/mediaart1_img06_thum.jpg" alt="" data-idx="6">
 						            		</div>
 						            	</div>
 						            </div>
 						            <div class="swiper-slide">
 						            	<div class="imgBox">
 						            		<div class="out_cover">
-						            			<img class="area_zoom" src="/images/art1/mediaart1_img07.jpg" alt="" data-idx="7">
+						            			<img class="" src="/images/art1/mediaart1_img07_thum.jpg" alt="" data-idx="7">
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
-						            			<img class="area_zoom" src="/images/art1/mediaart1_img08.jpg" alt="" data-idx="8">
+						            			<img class="" src="/images/art1/mediaart1_img08_thum.jpg" alt="" data-idx="8">
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
-						            			<img class="area_zoom" src="/images/art1/mediaart1_img09.jpg" alt="" data-idx="3">
+						            			<img class="" src="/images/art1/mediaart1_img09_thum.jpg" alt="" data-idx="3">
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
-						            			<img class="area_zoom" src="/images/art1/mediaart1_img10.jpg" alt="" data-idx="10">
+						            			<img class="" src="/images/art1/mediaart1_img10_thum.jpg" alt="" data-idx="10">
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
-						            			<img class="area_zoom" src="/images/art1/mediaart1_img11.jpg" alt="" data-idx="11">
+						            			<img class="" src="/images/art1/mediaart1_img11_thum.jpg" alt="" data-idx="11">
+						            		</div>
+						            	</div>
+						            	<div class="imgBox">
+						            		<div class="out_cover">
+						            			<img class="" src="/images/art1/mediaart1_img12_thum.jpg" alt="" data-idx="12">
 						            		</div>
 						            	</div>
 						            </div>
@@ -317,14 +318,6 @@
 												<div class="cont">보도자료, 전시홍보, 전시장 내·외부 전경, 전시 작품 디테일</div>
 											</li>
 											<li>
-												<strong>Cut</strong>
-												<div class="cont">5 cuts (30MB, 300dpi)</div>
-											</li>
-											<li>
-												<strong>Cost</strong>
-												<div class="cont">₩ 300,000 (VAT별도)</div>
-											</li>
-											<li>
 												<strong>Shooting time</strong>
 												<div class="cont">약 30 min</div>
 											</li>
@@ -346,14 +339,6 @@
 											<li>
 												<strong>Image</strong>
 												<div class="cont">보도자료, 전시홍보, 전시장 내·외부 전경, 전시 작품 디테일, 전시 테마(인쇄물, 인물 컷)</div>
-											</li>
-											<li>
-												<strong>Cut</strong>
-												<div class="cont">10 cuts (50MB, 300dpi) </div>
-											</li>
-											<li>
-												<strong>Cost</strong>
-												<div class="cont">₩ 500,000 (VAT별도)</div>
 											</li>
 											<li>
 												<strong>Shooting time</strong>
@@ -387,7 +372,7 @@
 										전화 및 메일 문의<br/>
 										<a class="ico tel" href="tel:02-6325-9271">02-6325-9271</a><br/>
 										<a class="ico email" href="mailto:mediaart1@art1.com">mediaart1@art1.com</a><br/>
-										<a class="ico site" href="https://www.mediaart1.com" target="_blank">www.mediaart1.com</a><br/>
+										<a class="ico site" href="http://www.mediaart1.com/" target="_blank">www.mediaart1.com</a><br/>
 										<a class="ico youtube" href="https://www.youtube.com/channel/UCkF9iU4uAsB91IV-XkJrUjw" target="_blank">http://www.youtube.com/channel/UCkF9iU4uAsB91IV-XkJrUjw</a><br/>
 										<a class="ico naver" href="http://blog.naver.com/media_art1" target="_blank">http://blog.naver.com/media_art1</a>
 									</p>
@@ -482,8 +467,8 @@
 					</article>
 				</section>
 				<section id="mediaBottom">
-					<img src="/images/art1/media-art1.jpg" alt="">
-					<!-- <a href="http://blog.naver.com/media_art1" target="_blank"><img src="/images/art1/media-art1.jpg" alt=""></a> -->
+					<!-- <img src="/images/art1/media-art1.jpg" alt=""> -->
+					<a href="http://www.mediaart1.com/" target="_blank"><img src="/images/art1/media-art1.jpg" alt=""></a>
 				</section>
 
 				<section id="mov_pop" onclick="closeMovPop();"><!-- 동영상 팝업 -->
@@ -519,6 +504,7 @@
 							            <div class="swiper-slide"><img src="/images/art1/mediaart1_img09.jpg" alt=""></div>
 							            <div class="swiper-slide"><img src="/images/art1/mediaart1_img10.jpg" alt=""></div>
 							            <div class="swiper-slide"><img src="/images/art1/mediaart1_img11.jpg" alt=""></div>
+							            <div class="swiper-slide"><img src="/images/art1/mediaart1_img12.jpg" alt=""></div>
 							        </div>
 								</div>
 								<div class="pageing">

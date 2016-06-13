@@ -625,8 +625,8 @@ background-image:url(/images/header/bg_allmenu_down.png); background-position:26
 #ExhibitionPopup .close{ position: absolute; right: 30px; top: 30px;}
 #ExhibitionPopup .formMailType1{margin-top: 30px;}
 #ExhibitionPopup .formMailType1 > ul > li{  margin-bottom: 12px;} 
-#ExhibitionPopup .formMailType1 input{font-family:"Nanum Gothic"; width: 265px; height: 28px; line-height: 28px; border-radius:3px; border:1px solid #666666;font-size:11px;color:#939393;}
-#ExhibitionPopup .formMailType1 .file input{font-family:"Nanum Gothic"; width: 169px; padding:0px 10px; height: 28px; line-height: 28px; border-radius:3px; border:1px solid #666666;font-size:11px;color:#939393;}
+#ExhibitionPopup .formMailType1 input{font-family:"Nanum Gothic"; width: 100%; height: 28px; line-height: 28px; border-radius:3px; border:1px solid #666666;font-size:11px;color:#939393;}
+#ExhibitionPopup .formMailType1 .file input{font-family:"Nanum Gothic"; width: 165px; padding:0px 10px; height: 28px; line-height: 28px; border-radius:3px; border:1px solid #666666;font-size:11px;color:#939393;}
 #ExhibitionPopup .formMailType1 .file .fakefile img{border-radius:10px 0px 0px 0px;border:1px solid #969696;overflow:hidden;background-color:#969696;}
 #ExhibitionPopup .formMailType1 .file input[type="file"]{width: 265px; height: 28px;}
 #ExhibitionPopup .formMailType1 .file div.fileinputs{width: 287px; float: none;}

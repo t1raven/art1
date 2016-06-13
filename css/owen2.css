@@ -484,8 +484,10 @@ span.h100{height:100%;vertical-align: middle;display: inline-block;}
 #view_pop .swiper-pagination .page { color: #0453bf; }
 
 
-#mediaArea .imageList .swiper-slide .imgBox { width: 33.33%; float: left; box-sizing: border-box; padding: 10px;  }
-#mediaArea .imageList .swiper-slide .imgBox img { max-width: 300px; width: 100%; cursor: pointer; }
+#mediaArea .imageList .swiper-slide .imgBox { width: 33.3333333333%; float: left; box-sizing: border-box; padding: 10px; overflow: hidden; }
+#mediaArea .imageList .swiper-slide .imgBox .out_cover { background-color: #000; }
+#mediaArea .imageList .swiper-slide .imgBox img { max-width: 300px; width: 100%; cursor: pointer; -webkit-transition: opacity .8s; transition: opacity .8s; opacity: 1; }
+#mediaArea .imageList .swiper-slide .imgBox img:hover { opacity: 1; }
 #mediaArea .imageList .swiper-container .pagination{text-align: center;margin-top: 0px;}
 #mediaArea .imageList .swiper-container .pagination > *{vertical-align: middle;}
 #mediaArea .imageList .swiper-container .pagination > .inner{display: inline-block;height:8px; margin: 0 10px;}
@@ -543,10 +545,10 @@ span.h100{height:100%;vertical-align: middle;display: inline-block;}
 }
 #view_pop .view_box{position:relative;width:900px;margin:0px auto;background:#fff;}
 #view_pop .view_box > .inner{padding:20px;}
-#view_pop .img_box{position:relative;width:100%;height:0px;padding-bottom:50%;margin-bottom:25px;overflow:hidden;}
+#view_pop .img_box{position:relative;width:100%;height:0px;padding-bottom:70%;margin-bottom:25px;overflow:hidden;}
 #view_pop .img_box > .swiper-wrapper{position: absolute;height:100%;top:0;}
-#view_pop .img_box > .swiper-wrapper > .swiper-slide{height:100%;}
-#view_pop .img_box img{width:100%;}
+#view_pop .img_box > .swiper-wrapper > .swiper-slide{height:100%; overflow: hidden;}
+#view_pop .img_box img{width: auto; height:100%;}
 #view_pop .pageing button{position:absolute;width:57px;top:50%; margin-top: -30px; z-index: 1;}
 #view_pop .pageing button.prev{left:0px;}
 #view_pop .pageing button.next{right:0px;}
