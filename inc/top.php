@@ -45,6 +45,7 @@
 <script src="/js/statistics.js"></script>
 <script src="/js/iscroll.js"></script>
 <script src="/js/iscroll5-ie8.js"></script>
+<script src="/js/nprogress.js"></script>
 <!--[if lt IE 9]>
 <link rel="stylesheet" href="<?=$currentFolder?>/css/ie.css" />
 <script src="<?=$currentFolder?>/js/html5.js"></script>
@@ -71,8 +72,15 @@
           </p>
       </div>
     </div>
-	<script type="text/javascript">
 
+	<script type="text/javascript">
+$(function(){
+  //NProgress.start();
+});
+$( document ).ready(function() {
+  NProgress.done(); 
+  $('.fade').removeClass('out');
+});
 function fixedPopupClose2(ur){
   $("#header .header_inner .utill > ul > li").each(function(){
     $(this).find(">a").removeClass("on");

@@ -3096,7 +3096,9 @@ Pagination Styles
   }*/
   
 }
-
+@media(max-width:440px){
+  .tabBox>ul>li { width: 33.3333333333%; }
+}
 
 /* 
 
