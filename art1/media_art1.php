@@ -31,21 +31,21 @@
 						<p>Exhibition Visual Content Production <span>전시 비주얼 컨텐츠 프로덕션</span></p>
 					</article>
 					<article class="topCont01">
+						<div class="imgArea">
+							<img src="/images/art1/img_mediaart1_top01.jpg" alt="">
+						</div>
 						<div class="txtArea">
 							<h2>Business</h2>
 							<p>media art1은 전시 비주얼 컨텐츠 프로덕션입니다. 전시 메이킹부터 작가인터뷰, 오프닝 리셉션, 작가와의 대화 및 전시 강연에 이르기까지 갤러리, 미술관에서 개최·진행되는 전시와 행사의 영상·사진 컨텐츠를 기획·연출·제작합니다. 다년간 갤러리, 미술관, 아트페어 등의 전시 영상·사진을 다루어온 프로페셔널로 구성된 media art1은 기존의 방송, 아카이브와는 전혀 다른 새로운 톤으로 트렌디한 영상미를 추구하며 최고의 퀄리티와 테마로 전시 영상·사진을 제작하고 있습니다.</p>
 						</div>
-						<div class="imgArea">
-							<img src="/images/art1/img_mediaart1_top01.jpg" alt="">
-						</div>
 					</article>
 					<article class="topCont02">
+						<div class="imgArea">
+							<img src="/images/art1/img_mediaart1_top02.jpg" alt="">
+						</div>
 						<div class="txtArea">
 							<h2>Service</h2>
 							<p>기존 온·오프라인 홍보물인 인쇄물, 웹배너 등의 사용범위를 넘어 각종 온라인 SNS(facebook, instagram, youtube, vimeo, etc) 홍보, 모바일 Invitation 영상, 해외 아트페어 참가지원 포트폴리오, 보도자료용 고화질 전시이미지, 홈페이지 프로필 영상, 자체 아카이브 등 다양한 목적으로 사용·활용될 수 있는 ‘OSMU(One Source Multi Use)’를 지향합니다.</p>
-						</div>
-						<div class="imgArea">
-							<img src="/images/art1/img_mediaart1_top02.jpg" alt="">
 						</div>
 						<div class="txtArea">
 							<h2>Visual Style</h2>
@@ -67,18 +67,21 @@
 											<li class="videoItem" data-video="Standard-Simple" data-img="/images/art1/mediaart1_mov01.jpg" data-idx="1">
 												<a href="#">
 													<img src="/images/art1/mediaart1_mov01.jpg" alt="">
+													<div class="cover"></div>
 												</a>
 												<p>SIMPLE</p>
 											</li>
 											<li class="videoItem" data-video="Standard-Classic" data-img="/images/art1/mediaart1_mov02.jpg" data-idx="2">
 												<a href="#">
 													<img src="/images/art1/mediaart1_mov02.jpg" alt="">
+													<div class="cover"></div>
 												</a>
 												<p>CLASSIC</p>
 											</li>
 											<li class="videoItem" data-video="Standard-Majestic" data-img="/images/art1/mediaart1_mov03.jpg" data-idx="3">
 												<a href="#">
 													<img src="/images/art1/mediaart1_mov03.jpg" alt="">
+													<div class="cover"></div>
 												</a>
 												<p>MAJESTIC</p>
 											</li>
@@ -120,23 +123,26 @@
 									<div class="listTit">2) Premium</div>
 									<div class="listCont">
 										<ul class="movList">
-											<!-- <li class="videoItem" data-video="Standard-Simple" data-img="/images/art1/mediaart1_mov01.jpg" data-idx="1">
+											<li class="videoItem" data-video="Standard-Simple" data-img="/images/art1/mediaart1_mov01.jpg" data-idx="1">
 												<a href="#">
-													<img src="/images/art1/mediaart1_mov01.jpg" alt="">
+													<img src="/images/art1/mediaart1_mov00.jpg" alt="">
+													<div class="cover"></div>
 												</a>
 												<p>SIMPLE / 국내작가</p>
-											</li> -->
-											<li class="videoItem" data-video="Premium-Classic" data-img="/images/art1/mediaart1_mov02.jpg" data-idx="2">
+											</li>
+											<li class="videoItem" data-video="Premium-Classic" data-img="/images/art1/mediaart1_mov00.jpg" data-idx="2">
 												<a href="#">
-													<img src="/images/art1/mediaart1_mov02.jpg" alt="">
+													<img src="/images/art1/mediaart1_mov00.jpg" alt="">
+													<div class="cover"></div>
 												</a>
 												<p>CLASSIC / 국외작가</p>
 											</li>
 											<li class="videoItem" data-video="Premium-Majestic" data-img="/images/art1/mediaart1_mov03.jpg" data-idx="3">
 												<a href="#">
 													<img src="/images/art1/mediaart1_mov03.jpg" alt="">
+													<div class="cover"></div>
 												</a>
-												<p>MAJESTIC/ 기획자</p>
+												<p>MAJESTIC / 기획자</p>
 											</li>
 										</ul>
 										<ul class="spacList">
@@ -172,14 +178,16 @@
 									<div class="listTit">3) Customizing</div>
 									<div class="listCont">
 										<ul class="movList">
-											<li class="videoItem" data-video="Customizing-01" data-img="/images/art1/mediaart1_mov00.jpg" data-idx="1">
+											<li class="videoItem" data-video="Customizing-01" data-img="/images/art1/mediaart1_mov04.jpg" data-idx="1">
 												<a href="#">
 													<img src="/images/art1/mediaart1_mov04.jpg" alt="">
+													<div class="cover"></div>
 												</a>
 											</li class="videoItem">
-											<li class="videoItem" data-video="Customizing-02" data-img="/images/art1/mediaart1_mov00.jpg" data-idx="2">
+											<li class="videoItem" data-video="Customizing-02" data-img="/images/art1/mediaart1_mov05.jpg" data-idx="2">
 												<a href="#">
 													<img src="/images/art1/mediaart1_mov05.jpg" alt="">
+													<div class="cover"></div>
 												</a>
 											</li>
 										</ul>
@@ -222,31 +230,37 @@
 						            	<div class="imgBox">
 						            		<div class="out_cover">
 						            			<img class="" src="/images/art1/mediaart1_img01_thum.jpg" alt="" data-idx="1">
+						            			<div class="cover"></div>
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
 						            			<img class="" src="/images/art1/mediaart1_img02_thum.jpg" alt="" data-idx="2">
+						            			<div class="cover"></div>
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
 						            			<img class="" src="/images/art1/mediaart1_img03_thum.jpg" alt="" data-idx="3">
+						            			<div class="cover"></div>
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
 						            			<img class="" src="/images/art1/mediaart1_img04_thum.jpg" alt="" data-idx="4">
+						            			<div class="cover"></div>
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
 						            			<img class="" src="/images/art1/mediaart1_img05_thum.jpg" alt="" data-idx="5">
+						            			<div class="cover"></div>
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
 						            			<img class="" src="/images/art1/mediaart1_img06_thum.jpg" alt="" data-idx="6">
+						            			<div class="cover"></div>
 						            		</div>
 						            	</div>
 						            </div>
@@ -254,31 +268,37 @@
 						            	<div class="imgBox">
 						            		<div class="out_cover">
 						            			<img class="" src="/images/art1/mediaart1_img07_thum.jpg" alt="" data-idx="7">
+						            			<div class="cover"></div>
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
 						            			<img class="" src="/images/art1/mediaart1_img08_thum.jpg" alt="" data-idx="8">
+						            			<div class="cover"></div>
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
 						            			<img class="" src="/images/art1/mediaart1_img09_thum.jpg" alt="" data-idx="3">
+						            			<div class="cover"></div>
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
 						            			<img class="" src="/images/art1/mediaart1_img10_thum.jpg" alt="" data-idx="10">
+						            			<div class="cover"></div>
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
 						            			<img class="" src="/images/art1/mediaart1_img11_thum.jpg" alt="" data-idx="11">
+						            			<div class="cover"></div>
 						            		</div>
 						            	</div>
 						            	<div class="imgBox">
 						            		<div class="out_cover">
 						            			<img class="" src="/images/art1/mediaart1_img12_thum.jpg" alt="" data-idx="12">
+						            			<div class="cover"></div>
 						            		</div>
 						            	</div>
 						            </div>
@@ -523,8 +543,8 @@
 
 				<script type="text/javascript">
 					$(function(){
-						$(".imageList .swiper-slide img").click(function(e) {
-	        				var num = $(this).attr("data-idx");
+						$(".imageList .swiper-slide .cover").click(function(e) {
+	        				var num = $(this).parent().find("img").attr("data-idx");
 	        				openViewPop(num-1);
 						});
 

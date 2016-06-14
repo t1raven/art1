@@ -818,7 +818,7 @@ label.dib.txt5{ width: 65px;    }
 #marketArea .marketVisual .share dd > ul > li{ float: left; margin-right: 20px; display: none;  }
 
 /*마켓 재작업 : 카테고리*/
-#marketArea .categori{ margin-top: 30px; margin-bottom: 40px; }
+#marketArea .categori{ margin-top: 30px; margin-bottom: 0; }
 #marketArea .categori .list > ul:after{display: block;clear: both;content:"";visibility: hidden; height: 0;}
 #marketArea .categori .list > ul > li{margin-bottom: 1.694915254237288%; float: left; position: relative; overflow: hidden;}
 #marketArea .categori .list > ul > li.n1{width: 32.20338983050847%;}
@@ -841,8 +841,8 @@ label.dib.txt5{ width: 65px;    }
 #marketArea .categori .list > ul > li .spec a.btn,#marketArea .marketVisual .list > ul > li .spec a.btn:hover{ color: #ed1848;  }
 
 /*마켓 재작업 : 검색단*/
-#marketArea .tabBox{margin-bottom: 40px;}
-#marketArea .searchArea{text-align: center; height: 100px; margin-bottom: 20px;}
+#marketArea .tabBox{margin-bottom: 15px;}
+#marketArea .searchArea{text-align: center; height: 100px; margin-bottom: 0px;}
 #marketArea .searchArea .inner{display: inline-block; *display: inline; *zoom: 1; position: relative;}
 #marketArea .searchArea .sort_lst{display: inline-block; *display: inline; *zoom: 1;}
 #marketArea .searchArea .btn_result{ width: 167px;  height: 36px; margin-left: 5px; font-size: 15px; line-height: 36px; background-color: #5c5c5c; color: #fff; text-align: center; text-transform: uppercase; }
@@ -1648,6 +1648,11 @@ Pagination Styles
 #newIndexArea .bot_banner > a img{width:100%;}
 #newIndexArea .bot_banner > a img.mobile{display: none;}
 
+#marketArea .bot_banner{margin-bottom:20px;}
+#marketArea .bot_banner > a{display: block;}
+#marketArea .bot_banner > a img{width:100%;}
+#marketArea .bot_banner > a img.mobile{display: none;}
+
 @media screen and (max-width: 1300px){
       /* #header .header_inner h1{margin-left: 78px;} */
 
@@ -1682,6 +1687,7 @@ Pagination Styles
       #spot_sub .cont,
       #footer .fooer_inner,
       #newIndexArea .bot_banner,
+      #marketArea .bot_banner,
       .btn_bot,
       #bbs_view_ty1,
       .comentArea
@@ -1811,6 +1817,7 @@ Pagination Styles
       #spot_sub .cont,
       #footer .fooer_inner,
       #newIndexArea .bot_banner,
+      #marketArea .bot_banner,
       .btn_bot,
       #bbs_view_ty1,
       .comentArea
@@ -1921,6 +1928,7 @@ Pagination Styles
       .content-mediaBox,
       #footer .fooer_inner,
       #newIndexArea .bot_banner,
+      #marketArea .bot_banner,
       .btn_bot,
       #bbs_view_ty1,
       .comentArea
@@ -2354,7 +2362,8 @@ Pagination Styles
       .content-mediaBox,
        #footer.h_sub .fooer_inner ,
        #footer .fooer_inner,
-       #newIndexArea .bot_banner
+       #newIndexArea .bot_banner,
+       #marketArea .bot_banner
       { max-width: 767px; width:inherit; margin-left:auto; margin-right:auto; }  
       #footer.h_sub .fooer_inner ,
        #footer .fooer_inner
@@ -2639,6 +2648,10 @@ Pagination Styles
   #newIndexArea .bot_banner > a img.pc{display: none;}
   #newIndexArea .bot_banner > a img.mobile{display: block;}
   #newIndexArea .bot_banner{margin-left: -2%; margin-right: -2%;}
+
+  #marketArea .bot_banner > a img.pc{display: none;}
+  #marketArea .bot_banner > a img.mobile{display: block;}
+  #marketArea .bot_banner{margin-left: -2%; margin-right: -2%;}
 
   /* #marketRView .proview_area2 h1 { font-size: 18px; }
   #marketRView .proview_area2 h1 .ico { background-size: contain; height: 25px; line-height: 25px; } */

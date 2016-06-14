@@ -382,6 +382,15 @@ $(window).load(function(){
           </div><!--//list -->
        </section><!-- //categori -->
 
+       <!-- 배너 광고 -->
+       <div class="bot_banner">
+          <a href="http://www.leonkorea.com/" class="inner" target="_blank">
+            <img src="/upload/banner/14633621409DGKSNMZQR.jpg" class="pc" alt="" />
+            <img src="/upload/banner/1463362140G2SSZZ77FX.jpg" class="mobile" alt="" />
+          </a>
+       </div>
+       <!-- 배너 광고 -->
+
        <div id="categoriList" class="tabBox">
             <h3 class="h_tab"><button>전체</button></h3>
           <ul style="display: block;">
