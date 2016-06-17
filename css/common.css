@@ -232,13 +232,13 @@ a .fc_blue:hover{ color: #348fe2; border-bottom: 1px solid #348fe2; }
  * dashboard > 위시리스트
  * 260 *195
  */
-.lst_horizontal.style4 > ul{ margin-left: -2.796610169491525%; overflow: hidden; position: relative; left: 0; top: 0;}
-.lst_horizontal.style4 > ul > li{width: 21.273898%; margin-left: 2.796610169491525%; position: relative; overflow: hidden; }
+.lst_horizontal.style4 > ul{ margin: 0 -1%; overflow: hidden; position: relative; left: 0; top: 0;}
+.lst_horizontal.style4 > ul > li{width: 25%; padding: 0 1%; position: relative; overflow: hidden; box-sizing: border-box; }
 .lst_horizontal.style4 > ul > li .delet{ position: absolute; right: -30px; top: 0; z-index: 2;  }
 .lst_horizontal.style4 .photo{position: relative; overflow: hidden; height: 0; padding-bottom:115%; }
 .lst_horizontal.style4 > ul > li .photo .circle{position: absolute; right: 10px; top: 10px; z-index: 2; width: 15px; height: 15px;}
 .lst_horizontal.style4 > ul > li .photo .circle img{ width: 15px !important; height: 15px !important;  margin-left: 0 !important;}
-.lst_horizontal.style4 > ul > li .photo img{ position: absolute; left: 0; top: 0; max-width: 100%;}
+.lst_horizontal.style4 > ul > li .photo img{ position: absolute; left: 0; top: 0; width: 100%; max-width: 100%;}
 .lst_horizontal.style4 > ul > li .photo img.nomg{margin-left:0px !important};
 .lst_horizontal.style4 .cont{ min-height: 70px; padding: 14px 10px 0; text-align: left;  }
 .lst_horizontal.style4 .cont .t1{color: #666; font-size: 13px; line-height: 18px; font-weight: 700;}

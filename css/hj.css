@@ -355,11 +355,11 @@ textarea.normal_txtarea {border:1px solid #c9c9c9; width:95%;}
 #bbs_view_ty1 .content .ico_list:after {display:block; clear:both; content:"";}
 #bbs_view_ty1 .content .ico_list li {float:left; margin-left:13px;}
 
-.comentArea {margin-top:50px;}
+.comentArea {margin-top:20px;}
 .comentArea .inputBox {position:relative; margin-bottom:20px;}
 .comentArea .inputBox .input {margin-right:130px; display:block;}
-.comentArea .inputBox .input textarea {border:1px solid #cccccc; padding: 10px; line-height: 15px; height: 37px; width:100%; overflow:auto; box-sizing: border-box;}
-.comentArea .inputBox .btn {position:absolute; right:0; top:0; }
+.comentArea .inputBox .input textarea {border:1px solid #cccccc; padding: 10px; line-height: 15px; height: 82px; width:100%; overflow:auto; box-sizing: border-box; -webkit-appearance: none; -webkit-border-radius: 0;}
+.comentArea .inputBox .btn {position:absolute; right:0; bottom:0; }
 .comentArea .inputBox .btn button {display:block; width:100px; border:1px solid #838383;height:37px; background:#959595; color:#fff; font-size:15px; font-weight:bold;border-top-left-radius:19px;}
 .comentArea .inputBox .btn button:hover {border:1px solid #ED1848;background:#ED1848; color:#fff;}
 
@@ -389,7 +389,7 @@ textarea.normal_txtarea {border:1px solid #c9c9c9; width:95%;}
 }
 
 @media (max-width: 1200px){
-	.comentArea .inputBox {margin-right:5px;margin-left:5px;}
+	.comentArea .inputBox {}
 	/* .comentArea ~ .btn_bot {margin-right:5px;margin-left:5px;} */
 }
 @media screen and (max-width: 1200px){
@@ -493,6 +493,7 @@ textarea.normal_txtarea {border:1px solid #c9c9c9; width:95%;}
 #rentalArea ul.process_list li .inner .box p.tit {margin-bottom:10px;}
 
 .comentArea { margin-top: 20px; }
+.comentArea .inputBox .input textarea { height: 37px; }
 
 }
 

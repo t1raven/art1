@@ -65,21 +65,21 @@
 									<div class="listCont">
 										<ul class="movList">
 											<li class="videoItem" data-video="Standard-Simple" data-img="/images/art1/mediaart1_mov01.jpg" data-idx="1">
-												<a href="#">
+												<a href="#" class="out_cover">
 													<img src="/images/art1/mediaart1_mov01.jpg" alt="">
 													<div class="cover"></div>
 												</a>
 												<p>SIMPLE</p>
 											</li>
 											<li class="videoItem" data-video="Standard-Classic" data-img="/images/art1/mediaart1_mov02.jpg" data-idx="2">
-												<a href="#">
+												<a href="#" class="out_cover">
 													<img src="/images/art1/mediaart1_mov02.jpg" alt="">
 													<div class="cover"></div>
 												</a>
 												<p>CLASSIC</p>
 											</li>
 											<li class="videoItem" data-video="Standard-Majestic" data-img="/images/art1/mediaart1_mov03.jpg" data-idx="3">
-												<a href="#">
+												<a href="#" class="out_cover">
 													<img src="/images/art1/mediaart1_mov03.jpg" alt="">
 													<div class="cover"></div>
 												</a>
@@ -124,22 +124,22 @@
 									<div class="listCont">
 										<ul class="movList">
 											<li class="videoItem" data-video="Standard-Simple" data-img="/images/art1/mediaart1_mov01.jpg" data-idx="1">
-												<a href="#">
+												<a href="#" class="out_cover">
 													<img src="/images/art1/mediaart1_mov00.jpg" alt="">
 													<div class="cover"></div>
 												</a>
 												<p>SIMPLE / 국내작가</p>
 											</li>
-											<li class="videoItem" data-video="Premium-Classic" data-img="/images/art1/mediaart1_mov00.jpg" data-idx="2">
-												<a href="#">
-													<img src="/images/art1/mediaart1_mov00.jpg" alt="">
+											<li class="videoItem" data-video="Premium-Classic" data-img="/images/art1/mediaart1_mov06.jpg" data-idx="2">
+												<a href="#" class="out_cover">
+													<img src="/images/art1/mediaart1_mov06.jpg" alt="">
 													<div class="cover"></div>
 												</a>
 												<p>CLASSIC / 국외작가</p>
 											</li>
-											<li class="videoItem" data-video="Premium-Majestic" data-img="/images/art1/mediaart1_mov03.jpg" data-idx="3">
-												<a href="#">
-													<img src="/images/art1/mediaart1_mov03.jpg" alt="">
+											<li class="videoItem" data-video="Premium-Majestic" data-img="/images/art1/mediaart1_mov07.jpg" data-idx="3">
+												<a href="#" class="out_cover">
+													<img src="/images/art1/mediaart1_mov07.jpg" alt="">
 													<div class="cover"></div>
 												</a>
 												<p>MAJESTIC / 기획자</p>
@@ -179,13 +179,13 @@
 									<div class="listCont">
 										<ul class="movList">
 											<li class="videoItem" data-video="Customizing-01" data-img="/images/art1/mediaart1_mov04.jpg" data-idx="1">
-												<a href="#">
+												<a href="#" class="out_cover">
 													<img src="/images/art1/mediaart1_mov04.jpg" alt="">
 													<div class="cover"></div>
 												</a>
 											</li class="videoItem">
 											<li class="videoItem" data-video="Customizing-02" data-img="/images/art1/mediaart1_mov05.jpg" data-idx="2">
-												<a href="#">
+												<a href="#" class="out_cover">
 													<img src="/images/art1/mediaart1_mov05.jpg" alt="">
 													<div class="cover"></div>
 												</a>

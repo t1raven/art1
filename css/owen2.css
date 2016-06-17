@@ -424,8 +424,8 @@ span.h100{height:100%;vertical-align: middle;display: inline-block;}
 #mediaArea .mediaCont.cont01 ul.movList { margin-bottom: 25px; overflow: hidden; margin-left: -10px; margin-right: -10px; }
 #mediaArea .mediaCont.cont01 ul.movList li { float: left; width: 33.33%; text-align: center; margin-bottom: 0px; box-sizing: border-box; padding: 0 10px; }
 #mediaArea .mediaCont.cont01 ul.movList li a { display: inline-block; background-color: #000; }
-#mediaArea .mediaCont.cont01 ul.movList li img { width: 100%; -webkit-transition: opacity .8s; transition: opacity .8s; opacity: 0.7; }
-#mediaArea .mediaCont.cont01 ul.movList li img:hover { opacity: 1; }
+#mediaArea .mediaCont.cont01 ul.movList li img { width: 100%; -webkit-transition: opacity .8s; transition: opacity .8s; }
+#mediaArea .mediaCont.cont01 ul.movList li .cover { background-color: rgba(0,0,0,.3); cursor: pointer; }
 #mediaArea .mediaCont.cont01 ul.movList li:last-child { margin-right: 0; }
 #mediaArea .mediaCont.cont01 ul.movList li p { padding: 13px 0; font-size: 15px; line-height: 20px; letter-spacing: 0; color: #333; font-weight: bold; }
 #mediaArea .mediaCont.cont01 ul.spacList { margin-bottom: 20px; }

@@ -841,7 +841,7 @@ label.dib.txt5{ width: 65px;    }
 #marketArea .categori .list > ul > li .spec a.btn,#marketArea .marketVisual .list > ul > li .spec a.btn:hover{ color: #ed1848;  }
 
 /*마켓 재작업 : 검색단*/
-#marketArea .tabBox{margin-bottom: 15px;}
+#marketArea .tabBox{margin-bottom: 11px;}
 #marketArea .searchArea{text-align: center; height: 100px; margin-bottom: 0px;}
 #marketArea .searchArea .inner{display: inline-block; *display: inline; *zoom: 1; position: relative;}
 #marketArea .searchArea .sort_lst{display: inline-block; *display: inline; *zoom: 1;}
@@ -1355,8 +1355,9 @@ Pagination Styles
 #bbs_view_ty1 .content .bbs_infor a.file {color:#f35176;}
 #bbs_view_ty1 .content .bbs_infor a.file span {text-decoration:underline;}
 #bbs_view_ty1 .content .bbs_infor span.writer {color:#7d7d7d; font-size:13px;}
-#bbs_view_ty1 .bbsBody {max-width:898px; margin:0px auto;}
+#bbs_view_ty1 .bbsBody {max-width:898px; margin: 0 auto; overflow: hidden;}
 #bbs_view_ty1 .bbsBody p{line-height:20px;}
+#bbs_view_ty1 .bbsBody .con { width: 100% !important; }
 
 #bbs_view_ty1.write .header > *{ margin-top: 5px;}
 #bbs_view_ty1.write .content{padding: 0px 0 20px 0;}
@@ -1648,7 +1649,7 @@ Pagination Styles
 #newIndexArea .bot_banner > a img{width:100%;}
 #newIndexArea .bot_banner > a img.mobile{display: none;}
 
-#marketArea .bot_banner{margin-bottom:20px;}
+#marketArea .bot_banner{margin-bottom:22px;}
 #marketArea .bot_banner > a{display: block;}
 #marketArea .bot_banner > a img{width:100%;}
 #marketArea .bot_banner > a img.mobile{display: none;}
@@ -2176,6 +2177,7 @@ Pagination Styles
 
       /*마이페이지  :  위시리스트 */
       #wishListArea2 > .total{ top: -42px;}
+      .area_search_resut #wishListArea2 { margin-top: 35px; }
 
       /*마이페이지  :  상담내역 */
       #contactUsArea .thumb_photo .photo{ width: 204px;}
@@ -2679,7 +2681,7 @@ Pagination Styles
 
   img.img_for_pc{display: none;}
   img.img_for_mobile{display: block;}
-  .gallery_list > ul > li.w3{width: auto; margin-left: -3%; margin-right: -3%;padding-bottom: 6%;}
+  .gallery_list > ul > li.w3{width: auto; margin-left: -4%; margin-right: -4%;padding-bottom: 6%;}
 
   #spot_sub .cont h1{font-size: 26px;}
   #loginArea {padding-top: 0;}
