@@ -67,9 +67,9 @@ ul.g_sns_type1 > li > a> span > img{height:100%;}
 #gallery_spot > .bx_slide.show{visibility: visible;}
 #gallery_spot > .bx_slide > ul{max-height: 590px;}
 #gallery_spot > .bx_slide > ul:after{content: '';display: block;clear: both;}
-#gallery_spot > .bx_slide > ul > li{float: left;width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding:0 1.2px;}
+#gallery_spot > .bx_slide > ul > li{float: left;width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;/* padding:0 1.2px; */}
 #gallery_spot > .bx_slide > ul > li > a{display: block;position: relative;height: 0;padding-bottom:44%;}
-#gallery_spot > .bx_slide > ul > li > a > img{width: 100%;position: absolute;top:0;left: 0;display: block;}
+#gallery_spot > .bx_slide > ul > li > a > img{max-width: 100%;position: absolute;top:0;left: 0;display: block;}
 #gallery_spot > .bx_slide > ul > li > a > span.txt{display: block;position: absolute;left:0;right: 0;bottom:5.7692%;max-width: auto;text-align: center;color: #fff;}
 #gallery_spot > .bx_slide > ul > li > a > span.txt > strong{display: block;font-size: 24px;padding-bottom: 30px;margin-bottom: 26px;position: relative;}
 #gallery_spot > .bx_slide > ul > li > a > span.txt > strong:after{content: '';width: 31px;height: 3px;background-color: #fff;position: absolute;bottom:0;left:0;right:0;margin: auto;}
@@ -155,9 +155,10 @@ ul.g_sns_type1 > li > a> span > img{height:100%;}
 #spot_gallery_about > .bx_right .con dl.hori:after{content: '';display: block;clear: both;}
 #spot_gallery_about > .bx_right .con dl.hori > dt{float: left;margin-right:5px;width:25px;}
 #spot_gallery_about > .bx_right .con dl.hori > dt img{max-height:16px;}
-#spot_gallery_about > .bx_right .con dl.hori > dd{display: table;}
+#spot_gallery_about > .bx_right .con dl.hori > dd{display: table; margin-left: 30px;}
 #spot_gallery_about > .bx_right .con > a{color: #666;text-decoration: underline;}
 #spot_gallery_about > .bx_right .con > a:hover{color: #333;}
+#spot_gallery_about > .bx_right .con .tabBox { margin-bottom: 10px; text-align: left; }
 #spot_gallery_about > .bx_right .con #bx_map{position: relative;height:0;padding-bottom:67%;}
 #spot_gallery_about > .bx_right .con #bx_map > .inner{position: absolute;top: 0;bottom: 0;left: 0;right: 0;}
 #spot_gallery_about > .bx_right ul.g_sns_type1{margin-top:20px;}

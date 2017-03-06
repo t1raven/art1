@@ -79,10 +79,23 @@ switch($tgt) {
 					<h3><span><?php echo $val['artistNameEn']; ?></span> <button class="view_more" onclick="mvArtist('<?php echo $idx; ?>', '<?php echo $val['artistIdx']; ?>');"><span>자세히보기</span></button></h3>
 					<h4><?php echo $val['worksNameEn'], ', ', $val['makingDate']; ?></h4>
 					<p><?php echo $val['material']; ?></p>
+
 					<?php if ((int)$val['height'] > 0 || (int)$val['width'] > 0) : ?>
-					<p><?php echo $val['height']; ?> x <?php echo $val['width']; ?><?php if (!empty($val['depth'])) : ?> x  <?php echo $val['depth']; ?><?php endif ; ?> cm</p>
+						<p><?php echo $val['height']; ?> x <?php echo $val['width']; ?><?php if (!empty($val['depth'])) : ?> x  <?php echo $val['depth']; ?><?php endif ; ?> cm</p>
 					<?php else : ?>
-					<p>Variable dimensions</p>
+						<p>Variable dimensions</p>
+					<?php endif ; ?>
+
+					<?php if ((int)$val['height2'] > 0 || (int)$val['width2'] > 0) : ?>
+						<p><?php echo $val['height2']; ?> x <?php echo $val['width2']; ?><?php if (!empty($val['depth2'])) : ?> x  <?php echo $val['depth2']; ?><?php endif ; ?> cm</p>
+					<?php endif ; ?>
+
+					<?php if ((int)$val['height3'] > 0 || (int)$val['width3'] > 0) : ?>
+						<p><?php echo $val['height3']; ?> x <?php echo $val['width3']; ?><?php if (!empty($val['depth3'])) : ?> x  <?php echo $val['depth3']; ?><?php endif ; ?> cm</p>
+					<?php endif ; ?>
+
+					<?php if (strlen($val['editionCurrent']) > 0  &&  strlen($val['editionLast']) > 0 ) : //에디션 추가. 0 을 사용할 수도 있으므로  empty 사용하지 않음// 2016-05-20 LYT ?>
+						<p> Ed.<?php echo $val['editionCurrent']?> Of <?php echo $val['editionLast']?></p>
 					<?php endif ; ?>
 				</header>
 				<div class="btns">

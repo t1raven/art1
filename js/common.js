@@ -17,7 +17,7 @@ var device;
 function con(l,t){
   if( "console" in window ){
      var log = (t == undefined) ? l : t + l;
-     console.log(log);
+     //console.log(log);
   }
 }
 var console = window.console || {log:function(){}};
@@ -834,6 +834,34 @@ function shareFaceBook(url, img, title, summary){
 	window.open(fullUrl,'','width='+ pWidth +',height='+ pHeight +',left='+ pLeft +',top='+ pTop +',location=no,menubar=no,status=no,scrollbars=no,resizable=no,titlebar=no,toolbar=no');
 }
 
+function shareFaceBookMarket(url, img, title, summary){
+	/*
+	$("meta[property='og:title']").attr("content", title);
+	$("meta[property='og:image']").attr("content", img);
+	$("meta[property='og:type']").attr("content", "art");
+	$("meta[property='og:site_name']").attr("content", "아트1닷컴");
+	$("meta[property='og:url']").attr("content", url);
+	$("meta[property='og:description']").attr("content", summary);
+	*/
+	var fullUrl;
+	var pWidth = 640;
+	var pHeight = 380;
+	var pLeft = (screen.width - pWidth) / 2;
+	var pTop = (screen.height - pHeight) / 2;
+
+	url = $(".swiper-slide-active > div > a").attr("href");
+	url = window.location.protocol + "//" + window.location.host + "/marketPlace/"+url;
+	/*
+	fullUrl = 'http://www.facebook.com/share.php?s=100&p[url]='+url+'&p[images][0]='+img+'&p[title]='+title+'&p[summary]='+summary;
+	fullUrl = fullUrl.split('#').join('%23');
+	fullUrl = encodeURI(fullUrl);
+	window.open(fullUrl,'','width='+ pWidth +',height='+ pHeight +',left='+ pLeft +',top='+ pTop +',location=no,menubar=no,status=no,scrollbars=no,resizable=no,titlebar=no,toolbar=no');
+	*/
+
+	fullUrl = "https://www.facebook.com/sharer/sharer.php?u="+encodeURIComponent(url) +  "&t=" + encodeURIComponent(title);
+	window.open(fullUrl,'','width='+ pWidth +',height='+ pHeight +',left='+ pLeft +',top='+ pTop +',location=no,menubar=no,status=no,scrollbars=no,resizable=no,titlebar=no,toolbar=no');
+}
+
 function shareGooglePlus(url, title) {
 	var url = "https://plus.google.com/share?url="+ encodeURIComponent(url) + "&t=" + encodeURIComponent(title);
 	window.open(url, '', 'width=490 height=470');
@@ -880,3 +908,18 @@ function showLayerArtworksView(idx, widx, eidx, aidx, fidx, tgt){
 		}
 	})
 }
+
+var getUrlParameter = function getUrlParameter(sParam) {
+    var sPageURL = decodeURIComponent(window.location.search.substring(1)),
+        sURLVariables = sPageURL.split('&'),
+        sParameterName,
+        i;
+
+    for (i = 0; i < sURLVariables.length; i++) {
+        sParameterName = sURLVariables[i].split('=');
+
+        if (sParameterName[0] === sParam) {
+            return sParameterName[1] === undefined ? true : sParameterName[1];
+        }
+    }
+};

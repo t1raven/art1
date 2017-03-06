@@ -3,6 +3,7 @@
           <li><a href="artist_rec.php">Artist Rec</a></li>
           <li><a href="art_collabo.php">Art Collabo</a></li>
           <li class="black"><a href="space_art1.php">space art1</a></li>
+          <li class="blue"><a href="media_art1.php">media art1</a></li>
           <li><a href="about_us.php">About</a></li>
           <li><a href="contact.php">Contact</a></li>
     </ul>
@@ -30,7 +31,7 @@
          $this.find(".prev").css("display","block");
       }else{
         $this.find(".prev").css("display","none");
-      }                  
+      }
 
 
    }else{
@@ -40,8 +41,8 @@
 
  $(function(){
 
-    sidemyScroll = new IScroll('.tabBox', { 
-        scrollX: true, 
+    sidemyScroll = new IScroll('.tabBox', {
+        scrollX: true,
         scrollY: false,
         mouseWheel: true ,
         preventDefault: false

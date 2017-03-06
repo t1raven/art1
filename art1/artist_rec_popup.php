@@ -2,7 +2,7 @@
 	$tile = $_GET['tile'];
 	include "artist_rec_data.php";
 	$vData = new videoData;
-	$vData -> checkData();
+	$vData -> checkData(0);
 	echo $vData ->tile[$tile][popTxt];
 ?>
 <script>

@@ -24,23 +24,40 @@
 						<li class="address">
 							<a href="javascript:;">Address & Hours</a>
 							<div class="con">
+								<?php if ($about->attr['isAddrDisplay'] == "Y") : ?>
 								<dl class="hori"> <dt><img src="/images/galleries/ico_location2.png" alt="주소" /> </dt> <dd><?php echo $about->attr['addr1'], '<br>', $about->attr['addr2']; ?></dd> </dl>
+								<?php endif ; ?>
+								<?php if ($about->attr['isAddrDisplayEn'] == "Y") : ?>
+								<dl class="hori"> <dt><img src="/images/galleries/ico_location2.png" alt="주소" /> </dt> <dd><?php echo $about->attr['addr1En']; ?></dd> </dl>
+								<?php endif ; ?>
+								<?php if (!empty($about->attr['companyAddrEn'])) : ?><dl class="hori"> <dt><img src="/images/galleries/ico_location2.png" alt="주소" /> </dt> <dd><?php echo $about->attr['companyAddrEn']; ?></dd> </dl><?php endif ; ?>
 								<?php if (!empty($about->attr['parking'])) : ?><dl class="hori"> <dt><img src="/images/galleries/ico_parking2.png" alt="주차" /></dt> <dd><?php echo $about->attr['parking']; ?></dd> </dl><?php endif ; ?>
 								<?php if (!empty($about->attr['openingHours'])) : ?><dl class="hori"> <dt><img src="/images/galleries/ico_watch2.png" alt="관람시간" /></dt> <dd><?php echo $about->attr['openingHours']; ?></dd> </dl><?php endif ; ?>
 							</div>
 						</li>
 						<li class="map yet">
-							<a href="javascript:;">Map</a>
+							<a href="javascript:;">Map</a>							
 							<div class="con">
-								<div id="bx_map">
+								<?php if (!empty($about->attr['companylatlng'])) : ?>
+								<div class="tabBox">
+									<ul>
+										<li class="on" id="tab1"><a href="javascript:map_select(1);">지사</a></li>
+										<li class="" id="tab2"><a href="javascript:map_select(2);">본사</a></li>
+									</ul>
+								</div>
+								<?php endif ; ?>
+								<div id="bx_map"></div>
+								<?php if (!empty($about->attr['companylatlng'])) : ?>
+								<div id="bx_map2" style="width: 100%; height: 215px;"></div>
+								<?php endif ; ?>
 							</div>
 						</li>
 						<li class="contact">
 							<a href="javascript:;">Contact</a>
 							<div class="con">
-								<dl class="hori"> <dt><img src="/images/galleries/ico_email2.png" alt="이메일" /> </dt> <dd><?php echo $about->attr['email']; ?></dd> </dl>
+								<dl class="hori"> <dt><img src="/images/galleries/ico_email2.png" alt="이메일" /> </dt> <dd><?php echo str_replace("/", "<br>", $about->attr['email']); ?></dd> </dl>
 								<dl class="hori"> <dt><img src="/images/galleries/ico_phone2.png" alt="전화번호" /> </dt> <dd><?php echo $about->attr['tel']; ?></dd> </dl>
-								<dl class="hori"> <dt><img src="/images/galleries/ico_fax2.png" alt="팩스" /> </dt> <dd><?php echo $about->attr['fax']; ?></dd> </dl>
+								<?php if (!empty($about->attr['fax'])) : ?><dl class="hori"> <dt><img src="/images/galleries/ico_fax2.png" alt="팩스" /> </dt> <dd><?php echo $about->attr['fax']; ?></dd> </dl><?php endif ; ?>
 							</div>
 						</li>
 						<li class="links">
@@ -289,10 +306,33 @@ iCutterOwen(["#gallery_spot > .bx_slide > ul > li > a", ".gallery_list_exhi .img
 $(window).resize(function(){
 	iCutterOwen(["#bbs_thumb_t5 > ul > li .thumb"]);
 })
+function map_select(num)
+{
+	if(num == 1)
+	{		
+		$("#tab1").removeClass("on");
+		$("#tab2").removeClass("on");
+		$("#tab1").addClass("on");
+
+		$("#bx_map").css("display", "");
+		$("#bx_map2").css("display", "none");
+		initialize();
+	}
+	else
+	{
+		$("#tab1").removeClass("on");
+		$("#tab2").removeClass("on");
+		$("#tab2").addClass("on");
+
+		$("#bx_map").css("display", "none");
+		$("#bx_map2").css("display", "");
+		initialize();
+	}
+}
 $(function(){
 	$("#spot_gallery_about .bx_right > ul > li > a").click(function(){
-		aboutFn.toggle(this);
-	});
+		aboutFn.toggle(this);		
+	});	
 });
 var aboutFn = {
 	toggle : function(me){
@@ -305,9 +345,10 @@ var aboutFn = {
 			par.siblings('.on').removeClass('on').find('.con').slideUp();
 			par.addClass('on');
 			ans.slideDown(400,function(){
-				if(par.hasClass('map yet')){
-					initialize();
-					par.removeClass('yet')
+				if(par.hasClass('map yet')){					
+					initialize();					
+					par.removeClass('yet');			
+					map_select(1);
 				}
 			});
 		}
@@ -338,6 +379,37 @@ function initialize(){
 		window.open("https://maps.google.com/maps?q=<?php echo $about->attr['lat']; ?>,<?php echo $about->attr['lng']; ?>&ll=<?php echo $about->attr['lat']; ?>,<?php echo $about->attr['lng']; ?>&z=15", "gooeleMap", "");
 	});
 
+
+	<?php if (!empty($about->attr['companylatlng'])) : ?>
+	<?php
+		$companylatlng = explode(",", $about->attr['companylatlng']);
+	?>
+
+	var myLatlng2 = new google.maps.LatLng(<?php echo $companylatlng[0]; ?>, <?php echo $companylatlng[1]; ?>);
+	var mapOptions2 = {
+		zoom: 16,
+		scrollwheel : false,
+		center: myLatlng2,
+		mapTypeId: google.maps.MapTypeId.ROADMAP
+	}
+	var map2 = new google.maps.Map(document.getElementById('bx_map2'), mapOptions2);
+	var marker2 = new google.maps.Marker({
+		position: myLatlng2,
+		map: map2,
+		title: "<?php echo $about->attr['galleryNameEn']; ?>"
+	});
+	google.maps.event.addDomListener(window, "resize", function() { //리사이즈에 따른 마커 위치
+		var center2 = map2.getCenter();
+		google.maps.event.trigger(map2, "resize");
+		map2.setCenter(center2);
+	});
+
+	google.maps.event.addListener(marker2, "click", function() { //리사이즈에 따른 마커 위치
+		window.open("https://maps.google.com/maps?q=<?php echo $companylatlng[0]; ?>,<?php echo $companylatlng[1]; ?>&ll=<?php echo $companylatlng[0]; ?>,<?php echo $companylatlng[1]; ?>&z=15", "gooeleMap", "");
+	});		
+	
+	<?php endif ; ?>
+	
 	/*
 	setTimeout(
 		function(){

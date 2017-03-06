@@ -18,6 +18,7 @@ $news_menu_world = '?at=list&subm=14';
 $news_menu_trouble = '?at=list&subm=5';
 $news_menu_episode = '?at=list&subm=6';
 $news_menu_cardnews = '?at=list&subm=15';
+$news_menu_post = '?at=list&subm=16';
 $news_menu_community = '/bbs/?at=list';
 
 //뉴스 카테고리 idx //db news_category 을 기준으로 한다.
@@ -63,7 +64,7 @@ if (!empty($news_category_idx)){
 	$news_skin_type = $Newstype->attr['news_skin_type'];
 	$news_category_name = $Newstype->attr['news_category_name'];
 }
-	
+
 if ($news_skin_type == 'tile' && $_REQUEST['at']=='list'){ //tile 형은  ajax 로 목록을 만듬으로 별도의 list 로 만든다.
 	//echo '<script>console.log("news_skin_type : '.$news_skin_type.' ")</script>';
 	require('list.tile.php');

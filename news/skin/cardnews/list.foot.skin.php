@@ -32,9 +32,9 @@ include_once(ROOT.'inc/bot.php');
 <script src="/js/jquery.dotdotdot.min.js"></script>
 <script>
 function swipeCardNews(){
-	
+
 <?php if ( $check_mobile == true ){ ?>
-	
+
 		// $("#cardnewsView .view_box .img_box").swipe({
 			// swipeLeft:function() {
 				// slideCardImg(1);
@@ -47,9 +47,9 @@ function swipeCardNews(){
 }
 
 $(function(){
-	resizing2();
+	resizing2(3);
 	$(window).resize(function(){
-		resizing2();
+		resizing2(3);
 		var CardBoxH = Math.max($(window).scrollTop()+($(window).height()/2)-($("#cardnewsView .view_box").height()/2),30);
 		$("#cardnewsView .view_box").css("margin-top",CardBoxH);
 	})

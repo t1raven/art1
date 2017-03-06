@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+#loginBoxArea{ width:604px; margin:0 auto; padding:135px 0 0 0;   font-family:"Lato"; margin-bottom:80px; }
+#loginBoxArea > h1{margin-bottom:25px; font-size:38px; color:#5a5959; text-align:center; font-weight:400; }
+#loginBoxArea > h1 > strong{font-weight:700;}
+#loginBoxArea .blueBox{ width:360px; height:290px; margin:0 auto 119px auto;/* box-shadow:5px 5px 5px #e0e0e0; */  /* background-color:#348fe2; */}
+#loginBoxArea .blueBox > p {margin-bottom:100px; font-size:22px; color:#333; text-align:center; font-weight:400;} 
+#loginBoxArea .flid {text-align:center;}
+#loginBoxArea .flid button{width:132px; height:38px;padding-bottom:4px; background-color:#184167; color:#fff;  border-radius:8px; font-size:20px; font-family:"Lato"; font-weight:400; }
+#loginBoxArea .flid .id_box{width:360px; height:36px; margin-bottom:6px; overflow:hidden; border-radius:3px; background:url(/oktomato/images/login/ico_id.png) #a5a5a5 18px center no-repeat; }
+#loginBoxArea .flid .id_box > input{width:285px; height:32px; margin-left:51px; padding-left:21px; font-family:"Lato"; font-weight:700;  border:1px solid #a5a5a5}
+#loginBoxArea .flid .pw_box{width:360px; height:36px; margin-bottom:50px;  overflow:hidden; border-radius:3px; background:url(/oktomato/images/login/ico_pw.png) #a5a5a5 19px center no-repeat;}
+#loginBoxArea .flid .pw_box > input{width:285px; height:32px; margin-left:51px; padding-left:21px; font-family:"Lato"; font-weight:700; border:1px solid #a5a5a5}
+#loginBoxArea .footer {text-align:center;}
+#loginBoxArea .footer h1{margin-bottom:20px;}
+#loginBoxArea .footer .copyright{font-size:12px; color:#b1b1b1;}
+#loginBoxArea .footer .copyright span{display:inline-block; padding: 0 10px;}

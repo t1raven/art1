@@ -43,7 +43,7 @@ $barbanner = $galleries->getBarBanner($dbh);
 					<ul class="swiper-wrapper">
 						<?php foreach($mainbanner as $val) : ?>
 						<li class="swiper-slide">
-							<a href="<?php echo $val['link']; ?>">
+							<a href="<?php echo $val['link']; ?>" <?php if($val['isTarget'] == "Y") : ?>target="_blank"<?php endif; ?>>
 								<img src="<?php echo galleriesBannerUploadPath, $val['upfileName']; ?>" alt="" class="pc"/>
 								<img src="<?php echo galleriesBannerUploadPath, $val['mobileupfileName']; ?>" alt="" class="mobile"/>
 								<span<?php if (!empty($val['bannerCaption'])) : ?> class="txt"<?php endif; ?>>
@@ -113,7 +113,7 @@ $barbanner = $galleries->getBarBanner($dbh);
 						<?php if ($key === 8 || $key === 17 || $key === 26 || $key === 35 || $key === 44) : ?>
 							<?php if (!empty($barbanner[$i]['upfileName'])) : ?>
 								<li class="w3">
-									<a href="<?php echo $barbanner[$i]['link']; ?>" target="_blank" class="banner">
+									<a href="<?php echo $barbanner[$i]['link']; ?>" <?php if($barbanner[$i]['isTarget'] == "Y") : ?>target="_blank"<?php endif; ?> class="banner">
 										<img src="<?php echo galleriesBannerUploadPath, $barbanner[$i]['upfileName']; ?>" class="img_for_pc" alt="" />
 										<img src="<?php echo galleriesBannerUploadPath, $barbanner[$i]['mobileupfileName']; ?>" class="img_for_mobile" alt="" />
 									</a>
@@ -132,7 +132,7 @@ $barbanner = $galleries->getBarBanner($dbh);
 	</div><!-- //container_inner -->
 </section><!-- //container_sub -->
 <script>
-iCutterOwen([/*"#gallery_spot > .bx_slide > ul > li > a",*/ ".gallery_list .img"]);
+iCutterOwen([/*"#gallery_spot > .bx_slide > ul > li > a", */".gallery_list .img"]);
 var soptSp = new Swiper("#gallery_spot > .bx_slide", {
 	pagination : "#gallery_spot .pagination > .inner",
 	paginationClickable : true,
@@ -141,22 +141,8 @@ var soptSp = new Swiper("#gallery_spot > .bx_slide", {
 	autoplay : 5000,
 	onSwiperCreated : function(){
 		$("#gallery_spot > .bx_slide").addClass("show");
-	},
-	onInit: function(){
-		swiperSlideH($("#gallery_spot > .bx_slide > ul > li > a"));
 	}
 });
-
-
-function swiperSlideH(t) {
-  $(window).resize(function(e) {
-    var slideH = t.find(".pc").height();
-    if($(window).width() <= 639){
-      slideH = t.find(".mobile").height();
-    }
-    t.css('padding-bottom', slideH);
-  }).resize();
-}
 
 $(function(){
 	$("#gallery_spot > .bx_slide .pagination > button.prev").click(function(e){e.preventDefault();soptSp.swipePrev();});

@@ -1,0 +1,21 @@
+
+
+.font_blue_color { font-size:14px; color:#348fe2; text-decoration:underline;}
+
+.font_blue_color_nolink { font-size:14px; color:#348fe2; }
+.font_blue_color_nolink { font-size:14px; color:#348fe2; }
+.font_red_color_nolink { font-size:14px; color:#348fe2; }
+
+
+
+
+.ml15{ display: inline-block; *display: inline; *zoom: 1;margin-left: 15px; }
+/* font color */
+.td-u{ text-decoration: underline; }
+.fc_blue{ color: #348fe2 !important; }
+.fc_purple{  color: #7762a7 !important; }
+.fc_red{  color: #ff0000 !important; }
+.fc_blue{  color: #23b2f4 !important; }
+.fc_gray {color:#8b8b8b !important;}
+
+/* //font color */

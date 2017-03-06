@@ -193,7 +193,7 @@
 	
 	#NewsV2 .bot_banner > a img.pc{display: none;}
 	#NewsV2 .bot_banner > a img.mobile{display: block;}
-	#NewsV2 .bot_banner{margin-left: -2%; margin-right: -2%;}
+	#NewsV2 .bot_banner{margin-left: -3%; margin-right: -3%;}
 }
 
 /*sect1 버튼 위치*/

@@ -17,10 +17,10 @@ div.fakefile {
  left: 0px;
  z-index: 1;
 }
-div.fakefile input{ border: 1px solid #e2e7eb;  width: 260px;   height: 24px; line-height: 24px; margin-right: 5px;} 
+div.fakefile input{ border: 1px solid #e2e7eb;  width: 260px;   height: 24px; line-height: 24px; margin-right: 5px;}
 input.file {
 cursor: pointer;
- width: 330px; 
+ width: 330px;
  height: 28px; line-height: 28px;
  position: relative;
  text-align: right;
@@ -39,7 +39,7 @@ input.fileDesign {
  vertical-align: middle;
  border: 1px solid #e2e7eb;
  cursor: pointer;
- width: 150px; 
+ width: 150px;
  height: 26px; line-height: 26px;
  position: relative;
  z-index: 2;
@@ -90,10 +90,10 @@ label.dib{ display: inline-block; *display: inline; *zoom: 1; color: #666767; fo
 label.pos{position: absolute; left: 10px; top: 5px; cursor:text }
 label.dib.date{ width: 86px;    }
 label.dib.date2{ width: 55px;    }
-label.dib.txt5{ width: 65px;    } 
+label.dib.txt5{ width: 65px;    }
 .lst_table1 > table{width: 100%; }
 .lst_table1 > table th,.lst_table1 > table td{ border-bottom: 1px solid #d9d9d9;  color: #9c9c9c;  vertical-align: middle;}
-.lst_table1 > table th{ color: #09214b; text-align: left;  padding: 11px 16px; } 
+.lst_table1 > table th{ color: #09214b; text-align: left;  padding: 11px 16px; }
 .lst_table1 > table .cen{ text-align: center; }
 
 .lst_table2{position: relative;}
@@ -117,7 +117,7 @@ label.dib.txt5{ width: 65px;    }
 
 .lst_table2 .pad_10{padding:12px 0;}
 .lst_table2 .pad_30{padding:12px 30px;}
-.lst_table2 > table tbody.pad15 tr td,.lst_table2 > table thead.pad15 tr th{padding:15px} 
+.lst_table2 > table tbody.pad15 tr td,.lst_table2 > table thead.pad15 tr th{padding:15px}
 
 .lst_table3{ border-style: solid; border-color: #e2e7eb #fff #e2e7eb; border-width:0; position: relative; margin-bottom:30px;}
 .lst_table3> table{width: 100%; }
@@ -192,10 +192,10 @@ label.dib.txt5{ width: 65px;    }
 
 
 /**
- * option ::: linkBox 
+ * option ::: linkBox
  */
 .lst_horizontal.style2 .item .link{
-  position: absolute; left: 0; bottom: 0; width: 100%;  height: 61px; 
+  position: absolute; left: 0; bottom: 0; width: 100%;  height: 61px;
   background-color: rgba(0, 0, 0, 0.6);
        /* IE 5.5 - 7 */
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#99000000, endColorstr=#99000000);
@@ -206,11 +206,11 @@ label.dib.txt5{ width: 65px;    }
 
 
 /* //common */
- 
+
 
 /*상단 문의 폼 : 공통*/
 #resevationArea{  }
-#resevationArea {z-index:999; background:#fff; width:100%; min-height: 453px; padding-top:56px; padding-bottom:30px; /* border-bottom:2px solid #717171; */}
+#resevationArea {z-index:999; background:#fff; width:100%; min-height: 453px; padding-top:60px; padding-bottom:30px; /* border-bottom:2px solid #717171; */}
 #resevationArea .header{  margin-bottom: 18px; padding-bottom: 18px; border-bottom: 1px solid #000;  }
 #resevationArea .header h1{margin-bottom: 0;}
 #resevationArea .inner{ max-width: 1040px; margin: 0 auto; position: relative;}
@@ -219,7 +219,7 @@ label.dib.txt5{ width: 65px;    }
 #resevationArea .rgh_group{width: 330px;  min-height: 265px; float: right; padding-left: 45px; border-left: 1px solid #e7e7e7;  font-size: 13px; line-height: 20px; }
 
 /*상단 문의 폼 : 컨텐츠 */
-#resevationContArea #resevationArea {border-bottom:0; padding-top: 0;} 
+#resevationContArea #resevationArea {border-bottom:0; padding-top: 0;}
 #resevationContArea #resevationArea .close{display: none;}
 
 /*퀵서치:공통*/
@@ -301,7 +301,7 @@ label.dib.txt5{ width: 65px;    }
 #marketPlaceArea .hotTheme .quickLink .inner{ border-width: 0 1px 1px; }
 
 #marketPlaceArea .hotTheme .RepBanner .bxBanner  ul > li{width: 100%; overflow: hidden;}
-#marketPlaceArea .hotTheme .RepBanner .bxBanner  ul > li .cont{ 
+#marketPlaceArea .hotTheme .RepBanner .bxBanner  ul > li .cont{
  width: 100%; position: absolute; left: 0; bottom: 0;
  min-height: 90px;
  background-color: rgba(0, 0, 0, 0.6);
@@ -346,14 +346,13 @@ label.dib.txt5{ width: 65px;    }
 #exhibitions_detail .exh h1{ margin-bottom: 30px;  font-size: 25px; line-height: 28px; color: #333;  font-weight: 700;     }
 #exhibitions_detail .exh > ul{margin-left:-1.2%;}
 #exhibitions_detail .exh > ul:after{display: block;clear: both;content:"";height: 0;visibility: hidden;}
-#exhibitions_detail .exh > ul > li{ position: relative; width: 15.3%; margin-left: 1.2%; margin-bottom: 15px;  float: left; }
+#exhibitions_detail .exh > ul > li{ position: relative; width: 18.8%; margin-left: 1.2%; margin-bottom: 15px;  float: left; }
 #exhibitions_detail .exh > ul > li img{max-width: 100%;}
 #exhibitions_detail .exh > ul > li .photo{ height: auto;display: block;overflow: hidden;  }
-#exhibitions_detail .exh > ul > li .circle{position: absolute;   right: 10px;   top: 10px;  }
+#exhibitions_detail .exh > ul > li .circle{position: absolute; right: 10px; top: 10px;  }
 #exhibitions_detail .exh > ul > li .cont{ border-bottom: 1px solid #b1b1b1; padding-top: 15px;  padding-bottom: 5px;  }
 #exhibitions_detail .exh > ul > li .cont .name{ font-size: 11px; font-family:'Dotum','돋움'; margin-bottom: 5px; }
 #exhibitions_detail .exh > ul > li .cont .h{ font-size: 15px; line-height: 20px; height: 40px; overflow: hidden; color: #333; font-weight: 700; }
-
 
 /*art1 :: exhibition*/
 #art1_exhibition{ }
@@ -379,7 +378,7 @@ label.dib.txt5{ width: 65px;    }
 #movIeA7_wrapper object,
 #movIeA8_wrapper object,
 #movIeA9_wrapper object,
-#movIeA10_wrapper object, #movIeA11_wrapper object, #movIeA12_wrapper object, #movIeA13_wrapper object, 
+#movIeA10_wrapper object, #movIeA11_wrapper object, #movIeA12_wrapper object, #movIeA13_wrapper object,
 #art1_exhibition .photographer .movie video
 { position: absolute; left: 0; top: 0; width: 100%; height: 100%; }
 #art1_exhibition .photographer .movie .play{ position: absolute; left: 50%; top: 50%; margin-left: -50px; margin-top: -50px; width: 100px; z-index: 2; display: none; }
@@ -457,11 +456,11 @@ label.dib.txt5{ width: 65px;    }
 #art1_promotion > .article .pro_info .edittionbox  li > button.out:hover{ color: #ededee; background-color:#fff; }
 #art1_promotion > .article .pro_info .edittionbox .info{font-size: 12px; line-height: 20px; margin-bottom: 5px;}
 #art1_promotion > .article .pro_info > ul > li > span{ display: block; margin-left: 130px; }
- #art1_promotion > .article .pro_info .ex{position: static; left: 0; top: 0; text-align: center; } 
+ #art1_promotion > .article .pro_info .ex{position: static; left: 0; top: 0; text-align: center; }
 /* #art1_promotion > .article .pro_info .ex{position: absolute; left: 45%; top: 114px ; } */
 #art1_promotion > .article .pro_info .ex p{margin-bottom: 15px; font-size: 13px; line-height: 24px;}
 #art1_promotion > .article .pro_info .btn_buy{
-  display: inline-block;  *display: inline;  *zoom: 1; width: 168px; height: 40px; background:#353535; color:#fff; text-align:center;  
+  display: inline-block;  *display: inline;  *zoom: 1; width: 168px; height: 40px; background:#353535; color:#fff; text-align:center;
   font-size: 15px; line-height:40px; border: 1px solid #4e4e4e; border-top-left-radius:17px;
 }
 #art1_promotion > .article .pro_info2{ font-size: 14px; line-height: 24px; margin-bottom: 60px; }
@@ -494,7 +493,7 @@ label.dib.txt5{ width: 65px;    }
 .RepBanner .bxBanner .bx-pager .bx-pager-item{display: inline-block; *display: inline; *zoom: 1; margin-left: 7px;}
 .RepBanner .bxBanner .bx-pager .bx-pager-item a{ display: inline-block; *display: inline;  *zoom: 1; width: 18px; height: 18px; background-image: url(../images/ico/ico_circle_off.png); background-position: 0 0; background-repeat: no-repeat;  overflow: hidden; text-indent: -3000px }
 .RepBanner .bxBanner .bx-pager .bx-pager-item a.active{ background-image: url(../images/ico/ico_circle_on.png);  }
- 
+
  #marketPlaceArea .hotTheme .MDChoice .inner{ padding: 13px 16px 24px; }
   #marketPlaceArea .hotTheme .MDChoice .bxBanner{ width: 267px; margin: 0 auto;   }
 
@@ -601,7 +600,7 @@ label.dib.txt5{ width: 65px;    }
 #aboutArea ul.list li > div.cont .bg dl dd {line-height:28px;color:#666;}
 #aboutArea ul.list li > div.cont .bg dl dd span {display:none;}
 #aboutArea ul.list li > div.cont .bg dl.a1 {top: -8%; left: 46%;}
-#aboutArea ul.list li > div.cont .bg dl.a2 {top: 22%; right: -7%;} 
+#aboutArea ul.list li > div.cont .bg dl.a2 {top: 22%; right: -7%;}
 #aboutArea ul.list li > div.cont .bg dl.a3 {bottom: 10%; right: 1%; }
 #aboutArea ul.list li > div.cont .bg dl.a4 {bottom: 10%; left: -5%;}
 #aboutArea ul.list li > div.cont .bg dl.a5 {top: 22%; left: -27px;}
@@ -622,7 +621,7 @@ label.dib.txt5{ width: 65px;    }
 #contactArea ul li.tels>div{display:inline-block;margin-right:20px;margin-bottom:5px;}
 
 /*마켓 재작업 : 상단 롤링배너*/
-#marketRView{ /* width: 1010px; */ width: 0; height: 100%;  /* overflow-y: scroll; */ overflow:hidden;  position: fixed;  
+#marketRView{ /* width: 1010px; */ width: 0; height: 100%;  /* overflow-y: scroll; */ overflow:hidden;  position: fixed;
     right: 0; top: 0; z-index: 10;  background-color: #fff; text-align: left;  zoom:1; /*    -webkit-overflow-scrolling: touch; -webkit-transform: translateZ(0px);
     -webkit-transform: translate3d(0,0,0);
     -webkit-perspective: 1000; */ background-image: url(trg.png);}
@@ -630,14 +629,14 @@ label.dib.txt5{ width: 65px;    }
 #marketRView .inner_view{ margin-top: 0; margin-left: 40px; padding-bottom: 20px;   margin-bottom: 40px; width: 850px;}
 
 #marketArea{}
-#marketArea  .cover {  width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 4;  
+#marketArea  .cover {  width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 4;
   background-color: rgba(0, 0, 0, 0.7);  background-image: url(trg.png);
    /* IE 5.5 - 7 */
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc000000, endColorstr=#cc000000);
     /* IE 8 */
     -ms-filter: "progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc000000, endColorstr=#cc000000)";
 
-  }    
+  }
 
 
  #marketArea  .cover:not([dummy]) {
@@ -685,14 +684,14 @@ label.dib.txt5{ width: 65px;    }
 #marketRView .product_info .product_des .group_rgh .details_list{ margin-top: 30px;}
 #marketRView .product_info .product_des .group_rgh .details_list > li{ margin-top: 5px; }
 #marketRView .product_info .product_des .group_rgh .details_list > li strong{display: inline-block; *display: inline; *zoom: 1; width: 55px; font-weight: normal;}
-#marketRView .product_info .product_des .group_rgh .btn{margin-top: 22px; text-align: center;}
-#marketRView .product_info .product_des .group_rgh .btn > button{ 
-  margin-left: 2px; border: 1px solid #b5b5b5; border-radius: 2px; width: 100px; height: 34px;  display: inline-block; *display: inline; *zoom: 1; font-size: 12px; border-top-left-radius:13px;   
+#marketRView .product_info .product_des .group_rgh .btn{margin-top: 22px; text-align: right;}
+#marketRView .product_info .product_des .group_rgh .btn > button{
+  margin-left: 2px; border: 1px solid #b5b5b5; border-radius: 2px; width: 100px; height: 34px;  display: inline-block; *display: inline; *zoom: 1; font-size: 12px; border-top-left-radius:13px;
 }
 #marketRView .product_info .product_des .group_rgh .btn > button:first-child{margin-left: 0;}
 #marketRView .product_info .product_des .group_rgh .btn > button:hover{border: 1px solid #ec1f4a; color: #ec1f4a;}
 #marketRView .product_info .product_des .group_rgh .util{position: absolute; right: 0; top: 0;}
-#marketRView .product_info .product_des .group_rgh .util > button{ color: #ed1849; font-size: 13px; }
+#marketRView .product_info .product_des .group_rgh .util > button{ color: #fff; font-size: 13px; }
 #marketRView .product_info .product_des .group_rgh .util > button.viewRoom{ margin-left: 5px; padding-left: 5px; padding-bottom: 8px;}
 #marketRView .product_info .product_des .group_rgh .util .lst_gal{ display: none; background: url(../images/market/bg_viewroom.gif) 50% 0 no-repeat; position: absolute; right: -13px; top: 22px; padding-top: 10px;  }
 #marketRView .product_info .product_des .group_rgh .util .lst_gal > ul > li{margin-bottom: 3px;}
@@ -801,7 +800,7 @@ label.dib.txt5{ width: 65px;    }
 
 
 #marketArea .marketVisual .cont{ display: none; position: absolute; left: 0; top: 0; width: 100%; height: 100%;  z-index: 5; }
-#marketArea .marketVisual .cont > ul > li{display: none;} 
+#marketArea .marketVisual .cont > ul > li{display: none;}
 #marketArea .marketVisual .cont > ul > li.on{display: block;}
 #marketArea .marketVisual .cont > ul > li .spec{ width: 300px; position: absolute; left: 50%; top: 170px; margin-left: -150px; text-align: center; color: #fff; z-index: 5;   }
 #marketArea .marketVisual .cont > ul > li .spec h3{font-size: 20px; line-height: 24px;}
@@ -878,11 +877,11 @@ label.dib.txt5{ width: 65px;    }
 #marketProductAjax .newsBox.bt_vewmore .newsBox_inner > a:hover{background:#ed1749; color:#fff;}
 
 #newWrapper .newsBox.bt_vewmore .newsBox_inner{padding:0px;border-width:0px;}
-#newWrapper .newsBox.bt_vewmore .newsBox_inner > a{display:block;height:374px;background:#d3d3d3;text-align:center;border-top-left-radius:35px;color:#333333;} 
-#newWrapper .newsBox.bt_vewmore .newsBox_inner > a>span{display:inline-block;  *display: inline;  *zoom: 1;vertical-align: middle;font-size:18px;}             
-#newWrapper .newsBox.bt_vewmore .newsBox_inner > a>span.h100{height:100%;}                                                                                     
-#newWrapper .newsBox.bt_vewmore .newsBox_inner > a>span>img{padding-bottom:26px;}                                                                              
-#newWrapper .newsBox.bt_vewmore .newsBox_inner > a:hover{background:#ed1749; color:#fff;}                                                                       
+#newWrapper .newsBox.bt_vewmore .newsBox_inner > a{display:block;height:374px;background:#d3d3d3;text-align:center;border-top-left-radius:35px;color:#333333;}
+#newWrapper .newsBox.bt_vewmore .newsBox_inner > a>span{display:inline-block;  *display: inline;  *zoom: 1;vertical-align: middle;font-size:18px;}
+#newWrapper .newsBox.bt_vewmore .newsBox_inner > a>span.h100{height:100%;}
+#newWrapper .newsBox.bt_vewmore .newsBox_inner > a>span>img{padding-bottom:26px;}
+#newWrapper .newsBox.bt_vewmore .newsBox_inner > a:hover{background:#ed1749; color:#fff;}
 
 /*마켓 제품 뷰*/
 #marketBg > .bg img{width: 100%;}
@@ -915,7 +914,7 @@ label.dib.txt5{ width: 65px;    }
 #marketView1 .marketArea .BigArea .btn .lst_gal ul li button {color:#7d7d7d; font-size:15px;}
 #marketView1 .marketArea .BigArea .btn .lst_gal ul li:hover button {color:#333; text-decoration:underline;}
 #marketView1 .desArea {position:relative;padding-top:20px; float:left; width:395px}
-#marketView1 .desArea > p.writer {color:#808080; font-size:18px; margin-bottom:22px;vertical-align:middle;} 
+#marketView1 .desArea > p.writer {color:#808080; font-size:18px; margin-bottom:22px;vertical-align:middle;}
 #marketView1 .desArea > p.writer  a{display: inline-block; *display: inline; *zoom: 1; vertical-align: 1px;}
 #marketView1 .desArea > p.tit {font-weight:bold; font-size:30px; color:#333; margin-bottom:48px;}
 #marketView1 .desArea > p.price {color:#333; font-size:18px; line-height: 24px; font-weight:bold;padding-bottom:15px; border-bottom:1px solid #d4d6de; margin-bottom:20px;}
@@ -924,15 +923,15 @@ label.dib.txt5{ width: 65px;    }
 #marketView1 .desArea > p.price .rantal .h{ color: #5489ea; }
 #marketView1 .desArea .details_list {min-height:185px; padding-bottom:24px; }
 #marketView1 .desArea .details_list dt {margin-bottom:15px; font-size:15px; color:#353535; font-family:"Lato"; font-weight: 700;}
-#marketView1 .desArea .details_list dd {margin-left:2px;background:url(/images/market/bg_market_dot.gif) 0 10px no-repeat; padding-left:9px; line-height:20px; font-size:13px; color:#8d8d8d;margin-bottom:4px;} 
+#marketView1 .desArea .details_list dd {margin-left:2px;background:url(/images/market/bg_market_dot.gif) 0 10px no-repeat; padding-left:9px; line-height:20px; font-size:13px; color:#8d8d8d;margin-bottom:4px;}
 #marketView1 .desArea .btn {position:relative;}
-#marketView1 .desArea .size_view{margin-top: 30px;} 
+#marketView1 .desArea .size_view{margin-top: 30px;}
 #marketView1 .desArea > .sns{margin-top: 0px; margin-bottom:35px; text-align: center; background: url(../images/market/bg_sns_line.gif) 0 4px repeat-x; }
 #marketView1 .desArea > .sns > .inner{display: inline-block; * display: inline; *zoom: 1; background-color: #fff; padding: 0 10px;}
 #marketView1 .desArea > .sns > .inner > a{display: inline-block; *display: inline; *zoom: 1; padding: 6px;}
 #marketView1 .desArea .layerPopupT1 {position:absolute; top:60px; left:50%; margin-left:-195px; display:none; z-index:99; }
 
-#profileBox {border:1px solid #ccc; padding:40px 20px 0; background:#fbfbfb; margin:22px auto 0 auto;} 
+#profileBox {border:1px solid #ccc; padding:40px 20px 0; background:#fbfbfb; margin:22px auto 0 auto;}
 #profileBox h2.tit {color:#333; font-weight:700; font-family:'Lato'; font-size:40px; text-align:center; padding-bottom:37px; }
 #profileBox > .inner {width:96.49122807018%; margin:0 auto;border-top:1px solid #d8d8d8; padding-top:11px}
 #profileBox > .inner:after {display:block; clear:both; content:"";}
@@ -948,7 +947,7 @@ label.dib.txt5{ width: 65px;    }
 #profileBox .box .inner p.tit2 {color:#000; font-size:13px; margin-bottom: 10px; margin-top: 15px;}
 #profileBox .box p.poinT {color:#5aabec; font-size:15px; font-weight:bold; margin-bottom:15px;}
 #profileBox .box p.name {color:#333; font-size:28px; font-weight:bold; margin-bottom:35px; line-height:28px;}
-#profileBox .box ul.n_list {} 
+#profileBox .box ul.n_list {}
 #profileBox .box ul.n_list li {margin-bottom:10px;}
 #profileBox .box ul.n_list li p.tit {color:#333; font-size:13px; margin-bottom:7px; line-height:18px;}
 #profileBox .box ul.n_list li p.txt {color:#666; font-size:12px; line-height:16px;}
@@ -981,7 +980,7 @@ label.dib.txt5{ width: 65px;    }
 #artistInfo > header.header .total:after{display: block;clear: both;content:"";height: 0; visibility: hidden;}
 #artistInfo > header.header .total > li{ float: left; margin-left: 48px;  }
 #artistInfo > header.header .total > li > span{ color: #ed1a4a;  font-weight: 700; }
- 
+
 /*마켓 상품 뷰*/
 #marketView1 > .item{ width: 719px; min-height: 532px; float: left; background-color: #eeeff1;}
 #marketView1 > .item img{max-width: 100%;}
@@ -1055,8 +1054,9 @@ label.dib.txt5{ width: 65px;    }
 
 .bbs_thumb_t6  .lst { }
 .bbs_thumb_t6  .lst > .thumb { height: 350px; overflow: hidden;position: relative;}
-.bbs_thumb_t6  .lst > .thumb:after{border:1px solid #e2e7eb;content:"";position: absolute;top:0;bottom:0;right:0;left:0;}
-.bbs_thumb_t6  .lst > .thumb img{ width: 100%; }
+.bbs_thumb_t6  .lst > .thumb:after{border:1px solid #e2e7eb;content:"";position: absolute;top:0;bottom:0;right:0;left:0; z-index: 1;}
+.bbs_thumb_t6  .lst > .thumb img{ width: auto; }
+.bbs_thumb_t6  .lst > .thumb a { display: block; position: relative; z-index: 2; padding: 1px; }
 
 .bbs_thumb_t6  .lst > .cont {position: relative; height: 175px; border-style:solid; border-color:#e2e7eb; border-width:0 1px 1px 1px;}
 .bbs_thumb_t6  .lst > .cont > .inner {padding: 33px; }
@@ -1100,13 +1100,13 @@ label.dib.txt5{ width: 65px;    }
 
 #newIndexArea .bbs_thumb_t2 .banner_wrapper{ height: 478px; position: relative; border: 1px solid #e2e2e2; text-align: center; overflow: hidden; }
 
-#newIndexArea .bbs_thumb_t2 .banner_wrapper .txt2{position: absolute; right: 10px; bottom: 10px; } 
+#newIndexArea .bbs_thumb_t2 .banner_wrapper .txt2{position: absolute; right: 10px; bottom: 10px; }
 #newIndexArea .bbs_thumb_t2 .banner_wrapper .txt2 strong{  }
 #newIndexArea .bbs_thumb_t2 .banner_wrapper .txt2 span { color: #bdbdbd; padding-left: 9px; background: url(../images/ico/bg_line.gif) 0 50% no-repeat; font-size: 12px;  }
 #newIndexArea .bbs_thumb_t2 .banner_wrapper .lst > .thumb{ width: 100%; height: 349px; margin-left: auto; margin-right: auto; overflow: hidden;  }
 #newIndexArea .bbs_thumb_t2 .banner_wrapper .lst > .thumb > a{ display: block; }
 #newIndexArea .bbs_thumb_t2 .banner_wrapper:not(.recent_news) .lst > .thumb img{width: 100% !important; height: auto !important;}
-#newIndexArea .bbs_thumb_t2 .banner_wrapper.recent_news .lst > .thumb img{width: 100% ; height: auto}
+#newIndexArea .bbs_thumb_t2 .banner_wrapper.recent_news .lst > .thumb img{width: auto ; height: auto}
 #newIndexArea .bbs_thumb_t2 .banner_wrapper.recent_news .lst > .thumb img.tit{display:none;}
 #newIndexArea .bbs_thumb_t2 .banner_wrapper.recent_news .lst > .thumb img.rec{display:block;}
 
@@ -1173,7 +1173,7 @@ label.dib.txt5{ width: 65px;    }
 #bbs_thumb_t5.no_bd > ul{border-width:0;}
 #bbs_thumb_t5 > ul > li{ *zoom:1; padding:20px 0; border-bottom: 1px solid #e0e0e0; }
 #bbs_thumb_t5 > ul > li:after{display: block;clear: both;content:"";height: 0; visibility: hidden;}
-#bbs_thumb_t5 > ul > li .thumb{ float: left; width: 200px; height: 150px; overflow: hidden; } 
+#bbs_thumb_t5 > ul > li .thumb{ float: left; width: 200px; height: 150px; overflow: hidden; }
 #bbs_thumb_t5 > ul > li .thumb img{width: 100%; height: auto;}
 #bbs_thumb_t5 > ul > li .cont{ margin-left: 260px; padding-top: 10px; }
 #bbs_thumb_t5 > ul > li .cont > h1{margin-top: 10px;}
@@ -1181,7 +1181,7 @@ label.dib.txt5{ width: 65px;    }
 #bbs_thumb_t5 > ul > li .cont > .txt{ height: 40px; margin-top: 10px; font-size: 15px; line-height: 19px; overflow: hidden;  white-space:nowrap; text-overflow:ellipsis; }
 #bbs_thumb_t5 > ul > li .cont > .data{ margin-top: 10px; }
 
-/* news : type4 */      
+/* news : type4 */
 #bbsType5{overflow: hidden;}
 #bbsType5 .bbs_thumb_t6{margin-left:0.8474576271186441%; margin-top: -30px;}
 #bbsType5 .bbs_thumb_t6 .lst{ float: left; width:49.32203389830508%; margin-left: 0.6779661016949153%; margin-top: 30px; text-align: center;  position: relative;}
@@ -1197,7 +1197,7 @@ label.dib.txt5{ width: 65px;    }
 #bbsType5 .bbs_thumb_t6 .lst > .cont{}
 #bbsType5 .bbs_thumb_t6 .lst > .cont .h a{line-height: 26px;}
 
-/* news : type4 */  
+/* news : type4 */
 
 
 #bbsType6 > .inner { border-top: 2px solid #888;padding-top:51px;}
@@ -1207,7 +1207,8 @@ label.dib.txt5{ width: 65px;    }
 .cardNewsSec #bbsType6 > .inner > h1 > .view_all:after{height:10px;top: 0;bottom: 0;left: 0;content: '';margin: auto;position: absolute;border-left:1px solid #999;}
 #bbsType6 > .inner > ul > li{position:relative; float:left;width:31.10%;margin-left:3.35%;}
 #bbsType6 > .inner.w6 > ul > li{width:15.55%;margin-left:1.34%;margin-bottom:1.34%;}
-#bbsType6 > .inner.w3 > ul > li{width:31.10%;margin-left:3.35%;margin-bottom:3.35%;}
+#bbsType6 > .inner.w4 > ul > li{width:24%;margin-left:1.25%;margin-bottom:1.25%;}
+#bbsType6 > .inner.w3 > ul > li{width:31.11%;margin-left:3.33%;margin-bottom:3.33%;}
 #bbsType6 > .inner.w2 > ul > li{width:48%;margin-left:4%;margin-bottom:4%;}
 #bbsType6 > .inner.w1 > ul{margin:0px 12px;}
 #bbsType6 > .inner.w1 > ul > li{float:none;width:auto;margin-bottom:30px;}
@@ -1275,7 +1276,7 @@ label.dib.txt5{ width: 65px;    }
 #cardnewsView .view_box.img_only.h_max .img_box > ul > li > img{height:100%;width:auto;}
 
 /* ===============================================================
-Basic Swiper Styles 
+Basic Swiper Styles
 ================================================================*/
 .swiper-container { margin:0 auto; position:relative; overflow:hidden; direction:ltr; -webkit-backface-visibility:hidden; -moz-backface-visibility:hidden; -ms-backface-visibility:hidden; -o-backface-visibility:hidden; backface-visibility:hidden; /* Fix of Webkit flickering */ z-index:1; }
 .swiper-wrapper {
@@ -1329,7 +1330,7 @@ Pagination Styles
 .cssAni{ webkit-transition: .3s ease-out; -moz-transition: .3s ease-out; -o-transition: .3s ease-out; transition: .3s ease-out; }
 
 
-/* news : view */     
+/* news : view */
 #bbs_view_ty1{ border: 1px solid #ccc; }
 #bbs_view_ty1 > .inner{ padding:35px 40px; }
 #bbs_view_ty1 .header{  position: relative; border-bottom: 1px solid #ccc; padding-bottom:22px; margin-bottom:63px;}
@@ -1478,8 +1479,8 @@ Pagination Styles
 
 /*마이페이지  :  주소록관리 */
 #addressArea:after{display: block;clear: both;content:"";height: 0;visibility: hidden;}
-#addressArea .lft_group{ float: left; width: 48%; } 
-#addressArea .rgh_group{ float: right; width: 48%; } 
+#addressArea .lft_group{ float: left; width: 48%; }
+#addressArea .rgh_group{ float: right; width: 48%; }
 #addressArea .rgh_group .address{position: relative; padding-right: 140px;}
 #addressArea .rgh_group .address .btn_pack{ position: absolute; right: 0;bottom: 0; }
 
@@ -1612,9 +1613,9 @@ Pagination Styles
 #marketVisualArticle > .bx_slide{visibility: visible;}
 #marketVisualArticle > .bx_slide > ul{max-height: 590px;}
 #marketVisualArticle > .bx_slide > ul:after{content: '';display: block;clear: both;}
-#marketVisualArticle > .bx_slide > ul > li{float: left;width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;padding:0 1.2px;}
+#marketVisualArticle > .bx_slide > ul > li{float: left;width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;/* padding:0 1.2px; */}
 #marketVisualArticle > .bx_slide > ul > li a{display: block;position: relative;height: 0;padding-bottom:44.1%;}
-#marketVisualArticle > .bx_slide > ul > li a > img{width: 100%;position: absolute;top:0;left: 0;display: block; }
+#marketVisualArticle > .bx_slide > ul > li a > img{max-width: 100%;position: absolute;top:0;left: 0;display: block; }
 #marketVisualArticle > .bx_slide > ul > li a > span.txt{display: block;position: absolute;left:0;right: 0;bottom:5.7692%;max-width: auto;text-align: center;color: #fff;}
 #marketVisualArticle > .bx_slide > ul > li a > span.txt > strong{display: block;font-size: 24px;padding-bottom: 30px;margin-bottom: 26px;position: relative;}
 #marketVisualArticle > .bx_slide > ul > li a > span.txt > strong:after{content: '';width: 31px;height: 3px;background-color: #fff;position: absolute;bottom:0;left:0;right:0;margin: auto;}
@@ -1654,6 +1655,28 @@ Pagination Styles
 #marketArea .bot_banner > a img{width:100%;}
 #marketArea .bot_banner > a img.mobile{display: none;}
 
+#container_sub.articovery_bg { background:url("/images/articovery/articovery_bg.jpg") right center no-repeat; background-size: cover; }
+#container_sub.articovery_bg .container_inner { display: table; max-width: 1580px; width: 100%; height: 100%; padding-bottom: 0; }
+#articovery_main { text-align: center; display: table-cell; vertical-align: middle; padding: 0 2%; }
+#articovery_main h1 { margin-bottom: 2em; }
+#articovery_main h1 img { max-width: 100%; }
+#articovery_main h3 { font-size: 1.375em; letter-spacing: 5px; font-weight: 400; margin: 0 auto; margin-bottom: 1.25em; color: #fff; max-width: 400px; padding: 0 15%; }
+#articovery_main h3 img { max-width: 100%; }
+#articovery_main p { font-size: 1.5em; letter-spacing: 5px; font-weight: 400; line-height: 1.3; color: #fff; }
+
+video::-internal-media-controls-download-button {
+display:none;
+}
+
+video::-webkit-media-controls-enclosure {
+overflow:hidden;
+}
+
+video::-webkit-media-controls-panel {
+width: calc(100% + 30px);
+}
+
+
 @media screen and (max-width: 1300px){
       /* #header .header_inner h1{margin-left: 78px;} */
 
@@ -1661,14 +1684,14 @@ Pagination Styles
 #awardArea .rgh_area .benefit_area {margin:40px auto; width:708px}
 #awardArea .lft_area {float:none; margin-bottom:20px; width:100%;}
 #awardArea .rgh_area {float:none; width:100%;}
-  
+
 }
 
 
 /*
- * 서브 컨텐츠 최대 크기 1180 
+ * 서브 컨텐츠 최대 크기 1180
  * 미디어 쿼리 범위  1024 / 768 /  640 / 480 / 320
- * 
+ *
  */
 
 /**
@@ -1676,9 +1699,9 @@ Pagination Styles
  * @type {[type]}
  */
 @media screen and (max-width: 1230px){
-        #quickBtn{width: 96%; margin: 0 2%; left: 0; margin-left: 0;}  
+        #quickBtn{width: 96%; margin: 0 2%; left: 0; margin-left: 0;}
        /*퀵서치:공통*/
-      .smartTableBox .arr {right: 148px;} 
+      .smartTableBox .arr {right: 148px;}
       #homeguide .article > .box .space{display: inline;}
       /* #header .header_inner h1{margin-left: 8px;} */
       #lnb{left: 200px; }
@@ -1692,14 +1715,14 @@ Pagination Styles
       .btn_bot,
       #bbs_view_ty1,
       .comentArea
-      { max-width: 1004px; margin-left:auto; margin-right:auto; } 
+      { width: 96%; margin-left:auto; margin-right:auto; }
 
             /*footer*/
       #footer .company_info .emailContact{width:310px;}
       #footer .company_info .address{margin-left: 55px; }
       #footer .company_info .copyright{width:290px;}
       #footer .company_info .copyright span.space{display:inline;}
-    
+
       /*마켓 메인*/
       #marketArea .marketVisual .list > ul > li .photo{ height: 442px; }
       #marketArea .marketVisual .cont > ul > li .spec{ top: 140px; }
@@ -1740,39 +1763,39 @@ Pagination Styles
       .bbs_thumb_t6  .lst > .thumb {height: 277px;}
      #newIndexArea .bbs_thumb_t1 .lst_thumb .thumb{width: 158px;  height: 106px;}
      #newWrapper{ width: auto; max-width: 905px; margin: 0 auto; }
-     #newIndexArea .bbs_thumb_t1 .lst_thumb .cont{margin-left: 157px; border-style: solid; height: 104px; border-width:1px 1px 1px 0; border-color: #e2e2e2;  } 
+     #newIndexArea .bbs_thumb_t1 .lst_thumb .cont{margin-left: 157px; border-style: solid; height: 104px; border-width:1px 1px 1px 0; border-color: #e2e2e2;  }
      #newIndexArea .bbs_thumb_t1 .lst_thumb .cont > .inner{ padding-left: 20px; padding-right: 10px;  padding-top: 5px; padding-bottom: 10px;  }
      #newIndexArea .bbs_thumb_t1 .lst_thumb .cont .user > br {display:block;}
-     
+
   #newIndexArea .bbs_thumb_t1 .lst_thumb .cont .user span.first{background:none; padding-left:0;}
   #newIndexArea .bbs_thumb_t1 .lst_thumb .cont .user > strong {margin-bottom:5px;}
 
   /*작가등록*/
-  
+
   #photographerArea .tmp{display:inline;}
-  
+
   /*갤러리즈 1230*/
   .marketPlace.top_btn,
   #area_gallery_index .top_btn{left:0;right:0;width:1004px;margin:auto;text-align: right;}
-   
+
 }
 
 @media screen and (max-width: 1600px){
   #header .header_inner {max-width:1280px;}
   #lnb { left: 260px; }
-  #lnb ul > li { margin-left: 125px; }
+  #lnb ul > li { margin-left: 90px; }
 }
 
 @media screen and (max-width: 1300px){
-  #header .header_inner {max-width:900px;}
+  /* #header .header_inner {max-width:900px;} */
   #lnb { left: 135px; }
-  #lnb ul > li { margin-left: 80px; }
+  #lnb ul > li { margin-left: 70px; }
 }
 
 @media screen and (max-width: 1140px){
-    
+
       /*퀵서치:공통*/
-      .smartTableBox .arr {right: 98px;} 
+      .smartTableBox .arr {right: 98px;}
 
       /* #header .header_inner h1{margin-left: 48px;} */
 
@@ -1782,7 +1805,7 @@ Pagination Styles
     #aboutArea ul.list li > div.cont {padding:25px 0 15px 0}
     #aboutArea ul.list li > div.cont:after {display:block; clear:both; content:"";}
     #aboutArea ul.list li > div.cont p.tit {float:left; margin-right:20px;}
-    #aboutArea ul.list li > div.cont ul.his_list {width:360px;} 
+    #aboutArea ul.list li > div.cont ul.his_list {width:360px;}
     #aboutArea ul.list li > div.cont ul.his_list li strong {display:inline;}
     #aboutArea ul.list li > div.cont {margin-left:0; border:0; padding-left:10px;}
     #aboutArea ul.list li > div.cont  ul.his_list:after {display:block; clear:both; content:"";}
@@ -1805,9 +1828,9 @@ Pagination Styles
  * @type {[type]}
  */
 @media screen and (max-width: 1080px){
-  
+
     /*#lnb{left:150px;}*/
-    #lnb ul > li{margin-left:60px;}
+    #lnb ul > li{margin-left:40px;}
 
       #homeguide .article > .box{ float: none; position: relative; width: auto;  margin-left: 0; margin-bottom: 20px;  font-size: 13px; line-height: 22px; }
       #homeguide .article > .box.ty1 .inr,#homeguide .article > .box.ty2 .inr{min-height: 10px;}
@@ -1822,10 +1845,10 @@ Pagination Styles
       .btn_bot,
       #bbs_view_ty1,
       .comentArea
-      { max-width: 900px; margin-left:auto; margin-right:auto;  }
+      { margin-left:auto; margin-right:auto;  }
 
 
-    
+
     /* 뉴스 타입 */
     #bbsType5 .bbs_thumb_t6 .lst .item{ height: 190px;}
 
@@ -1865,17 +1888,17 @@ Pagination Styles
       /*상단 문의 폼 : 공통*/
       #resevationArea .lft_group{ width: 500px; }
       #resevationArea .rgh_group{ width: 250px; }
-      
+
       /*퀵서치:공통*/
       .smartBox .searchBar .inp_txt{width: 500px;}
 
 
       /*맴버십 : 로그인*/
       #loginArea .lft_group {width:37%; margin-right: 5%; float:left;}
-      
 
 
-      
+
+
       /*마이페이지  :  상담내역 */
       #customerArea .qnaContent .inner{ padding: 20px;  }
       #customerArea .qnaContent .inner > ul > li .photo{ width: 221px; }
@@ -1888,7 +1911,7 @@ Pagination Styles
       #contactUsArea .qnaContent .close{ position: absolute; right: 20px; top: 20px; }
 
   /* art1 awrad */
-  
+
   #awardArea .rgh_area {float:none; width:100%;}
 
       /*w1080 :: 기획전 상세 */
@@ -1901,7 +1924,7 @@ Pagination Styles
 
   /*작가등록*/
   #photographerArea .contact_info ul li>div img{display: none;}
-  
+
   /*갤러리즈 1080*/
   .marketPlace.top_btn,
   #area_gallery_index .top_btn{width:900px;}
@@ -1917,13 +1940,13 @@ Pagination Styles
 
   #container_sub{margin-top: 15px;}
   #spot_sub{min-height:inherit}
-  
-       
+
+
 
       /*퀵서치:공통*/
-      .smartTableBox .arr {right: 61px;} 
+      .smartTableBox .arr {right: 61px;}
 
-       /* common */  
+       /* common */
       #lnb{display: none;}
       #header .header_inner,
       .content-mediaBox,
@@ -1945,20 +1968,20 @@ Pagination Styles
       #header button.btn_menu img{width: 100%;}
       #header .header_inner .utill{ top: 15px; }
 /*       #header .header_inner .utill > ul > li{margin-left: 10px; } */
-       #allMenu .allMenu_inner{ top: 102px; } 
+       #allMenu .allMenu_inner{ top: 102px; }
 
 
 
-     
+
       #container_sub.margin_none{margin-top: 0;}
 
       .title1{ font-size: 22px; line-height: 30px; margin-bottom: 17px; }
       .title2{ font-size: 18px; line-height: 24px; margin-bottom: 10px;}
       .Paragraph{ margin-bottom: 40px;}
-  
+
        /* //common */
        /* .fixedsubTop{ margin-top: 0; } */
-       .mobileTableBox{ display: block; } 
+       .mobileTableBox{ display: block; }
        .pcTable{display: none;}
       /*서브 비주얼*/
       #spot_sub{ height: 90px;}
@@ -1966,7 +1989,7 @@ Pagination Styles
       #spot_sub .img img{ max-width:100%; }
       #spot_sub .cont{padding-top: 35px;}
       #spot_sub .cont h1 img{height: 34px;}
-      
+
 
       /*상단 문의 폼 : 공통*/
       #resevationArea .lft_group{ width: inherit; float: none; min-height:200px; }
@@ -2000,7 +2023,7 @@ Pagination Styles
       .lst_horizontal.style2 .cont .t1{font-size: 12px; line-height: 14px; }
       .lst_horizontal.style2 .cont .t2{ margin-top: 6px;font-size: 14px; line-height: 16px; }
 
-  
+
       #marketRView .inner_view{margin-left: 0;   margin-bottom: 2%; padding-bottom:10px; width: auto;}
       #marketRView .follow_close{margin-left: 0;   margin-bottom: 2%; padding-bottom:10px; width: auto;padding-top:100px;max-width:none;}
       #marketRView .header{left: 0; width: 96%; padding-left: 2%; padding-right: 2%; max-width:2000px; padding-bottom: 5px; padding-top: 15px; margin-bottom: 5px;}
@@ -2025,7 +2048,7 @@ Pagination Styles
 #marketRView #shoppingArea .shopping_list .inner ul li img{max-width: 100%;} */
       /* 장바구니 */
 /*       #shoppingArea .shopping_list .inner ul li {width: 47%; margin-left: 2%;} */
-      
+
 
       /*art1*/
       #art1_exhibition .photographer > .info > .cont dl.n1{float: none;  width: auto; margin-bottom: 30px;}
@@ -2044,7 +2067,7 @@ Pagination Styles
       /*마켓 상품 뷰*/
       #marketView1 > .item{ max-width: 719px; margin: 0 auto; float: none; width: inherit; min-height: auto;}
       #marketView1 > .cont{ max-width: 719px; padding-top: 20px; margin: 0 auto; float: none; width:inherit; }
-      #marketView1 > .cont > h1{  margin-bottom: 10px; }    
+      #marketView1 > .cont > h1{  margin-bottom: 10px; }
       #joinStep1Area .lft_group{ float: none; border-right: 0; width:inherit; border-bottom: 1px solid #666; padding-bottom: 30px; margin-bottom: 30px; }
       #joinStep1Area .lft_group input[type="text"]{width: 96%; }
       #joinStep1Area .lft_group .susin{ right: 0; }
@@ -2057,7 +2080,7 @@ Pagination Styles
       #joinStep1Area .rgh_group .info .space{ display: inline; }
       #joinStep1Area .bot_group{ margin-top: 20px; padding-top: 20px; }
 
-      
+
       /* news */ /* 980  :  905*/
       col.data{width: 100px;  }
       .mobileNone{ display: none; }
@@ -2068,11 +2091,11 @@ Pagination Styles
       .bbs_table table thead tr th:nth-child(4){letter-spacing:-1px;}
       .bbs_table table thead tr th .add_hit{display: inline; }
       .bbs_table table tbody tr td .hit_cnt{display: inline; margin-top: 10px;color:#818181}
-       #newIndexArea  .brief,#newIndexArea  .news{ margin-right: 0;   } 
+       #newIndexArea  .brief,#newIndexArea  .news{ margin-right: 0;   }
        #newIndexArea .bbs_thumb_t2 .banner_wrapper{height: auto;}
        #newIndexArea .bbs_thumb_t2 .banner_wrapper .lst > .thumb{ width: 100%; height: auto;}
        #newIndexArea .bbs_thumb_t2 .banner_wrapper .lst > .thumb > a{ display: block; margin-top:0; }
-       
+
        #newIndexArea .bbs_thumb_t2 .banner_wrapper.recent_news .lst > .thumb img{width: 100% ; height: auto }
        /* #newIndexArea .bbs_thumb_t2 .banner_wrapper.recent_news .lst > .thumb img.tit{display:block;}
        #newIndexArea .bbs_thumb_t2 .banner_wrapper.recent_news .lst > .thumb img.rec{display:none;} */
@@ -2091,14 +2114,14 @@ Pagination Styles
       #bbs_list1_rwd > ul > li .cont .txt{ width: 95%; height: 48px; margin-bottom: 15px; font-size: 13px; line-height: 22px; }
 
 
-     
-     
+
+
 
      /*마켓 재작업*/
      #marketArea .marketVisual  .dmp-controls .pageing .prev, #marketArea .marketVisual  .dmp-controls .pageing .next{top: 140px;}
      #marketArea .marketVisual .marketVisualArticle{width: 100%; height: 302px;}
       #marketArea .marketVisual .list > ul > li .photo{ height: 302px; }
-      #marketArea .marketVisual .cont > ul > li .spec{ top: 140px; }   
+      #marketArea .marketVisual .cont > ul > li .spec{ top: 140px; }
       #marketArea .sort_lst > li{ width: 49%; margin-left: 0; }
       #marketArea .sort_lst dl.sort_box dt{ width: 100%; min-width: 50;  height: 36px; background: url(../images/ico/ico_arrbot_off.gif) 97% 50% no-repeat; background-color: #fff; }
       .sort_lst dl.sort_box dd{width: 96%; padding: 2%;}
@@ -2106,32 +2129,32 @@ Pagination Styles
       #marketArea .searchArea .btn_result{ display: none; width: 120px;  height: 36px; margin-left: 5px; font-size: 13px; line-height: 36px; background-color: #5c5c5c; color: #fff; text-align: center; text-transform: uppercase; }
 
       #marketArea .searchArea .search2{margin-top: 20px; display: none !important; position: static; }
-      
+
 
       /*마켓 재작업 : istop type*/
       #marketProductAjax{ width: 100%; max-width: 100%;  }
       #marketProductAjax .newsBox{/* width:286px; */ width: 31.60220994475138%; margin-left: 1%;}
 
-      /*마켓 작가 검색*/ 
+      /*마켓 작가 검색*/
       #artistInfo > header.header .total{ position: static; right: 0; top: 0;}
       #artistInfo > header.header .total > li{margin-left: 0; margin-right: 10px; font-size: 13px; }
 
-      /* news */ 
+      /* news */
 
       .bbs_thumb_t6 .lst > .thumb,.bbs_thumb_t6  .lst > .cont{ height: auto; }
       .bbs_thumb_t6 .lst > .thumb  img{width: 100% !important; height: auto !important;}
       .bbs_thumb_t6  .lst > .cont > .inner {padding: 17px; }
       .bbs_thumb_t6  .lst > .cont  .h{ height: 22px;}
-    
+
 
       #newIndexArea .bbs_thumb_t1 .lst_thumb .cont > .inner{ padding-left: 10px; padding-right: 10px;  padding-top:15px; padding-bottom: 15px;  }
 
 
-  
+
       #newWrapper{ width: inherit;  margin: 2%; }
       #newWrapper .newsBox{/* width:286px;  */ width: 31.60220994475138%; margin-left: 1%;}
 
-      
+
       /*맴버십 : 로그인*/
       #loginArea { padding-bottom: 0; }
       #loginArea .lft_group {width:auto; margin-right:0; float:none; margin-bottom: 60px;}
@@ -2141,7 +2164,7 @@ Pagination Styles
 
 
 
-      
+
 
       /*마이페이지  :  대시보드 */
       .dashSubArea{ border-width: 0; padding:0; }
@@ -2163,8 +2186,8 @@ Pagination Styles
 
       /*마이페이지  :  주소록관리 */
       #addressArea:after{display: block;clear: both;content:"";height: 0;visibility: hidden;}
-      #addressArea .lft_group{ float: none; width: inherit; margin-bottom: 15px; } 
-      #addressArea .rgh_group{ float: none; width: inherit; } 
+      #addressArea .lft_group{ float: none; width: inherit; margin-bottom: 15px; }
+      #addressArea .rgh_group{ float: none; width: inherit; }
       #addressArea .rgh_group .address { padding-right: 110px; }
       #addressArea .rgh_group .address .btn_pack { width: auto; padding: 0 10px; right: 0; }
       /* #addressArea .rgh_group .address{position: relative; padding-right: 0;} */
@@ -2186,11 +2209,11 @@ Pagination Styles
       #customerArea .qnaContent .inner > ul > li .photo{ width: 181px; }
 
       /*마이페이지  :  주문정보 */
-      
+
       .thumb_photo .info{ display: block;margin-left: 20px; vertical-align: middle; }
       .thumb_photo .info{ display: block; margin-left: 0; vertical-align: middle; margin-top: 10px;}
-      
-      
+
+
     /*art1 about */
 
             /*     #aboutArea ul.list li > div.cont .bg {background:none; width:auto; height:auto;}
@@ -2209,11 +2232,11 @@ Pagination Styles
     #photographerArea .contact_info ul li{width:auto}
     #photographerArea .contact_info ul li>div{padding:5px 15px 5px 0px;text-align:left;border-width:0px;line-height:20px;}
     #photographerArea .contact_info ul li>div:first-child{border-left-width:0px;}
-    
+
     #marketArea .marketVisual .dmp-controls .pageing .prev, #marketArea .marketVisual .dmp-controls .pageing .next{ width:48px; }
-    
+
     .lst_table3.artist> table col.th1 {width:150px;}
-    
+
     /*갤러리즈 959*/
     .marketPlace.top_btn,
     #area_gallery_index .top_btn{width:728px;top:140px}
@@ -2274,12 +2297,12 @@ Pagination Styles
         .table_dot table thead tr th{ padding: 6px;}
         .table_dot table tbody tr td{padding: 8px 5px; font-size: 14px;}
         /*table : 도트라인*/
-         
-        /*게시판 쓰기 페이지*/ 
+
+        /*게시판 쓰기 페이지*/
         #bbs_view_ty1 > .inner{ padding: 15px 20px; }
          #bbs_view_ty1.write .header{padding: 0 0 10px 0;}
-         #bbs_view_ty1.write .header > input[type="text"]{width: 96%; padding: 0 2%;} 
-         
+         #bbs_view_ty1.write .header > input[type="text"]{width: 96%; padding: 0 2%;}
+
 
         /*기본 폼메일 1*/
         .formMailType1{ margin-top: 20px;}
@@ -2287,10 +2310,10 @@ Pagination Styles
         .formMailType1 input[type="text"]{ width: 100%; max-width: inherit; }
         .formMailType1 input[type="password"]{ width: 100%; max-width: inherit; }
         .formMailType1 .rgh_group{ position: static; right:inherit; left:0; top: 0; text-align: right; margin-top: -27px; }
-        
 
 
-      
+
+
       .bbs_searchbox{position: relative;}
       .bbs_searchbox .inp{float: none; display: block; width: inherit; background-color: #fbfbfb; /*margin-right: 86px;*/}
       .bbs_searchbox .btn{position: absolute; right: 0; top: 0;}
@@ -2325,7 +2348,7 @@ Pagination Styles
 
       .tabBox.n6 ul{width: 200%;}
       .tabBox.n6 ul > li{width: 16.66666666666667%;}
-      
+
       .tab_type2{background-color: #606060; }
       .tab_type2 ul{float: none; *zoom:1;}
       .tab_type2 ul > li{ height: auto; float: left; margin-left: 0; padding-right:0; color: #fff; font-size: 15px; text-align: center;  background-repeat: no-repeat; background-position: 0 0; background-image: none; }
@@ -2358,26 +2381,26 @@ Pagination Styles
     .tab_list li:hover span a {color:#333;}
 
     .tabArea .tab_list > li > span > a{ display: block;  margin: 0 auto; padding: 15px;  background: none; font-family:"Lato"; font-size: 13px; line-height:16px;  color: #484848; font-weight: normal; border: 0;}
-      
 
-      
+
+
       .content-mediaBox,
        #footer.h_sub .fooer_inner ,
        #footer .fooer_inner,
        #newIndexArea .bot_banner,
        #marketArea .bot_banner
-      { max-width: 767px; width:inherit; margin-left:auto; margin-right:auto; }  
+      { max-width: 767px; width:inherit; margin-left:auto; margin-right:auto; }
       #footer.h_sub .fooer_inner ,
        #footer .fooer_inner
        {padding-top: 0;}
 
-      #header .header_inner,.content-mediaBox.margin1, #newIndexArea .bot_banner{ width:auto; margin-left:3%; margin-right:3%; }  
+      #header .header_inner,.content-mediaBox.margin1, #newIndexArea .bot_banner{ width:auto; margin-left:3%; margin-right:3%; }
       #marketProductAjax{ width:auto; margin-left:2%; margin-right:2%; }
       #artistInfo.content-mediaBox.margin1  { margin-left:0%; margin-right:0%; }
       #artistInfo.content-mediaBox.margin1 .header { width:auto; margin-left:3%; margin-right:3%; }
 
       #footer .bnb{border-bottom: 0;}
-      #footer .bnb .lst > li{width: 22%; text-align: center; padding: 0;  } 
+      #footer .bnb .lst > li{width: 22%; text-align: center; padding: 0;  }
       #footer .bnb .lst > li:first-child{width: 21%;}
       #footer .bnb .lst > li.policy{width: 35%;}
       #footer .bnb .lst > li > a{ padding: 0; font-size: 11px; line-height: 14px; border-style: solid;  border-width:0 0 0 0; border-color: #333; padding: 14px 0;  }
@@ -2415,7 +2438,7 @@ Pagination Styles
       #art1_promotion > .article .pro_info .edittionbox{width: 301px; padding-top: 30px;}
       #art1_promotion > .article .pro_info .edittionbox > ul{width: 300px;}
       #art1_promotion > .article .pro_info .edittionbox .close{right: 10px; top: 10px;}
-      
+
       #marketRView .product_info .product_des .group_lft{ width: 50%; float: none; min-height: 100px; margin-top: 20px;}
       #marketRView .product_info .product_des .group_rgh{ width: auto; float: none;}
 
@@ -2483,7 +2506,7 @@ Pagination Styles
       #joinStep1Area .rgh_group > ul > li{width: inherit; float: none; margin-top: 10px; text-align: center;}
       #joinStep1Area .bot_group .agreement > p{margin-bottom: 15px;  }
 
-  
+
       /*news : type3 */
       #bbs_nomal_list > header.header .bbs_searchbox{ position: relative; right: 0; bottom: 0; margin-top: 10px;}
 
@@ -2499,7 +2522,7 @@ Pagination Styles
       #basicArea .lst_sort1{ margin-bottom: 10px;}
       #dashboardArea #customerArea .header ,#dashboardArea #orderInfoArea .header{ margin-bottom: 6px; }
       #customerArea h1.title1 ,#orderInfoArea h1.title1{ border-width:0; padding-bottom: 0; }
-      
+
       #basicArea .article { padding-left: 20px;}
       #orderAddArea .lst_order{ padding-left: 20px; }
       #orderAddArea .lst_order .lst{width:100%;margin-bottom: 20px;}
@@ -2512,7 +2535,7 @@ Pagination Styles
 
       /*뉴스 썸네일 리스트 게시판 */
       #bbs_thumb_t5 > ul > li {  padding: 10px 0; }
-      #bbs_thumb_t5 > ul > li .thumb{ width: 170px; height: 150px;} 
+      #bbs_thumb_t5 > ul > li .thumb{ width: 170px; height: 150px;}
       #bbs_thumb_t5 > ul > li .cont{ margin-left: 190px; }
       #bbs_thumb_t5 > ul > li .cont > h1 { margin-top: 0; }
 
@@ -2521,10 +2544,10 @@ Pagination Styles
   #bbsType5 .bbs_thumb_t6 .lst .item {height:auto !important; overflow:visible; padding-bottom: 0;}
   #bbsType5 .bbs_thumb_t6 .lst .item > a { position: static; }
   #bbsType5 .bbs_thumb_t6 {width:95%; margin:0 auto;}
-  #bbsType5 .bbs_thumb_t6 .lst{ float:none; width:100%; margin-left: 0%; margin-top: 10px; text-align: center;  }     
+  #bbsType5 .bbs_thumb_t6 .lst{ float:none; width:100%; margin-left: 0%; margin-top: 10px; text-align: center;  }
   #bbsType5 .bbs_thumb_t6 .lst img.pc { display: none; }
   #bbsType5 .bbs_thumb_t6 .lst img.mobile { display: block; }
-  
+
   /*뉴스 커뮤니티 글쓰기 */
 
   #bbs_view_ty1.write {}
@@ -2541,10 +2564,10 @@ Pagination Styles
   #awardArea .rgh_area .benefit_area ul li.a2,#awardArea .rgh_area .benefit_area ul li.a3 {margin-left:0;}
 
       /*뉴스 썸네일 리스트 게시판 */
-      #bbs_thumb_t5 > ul > li .thumb{ width: 140px; height: 130px;} 
+      #bbs_thumb_t5 > ul > li .thumb{ width: 140px; height: 130px;}
       #bbs_thumb_t5 > ul > li .cont{ margin-left: 160px; padding-top: 0; }
       #bbs_thumb_t5 > ul > li .cont > h1 a{ font-size: 15px; line-height: 22px;}
-      
+
       #bbs_thumb_t5 > header.header .bbs_searchbox{ position: relative; right: 0; bottom: 0; margin-top: 10px; }
       #bbs_thumb_t5 > header.header { margin-bottom: 10px; }
       #bbsType5 .bbs_thumb_t6 { width: 100%; }
@@ -2556,7 +2579,7 @@ Pagination Styles
       #marketRView #shoppingArea .shopping_list > button.next{right: -16px;}
       #marketRView #shoppingArea .shopping_list > button.prev{left: -16px;}
       #marketRView #shoppingArea .shopping_list > button.next img,
-      #marketRView #shoppingArea .shopping_list > button.prev img{width: 14px;} 
+      #marketRView #shoppingArea .shopping_list > button.prev img{width: 14px;}
 
 
   /*작가등록*/
@@ -2571,7 +2594,7 @@ Pagination Styles
   #photographerArea .process_lst2 dl.circle_pc > dt >*{display:inline;}
   #photographerArea .process_lst2 dl.circle_pc > dd {margin:0px 5px;}
   #photographerArea .process_lst2 .note { background-image: none; background-color:#F9F7F1;padding: 10px; width: auto; height: auto; box-sizing: content-box; margin-bottom: 20px; box-shadow:2px 2px 5px -2px #a1a1a1;}
-  
+
   .lst_table3.artist> table{font-size:13px;}
   .lst_table3.artist> table col.th1 {width:20%;}
   .lst_table3.artist> table tbody th{padding:5px;min-width: 100px;}
@@ -2583,7 +2606,7 @@ Pagination Styles
     .lst_table3.artist> table tbody td .fakefile > img{position: absolute;right:5px;}
     /*카드뉴스*/
     #cardnewsView .pageing button{width:48px;}
-    
+
 /*갤러리즈 767*/
   /* #gallery_spot .pagination{margin-top:20px;} */
   #gallery_spot > .bx_slide .prevnext > button{bottom: 34px;}
@@ -2598,30 +2621,30 @@ Pagination Styles
   .sect_gallery_news header .bx_search p{padding-right:110px;position: relative;}
   .sect_gallery_news header .bx_search input{width: 100%;}
   .sect_gallery_news header .bx_search button.btn_pack{min-width:100px;width:100px;position: absolute;bottom:0;right:0;}
-  
+
   .gallery_exhibition_view > .bx_left{float: none;width: auto;}
   .gallery_exhibition_view > .bx_right{float: none;width: auto;}
-  
+
   .gallery_list_exhi .con{padding:0px 15px 10px;}
   .gallery_list_exhi .con > header{margin-bottom: 6px;}
   .gallery_list_exhi .con > header > p{padding-top: 10px;}
   .gallery_list_exhi ul.link_share_btns > li > a{padding-top: 9px;}
   .gallery_list_exhi ul.link_share_btns > li > a.img_h > span > img{height:20px;}
-  
+
   .gallery_artist_view > .bx_left{float: none;width: auto;}
   .gallery_artist_view > .bx_right{float: none;width: auto;}
-  
+
   .gallery_artwork_view > .bx_left{float: none;width: auto;}
   .gallery_artwork_view > .bx_right{float: none;width: auto;}
-  
+
   .gallery_fair_view > .bx_left{float: none;width: auto;}
   .gallery_fair_view > .bx_right{float: none;width: auto;}
-  
+
   #pop_artworks_view .gallery_artwork_view > .bx_left{width: auto;margin-bottom:50px;}
   #pop_artworks_view .gallery_artwork_view > .bx_right{width: auto;}
-  
-  .key_feature table.tb_features, 
-  .key_feature table.tb_features > tbody, 
+
+  .key_feature table.tb_features,
+  .key_feature table.tb_features > tbody,
   .key_feature table.tb_features > tbody > tr,
   .key_feature table.tb_features > tbody > tr > th,
   .key_feature table.tb_features > tbody > tr > td{display: block;}
@@ -2632,14 +2655,14 @@ Pagination Styles
   .key_feature table.tb_features > tbody > tr.gray > th, .key_feature table.tb_features > tbody > tr.gray > td{background-color: transparent;}
   .key_feature table.tb_features > tbody > tr > th:first-child{background-color: transparent;}
   .key_feature table.tb_features > tbody > tr > th:first-child + td{background-color: #f8f8f8;}
-  
+
   #apply_info_area .process_lst2 > .inner > ul > li > div{padding: 10px 15px 10px 15px;}
   #apply_info_area .process_lst2 > .inner > ul > li > div > h2 >span{font-size:15px;line-height:25px;}
   #apply_info_area .process_lst2 > .inner > ul > li > div > h2 a{ height: 28px;  line-height: 28px;font-size:12px;}
   #apply_info_area .process_lst2 > .inner > ul > li > div .tip{margin-bottom:17px;}
-  
+
   ul.link_share_btns > li{margin-left:10px;}
-} 
+}
 
 
 /**
@@ -2755,12 +2778,12 @@ Pagination Styles
       .inpBox{display: block;  width: auto; height: 33px; margin-top: 15px; padding-right: 40px; padding-left: 4px;  border: 1px solid #d9d9d9; position: relative;}
       .inpBox input[type="text"]{width: 100%; height: 33px; line-height: 33px; padding: 0; border: 0; }
       /*마켓 재작업 : istop type*/
-      #marketProductAjax .newsBox{/* width:286px; */ width: 48%; margin-left: 1%;} 
+      #marketProductAjax .newsBox{/* width:286px; */ width: 48%; margin-left: 1%;}
 
       /* news */ /* 639  :  598*/
       #newWrapper .newsBox{/* width:286px;  */ width: 49%; margin-left: 1%;}
 
-      /*art1 Exhibition */  
+      /*art1 Exhibition */
       #art1_exhibition .photographer{ margin-bottom: 60px;}
       #art1_exhibition .photographer > h1{ margin-bottom: 24px; font-size: 23px; line-height: 28px;  }
       #art1_exhibition .photographer > .info{ padding-left: 0;  }
@@ -2816,14 +2839,14 @@ Pagination Styles
       #exhibitions_detail .exh > ul > li .cont .h { font-size: 13px; }
       #exhibitions_detail .banner img.pc { display: none; }
       #exhibitions_detail .banner img.mobile { display: block; }
-     
+
       .tab_type3 > ul > li > a{ padding: 17px 0 12px; font-size: 13px;}
 
 
 
     #aboutArea ul.list li > div.cont .bg {margin: 0 10%;}
 
-  
+
 /*갤러리즈 639*/
 .marketPlace.top_btn,
   #area_gallery_index .top_btn{top: 135px;}
@@ -2832,13 +2855,13 @@ Pagination Styles
   #sect_gallery_list header .bx_search input{width: 100%;}
   #sect_gallery_list header .bx_search button.btn_pack{min-width:100px;width:100px;position: absolute;right:0;top:0;}
 
-  
+
 
   #newIndexArea .bbs_thumb_t2 .banner_wrapper .lst > .cont { height: 105px; }
   #newIndexArea .bbs_thumb_t2 .banner_wrapper .lst > .cont > .inner { padding-top: 10px; }
 
 
-  
+
 
   #marketProductAjax .newsBox .newsBox_inner .news_cont { padding: 10px; }
   #marketProductAjax .newsBox .newsBox_inner .news_cont .text_cont { margin-top: 5px; }
@@ -2847,8 +2870,8 @@ Pagination Styles
 
   #Artist.proview_area2 .group_rgh .lst { margin-bottom: 10px;  padding-bottom: 10px;}
   #Artist.proview_area2 .group_rgh .lst.exp > ul > li { margin-bottom: 5px; }
-  
-  #artistInfo > header.header { margin-bottom: 15px; padding-bottom: 15px; } 
+
+  #artistInfo > header.header { margin-bottom: 15px; padding-bottom: 15px; }
   #artistInfo > header.header h1 { font-size: 20px; }
   #artistInfo > header.header h1 > span { font-size: 18px; }
 
@@ -2922,7 +2945,7 @@ Pagination Styles
 @media screen and (max-width: 540px){
   #cardnewsView .con_box > ul{position:relative;float:right;}
   #cardnewsView .con_box > ul >li.img_list{margin-left:20px;}
-  
+
   /*작가등록*/
   #photographerArea .process_lst2 > .inner > ul > li > div{10px 10px 10px 10px;}
   #photographerArea .benfit_lst ul li{width:auto;float:none;}
@@ -2940,19 +2963,19 @@ Pagination Styles
   #photographerArea .process_lst2 dl.note dt{font-size:13px;}
   #photographerArea .process_lst2 dl.note dd{font-size:12px; line-height:18px;}
   #photographerArea .process_lst2 .line{left:20px;}
-  
+
   #cardnewsView .pageing button{width:38px;}
   #cardnewsView .con_box{margin-bottom: 10px;}
   #cardnewsView .img_box{margin-bottom: 10px;}
   #cardnewsView .view_box > .inner{padding:10px;}
   #marketArea .marketVisual .dmp-controls .pageing .prev, #marketArea .marketVisual .dmp-controls .pageing .next{ width:38px; }
-  
+
   #loginArea .joinBox .btn a{font-size:17px;width:135px;}
-  
+
   /*갤러리즈 540*/
   .gallery_list_exhi > ul{margin-left:0;}
   .gallery_list_exhi > ul > li{float: none;width: auto;margin-left: 0;}
-  
+
   /*.gallery_list_aritst{overflow: hidden;position: relative;}*/
   .gallery_list_aritst > ul > li{width: 47.8441%;/*margin-bottom: 15px;*/}
   /*.gallery_list_aritst > ul > li:after{position: absolute;left:0;right:0;height:1px;background-color: #E9E9E9;content: '';}
@@ -2964,10 +2987,10 @@ Pagination Styles
   /*.gallery_list_exhi2{overflow: hidden;position: relative;}*/
   .gallery_list_exhi2 > ul > li{width: 48.2515%;}
   /*.gallery_list_exhi2 > ul > li:after{position: absolute;left:0;right:0;height:1px;background-color: #E9E9E9;content: '';margin-top:10px;}*/
-  
+
   .gallery_list_exhi2 ul.link_share_btns .hv > ul{padding:13px;}
   .gallery_list_exhi2 ul.link_share_btns .hv > ul > li{width:37px;}
-  
+
   #apply_info_area .process_lst2 > .inner > ul > li{margin-bottom:10px;}
   #apply_info_area .process_lst2 > .inner > ul > li > div{10px 10px 10px 10px;}
   #apply_info_area .process_lst2 > .inner > ul > li > h1{width:40px;}
@@ -3000,7 +3023,7 @@ Pagination Styles
 
       /* #shoppingArea .shopping_list .inner ul li {width: 98%; margin-left:2%;}
       #shoppingArea .shopping_list .inner ul li .img{display: block;}*/
-/*       #shoppingArea .shopping_list .inner ul li img{width: 100%; height: auto;} 
+/*       #shoppingArea .shopping_list .inner ul li img{width: 100%; height: auto;}
 #marketRView #shoppingArea .shopping_list .inner ul li{width: 150px;}
 #marketRView #shoppingArea .shopping_list .inner ul li .img{ height: 180px;}
 #marketRView #shoppingArea .shopping_list > button.next{right: -12px;}
@@ -3021,7 +3044,7 @@ Pagination Styles
   #footer .company_info .contact ul li.contact4{/* display: none; */}
   #footer .company_info .copyright{display: none;}
 
- 
+
 /*    .tabBox ul{width: 100%;}    */
    .tabBox.n6 ul{width: 197%;}
    #footer .company_info .emailContact .sendemail{max-width:375px;width:auto;}
@@ -3030,13 +3053,13 @@ Pagination Styles
    #footer .email_input{height:35px; line-height: 1em; font-size:13px; color:#9d9d9d; }
    #footer .email .btns{height:35px; }
    #footer .email button{height:35px; }
-    
+
 
       /*news*/
 
      /*뉴스 썸네일 리스트 게시판 */
       #bbs_thumb_t5 > ul > li .thumb{ width: 110px; height: 130px;}
-      #bbs_thumb_t5.type_gallary > ul > li .thumb{width: 110px;height:110px;} 
+      #bbs_thumb_t5.type_gallary > ul > li .thumb{width: 110px;height:110px;}
       #bbs_thumb_t5.type_gallary > ul > li .cont{padding-top: 9px;}
       #bbs_thumb_t5.type_gallary > ul > li .cont > .txt{display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;-ms-text-overflow: normal;white-space: normal; text-overflow: normal;height:38px;overflow: hidden;}
       #bbs_thumb_t5 > ul > li .cont{ margin-left: 130px; padding-top: 0px; margin-top: 0; }
@@ -3066,7 +3089,7 @@ Pagination Styles
       /*마켓 재작업 : istop type*/
       /* #marketProductAjax .newsBox{width:286px; width: inherit; margin-left: 0;}  */
 
-      /*마켓 작가 검색*/ 
+      /*마켓 작가 검색*/
       /* #artistInfo > header.header .total > li{float: none;} */
 
       /*w480 :: 기획전 상세 */
@@ -3080,27 +3103,27 @@ Pagination Styles
 /*       .lst_horizontal.style4 > ul{ margin-left: 0;}
 .lst_horizontal.style4 > ul > li{width: 100%; margin-left: 0; margin-bottom: 20px;} */
   #bbs_view_ty1 .content .bbs_infor {}
-  
-      
+
+
       /*  */
-      #aboutArea ul.list li > div.cont .bg dl.a2 {top: 21%; right: -9%;} 
+      #aboutArea ul.list li > div.cont .bg dl.a2 {top: 21%; right: -9%;}
       #aboutArea ul.list li > div.cont .bg dl.a3 {bottom: 2%;}
       #aboutArea ul.list li > div.cont .bg dl.a4 {bottom: 2%;}
       #aboutArea ul.list li > div.cont .bg dl.a5 {top: 22%; left: -11%;}
-  
+
   #newWrapper .newsBox .newsBox_inner{padding-bottom: 10px;}
   #newWrapper .newsBox .newsBox_inner .news_cont{margin-top: 10px;padding-left: 5px;}
   #newWrapper .newsBox .newsBox_inner .news_cont > h2{margin-top:7px;}
   #newWrapper .newsBox .newsBox_inner .news_cont > h2 a{line-height: 1.375;}
   #newWrapper .newsBox .newsBox_inner .news_cont .text_cont{margin-top:10px;}
-  
+
 
 
 
 /*갤러리즈*/
   .gallery_list > ul{margin-left:0;}
   .gallery_list > ul > li{border-bottom:1px solid #E9E9E9;padding-bottom: 8px;margin-bottom:4%;}
-  
+
   .gallery_list > ul > li, .gallery_list > ul > li.w3{width: auto;float: none;}
   .gallery_list > ul > li.w3{border-bottom-width:0;margin-bottom:4%;padding-bottom: 0;}
 
@@ -3110,20 +3133,20 @@ Pagination Styles
 }/* //media::479 */
 
 @media(max-width:440px){
-  
+
   #resevationArea .rgh_group > ul > li { width: 33.33333%; }
-  
+
     /*#footer .company_info .contact ul{margin-left:auto;margin-right:auto;width:120px;}*/
   /*#footer .company_info .contact ul li.contact1, #footer .company_info .contact ul li.contact2, #footer .company_info .contact ul li.contact4{
    display:block;margin:0;
   }*/
-  
+
 }
 @media(max-width:440px){
   .tabBox>ul>li { width: 33.3333333333%; }
 }
 
-/* 
+/*
 
 @media screen and (max-width: 1280px){
 

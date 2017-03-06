@@ -32,7 +32,7 @@
 								</li>
 								<li>
 									<strong>3. 연락처</strong>
-									<div class="cont">전화: 02-6325-9273, 팩스: 02-6005-9277, 이메일: <a href="mailto:spaceart1@art1.com">spaceart1@art1.com</a></div>
+									<div class="cont">전화: 02-6325-9271, 팩스: 02-6005-9277, 이메일: <a href="mailto:spaceart1@art1.com">spaceart1@art1.com</a></div>
 								</li>
 								<li>
 									<strong>4. 홈페이지</strong>
@@ -89,7 +89,9 @@
 										전화 및 메일 문의
 										<div class="lst_hypen">
 											<ul>
-												<li><span>-</span><p>전화: <a href="tel:02-6325-9273"></a>02-6325-9273</p></li>
+												<li><span>-</span>
+												<p>전화: <a href="tel:02-6325-9273"></a>02-6325-9271</p>
+												</li>
 												<li><span>-</span><p>메일주소: <a href="mailto:spaceart1@art1.com">spaceart1@art1.com</a></p></li>
 												<li><span>-</span><p>홈페이지: <a href="/art1/quick_space_art1.php" target="_blank">www.spaceart1.com</a></p></li>
 												<li><span>-</span><p>블로그: <a href="http://blog.naver.com/space_art1" target="_blank">http://blog.naver.com/space_art1</a></p></li>
@@ -300,9 +302,8 @@
 				</section><!-- spaceBottom -->
 
 				<div class="btn_bot cen">
-                      <a href="space_art1_Rental_Guide.pdf" class="btn_pack normal gray" target="_blank">Rental Guide &nbsp;&nbsp;<span class="img_hover"><img class="img_off" src="/images/art1/ico_pdf.png" alt=""><img class="img_on" src="/images/art1/ico_pdf_on.png" alt=""></span></a>
-					  <br/>
-                      <a href="http://blog.naver.com/space_art1" class="" target="_blank" style="display: inline-block; margin-top: 15px;"><img src="/images/art1/space-art1.jpg"/></a>
+                      <a href="space_art1_Rental_Guide.pdf" class="btn_pack normal gray" target="_blank" style="display: inline-block; margin-right:20px;">Rental Guide &nbsp;&nbsp;<span class="img_hover"><img class="img_off" src="/images/art1/ico_pdf.png" alt=""><img class="img_on" src="/images/art1/ico_pdf_on.png" alt=""></span></a>
+                      <a href="http://blog.naver.com/space_art1" class="" target="_blank" style="display: inline-block;"><img src="/images/art1/space-art1.jpg"/></a>
 					  <!-- <a href="http://blog.naver.com/space_art1" class="btn_pack normal gray" target="_blank">space art1 blog </a> -->
 					   <p class="addTxt">※ 공간에 대한 더 많은 정보는 space art1 블로그를 통해 확인하실 수 있습니다.</p>
                   </div><!-- btn_bot -->

@@ -5,13 +5,11 @@
       </h1>
       <nav id="lnb"  <? if ($pageNum == "0"){?> class="h_main"<?} else {?> class="h_sub" <? } ?>>
          <ul>
-            <li class="m1">
-               <a href="/art1/artist_rec.php"><span class="en">art1</span><span class="kr">아트1</span></a></li>
-            <!-- li class="m2"><a href="/news/index.php">NEWS</a></li -->
+            <li class="m1"><a href="/art1/artist_rec.php"><span class="en">art1</span><span class="kr">아트1</span></a></li>
             <li class="m2"><a href="/news/index.php?at=main"><span class="en">news</span><span class="kr">뉴스</span></a></li>
             <li class="m3"><a href="/marketPlace/index.php"><span class="en">market</span><span class="kr">마켓</span></a></li>
             <li class="m4"><a href="/galleries/"><span class="en">galleries</span><span class="kr">갤러리</span></a></li>
-            <!-- <li class="m4"><a href="/sponsorship/index.php">SPONSORSHIP</a></li> -->
+            <li class="m5 new"><a href="/articovery/"><span class="en">articovery</span><span class="kr">아티커버리</span></a></li>
          </ul>
       </nav>
       <!--gnb-->
@@ -89,10 +87,11 @@
    <div class="mobileQmenu">
       <div class="inner">
          <ul>
-            <li><a href="/art1/artist_rec.php">art1</a></li>
-            <li><a href="/news/index.php?at=main">news</a></li>
-            <li><a href="/marketPlace/index.php">market</a></li>
-            <li><a href="/galleries/">galleries</a></li>
+            <li><a href="/art1/artist_rec.php"><span>art1</span></a></li>
+            <li><a href="/news/index.php?at=main"><span>news</span></a></li>
+            <li><a href="/marketPlace/index.php"><span>market</span></a></li>
+            <li><a href="/galleries/"><span>galleries</span></a></li>
+            <li class="new"><a href="/articovery/"><span>articovery</span></a></li>
          </ul>
       </div>
    </div>

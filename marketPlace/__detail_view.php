@@ -359,13 +359,13 @@ $snsDescription = str_replace("\r\n", '', strip_tags($Work->attr['goods_descript
                 </div><!-- //group_lft -->
 
           <div class="group_rgh">
-              <p class="name"><span><?php echo $Artist->attr['artist_name'];?></span></p>
-              <p class="t1"><?php echo nl2br(strip_tags($Artist->attr['artist_greeting']));?></p>
+              <p class="name"><span><?php echo htmlspecialchars(stripslashes($Artist->attr['artist_name']));?></span></p>
+              <p class="t1"><?php echo nl2br(strip_tags(stripslashes($Artist->attr['artist_greeting'])));?></p>
               <div class="lst about">
                   <ul>
                       <li>
                           <div class="h">직업</div>
-                          <div class="cont"><?php echo $Artist->attr['artist_job'];?></div>
+                          <div class="cont"><?php echo htmlspecialchars(stripslashes($Artist->attr['artist_job']));?></div>
                       </li>
                       <li>
                           <div class="h">출생</div>
@@ -377,7 +377,7 @@ $snsDescription = str_replace("\r\n", '', strip_tags($Work->attr['goods_descript
                       </li>
                       <li>
                           <div class="h">장르</div>
-                          <div class="cont"><?php echo $Artist->attr['artist_genre'];?></div>
+                          <div class="cont"><?php echo htmlspecialchars(stripslashes($Artist->attr['artist_genre']));?></div>
                       </li>
                   </ul>
               </div>
@@ -389,7 +389,7 @@ $snsDescription = str_replace("\r\n", '', strip_tags($Work->attr['goods_descript
                           <div class="cont">
 						<?php for($i = 0; $i < $aEducationYearCnt; $i++): ?>
 							<?php if (!empty($aEducationYear[$i]) ||  !empty($aEducationName[$i])): ?>
-                              <p><?php echo $aEducationYear[$i];?>  <?php echo $aEducationName[$i];?></p>
+                              <p><?php echo $aEducationYear[$i];?>  <?php echo htmlspecialchars(stripslashes($aEducationName[$i]));?></p>
 							<?php endif; ?>
 						<?php endfor; ?>
                           </div>
@@ -401,7 +401,7 @@ $snsDescription = str_replace("\r\n", '', strip_tags($Work->attr['goods_descript
                           <div class="cont">
 							<?php for($i = 0; $i < $aPrivateYearCnt; $i++): ?>
 								<?php if (!empty($aPrivateYear[$i]) ||  !empty($aPrivateName[$i])): ?>
-                              <p><?php echo $aPrivateYear[$i];?> <?php echo $aPrivateName[$i];?></p>
+                              <p><?php echo $aPrivateYear[$i];?> <?php echo htmlspecialchars(stripslashes($aPrivateName[$i]));?></p>
 							<?php endif; ?>
 						<?php endfor; ?>
                           </div>
@@ -413,7 +413,7 @@ $snsDescription = str_replace("\r\n", '', strip_tags($Work->attr['goods_descript
                           <div class="cont">
 							<?php for($i = 0; $i < $aTeamYearCnt; $i++): ?>
 								<?php if (!empty($aTeamYear[$i]) ||  !empty($aTeamName[$i])): ?>
-                              <p><?php echo $aTeamYear[$i];?> <?php echo $aTeamName[$i];?></p>
+                              <p><?php echo $aTeamYear[$i];?> <?php echo htmlspecialchars(stripslashes($aTeamName[$i]));?></p>
 							<?php endif; ?>
 						<?php endfor; ?>
                           </div>
@@ -425,7 +425,7 @@ $snsDescription = str_replace("\r\n", '', strip_tags($Work->attr['goods_descript
                           <div class="cont">
 							<?php for($i = 0; $i < $aCvYearCnt; $i++): ?>
 								<?php if (!empty($aCvYear[$i]) ||  !empty($aCvName[$i])): ?>
-                              <p><?php echo $aCvYear[$i];?> <?php echo $aCvName[$i];?></p>
+                              <p><?php echo $aCvYear[$i];?> <?php echo htmlspecialchars(stripslashes($aCvName[$i]));?></p>
 							<?php endif; ?>
 						<?php endfor; ?>
                           </div>
@@ -437,7 +437,7 @@ $snsDescription = str_replace("\r\n", '', strip_tags($Work->attr['goods_descript
                           <div class="cont">
 							<?php for($i = 0; $i < $aAwardYearCnt; $i++): ?>
 								<?php if (!empty($aAwardYear[$i]) ||  !empty($aAwardName[$i])): ?>
-                              <p><?php echo $aAwardYear[$i];?> <?php echo $aAwardName[$i];?></p>
+                              <p><?php echo $aAwardYear[$i];?> <?php echo htmlspecialchars(stripslashes($aAwardName[$i]));?></p>
 							<?php endif; ?>
 						<?php endfor; ?>
                           </div>
@@ -621,7 +621,6 @@ function marketViewOpen(){
             }else{
                 var outsideSize = $("#header .header_inner").offset().left;
             }
-            console.log(outsideSize);
 
             marketViewViewport.css({
               "display":"block"
@@ -639,7 +638,7 @@ function marketViewOpen(){
                   });
             /*marketViewViewport.find(".header").css("top",$("#header").height());*/
 		if(winWidth > 1250){
-			marketViewViewport.stop().animate({"width":marketViewViewportInner.outerWidth(true) + 40/*outsideSize*/},500,function(){});
+			marketViewViewport.stop().animate({"width":marketViewViewportInner.outerWidth(true) + outsideSize},500,function(){});
 			marketViewViewport.css("padding-right","");
 		}else if(winWidth <= 1250 && winWidth > 960  ){
 			marketViewViewport.stop().animate({"width":marketViewViewportInner.outerWidth(true)},500,function(){});
@@ -649,21 +648,22 @@ function marketViewOpen(){
                 // con(winParsent(96));
                 marketViewViewportInner.css({
                       "padding-top":$("#header").height(),
-                      "width":winParsent(96)
+                      "width":winParsent(92)
                     });
                 marketViewViewport.stop().animate({
-                  "width":"96%"
+                  "width":"92%"
                 },500,function(){}).css({
-          			  "padding":"0 2% 2%"
-          			});
+			"padding":"0 2% 2%"
+			});
                 marketViewViewportInner.find(".product_info").css({
                  "padding-top":"0"
-                });
-                marketViewViewport.find(".header").css({
+              });
+
+                  marketViewViewport.find(".header").css({
                     "position":"relative",
                     "left":"",
                     "top":"",
-                });
+                  });
 
 		}
 		//con("outsideSize:::::"+outsideSize);

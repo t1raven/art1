@@ -18,7 +18,7 @@
 
   <div class="cont">
     <? if ( $pageNum == "1") { ?>
-      <h1 class="art1"><a href="/art1/index.php"><?=$categoriName?></a></h1>
+      <h1 class="art1"><a href="/art1/artist_rec.php"><?=$categoriName?></a></h1>
     <? } elseif ( $pageNum == "2") { ?>
       <h1><a href="/news/index.php?at=main"><?=$categoriName?></a></h1>
     <? } elseif ( $pageNum == "3") { ?>

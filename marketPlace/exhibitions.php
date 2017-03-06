@@ -18,6 +18,13 @@ if (!empty($evt_idx) && is_numeric($evt_idx)) {
 	$aParaArtWork = explode('§', $Event->attr['para_artwork']);
 	$aGoodsInfo = $Event->getGoodsInfo($dbh, $aParaArtWork);
 	$eventCnt = count($aParaSubTitle);
+
+	//모바일용 이미지 베너 추가 2016-06-08 // LYT
+	$evt_main_img_m = ( empty($Event->attr['evt_main_img_m']) ) ? $evt_main_img_m = $Event->attr['evt_main_img'] : $evt_main_img_m = $Event->attr['evt_main_img_m'];
+
+	$ogTitle = $Event->attr['evt_title'];
+	$ogDescription = $Event->attr['evt_copyright'];
+	$ogImage = $PUBLIC['HOME'].eventUploadPath.$Event->attr['evt_main_img'];
 }
 else {
 	exit;
@@ -43,12 +50,14 @@ include('../inc/spot_sub.php');
                 <h1><?php echo $Event->attr['evt_title'];?></h1>
                 <p class="t1"><?php echo $Event->attr['evt_copyright'];?></p>
               </header>
-              <div class="banner">
+              <?php if (!empty($Event->attr['evt_main_img'])) : ?>
+			  <div class="banner">
                   <div class="photo">
                     <img src="<?php echo eventUploadPath, $Event->attr['evt_main_img']; ?>" alt="" class="boxsize pc">
-                    <img src="<?php echo eventUploadPath, $Event->attr['evt_main_img']; ?>" alt="" class="boxsize mobile">
+                    <img src="<?php echo eventUploadPath, $evt_main_img_m; ?>" alt="" class="boxsize mobile">
                   </div>
               </div>
+			  <?php endif ; ?>
               <div class="tab_type3 n5">
                 <ul>
                 <?php
@@ -74,6 +83,7 @@ include('../inc/spot_sub.php');
                                 $aTemp = explode('§', $aGoodsInfo[$z]);
                     ?>
                     <li>
+					<!-- <div class="testCss">test</div> -->
                     <?php if ($aTemp[4] === '0'):?>
 						<p class="circle"><img src="/images/ico/ico_red_circle.png" alt="판매불가"></p>
 					<?php else: ?>

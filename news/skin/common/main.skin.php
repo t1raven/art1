@@ -54,8 +54,8 @@ try {
                 <div class="bbs_thumb_t6">
                       <section class="lst">
                           <div class="thumb">
-                              <a href="?at=read&subm=1&idx=<?php echo $News->attr['news_idx']; ?>"><img src="<?php echo newsUploadPath.$News->attr['news_recent_up_file_name'];?>" alt="" /></a>
-                          </div><!-- trend_imgBox -->
+                            <a href="?at=read&subm=1&idx=<?php echo $News->attr['news_idx']; ?>"><img src="<?php echo newsUploadPath.$News->attr['news_recent_up_file_name'];?>" alt="" /></a>
+                          </div>
                           <div class="cont">
                               <div class="inner">
                                 <p class="h"><a href="?at=read&subm=1&idx=<?php echo $News->attr['news_idx']; ?>"><?php echo $News->attr['news_title'];?></a></p>
@@ -443,12 +443,15 @@ foreach($list as $row) {
 		  $list = $banner->getListBanner($dbh);
 		  $i=1;
 		  foreach($list as $row){
+				if($row['isDisplay'] == 'Y')
+				{
 		  ?>
 			<a href="<?php echo $row['linkUrl']; ?>" class="inner" target="_blank">
 				<img src="<?php echo $row['bannerUpFileName']; ?>" class="pc" alt="" />
 				<img src="<?php echo $row['bannerUpFileNameMobile']; ?>" class="mobile" alt="" />
 			</a>
 		  <?php 
+				}
 			 $i++;
 		  }  //메인 베너 E
 		  ?>

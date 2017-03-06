@@ -42,21 +42,20 @@
 											<p>아트1 1주년</p>
 										</div>
 									</li>
-									<!-- <li class="c3">
+									<li class="c6">
 										<span class="circle"></span>
 										<div class="con">
-											<h4>7월.</h4>
-											<p>아트1, ‘2015 ICT 어워드 코리아’ 모바일 부분 장관상 수상</p>
+											<h4>6월.</h4>
+											<p>L호텔 아트 컨설팅</p>
 										</div>
 									</li>
-									<li class="c4">
+									<li class="c10">
 										<span class="circle"></span>
 										<div class="con">
-											<h4>9월.</h4>
-											<p>복합문화공간 스페이스 아트1 개관</p>
-											<p>스페이스 아트1 개관기념전&lt;art1 show&gt;</p>
+											<h4>10월.</h4>
+											<p>스페이스 아트1 <필동 아트마켓 프로젝트></p>
 										</div>
-									</li> -->
+									</li>
 								</ul>
 							</div>
 						</div>

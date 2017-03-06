@@ -44,6 +44,7 @@ if (!empty($news_skin_type))
 
 	foreach($list as $row) {
 		//리센트뉴스 S
+
 		if (empty($row['news_recent_up_file_name'])){
 			//$list_img = newsUploadPath.$row['up_file_name'];
 			if(empty($row['file_code'])){

@@ -11,6 +11,7 @@
 		<li class="<?php if($subm=='5') echo 'on' ; ?>"><a href="/news/?at=list&subm=5">Trouble</a></li>
 		<li class="<?php if($subm=='6') echo 'on' ; ?>"><a href="/news/?at=list&subm=6">Episode</a></li>
 		<li class="<?php if($subm=='15') echo 'on' ; ?>"><a href="/news/?at=list&subm=15">Card News</a></li>
+    <!-- <li class="<?php if($subm=='16') echo 'on' ; ?>"><a href="/news/?at=list&subm=16">Post</a></li> -->
 		<li class="<?php if($subm=='') echo 'on' ; ?>"><a href="/bbs/?at=list">Community</a></li>
 	</ul>
 	<span class="prev" style="display: none;"><img src="/images/ico/ico_tabarr_lft.png" alt=""></span>
@@ -33,7 +34,7 @@
          $this.find(".prev").css("display","block");
       }else{
         $this.find(".prev").css("display","none");
-      }                  
+      }
 
 
    }else{
@@ -42,8 +43,8 @@
 }//updatePosition
 
  $(function(){
- 	/*  sidemyScroll = new IScroll('.tabBox', { 
-        scrollX: true, 
+ 	/*  sidemyScroll = new IScroll('.tabBox', {
+        scrollX: true,
         scrollY: false,
         mouseWheel: true ,
         preventDefault: false

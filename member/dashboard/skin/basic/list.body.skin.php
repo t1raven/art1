@@ -135,11 +135,11 @@
                                 <p class="t2"><?php echo $row['goods_name'];?></p>
                               </div>
                               <div class="btn">
-                                <?php if ($row['goods_lental_state'] === 'N' || $row['sold_out_state'] === 'Y'): ?>
+                                <!-- <?php if ($row['goods_lental_state'] === 'N' || $row['sold_out_state'] === 'Y'): ?>
                                   <button type="button" class="btn_pack radius Inactive" onclick="alert('렌탈이 불가능한 작품입니다.');">RENTAL</button>
                                 <?php else: ?>
                                   <button type="button" class="btn_pack radius" onclick="rental('<?php echo $row['goods_idx'];?>')">RENTAL</button>
-                                <?php endif; ?>
+                                <?php endif; ?> -->
 
                                 <?php if ($row['goods_lental_state'] === 'N' || $row['goods_cnt'] === '0' || $row['sold_out_state'] === 'Y'): ?>
                                   <button type="button" class="btn_pack radius Inactive" onclick="alert('판매가 불가능한 작품입니다.');">CART</button>

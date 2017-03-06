@@ -195,8 +195,12 @@ class Marketmain
 			$goods_idx = !empty($this->getAddslashes('goods_idx')) ? $this->getAddslashes('goods_idx') : null;
 			$evt_title = !empty($this->getAddslashes('evt_title')) ? $this->getAddslashes('evt_title') : null;
 			$evt_idx = !empty($this->getAddslashes('evt_idx')) ? $this->getAddslashes('evt_idx') : null;
+			$mmb_link = !empty($this->getAddslashes('mmb_link')) ? $this->getAddslashes('mmb_link') : null;
 			$mmb_img_name = !empty($this->getAddslashes('mmb_img_name')) ? $this->getAddslashes('mmb_img_name') : null;
 			$mmb_img_rename = !empty($this->getAddslashes('mmb_img_rename')) ? $this->getAddslashes('mmb_img_rename') : null;
+			$mmb_img_mobile_name = !empty($this->getAddslashes('mmb_img_mobile_name')) ? $this->getAddslashes('mmb_img_mobile_name') : null;
+			$mmb_img_mobile_rename = !empty($this->getAddslashes('mmb_img_mobile_rename')) ? $this->getAddslashes('mmb_img_mobile_rename') : null;
+			$orders = !empty($this->getAddslashes('orders')) ? $this->getAddslashes('orders') : null;
 			$mmb_idx = $this->getAddslashes('mmb_idx');
 /*
 			echo '<br>mmb_display:'.$mmb_display;
@@ -214,9 +218,13 @@ class Marketmain
 							goods_idx = :goods_idx,
 							goods_name = :goods_name,
 							evt_idx = :evt_idx, evt_title = :evt_title,
+							mmb_link = :mmb_link,
 							mmb_img_name = :mmb_img_name,
 							mmb_img_rename = :mmb_img_rename,
-							mmb_display = :mmb_display
+							mmb_img_mobile_name = :mmb_img_mobile_name,
+							mmb_img_mobile_rename = :mmb_img_mobile_rename,
+							mmb_display = :mmb_display,
+							orders = :orders
 						WHERE mmb_idx = :mmb_idx';
 			$stmt = $dbh->prepare($sql);
 			$stmt->bindParam(':mmb_gubun', $mmb_gubun, PDO::PARAM_STR, 1);
@@ -224,9 +232,13 @@ class Marketmain
 			$stmt->bindParam(':goods_name', $goods_name, PDO::PARAM_STR, 200);
 			$stmt->bindParam(':evt_idx', $evt_idx, PDO::PARAM_INT, 11);
 			$stmt->bindParam(':evt_title', $evt_title, PDO::PARAM_STR, 100);
+			$stmt->bindParam(':mmb_link', $mmb_link, PDO::PARAM_STR, 255);
 			$stmt->bindParam(':mmb_img_name', $mmb_img_name, PDO::PARAM_STR, 255);
 			$stmt->bindParam(':mmb_img_rename', $mmb_img_rename, PDO::PARAM_STR, 25);
+			$stmt->bindParam(':mmb_img_mobile_name', $mmb_img_mobile_name, PDO::PARAM_STR, 255);
+			$stmt->bindParam(':mmb_img_mobile_rename', $mmb_img_mobile_rename, PDO::PARAM_STR, 25);
 			$stmt->bindParam(':mmb_display', $mmb_display, PDO::PARAM_STR, 1);
+			$stmt->bindParam(':orders', $orders, PDO::PARAM_INT, 3);
 			$stmt->bindParam(':mmb_idx', $mmb_idx, PDO::PARAM_INT, 11);
 
 			if ($stmt->execute()) {
@@ -273,9 +285,9 @@ class Marketmain
 	// 마켓 메인배너 목록 가져오기(관리자)
 	function getMainBannerList($dbh) {
 		try {
-			$sql = ' SELECT mmb_idx, mmb_gubun, goods_idx, goods_name, evt_idx, evt_title, mmb_img_name, mmb_img_rename, mmb_display
+			$sql = ' SELECT mmb_idx, mmb_gubun, goods_idx, goods_name, evt_idx, evt_title, mmb_link, mmb_img_name, mmb_img_rename, mmb_img_mobile_name, mmb_img_mobile_rename, mmb_display, orders
 						FROM market_main_banner
-						ORDER BY mmb_idx ASC';
+						ORDER BY orders ASC, mmb_idx ASC';
 			$stmt = $dbh->prepare($sql);
 
 			if ($stmt->execute() && $stmt->rowCount()) {
@@ -295,10 +307,10 @@ class Marketmain
 	function getMainBannerListRolling($dbh) {
 		try {
 			$mmb_display = 'Y';
-			$sql = ' SELECT mmb_idx, mmb_gubun, goods_idx, evt_idx, mmb_img_rename
+			$sql = ' SELECT mmb_idx, mmb_gubun, goods_idx, evt_idx, mmb_link, mmb_img_rename, mmb_img_mobile_rename
 						FROM market_main_banner
 						WHERE mmb_img_rename IS NOT NULL AND mmb_display = :mmb_display
-						ORDER BY mmb_idx ASC';
+						ORDER BY orders ASC, mmb_idx ASC';
 			$stmt = $dbh->prepare($sql);
 			$stmt->bindParam(':mmb_display', $mmb_display, PDO::PARAM_INT, 11);
 
@@ -974,8 +986,16 @@ class Marketmain
 					$subSQL .= ' AND goods_size = :goods_size ';
 				}
 
+				/*
 				if (is_numeric($goods_color)) {
 					$subSQL .= ' AND goods_color = :goods_color ';
+				}
+				*/
+
+				//멀티 색상 검색
+				if (is_numeric($goods_color)) {
+					$goods_color = '§'.$goods_color.'§';
+					$subSQL .= ' AND INSTR(goods_color_multi , :goods_color )  > 0 ';
 				}
 	/*
 				if (is_numeric($goods_sell_price)) {
@@ -1057,7 +1077,6 @@ class Marketmain
 							FROM goods AS a
 							WHERE a.category_idx = :category_idx AND a.goods_display = :goods_display AND a.del_state = :del_state '.$subSQL. ' ORDER BY a.goods_idx DESC LIMIT '.$rdmstart.', '.$end.') ORDER BY RAND()';
 
-				//echo $sql;
 				$stmt = $dbh->prepare($sql);
 				$stmt->bindParam(':category_idx', $category_idx, PDO::PARAM_INT, 1);
 				$stmt->bindParam(':goods_display', $goods_display, PDO::PARAM_STR, 1);
@@ -1075,8 +1094,14 @@ class Marketmain
 					$stmt->bindParam(':goods_size', $goods_size, PDO::PARAM_INT, 1);
 				}
 
+				/*
 				if (is_numeric($goods_color)) {
 					$stmt->bindParam(':goods_color', $goods_color, PDO::PARAM_INT, 1);
+				}
+				*/
+				//멀티색상 검색
+				if (!empty($goods_color)) {
+					$stmt->bindParam(':goods_color', $goods_color, PDO::PARAM_INT, 50);
 				}
 
 				if ($rantal === 'Y') {
@@ -1181,8 +1206,15 @@ class Marketmain
 				$subSQL .= ' AND goods_size = :goods_size ';
 			}
 
+			/*
 			if (is_numeric($goods_color)) {
 				$subSQL .= ' AND goods_color = :goods_color ';
+			}
+			*/
+
+			if (is_numeric($goods_color)) {
+				$goods_color = '§'.$goods_color.'§';
+				$subSQL .= ' AND INSTR(goods_color_multi , :goods_color )  > 0 ';
 			}
 
 			if (is_numeric($goods_sell_price)) {
@@ -1251,8 +1283,13 @@ class Marketmain
 				$stmt->bindParam(':goods_size', $goods_size, PDO::PARAM_INT, 1);
 			}
 
+			/*
 			if (is_numeric($goods_color)) {
 				$stmt->bindParam(':goods_color', $goods_color, PDO::PARAM_INT, 1);
+			}
+			*/
+			if (!empty($goods_color)) {
+				$stmt->bindParam(':goods_color', $goods_color, PDO::PARAM_STR, 50);
 			}
 
 			if ($rantal === 'Y') {

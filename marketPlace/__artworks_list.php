@@ -133,30 +133,42 @@ if ($artWorkTotalCount > 0) {
 				$page = (int)($i / $def_sz +1) ;
 			}
 
+			$makeYear = !empty($row['goods_make_year']) ? $row['goods_make_year'] : null;
 			$material = !empty($row['goods_material']) ? $row['goods_material'].', ' : null;
 			$width = !empty($row['goods_width']) ? $row['goods_width'] : null;
 			$depth = !empty($row['goods_depth']) ? $row['goods_depth'] : null;
 			$height = !empty($row['goods_height']) ? $row['goods_height'] : null;
-			$makeYear = !empty($row['goods_make_year']) ? $row['goods_make_year'] : null;
 
 			//2015-03-13 이용태 수정 소숫점 .0 을 없앤다.
 			$width =  !empty($width) ? str_replace('.0','',$width) : null; //str_replace("-","",$loss_hp)
 			$height =  !empty($height) ? str_replace('.0','',$height)  : null;
 			$depth =  !empty($depth) ? str_replace('.0','',$depth)  : null;
 
+			if (!empty($makeYear)) {
+				$info = $makeYear.', ';
+			}
 
 
 			if (!empty($material)) {
-				$info = $material;
+				$info .=  $material;
 			}
 
-			if (!empty($width)) {
+			/*if (!empty($width)) {
 				$info .= $width;
 			}
 
 			if (!empty($depth)) {
 				$info .= 'x'.$depth;
+			}*/
+			
+			if (!empty($depth)) {
+				$info .= $depth;
 			}
+
+			if (!empty($width)) {
+				$info .= 'x'.$width;
+			}
+
 
 			if (!empty($height)) {
 				if ((int)$height > 0) {
@@ -167,14 +179,15 @@ if ($artWorkTotalCount > 0) {
 				}
 			}
 			else {
-				$info .= 'cm';
+				if(empty($width) && empty($depth) ) {
+					$info .= '';
+				} else {
+					$info .= 'cm';
+				}
 			}
 
+			$info = ( substr($info, -2, 2) == ', ' ) ? substr($info, 0, -2) : $info ; //맨 뒤 문장뒤에 , 를 삭제
 
-
-			if (!empty($makeYear)) {
-				$info .= ' '.$makeYear;
-			}
 
 			$price = (int)$row['goods_sell_price'];
 
@@ -213,13 +226,13 @@ if ($artWorkTotalCount > 0) {
 					<span class="sale"><img src="/images/market/ico_sale.png" alt="판매된"></span>
 				<?php else: ?>
 					<?php if ($row['is_rental'] === 'Y'): ?>
-					<span class="rental"><img src="/images/market/ico_rental.png" alt="랜탈됨"></span>
+					<!-- <span class="rental"><img src="/images/market/ico_rental.png" alt="랜탈됨"></span> -->
 					<?php endif; ?>
 				<?php endif; ?>
 					<a><img src="<?php echo goodsThumbImgUploadPath, $row['goods_list_img'];?>" alt="" /></a>
 				</div>
 				<div class="news_cont">
-					<h1><?php echo $row['goods_name'];?></h1>
+					<h1><?php echo stripslashes($row['goods_name']);?></h1>
 					<div class="text_cont">
 						<p class="name"><?php echo $row['artist_name'];?></p>
 						<p class="name"><?php echo $info;?></p>

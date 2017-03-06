@@ -26,6 +26,7 @@ if (!empty($goods_idx)){
 <input type="hidden" name="user_view_url" id="user_view_url" value="">
 <section id="resevationArea">
    <div class="inner">
+   <button type="button" class="close" onclick="fixedPopupClose();"><img src="/images/btn/btn_close.png" alt="닫기"></button>
     <!-- <header class="header">
         <h1 class="title1">상담등록</h1>
         <button class="close" onclick="fixedPopupClose();"><img src="/images/btn/btn_close.png" alt="닫기"></button>

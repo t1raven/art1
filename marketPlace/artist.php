@@ -32,6 +32,7 @@ $pageNum = '3';
 $subNum = '0';
 $thirdNum = '0';
 $pathType = 'a';
+$ARTWORKSLISTCOUNT = '32';
 
 include('../inc/config.php');
 include('../inc/link.php');
@@ -60,7 +61,7 @@ include('../inc/spot_sub.php');
 <script src="/js/jquery.transform2d.js"></script>
 <script>
         $(function(){
-          ajaxData();
+		  ajaxData();
           //scrollNewEvent()
           var mainTimeOutSet;
          /* $(window).resize(function(){
@@ -70,10 +71,13 @@ include('../inc/spot_sub.php');
                   iCutterLoadNone("#marketArea .categori .list > ul > li .photo");
               },1000);
             })*/
+
         })
+
         $(window).on("scroll",function(){
            scrollNewEvent();
            //getItemElement();
+		  
           })
 
 
@@ -82,15 +86,14 @@ include('../inc/spot_sub.php');
 
 		var page = 1;
 		var totalCount = <?php echo $eachArtWorkTotalCount;?>;
-		var totalPage = Math.ceil(totalCount / <?php echo ARTWORKSLISTCOUNT;?>);
+		//var totalPage = Math.ceil(totalCount / <?php echo ARTWORKSLISTCOUNT;?>);
+		var totalPage = Math.ceil(totalCount / <?php echo $ARTWORKSLISTCOUNT;?>);
 
 		//뒤로가기를 위한 변수
 		var back_page = '<?php echo $back_page;?>' ;
 		var isto = '<?php echo $isto;?>' ; //뒤로가기 시 해당 섹션으로 찾아가기 위한 변수  $("#id")
 		var at_tmp = '<?php echo $at_tmp;?>' ;
-
-
-          var loadingImg = $("<img>").addClass("loading").attr("src","../images/ico/ajax-loader.gif").css({
+        var loadingImg = $("<img>").addClass("loading").attr("src","../images/ico/ajax-loader.gif").css({
             "position":"absolute",
             "left":"50%",
             "top":0,
@@ -107,8 +110,9 @@ include('../inc/spot_sub.php');
             doc = $(document),
             body = (navigator.userAgent.indexOf('AppleWebKit') !== -1) ? $('body') : $('html');
             var top = win.scrollTop() + win.height();
+			//alert(top);
             var endHeight = $("#marketProductAjax").offset().top + $("#marketProductAjax").outerHeight() +150;
-
+			//alert(endHeight);
             if(top > endHeight ){
 			  if (totalPage >= page){
 				  startScroll();
@@ -119,16 +123,14 @@ include('../inc/spot_sub.php');
               if(!scrollNewsStartFlag){
                 scrollNewsStartFlag = true;
                 loadingStart($("#marketProductAjax").outerHeight());
-                 getItemElement();
+				//$("#marketProductAjax").addClass('clearfix');
+                 getItemElement();  
 
               }//if
 
             }
 
-
-
-
-          };//scrollNewEvent
+         };//scrollNewEvent
 
         function ajaxData(num)
           {
@@ -163,8 +165,6 @@ include('../inc/spot_sub.php');
 								 },500)
                         };
                         imgLoad.on( 'always', onAlways );
-
-
 
                         /*function onDone( instance ) {
                         alert('onDone');
@@ -220,10 +220,15 @@ include('../inc/spot_sub.php');
                         var $data2 = $($container.find("#tmpData").html());
                         $container.append($data2);
                         $("#tmpData").remove();
-                        $container.isotope( 'appended',$data2).isotope('layout');
-                        $data2.css({"opacity":0 , "margin-top":0}).animate({"opacity":1 , "margin-top":0},500);
-                        page += 1;
-                        scrollNewsStartFlag = false;
+                        $data2.imagesLoaded(function(){
+                          $container
+                          .isotope( 'appended',$data2)
+                          .isotope('layout');
+                          $data2.css({"opacity":0 , "margin-top":0}).animate({"opacity":1 , "margin-top":0},500);
+                          page += 1;
+                          scrollNewsStartFlag = false;
+                        });
+                          
 
                   })//loading
 
@@ -237,10 +242,11 @@ include('../inc/spot_sub.php');
               $('<p class="noProduct">상품이 존재하지 않습니다.</p>').appendTo($container);
              }
         })
+
         }//getItemElement
 
 
-
+		
         </script>
 <?php
 include '../inc/footer.php';

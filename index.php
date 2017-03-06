@@ -140,46 +140,46 @@ function newsletter(){
 
 <?
 $imgVer = '?ver=1.42';
-$movies[0]['num'] =  '6';
-$movies[1]['num'] =  '7';
-$movies[2]['num'] =  '8';
-$movies[3]['num'] =  '9';
-$movies[4]['num'] =  '10';
-$movies[5]['num'] =  '11';
-$movies[6]['num'] =  '12';
+$movies[0]['num'] =  '14';
+$movies[1]['num'] =  '15';
+$movies[2]['num'] =  '16';
+$movies[3]['num'] =  '17';
+$movies[4]['num'] =  '18';
+$movies[5]['num'] =  '19';
+$movies[6]['num'] =  '20';
 
-$movies[0]['img'] =  '/images/main/tmp2/img_movt2_06.jpg'.$imgVer;
-$movies[1]['img'] =  '/images/main/tmp2/img_movt2_07.jpg'.$imgVer;
-$movies[2]['img'] =  '/images/main/tmp2/img_movt2_08.jpg'.$imgVer;
-$movies[3]['img'] =  '/images/main/tmp2/img_movt2_09.jpg'.$imgVer;
-$movies[4]['img'] =  '/images/main/tmp2/img_movt2_10.jpg'.$imgVer;
-$movies[5]['img'] =  '/images/main/tmp2/img_movt2_11.jpg'.$imgVer;
-$movies[6]['img'] =  '/images/main/tmp2/img_movt2_12.jpg'.$imgVer;
+$movies[0]['img'] =  '/images/main/tmp1611_2/img_movt2_14.jpg'.$imgVer;
+$movies[1]['img'] =  '/images/main/tmp1611_2/img_movt2_15.jpg'.$imgVer;
+$movies[2]['img'] =  '/images/main/tmp1611_2/img_movt2_16.jpg'.$imgVer;
+$movies[3]['img'] =  '/images/main/tmp1611_2/img_movt2_17.jpg'.$imgVer;
+$movies[4]['img'] =  '/images/main/tmp1611_2/img_movt2_18.jpg'.$imgVer;
+$movies[5]['img'] =  '/images/main/tmp1611_2/img_movt2_19.jpg'.$imgVer;
+$movies[6]['img'] =  '/images/main/tmp1611_2/img_movt2_20.jpg'.$imgVer;
 
-$movies[0]['dimg'] =  '/images/bg/bg_mov_noPlay6.jpg'.$imgVer;
-$movies[1]['dimg'] =  '/images/bg/bg_mov_noPlay7.jpg'.$imgVer;
-$movies[2]['dimg'] =  '/images/bg/bg_mov_noPlay8.jpg'.$imgVer;
-$movies[3]['dimg'] =  '/images/bg/bg_mov_noPlay9.jpg'.$imgVer;
-$movies[4]['dimg'] =  '/images/bg/bg_mov_noPlay10.jpg'.$imgVer;
-$movies[5]['dimg'] =  '/images/bg/bg_mov_noPlay11.jpg'.$imgVer;
-$movies[6]['dimg'] =  '/images/bg/bg_mov_noPlay12.jpg'.$imgVer;
+$movies[0]['dimg'] =  '/images/bg/bg_mov_noPlay14.jpg'.$imgVer;
+$movies[1]['dimg'] =  '/images/bg/bg_mov_noPlay15.jpg'.$imgVer;
+$movies[2]['dimg'] =  '/images/bg/bg_mov_noPlay16.jpg'.$imgVer;
+$movies[3]['dimg'] =  '/images/bg/bg_mov_noPlay17.jpg'.$imgVer;
+$movies[4]['dimg'] =  '/images/bg/bg_mov_noPlay18.jpg'.$imgVer;
+$movies[5]['dimg'] =  '/images/bg/bg_mov_noPlay19.jpg'.$imgVer;
+$movies[6]['dimg'] =  '/images/bg/bg_mov_noPlay20.jpg'.$imgVer;
 
 if($check_mobile === false){
-	$movies[0]['mov'] =  'ArtistRec6';
-	$movies[1]['mov'] =  'ArtistRec7';
-	$movies[2]['mov'] =  'ArtistRec8';
-	$movies[3]['mov'] =  'ArtistRec9';
-	$movies[4]['mov'] =  'ArtistRec10';
-	$movies[5]['mov'] =  'ArtistRec11';
-	$movies[6]['mov'] =  'ArtistRec12';
+	$movies[0]['mov'] =  'ArtistRec14';
+	$movies[1]['mov'] =  'ArtistRec15';
+	$movies[2]['mov'] =  'ArtistRec16';
+	$movies[3]['mov'] =  'ArtistRec17';
+	$movies[4]['mov'] =  'ArtistRec18';
+	$movies[5]['mov'] =  'ArtistRec19';
+	$movies[6]['mov'] =  'ArtistRec20';
 }else{
-	$movies[0]['mov'] =  'ArtistRec6_m';
-	$movies[1]['mov'] =  'ArtistRec7_m';
-	$movies[2]['mov'] =  'ArtistRec8_m';
-	$movies[3]['mov'] =  'ArtistRec9_m';
-	$movies[4]['mov'] =  'ArtistRec10_m';
-	$movies[5]['mov'] =  'ArtistRec11_m';
-	$movies[6]['mov'] =  'ArtistRec12_m';
+	$movies[0]['mov'] =  'ArtistRec14_m';
+	$movies[1]['mov'] =  'ArtistRec15_m';
+	$movies[2]['mov'] =  'ArtistRec16_m';
+	$movies[3]['mov'] =  'ArtistRec17_m';
+	$movies[4]['mov'] =  'ArtistRec18_m';
+	$movies[5]['mov'] =  'ArtistRec19_m';
+	$movies[6]['mov'] =  'ArtistRec20_m';
 }
 ?>      
 <? include "inc/header.php"; ?>
@@ -437,12 +437,15 @@ if($check_mobile === false){
 				  $list = $banner->getListBanner($dbh);
 				  $i=1;
 				  foreach($list as $row){
+						if($row['isDisplay'] == 'Y')
+						{
 				  ?>
 					<a href="<?php echo $row['linkUrl']; ?>" class="inner" target="_blank">
 						<img src="<?php echo $row['bannerUpFileName']; ?>" class="pc" alt="" />
 						<img src="<?php echo $row['bannerUpFileNameMobile']; ?>" class="mobile" alt="" />
 					</a>
 				  <?php 
+						}
 					 $i++;
 				  }  //메인 베너 E
 				  ?>
@@ -558,7 +561,7 @@ newsAni.swipe();
 						<div class="m_tlie tile_t1" data-video="<?=$movies[6]['mov']?>" data-img="<?=$movies[6]['dimg']?>" data-idx="<?=$movies[6]['num']?>">
 							<span class="cover"></span><img src="<?=$movies[6]['img']?>" class="movimg" alt="">
 							<div class="cont">
-								<h2><span>ARTIST<br />REC#<?=$movies[6]['num']-1?></span></h2>
+								<h2><span>ARTIST<br />REC#<?=$movies[6]['num']?></span></h2>
 							</div>
 							<a href="#" class="play"><img src="images/main/btn_play.png" alt="영상 시작"></a>
 							<a href="/art1/artist_rec.php?idx=<?=$movies[6]['num']?>" class="share"><img src="images/main/btn_share.png" alt="자세히 보기"></a>
@@ -575,11 +578,11 @@ newsAni.swipe();
 							<li class="m_tlie tile_t2" data-video="<?=$movies[3]['mov']?>" data-img="<?=$movies[3]['dimg']?>" data-idx="<?=$movies[3]['num']?>">
 								<span class="cover"></span><img src="<?=$movies[3]['img']?>" class="movimg" alt="">
 								<div class="cont">
-									<!-- <h2><span>ARTIST<br />REC#<?=$movies[3]['num']?></span></h2> -->
-									<h2 class="type2"><span>art1<br />&nbsp;show&nbsp;</span></h2>
+									<h2><span>ARTIST<br />REC#<?=$movies[3]['num']?></span></h2>
+									<!-- <h2 class="type2"><span>art1<br />&nbsp;show&nbsp;</span></h2> -->
 								</div>
-								<a href="#" class="play single"><img src="images/main/btn_play.png" alt="영상 시작"></a>
-								<!-- <a href="/art1/artist_rec.php?idx=<?=$movies[3]['num']?>" class="share"><img src="images/main/btn_share.png" alt="자세히 보기"></a> -->
+								<a href="#" class="play"><img src="images/main/btn_play.png" alt="영상 시작"></a>
+								<a href="/art1/artist_rec.php?idx=<?=$movies[3]['num']?>" class="share"><img src="images/main/btn_share.png" alt="자세히 보기"></a>
 							</li>
 						</ul>
 					</li>
@@ -597,6 +600,7 @@ newsAni.swipe();
 								<span class="cover"></span><img src="<?=$movies[1]['img']?>" class="movimg" alt="">
 								<div class="cont">
 									<h2><span>ARTIST<br />REC#<?=$movies[1]['num']?></span></h2>
+									<!-- <h2 class="type2"><span>art1<br />&nbsp;show&nbsp;</span></h2> -->
 								</div>
 								<a href="#" class="play"><img src="images/main/btn_play.png" alt="영상 시작"></a>
 								<a href="/art1/artist_rec.php?idx=<?=$movies[1]['num']?>" class="share"><img src="images/main/btn_share.png" alt="자세히 보기"></a>
@@ -607,16 +611,18 @@ newsAni.swipe();
 							<li class="m_tlie tile_t3 promo" data-video="<?=$movies[0]['mov']?>" data-img="<?=$movies[0]['dimg']?>" data-idx="<?=$movies[0]['num']?>">
 								<span class="cover"></span><img src="<?=$movies[0]['img']?>" class="movimg" alt="">
 								<div class="cont">
+									<!-- <h2><span>ARTIST<br />REC#<?=$movies[0]['num']?></span></h2> -->
 									<h2><span>ARTIST<br />REC#<?=$movies[0]['num']?></span></h2>
+									<!-- <h2 class="type2"><span>art1<br />&nbsp;show&nbsp;</span></h2> -->
 								</div>
 								<a href="#" class="play"><img src="images/main/btn_play.png" alt="영상 시작"></a>
 								<a href="/art1/artist_rec.php?idx=<?=$movies[0]['num']?>" class="share"><img src="images/main/btn_share.png" alt="자세히 보기"></a>
 							</li>
 						</ul>
 						<div class="m_tlie tile_t4" data-video="<?=$movies[5]['mov']?>" data-img="<?=$movies[5]['dimg']?>" data-idx="<?=$movies[5]['num']?>">
-							<img src="<?=$movies[5]['img']?>" class="movimg" alt=""><span class="cover"></span>
+							<span class="cover"></span><img src="<?=$movies[5]['img']?>" class="movimg" alt="">
 							<div class="cont">
-								<h2><span>ARTIST<br />REC#<?=$movies[5]['num']-1?></span></h2>
+								<h2><span>ARTIST<br />REC#<?=$movies[5]['num']?></span></h2>
 							</div>
 							<a href="#" class="play"><img src="images/main/btn_play.png" alt="영상 시작"></a>
 							<a href="/art1/artist_rec.php?idx=<?=$movies[5]['num']?>" class="share"><img src="images/main/btn_share.png" alt="자세히 보기"></a>
@@ -637,7 +643,7 @@ newsAni.swipe();
               <div class="m_tlie tile_t1" data-video="<?=$movies[6]['mov']?>" data-img="<?=$movies[6]['dimg']?>" data-idx="<?=$movies[6]['num']?>">
 				<span class="cover"></span><img src="<?=$movies[6]['img']?>" class="movimg" alt="">
 				<div class="cont">
-					<h2><span>ARTIST<br />REC#<?=$movies[6]['num']-1?></span></h2>
+					<h2><span>ARTIST<br />REC#<?=$movies[6-1]['num']?></span></h2>
 				</div>
 				<a href="#" class="play"><img src="images/main/btn_play.png" alt="영상 시작"></a>
 				<a href="/art1/artist_rec.php?idx=<?=$movies[6]['num']?>" class="share"><img src="images/main/btn_share.png" alt="자세히 보기"></a>
@@ -651,7 +657,7 @@ newsAni.swipe();
                   <li class="bxsh"  data-video="<?=$movies[5]['mov']?>" data-img="<?=$movies[5]['dimg']?>" data-idx="<?=$movies[5]['num']?>">
                       <span class="cover"></span><img src="<?=$movies[5]['img']?>" class="movimg" alt="">
                       <div class="cont">
-                       	<h2><span>ARTIST<br />REC#<?=$movies[5]['num']-1?></span></h2>
+                       	<h2><span>ARTIST<br />REC#<?=$movies[5-1]['num']?></span></h2>
                         <div class="txt">
                         </div>
                       </div>
@@ -661,7 +667,7 @@ newsAni.swipe();
                   <li class="bxsh"  data-video="<?=$movies[4]['mov']?>" data-img="<?=$movies[4]['dimg']?>" data-idx="<?=$movies[4]['num']?>">
                       <span class="cover"></span><img src="<?=$movies[4]['img']?>" class="movimg" alt="">
                       <div class="cont">
-                        <h2><span>ARTIST<br />REC#<?=$movies[4]['num']?></span></h2>
+                        <h2><span>ARTIST<br />REC#<?=$movies[4-1]['num']?></span></h2>
                         <div class="txt">
                         </div>
                       </div>
@@ -671,19 +677,18 @@ newsAni.swipe();
                   <li class="bxsh" data-video="<?=$movies[3]['mov']?>" data-img="<?=$movies[3]['dimg']?>" data-idx="<?=$movies[3]['num']?>">
                       <span class="cover"></span><img src="<?=$movies[3]['img']?>" class="movimg" alt="">
                       <div class="cont">
-						<h2 class="type2"><span>art1<br />&nbsp;show&nbsp;</span></h2>
-                        <!-- <h2><span>ARTIST<br />REC#<?=$movies[3]['num']?></span></h2> -->
+                        <h2><span>ARTIST<br />REC#<?=$movies[3-1]['num']?></span></h2>
                         <div class="txt">
                         </div>
                       </div>
-                    <a href="#" class="play single"><img src="images/main/btn_play.png" alt="영상 시작"></a>
-                    <!-- <a href="/art1/artist_rec.php?idx=<?=$movies[3]['num']?>" class="share"><img src="images/main/btn_share.png" alt="자세히 보기"></a> -->
+                    <a href="#" class="play"><img src="images/main/btn_play.png" alt="영상 시작"></a>
+                    <a href="/art1/artist_rec.php?idx=<?=$movies[3]['num']?>" class="share"><img src="images/main/btn_share.png" alt="자세히 보기"></a> 
                   </li>
                   
                   <li class="bxsh" data-video="<?=$movies[2]['mov']?>" data-img="<?=$movies[2]['dimg']?>" data-idx="<?=$movies[2]['num']?>">
                       <span class="cover"></span><img src="<?=$movies[2]['img']?>" class="movimg" alt="">
                       <div class="cont">
-                        <h2><span>ARTIST<br />REC#<?=$movies[2]['num']?></span></h2>
+                        <h2><span>ARTIST<br />REC#<?=$movies[2-1]['num']?></span></h2>
                         <div class="txt">
                         </div>
                       </div>
@@ -693,7 +698,7 @@ newsAni.swipe();
                   <li class="bxsh" data-video="<?=$movies[1]['mov']?>" data-img="<?=$movies[1]['dimg']?>" data-idx="<?=$movies[1]['num']?>">
                       <span class="cover"></span><img src="<?=$movies[1]['img']?>" class="movimg" alt="">
                       <div class="cont">
-                        <h2><span>ARTIST<br />REC#<?=$movies[1]['num']?></span></h2>
+                        <h2><span>ARTIST<br />REC#<?=$movies[1-1]['num']?></span></h2>
                       </div>
                     <a href="#" class="play"><img src="images/main/btn_play.png" alt="영상 시작"></a>
                     <a href="/art1/artist_rec.php?idx=<?=$movies[1]['num']?>" class="share"><img src="images/main/btn_share.png" alt="자세히 보기"></a>
@@ -701,7 +706,8 @@ newsAni.swipe();
                   <li class="bxsh" data-video="<?=$movies[0]['mov']?>" data-img="<?=$movies[0]['dimg']?>" data-idx="<?=$movies[0]['num']?>">
                       <span class="cover"></span><img src="<?=$movies[0]['img']?>" class="movimg" alt="">
                       <div class="cont">
-                        <h2><span>ARTIST<br />REC#<?=$movies[0]['num']?></span></h2>
+						<!-- <h2 class="type2"><span>art1<br />&nbsp;show&nbsp;</span></h2> -->
+						<h2><span>ARTIST<br />REC#<?=$movies[0]['num']?></span></h2>
                       </div>
                     <a href="#" class="play"><img src="images/main/btn_play.png" alt="영상 시작"></a>
                     <a href="/art1/artist_rec.php?idx=<?=$movies[0]['num']?>" class="share"><img src="images/main/btn_share.png" alt="자세히 보기"></a>
@@ -745,7 +751,7 @@ newsAni.swipe();
 		{name : 'ArtistRec9', img : '/images/bg/bg_mov_noPlay9.jpg'},
 		{name : 'ArtistRec10', img : '/images/bg/bg_mov_noPlay10.jpg'},
 		{name : 'ArtistRec11', img : '/images/bg/bg_mov_noPlay11.jpg'},
-		{name : 'ArtistRec11', img : '/images/bg/bg_mov_noPlay12.jpg'}
+		{name : 'ArtistRec12', img : '/images/bg/bg_mov_noPlay12.jpg'}
   	]
 <?}else{?>	
   	var movies = [
@@ -784,7 +790,7 @@ newsAni.swipe();
                            repeat:"always",
                            icons: false, // disable a big play button on the middle of screen
                            flashplayer: "/swf/jwplayer44.swf",
-                           file: "/"+soundSrc+".flv"
+                           file: "/video/"+soundSrc+".flv"
                        });
 
                 }else{
@@ -803,7 +809,7 @@ newsAni.swipe();
                            repeat:"always",
                            icons: false, // disable a big play button on the middle of screen
                            flashplayer: "/swf/jwplayer44.swf",
-                           file: "/"+soundSrc+".flv"
+                           file: "/video/"+soundSrc+".flv"
                        });
                 }
 
@@ -837,9 +843,9 @@ newsAni.swipe();
                   <? }else{ ?>
                   var videobox = $('<div class="video_cover" style=""></div><video id="'+videoTag+'" '+ (endedFlag ? "" : "autoplay") +' controls volume="1"  ></video>');
                   <? } ?>
-                  var sourceMp4 = $('<source src="'+soundSrc+'.mp4" type="video/mp4">');
-                  var sourceOgg = $('<source src="'+soundSrc+'.ogv" type="video/ogv">');
-                  var sourceEmbed = $('<embed src="'+soundSrc+'.mp4" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" autoplay="false"></embed>');
+                  var sourceMp4 = $('<source src="/video/'+soundSrc+'.mp4" type="video/mp4">');
+                  var sourceOgg = $('<source src="/video/'+soundSrc+'.ogv" type="video/ogv">');
+                  var sourceEmbed = $('<embed src="/video/'+soundSrc+'.mp4" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" autoplay="false"></embed>');
                   if($("#movFlv").find("#"+videoTag+"").length > 0){
                         $("#movFlv #"+videoTag+"").remove();
                   }
@@ -862,7 +868,11 @@ newsAni.swipe();
                     }
                     itemMotion(movStartNum, true ) ;
 
-                  }, false);                  
+                  }, false); 
+
+                  $('#'+videoTag).on('ended', function() {
+                  	closeMovPop();return false
+                  });                 
             }
 
 		$(function(){

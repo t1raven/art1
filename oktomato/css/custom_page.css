@@ -1,0 +1,207 @@
+@charset "utf-8";
+
+
+
+
+
+/*버튼 팩*/
+.btn_cen{ text-align: center; margin-top: 24px; }
+.box_area1{ margin-bottom: 40px; }
+.btn_pack1{ display: inline-block; *display: inline; *zoom: 1; vertical-align: middle;  background-color: #3b3b3b; font-size: 1.333em;  text-align: center; padding: 7px 50px; color: #fff;  }
+.btn_pack1_b_type { display: inline-block; *display: inline; *zoom: 1; vertical-align: middle;  background-color: #3b3b3b; font-size: 1.333em;  text-align: center; padding: 7px 50px; color: #fff;  }
+
+/* option */
+/*크기*/
+.btn_pack1.small{ min-width: 105px; padding: 6px 8px; color: #fff; font-size: 1.085em; }
+.btn_pack1.small.w50{ min-width: 50px;}
+.btn_pack1_b_type.small{ min-width: 215px; padding: 6px 8px; color: #fff; font-size: 1.085em; }
+
+/*색*/
+.btn_pack1.purple{ background-color: #7762a7; }
+.btn_pack1.purple_on:hover{  background-color: #7762a7; transition: .4s ease; -moz-transition: .4s ease; -webkit-transition: .4s ease; -o-transition: .4s ease;}
+.btn_pack1.gray{background-color: #9c9c9c; }
+.btn_pack1.sky{ background-color: #2ba3f7; }
+
+.btn_pack1.ov-b:hover{ background-color: #348fe2; }
+/* option */
+/*//버튼 팩*/
+
+/*박스*/
+.section_box{
+    padding:23px 20px; 
+    margin-bottom: 20px;
+    -webkit-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.2);
+    -moz-box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.2);
+    box-shadow: 1px 1px 3px 0px rgba(50, 50, 50, 0.2);
+    background-color: #fff;
+}
+.section_box:after {display:block; clear:both; content:"";}
+.user_td_control1 a {vertical-align:middle;}
+.user_td_control1 button{
+  text-decoration: underline; line-height: 20px; background: url(/oktomato/images/bg/bg_user_td.gif) 0 53% no-repeat; color: #8b8b8b; padding-left: 10px; margin-left: 5px;vertical-align:middle;
+}
+.user_td_control1 button:first-child{background: none; padding-left: 0; margin-left: 0;}
+.user_td_control1 button:hover{color: #348fe2;}
+
+.section_box .lft_Box {float:left; width:49%;}
+.section_box .rgh_Box {float:right; width:49%;}
+
+
+
+
+/*common*/
+.a-Bg:after{ display: block; content: "";  background-image: url(/oktomato/images/bg/ico_common.png); background-repeat: no-repeat; }
+.c-Bg{  background-image: url(/oktomato/images/bg/ico_common.png); background-repeat: no-repeat; }
+
+
+/* 타이틀 */
+
+.title1{ color: #348fe2; font-size: 16px; font-weight: 700; margin-bottom: 20px; }
+/* .title1{ background-color: #7762a7; display: block; border-radius:5px;  padding: 14px; color: #fff; font-size: 1.250em; font-weight: 700; position: relative; }
+.title1 .rgh{position: absolute; right: 38px;top: 13px; display: block; width: 80px; text-align: center; }
+.title1 .rgh.off{color: #eb4839;}
+.title1.off{ color: #525252; background-color: #e7e7e7;  }
+.title3{ font-size: 1.250em; color: #08214b; margin-bottom: 10px; font-weight: 800; } */
+
+
+#header ,
+#lnb ,
+#container
+{ margin-left: 240px; padding-right: 40px;   position: relative; }
+#header .header_inner ,
+#lnb .inner,
+#container .container_inner
+{ max-width: 1230px; min-width: 768px; position: relative; } 
+/* 일단 1024에 맞춰서 작업 어차피 100%로 늘리면 늘어나니까...
+ { max-width: 100%; min-width: 768px; position: relative; } */
+
+
+
+/*헤더*/
+#header{min-height: 69px; border-bottom: 1px solid #e1e2e7; background-color: #fff; z-index: 3; }
+#header .header_inner{ padding: 10px 19px;   }
+#header .gnb{ position: absolute; right: 0; top: 17px;  }
+#header .gnb > ul  > li{float: left; margin-left: 30px; position: relative; }
+#header .gnb .home > a{  display: block; position: relative; color: #ff6d60; font-size: 13px; line-height: 22px;  padding-left: 30px;  }
+#header .gnb .home > a:after{ width: 20px; height: 20px; position: absolute; left: 0; top: 0;   background-position:  -10px -10px;   }
+#header .gnb .menu{margin-top: -2px; padding-right: 22px; }
+#header .gnb .menu:after{width: 9px; height: 5px; position: absolute; right: 0; top: 11px;   background-position: -142px -35px;}
+#header .gnb .menu > .user{ display: block; position: relative; padding-left: 34px; height: 26px; line-height: 24px; color: #333;  font-family: 'Lato', sans-serif; font-weight: 400; font-size: 13px; }
+#header .gnb .menu > .user:after{ width:26px; height:26px; position: absolute; left: 0; top: 0;   background-position:  -50px -7px;   }
+#header .gnb .menu > .user:hover:after,#header .gnb .menu > .user.on:after{ background-position:  -50px -40px;  }
+#header .gnb .menu .setting{ position: absolute; left: -21px; top: 28px; width: 185px; padding-bottom: 16px; background: url(/oktomato/images/bg/bg_adminbox_bot.png) 0 100% no-repeat;  }
+#header .gnb .menu .setting .inner{ min-height: 80px; padding: 30px 30px 15px; background: url(/oktomato/images/bg/bg_adminbox_top.png) 0 0 no-repeat; }
+#header .gnb .menu .setting .inner > ul > li{margin-bottom:10px; }
+#header .gnb .menu .setting .inner > ul > li.last{ border-top: 1px solid #ededed; margin-top: 10px; margin-bottom: 0; padding-top: 5px; }
+#header .gnb .menu .setting .inner > ul > li > button,#header .gnb .menu .setting .inner > ul > li > a{ font-size: 14px; color: #707276; }
+
+#lnb{background-color: #fff; background-image: url(/oktomato/images/bg/bg_lnb.gif); background-position: 0 100%; background-repeat: repeat-x;}
+#lnb > .inner > ul.list > li{float: left; width: 16%; text-align: center;  }
+#lnb > .inner > ul.list > li:first-child{ width: 18%; }
+
+#lnb > .inner > ul.list:after{display: block;clear: both;content: ""; height: 0; visibility: hidden;}
+#lnb > .inner > ul.list > li > a{ height: 42px; line-height: 40px; display: block; font-size: 16px;  color: #333; font-family: 'Lato', sans-serif; font-weight: 400; }
+#lnb > .inner > ul.list > li > a:hover{color: #348fe2;}
+#lnb > .inner > ul.list > li.on > a{color: #348fe2; border-bottom: 3px solid #348fe2;}
+
+
+/*좌측메뉴*/
+#side{ position: absolute; left: 0; top: 0; width: 234px; height:100%; background-color: #2d353c; background-image: url(/oktomato/images/bg/bg_snb.gif); background-repeat: repeat-y; background-position: 100% 0;  color: #fff; border-right: 6px solid #d3d4d8;  }
+#side .sideHeader{padding-top: 24px; padding-left: 25px;  margin-bottom: 65px;  }
+#side .sideHeader .switch{ position: absolute; right: 26px; top: 20px; width: 30px; height: 30px; background-position: -261px -8px; overflow: hidden; text-indent: -9999px; }
+#side .sideHeader .switch.on{background-position: -207px -8px;}
+#side .sideHeader > h1{  
+    position: relative; padding-left: 30px; height: 23px; line-height: 20px; font-family: 'Lato', sans-serif; font-weight: 400; font-size: 16px;   
+}
+#side .sideHeader > h1 a {color:#fff;}
+#side .sideHeader > h1:after{position: absolute; left: 0; top: 0; width: 22px; height: 21px; background-position: -99px -10px;}
+
+#side .snb{ position: relative; left: 0; top: 0; }
+#side .snb > li  > a{ background: none; height: 40px; display: table; width: 100%; position: relative; color: #889097; background-position: 100% 0; background-repeat: repeat-y;  }
+#side .snb > li  > a:hover{color: #fff;}
+#side .snb > li.on  > a{ background-color: #348fe2; background-image: url(/oktomato/images/bg/bg_snb2.gif); color: #fff;}
+
+#side .snb > li  > a:after{position: absolute; right: 32px; top: 18px; background-position: -170px -18px; width: 9px; height: 5px; display: block; content: "";  background-image: url(/oktomato/images/bg/ico_common.png); background-repeat: no-repeat; }
+#side .snb > li.on  > a:after{ background-position: -142px -18px; }
+
+#side .snb > li  > a span{ width: 150px; display: table-cell; vertical-align: middle; padding-left: 30px; font-size: 14px; line-height: 18px;  }
+#side .snb .depth3{ background-color: #1a2229; padding: 10px 0 10px 30px; }
+#side .snb .depth3 a{ font-size: 13px; display: block; line-height: 16px; padding: 5px 0; color: #6a7076;  }
+#side .snb .depth3 > ul > li.on > a,#side .snb .depth3 > ul > li > a:hover{ color: #fff; }
+
+
+#container .container_inner{ margin-top: 25px; margin-left: 19px;  text-align: left; }
+#container .container_inner .content{ padding-bottom: 50px; }
+#path{position: relative; margin-bottom: 20px;}
+#path > h1{ position: relative; padding-left: 15px; font-size: 22px; line-height: 26px; color: #1a1f24; font-weight: 700;}
+#path > h1:after{ background-image: url(/oktomato/images/bg/ico_common.png); background-repeat: no-repeat;  width: 6px; height: 6px; background-color: #348fe2; position: absolute; left: 0; top: 10px; content:"";  }
+
+#path .location{color: #908f8f; font-size: 12px; position: absolute; right: 0; top: 6px; }
+
+
+/*  테이블내 이미지 썸네일 */
+.img_thumbnail_layout { width:100%; text-align:left; vertical-align:middle; font-size:14px; line-height:22px; clear:both; padding-bottom:30px; }
+.img_thumbnail_layout img { float:left; width:200px; height:150px; padding:10px 20px;}
+.img_thumbnail_layout h1 { color:#000000; font-weight:bold; }
+.img_thumbnail_layout h2 { color:#348fe2; font-weight:bold; } 
+.img_thumbnail_layout h3 { color:#666666; font-size:12px;margin-top:25px; }
+
+.img_thumbnail_total_price { width:96%; text-align:left; font-size:14px; font-weight:bold;  border-top:1px solid #ccc; clear:both; margin:0 auto; margin-top:50px;}
+.img_thumbnail_total_price h1 { margin: 10px 0px; padding-top:10px;color:#000000; font-weight:bold; text-align:right;}
+
+/*마켓  - 추천인관리 */
+#recommenderManagement label.pos.name{position: absolute; left: 12px; top: 5px; cursor:text }
+#recommenderManagement .lst_Upload{float: none; padding-left: 20px;}
+#recommenderManagement input.file{width: 242px; padding-left: 20px;}
+#recommenderManagement div.fileinputs{ width: 280px; float: none; }
+#recommenderManagement .on div.fakefile { top: 21px; left: 10px;}
+#recommenderManagement div.fakefile input{ width: 180px;   height: 24px; } 
+
+/* 컨텐츠 양분 */
+
+.lft_area {float:left; width:48%;}
+.rgh_area {float:right; width:48%;}
+
+.order_stat_Box {position:relative;}
+.order_stat_Box ul {}
+.order_stat_Box ul li {margin-bottom:8px; padding-bottom:20px; background:url(/oktomato/images/ico/ico_arr_down.gif) 90px bottom no-repeat;}
+.order_stat_Box ul li.last {background:none;}
+.order_stat_Box ul li span.tit {display:inline-block; width:70px;}
+.order_stat_Box .lnvoice {position:absolute;  left:300px; bottom:15px;}
+
+
+.admin_tab_list {text-align:center;}
+.admin_tab_list ul { display:inline-block;}
+.admin_tab_list ul li {float:left;}
+.admin_tab_list ul li a {font-size:15px; color:#555; }
+.admin_tab_list ul li.on a {color:#000; font-weight:bold;}
+.admin_tab_list ul li:before {content:"|"; margin-left:15px; margin-right:15px;}
+.admin_tab_list ul li:first-child:before {content:""; margin-left:0; margin-right:0;}
+ /* IE8 only */  
+@media \0screen {  
+
+}  
+/* /IE8 only */  
+
+
+		
+@media all and (max-width:1249px) {
+
+}
+
+
+@media all and (max-width:768px) {
+
+}
+
+#waiting{width:100%;height:100%;position:fixed;top:0px;left:0px;z-index:10;display:none;
+    background:rgb(255,255,255);
+    background: transparent\9;
+    background:rgba(255,255,255,0.5);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#7fffffff,endColorstr=#7fffffff);
+    zoom: 1;
+}
+#waiting:nth-child(n) {filter: none;}
+#waiting .inner{position:relative;width:310px;height:150px;background:#fff;border:1px solid #C3C3C3;border-radius:10px;margin:0px auto;text-align:center; }
+#waiting .inner h1{padding-top:40px;}
+#waiting .inner p{margin-top:15px;font-size:20px;color:#000;}

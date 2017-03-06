@@ -9,21 +9,21 @@
 ?>
 <? include "../inc/link.php"; ?>
 <? include "../inc/top.php"; ?>
-<? include "../inc/header.php"; ?> 
+<? include "../inc/header.php"; ?>
 <? include "../inc/spot_sub.php"; ?>
 <link rel="stylesheet" type="text/css" href="/css/owen2.css">
   <section id="container_sub">
     <div class="container_inner">
-      <? include "../inc/path.php"; ?> 
-      <? include "tab_art1_2test.php"; ?>
+      <? include "../inc/path.php"; ?>
+      <? include "tab_art1_2.php"; ?>
 		  <div id="mediaArea" class="content-mediaBox margin1">
 				<section id="mediaTop">
 					<article class="topMov">
 						<div class="inner">
-							<div id="area_movie" data-video="Standard-Simple" data-img="/images/art1/mediaart1_mov01.jpg" data-idx="1">
+							<!-- <div id="area_movie" data-video="Standard-Simple" data-img="/images/art1/mediaart1_mov01.jpg" data-idx="1">
 								<button class="play" data-video=""><img src="/images/art1/img_mediaart1_topmov.jpg" alt=""></button>
-								<!-- <video id="topMov" poster="/images/art1/img_mediaart1_topmov.jpg" controls=""><source src="/Premium-Classic.mp4" type="video/mp4"><source src="/Premium-Classic.ogv" type="video/ogv"></video> -->
-							</div>
+							</div> -->
+							<img src="/images/art1/mediaart1_main.jpg" alt="">
 						</div>
 					</article>
 					<article class="topTit">
@@ -51,7 +51,7 @@
 							<h2>Visual Style</h2>
 							<p>전시설치기간이 여유롭지 않은 기관을 위해 영상 촬영부터 편집 및 납품까지 최대 36시간의 신속한 서비스를 약속드리고 있으며, 전시에 따라 다양한 컨셉과 테마를 선택할 수 있는 템플릿시스템을 구축하여 운영하고 있습니다.</p>
 						</div>
-						
+
 					</article>
 				</section>
 				<section id="mediaCont">
@@ -62,6 +62,15 @@
 							<ul>
 								<li>
 									<div class="listTit">1) Standard</div>
+									<div class="listNotice">
+										<div class="inner">
+											<div class="tits"><img class="ico" src="/images/art1/ico_mediaart1_01.png">이런분께 추천합니다!</div>
+											<ul>
+												<li>원하는 퀄리티의 영상을 주어진 기한 내에 합리적인 비용으로 진행하길 원하시는 분.</li>
+												<li>다양한 작품과 장소의 특성을 고려한 디스플레이를 실사 촬영하여, 빠른 제작 프로세스로 짧고 임팩트있는 아카이브 및 온라인 컨텐츠 제작을 원하시는 분.</li>
+											</ul>
+										</div>
+									</div>
 									<div class="listCont">
 										<ul class="movList">
 											<li class="videoItem" data-video="Standard-Simple" data-img="/images/art1/mediaart1_mov01.jpg" data-idx="1">
@@ -112,6 +121,10 @@
 												<div class="cont">24시간 이내 </div>
 											</li>
 											<li>
+												<strong>Process</strong>
+												<div class="cont"><span class="step">STEP 1</span> 컨셉 선택 <span>></span> <span class="step">STEP 2</span> 촬영 진행 <span>></span> <span class="step">STEP 3</span> 촬영영상 편집</div>
+											</li>
+											<li>
 												<strong>Use</strong>
 												<div class="cont">각종 SNS, 모바일 Invitation 영상, 전시 미디어 퍼포먼스, 자체 아카이브 등</div>
 											</li>
@@ -121,11 +134,20 @@
 								</li>
 								<li>
 									<div class="listTit">2) Premium</div>
+									<div class="listNotice">
+										<div class="inner">
+											<div class="tits"><img class="ico" src="/images/art1/ico_mediaart1_01.png">이런분께 추천합니다!</div>
+											<ul>
+												<li>작가 또는 기획자의 인터뷰 영상을 촬영하여 전시와 작품에 대한 흥미 유발과 깊이 있는 이해를 돕는 감각적인 퀄리티의 영상 제작을 원하시는 분.</li>
+												<li>테크니컬 퍼포먼스와 미디어 등 움직이는 작품을 세밀하고 구체적으로 담아 시청각적 효과를 극대화한 영상 제작을 원하시는 분.</li>
+											</ul>
+										</div>
+									</div>
 									<div class="listCont">
 										<ul class="movList">
-											<li class="videoItem" data-video="Standard-Simple" data-img="/images/art1/mediaart1_mov01.jpg" data-idx="1">
+											<li class="videoItem" data-video="Premium-Simple" data-img="/images/art1/mediaart1_mov08.jpg" data-idx="1">
 												<a href="#" class="out_cover">
-													<img src="/images/art1/mediaart1_mov00.jpg" alt="">
+													<img src="/images/art1/mediaart1_mov08.jpg" alt="">
 													<div class="cover"></div>
 												</a>
 												<p>SIMPLE / 국내작가</p>
@@ -167,6 +189,10 @@
 												<div class="cont">36시간 이내 </div>
 											</li>
 											<li>
+												<strong>Process</strong>
+												<div class="cont"><span class="step">STEP 1</span> 컨셉 협의 <span>></span> <span class="step">STEP 2</span> 촬영 진행 <span>></span> <span class="step">STEP 3</span> 촬영영상 편집</div>
+											</li>
+											<li>
 												<strong>Use</strong>
 												<div class="cont">각종 SNS, 모바일 Invitation 영상, 전시 미디어 퍼포먼스, 해외 아트페어 참가지원 포트폴리오, 홈페이지 프로필 영상, 자체 아카이브 등</div>
 											</li>
@@ -176,6 +202,15 @@
 								</li>
 								<li>
 									<div class="listTit">3) Customizing</div>
+									<div class="listNotice">
+										<div class="inner">
+											<div class="tits"><img class="ico" src="/images/art1/ico_mediaart1_01.png">이런분께 추천합니다!</div>
+											<ul>
+												<li>각종 장비와 영상전문가의 뛰어난 기술력으로 “기획·연출·촬영·편집”에 이르기까지 가장 효율적인 전시 맞춤형 영상 제작을 원하시는 분.</li>
+												<li>트렌디하고 창조적인 컨셉으로 완성된 원소스 멀티유즈 영상을 제작하기 원하시는 분.</li>
+											</ul>
+										</div>
+									</div>
 									<div class="listCont">
 										<ul class="movList">
 											<li class="videoItem" data-video="Customizing-01" data-img="/images/art1/mediaart1_mov04.jpg" data-idx="1">
@@ -187,6 +222,12 @@
 											<li class="videoItem" data-video="Customizing-02" data-img="/images/art1/mediaart1_mov05.jpg" data-idx="2">
 												<a href="#" class="out_cover">
 													<img src="/images/art1/mediaart1_mov05.jpg" alt="">
+													<div class="cover"></div>
+												</a>
+											</li>
+											<li class="videoItem" data-video="Customizing-03" data-img="/images/art1/mediaart1_mov09.jpg" data-idx="2">
+												<a href="#" class="out_cover">
+													<img src="/images/art1/mediaart1_mov09.jpg" alt="">
 													<div class="cover"></div>
 												</a>
 											</li>
@@ -207,6 +248,10 @@
 											<li>
 												<strong>Running time</strong>
 												<div class="cont">5 min 이상</div>
+											</li>
+											<li>
+												<strong>Process</strong>
+												<div class="cont"><span class="step">STEP 1</span> 촬영 진행방식 협의 <span>></span> <span class="step">STEP 2</span> 컨셉 협의 및 기획 <span>></span> <span class="step">STEP 3</span> 연출 및 촬영 진행 <span>></span> <span class="step">STEP 4</span> 촬영영상 편집</div>
 											</li>
 											<li>
 												<strong>Use</strong>
@@ -317,7 +362,7 @@
 								        paginationClickable: true,
 								        cssWidthAndHeight : 'height'
 								    });
-								    
+
 									$("#mediaArea .imageList .swiper-container .pagination > .prev").click(function(e){
 										e.preventDefault();
 										swiper.swipePrev();
@@ -336,6 +381,14 @@
 											<li>
 												<strong>Image</strong>
 												<div class="cont">보도자료, 전시홍보, 전시장 내·외부 전경, 전시 작품 디테일</div>
+											</li>
+											<li>
+												<strong>Cut</strong>
+												<div class="cont">5 cuts (30MB, 300dpi) </div>
+											</li>
+											<li>
+												<strong>Cost</strong>
+												<div class="cont">\ 300,000 (VAT별도)</div>
 											</li>
 											<li>
 												<strong>Shooting time</strong>
@@ -359,6 +412,14 @@
 											<li>
 												<strong>Image</strong>
 												<div class="cont">보도자료, 전시홍보, 전시장 내·외부 전경, 전시 작품 디테일, 전시 테마(인쇄물, 인물 컷)</div>
+											</li>
+											<li>
+												<strong>Cut</strong>
+												<div class="cont">10 cuts (50MB, 300dpi) </div>
+											</li>
+											<li>
+												<strong>Cost</strong>
+												<div class="cont">\ 500,000 (VAT별도)</div>
 											</li>
 											<li>
 												<strong>Shooting time</strong>
@@ -417,23 +478,53 @@
 						<article class="mediaCont cont03">
 							<h2><span>03</span> Process</h2>
 							<p class="cont">
-								<img src="/images/art1/img_mediaart1_process.jpg" alt="">
+								<img src="/images/art1/img_mediaart1_process.png" alt="">
 							</p>
 						</article>
 						<article class="mediaCont cont04">
 							<h2><span>04</span> Practical application</h2>
 							<ul>
 								<li>
-									<strong>사전 홍보</strong>
-									<p class="cont">메이킹 영상, 작품 이미지를 활용한 사전 홍보와 도록·리플렛 제작</p>
+									<strong>전시개최 전 활용법</strong>
+									<div class="cont">
+										<ul>
+											<li>메이킹 영상과 전시, 작품 이미지를 활용하여 전시 오픈 전 youtube, vimeo, facebook, instagram 등의 소셜네트워크 및 해외 유수 예술 전문 웹사이트에 홍보</li>
+											<li>신문, 잡지 등에 배포할 보도자료용 컨텐츠로 활용</li>
+											<li>모바일 Invitation, 도록, 리플렛, 현수막 등 온·오프라인에서 사용할 수 있는 홍보물 제작</li>
+										</ul>
+									</div>
+									<div class="img">
+										<ul>
+											<li><img src="/images/art1/img_mediaart1_practical01.jpg"></li>
+											<li><img src="/images/art1/img_mediaart1_practical02.jpg"></li>
+										</ul>
+									</div>
 								</li>
 								<li>
-									<strong>전시 개최</strong>
-									<p class="cont">오프닝 영상, 전시전경 이미지를 활용한 온·오프라인 홍보</p>
+									<strong>전시개최 후 활용법</strong>
+									<div class="cont">
+										<ul>
+											<li>오프닝 영상과 전시 및 작품 이미지를 youtube, vimeo, facebook, instagram 등의 소셜네트워크 및 언론·미디어 매체에 홍보자료로 활용</li>
+											<li>전시장 혹은 부스 미디어월을 구성하여 전시와 갤러리 홍보</li>
+											<li>전시 부가 프로그램, 세일즈 이벤트 등으로 활용</li>
+										</ul>
+									</div>
+									<div class="img">
+										<ul>
+											<li><img src="/images/art1/img_mediaart1_practical03.jpg"></li>
+											<li><img src="/images/art1/img_mediaart1_practical04.jpg"></li>
+										</ul>
+									</div>
 								</li>
 								<li>
-									<strong>전시 종료</strong>
-									<p class="cont">홈페이지 및 각종 SNS에 아카이브</p>
+									<strong>전시종료 후 활용법</strong>
+									<div class="cont">
+										<ul>
+											<li>납품받은 영상과 전시, 작품 이미지를 홈페이지 및 각종 소셜네트워크 및 해외 유수 예술 전문 웹사이트에 아카이브</li>
+											<li>자체 온·오프라인 아카이브를 통한 컨텐츠 확충</li>
+											<li>추후 해외 아트페어 지원 및 각종 공모 지원에 활용할 수 있는 레퍼런스 자료로 활용</li>
+										</ul>
+									</div>
 								</li>
 							</ul>
 						</article>
@@ -488,7 +579,9 @@
 				</section>
 				<section id="mediaBottom">
 					<!-- <img src="/images/art1/media-art1.jpg" alt=""> -->
+					<a href="https://www.youtube.com/playlist?list=PL4fGKFWBaWSycTh7Qyz6bUz5ZM4asIp3Q" target="_blank"><img src="/images/art1/youtube.png" alt=""></a>
 					<a href="http://www.mediaart1.com/" target="_blank"><img src="/images/art1/media-art1.jpg" alt=""></a>
+					<p>※ media art1에 대한 더 많은 정보는 유튜브채널과 블로그를 통해 확인하실 수 있습니다.</p>
 				</section>
 
 				<section id="mov_pop" onclick="closeMovPop();"><!-- 동영상 팝업 -->
@@ -535,7 +628,7 @@
 						           <button class="next"><img src="/images/btn/btn_next_op.png" alt="다음"></button>
 						        </div>
 							</div>
-							
+
 							<button class="btn_close" onclick="closeViewPop();"><img src="/images/btn/btn_close3.png"></button>
 						</div>
 					</div>
@@ -556,7 +649,7 @@
 
 						    viewSwiper.resizeFix();
 							viewSwiper.swipeTo(num,1);
-							    
+
 						}
 						var viewSwiper = new Swiper('#view_pop .img_box', {
 									paginationClickable: true,
@@ -568,7 +661,7 @@
 						              var idx = viewSwiper.activeIndex;
 						              var len = viewSwiper.slides.length;
 						              $("#view_pop .swiper-pagination .page").text(idx%(len-2) == 0 ? len-2 : idx%(len-2));
-						    		}	
+						    		}
 						});
 						$("#view_pop .pageing .prev").click(function(e){e.preventDefault();viewSwiper.swipePrev();});
 						$("#view_pop .pageing .next").click(function(e){e.preventDefault();viewSwiper.swipeNext();});
@@ -577,15 +670,15 @@
 					function closeViewPop(){
 					    fadePlayMotion($("#view_pop > .inner"), false, 400);
 					}
-				    
+
 				</script>
 
 				<script src="/js/jwplayer.js"></script>
 				<script type="text/javascript">
-					function playVid(t) { 
+					function playVid(t) {
 					    var $this = $(t);
 					    $this.css("display","none");
-					    if(isie7 || isie8){
+					    if(isie7 || isie8 || isie9){
 					    	var jwp = null;
 					    	$("#topMov").remove();
 					    	$("#area_movie").append("<div class='topMov_ie'><div id='topMov_ie'></div></div>")
@@ -599,12 +692,12 @@
 		                        repeat:"always",
 		                        icons: false, // disable a big play button on the middle of screen
 		                        flashplayer: "/swf/jwplayer44.swf",
-		                        file: "/Premium-Classic.flv"
+		                        file: "/video/Premium-Classic.flv"
 		                    });
 					    }else{
 					    	document.getElementById("topMov").play();
 					    }
-					    
+
 					}
 
 					$(".videoItem a, #area_movie .play").click(function(e) {
@@ -613,10 +706,10 @@
         				movList = $(this).parent().parent();
         				movStartNum = $(this).parent().attr('data-idx');
         				movTotal = $(this).parent().parent().children(".videoItem").length;
-				        if(isie7 || isie8){
+				        if(isie7 || isie8 || isie9){
 				           itemIeMotion(movStartNum, $(this).parent());
 				        }else{
-				          itemMotion(movStartNum, false ,$(this).parent());    
+				          itemMotion(movStartNum, false ,$(this).parent());
 				        }
 				        if($(this).hasClass('play')) {
 				        	$("#mov_pop .remote").css("display", "none");
@@ -633,7 +726,7 @@
 							$("#mov_pop > .inner > .mov_box").removeAttr("style");
 						}
 				    }
-				    
+
 				    function donotClose(e){
 				    	e.stopPropagation();
 				    }
@@ -649,7 +742,7 @@
 				      if(isie7 || isie8 || isie9){
 				      	var jwp = null;
 				        function itemIeMotion(num, me){
-				         	
+
 								var ele = $(me);
 								$("#mov_pop .remote").remove();
 								//alert("videa: "+ele.data('video'));
@@ -666,7 +759,7 @@
 				                           repeat:"always",
 				                           icons: false, // disable a big play button on the middle of screen
 				                           flashplayer: "/swf/jwplayer44.swf",
-				                           file: "/"+soundSrc+".flv"
+				                           file: "/video/"+soundSrc+".flv"
 				                   });
 
 				                }else{
@@ -684,15 +777,15 @@
 				                           repeat:"always",
 				                           icons: false, // disable a big play button on the middle of screen
 				                           flashplayer: "/swf/jwplayer44.swf",
-				                           file: "/"+soundSrc+".flv"
+				                           file: "/video/"+soundSrc+".flv"
 				                       });
 				                }
 
 				        }//itemIeMotion
 
 						function playPause() {
-						} 
-						
+						}
+
 						function fullSize(){
 						}
 
@@ -718,15 +811,15 @@
 				                  <? }else{ ?>
 				                  var videobox = $('<div class="video_cover" style=""></div><video id="'+videoTag+'" '+ (endedFlag ? "" : "autoplay") +' controls volume="1" autoplay="true"  ></video>');
 				                  <? } ?>
-				                  var sourceMp4 = $('<source src="/'+soundSrc+'.mp4" type="video/mp4">');
-				                  var sourceOgg = $('<source src="/'+soundSrc+'.ogv" type="video/ogv">');
-				                  var sourceEmbed = $('<embed src="/'+soundSrc+'.mp4" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" autoplay="ture"></embed>');
+				                  var sourceMp4 = $('<source src="/video/'+soundSrc+'.mp4" type="video/mp4">');
+				                  var sourceOgg = $('<source src="/video/'+soundSrc+'.ogv" type="video/ogv">');
+				                  var sourceEmbed = $('<embed src="/video/'+soundSrc+'.mp4" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" autoplay="ture"></embed>');
 				                  if($("#movFlv").find("#"+videoTag+"").length > 0){
 				                        $("#movFlv #"+videoTag+"").remove();
 				                  }
 				                  $("#movFlv").html(videobox);
 				                  $("#movFlv #"+videoTag+"").append(sourceMp4).append(sourceOgg).append(sourceEmbed);
-				                  
+
 				                  <? if($check_mobile === true){ ?>
 				                  document.getElementById("movA1").oncanplay  = function() {
 				                  		$(".video_cover").fadeOut();
@@ -760,15 +853,15 @@
 				                itemMotion(movStartNum, true , movList.children(".videoItem").eq(movStartNum-1));
 							});
 						});
-						
+
 						function playPause() {
 							var mov = document.getElementById("movA1");
-						    if (mov.paused) 
+						    if (mov.paused)
 						        mov.play();
-						    else 
-						        mov.pause(); 
-						} 
-						
+						    else
+						        mov.pause();
+						}
+
 						function fullSize(){
 							var mov = document.getElementById("movA1");
 							if (mov.requestFullscreen) {
@@ -779,7 +872,7 @@
 								mov.webkitRequestFullscreen(); // Chrome and Safari
 							}
 						}
-						
+
 				      }//isie7 || isie8
 
 
@@ -789,7 +882,7 @@
 
 					});
 					$(function(){
-						
+
 					});
 
 				</script>

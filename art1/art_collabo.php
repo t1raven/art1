@@ -266,7 +266,7 @@ foreach($limitedNbr as $val) {
 				<div class="movie">
 <? if($check_ie === false){ ?>
 					<button class="play" onclick="playVid(3,this);"><img src="/images/bg/bg_mov_promotionBarble_play.jpg" alt="동영상 플레이 하기"></button>
-					<video id="movA4" poster="/images/bg/bg_mov_promotionBarble.jpg" controls=""><source src="/Promotion_barble.mp4" type="video/mp4"><source src="/Promotion_barble.ogv" type="video/ogv"></video>
+					<video id="movA4" poster="/images/bg/bg_mov_promotionBarble.jpg" controls=""><source src="/video/Promotion_barble.mp4" type="video/mp4"><source src="/video/Promotion_barble.ogv" type="video/ogv"></video>
 <?}else{?>
 					<div id="art1_promotion_IeMov"></div>   
 <?}?>
@@ -330,9 +330,9 @@ foreach($limitedNbr as $val) {
 			var par = $(me).parent();
 			if(par.find('video').length == 0){				
 <?if($check_mobile === false){?>
-          		par.append("<video poster='/images/bg/bg_mov_noPlay10' controls=''><source src='/"+video+".mp4' type='video/mp4'><source src='/"+video+".ogv' type='video/ogv'></video>");
+          		par.append("<video poster='/images/bg/bg_mov_noPlay10' controls=''><source src='/video/"+video+".mp4' type='video/mp4'><source src='/video/"+video+".ogv' type='video/ogv'></video>");
 <?}else{?>
-          		par.append("<video poster='/images/bg/bg_mov_noPlay10.jpg' controls=''><source src='/"+video+"_m.mp4' type='video/mp4'><source src='/"+video+"_m.ogv' type='video/ogv'></video>");
+          		par.append("<video poster='/images/bg/bg_mov_noPlay10.jpg' controls=''><source src='/video/"+video+"_m.mp4' type='video/mp4'><source src='/video/"+video+"_m.ogv' type='video/ogv'></video>");
 <?}?>
 			}
 			$(me).remove();
@@ -394,7 +394,7 @@ foreach($limitedNbr as $val) {
                            repeat:"always",
                            icons: false, // disable a big play button on the middle of screen
                            flashplayer: "/swf/jwplayer44.swf",
-                           file: "/Promotion_barble.flv"
+                           file: "/video/Promotion_barble.flv"
                        });
 
 

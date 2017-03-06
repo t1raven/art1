@@ -3,6 +3,7 @@ require($_SERVER['DOCUMENT_ROOT'].'lib/include/global.inc.php');
 require(ROOT.'lib/class/market/event.class.php');
 require(ROOT.'lib/class/market/marketmain.class.php');
 require(ROOT.'lib/class/market/goods.class.php');
+require ROOT.'lib/class/banner/banner.class'.SOURCE_EXT;
 include(ROOT.'inc/config.php');
 
 $z = 0;
@@ -274,7 +275,7 @@ $(window).load(function(){
                 <dt><button><img src="/images/btn/btn_share.png" alt="공유하기"></button></dt>
                 <dd>
                   <ul>
-                    <li><button type="button" onclick="shareFaceBook('', '', '', '');"><img src="/images/btn/btn_share1_off.png" alt="페이스북"></button></li>
+                    <li><button type="button" onclick="shareFaceBookMarket('', '', '', '');"><img src="/images/btn/btn_share1_off.png" alt="페이스북"></button></li>
                     <li><button type="button" onclick="sharePinterest('', '', '');"><img src="/images/btn/btn_share2_off.png" alt="핀터레스트"></button></li>
                     <!--li><button><img src="/images/btn/btn_share3_off.png" alt="인스타그램"></button></li>
                     <li><button><img src="/images/btn/btn_share4_off.png" alt="픽터파이"></button></li-->
@@ -290,19 +291,27 @@ $(window).load(function(){
                  <?php
          if ($val['mmb_gubun'] === 'A') {
           $sHref = 'artwork_view.php?goods='.$val['goods_idx'];
+		  $sTarget = "";
         }
-        else{
+        else if ($val['mmb_gubun'] === 'E'){
            if ($val['evt_idx'] === '10' ||$val['evt_idx'] === '12') {
              $sHref = '/art1/promotion.php';
+			 $sTarget = "";
            }
            else {
             $sHref = 'exhibitions.php?evt='.$val['evt_idx'];
+			$sTarget = "";
            }
         }
+		else
+		{
+			$sHref = $val['mmb_link'];
+			$sTarget = "target=\"_blank\"";
+		}
         ?>
         <li class="swiper-slide">
                   <div class="photo">
-                      <a href="<?php echo $sHref; ?>">
+                      <a href="<?php echo $sHref; ?>" <?php echo $sTarget; ?>>
                           <img src="<?php echo marketMainUploadPath, $val['mmb_img_rename']; ?>" alt="" class="pc"  >
                           <img src="<?php echo marketMainUploadPath, $val['mmb_img_mobile_rename']; ?>" alt="" class="mobile" >
                       </a>
@@ -382,12 +391,29 @@ $(window).load(function(){
           </div><!--//list -->
        </section><!-- //categori -->
 
-       <!-- 배너 광고 -->
+	   <!-- 배너 광고 -->
        <div class="bot_banner">
-          <a href="http://www.leonkorea.com/" class="inner" target="_blank">
-            <img src="/upload/banner/14633621409DGKSNMZQR.jpg" class="pc" alt="" />
-            <img src="/upload/banner/1463362140G2SSZZ77FX.jpg" class="mobile" alt="" />
+		<?php 
+		   //메인 베너 S
+		  $banner = new Banner();
+		  $list = null;
+		  $row = null;
+		  $banner->setAttr('section', 3);
+		  $list = $banner->getListBanner($dbh);
+		  $i=1;
+		  foreach($list as $row){
+				if($row['isDisplay'] == 'Y')
+				{
+		?>
+		  <a href="<?php echo $row['linkUrl']; ?>" class="inner" target="_blank">
+			<img src="<?php echo $row['bannerUpFileName']; ?>" class="pc" alt="" />
+			<img src="<?php echo $row['bannerUpFileNameMobile']; ?>" class="mobile" alt="" />
           </a>
+		<?php 
+				}
+			 $i++;
+		  }  //메인 베너 E
+		?>
        </div>
        <!-- 배너 광고 -->
 

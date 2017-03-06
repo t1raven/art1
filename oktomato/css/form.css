@@ -1,0 +1,328 @@
+@charset "utf-8";
+
+/*사진등록*/
+.photoUpload{ *zoom:1; }
+.photoUpload:after{display: block;clear: both;content:""; height: 0; visibility: hidden;}
+.photoUpload .photo{float: left; width: 112px; height: 148px; border: 1px solid #e2e7eb; border-radius: 1px; background-color: #f5f5f5; text-align: center;}
+.photoUpload .photoType1{float: left; width: 160px; height: 80px; border: 1px solid #e2e7eb; border-radius: 1px; background-color: #f5f5f5; text-align: center;}
+.photoUpload .photoType2{float: left; width: 112px; height: 112px; border: 1px solid #e2e7eb; border-radius: 1px; background-color: #f5f5f5; text-align: center;}
+.photoUpload .photoType3{float: left; width: 600px; height: 64px; border: 1px solid #e2e7eb; border-radius: 1px; background-color: #f5f5f5; text-align: center;}
+.photoUpload .cont{ float: left; margin-left: 5px; padding-top: 50px; }
+.photoUpload.maw .cont{ float: none; margin-left: 120px; padding-top: 30px;}
+
+.lst_Upload{margin-left: 20px;padding: 7px; float: left;}
+.lst_Upload .tag:first-child{margin-top: 0;}
+.lst_Upload .tag{margin-top: 5px; color: #242a30; display: block;}
+.lst_Upload .tag button{ margin-left: 6px; width: 15px; height: 15px; overflow: hidden; text-indent: -9999px;  display: inline-block; background-image: url(/oktomato/images/bg/ico_common.png); background-repeat: no-repeat; background-position: -414px -17px;  }
+.lst_Upload .tag button:hover{background-position:-414px -40px;}
+
+
+/* label */
+label.dib{ display: inline-block; *display: inline; *zoom: 1; color: #666767; font-size: 1.085em; margin-right: 5px; vertical-align: middle; }
+label.pos{position: absolute; left: 10px; top: 8px; cursor:text }
+label.dib.date{ width: 86px;    }
+label.dib.date2{ width: 55px;    }
+label.dib.txt5{ width: 65px;    }
+
+/* //label */
+
+/* input */
+input.inp_txt{ border-style: solid; border-width: 1px; border-color: #e2e7eb; height: 27px; line-height: 27px; padding: 0 10px;  font-size: 1em; color: #515151; border-radius: 3px; }
+input.wt{width: 270px;}
+input.wt2{width: 338px;}
+input.date{width: 105px;}
+input.w200{ width: 200px; }
+input.w250{ width: 250px; }
+input.w390{ width: 390px; }
+input.w470{ width: 470px; }
+input.w190{ width: 190px; }
+input.w130{ width: 130px; }
+input.w150{ width: 150px; }
+input.w110{ width: 120px; }
+input.w50{ width: 50px; }
+input.w60{ width: 60px; }
+input.w70{ width: 70px; }
+input.w80{ width: 80px; }
+input.w90{ width: 90px; }
+input.w100{ width: 100px; }
+input.wp100{width:30%;}
+input.wp80{width:80%;}
+input.txt_point{text-align:center;}
+input.txt_point2{text-align:right;}
+.d-t{display: table;}
+.d-t > *{ display: table-cell; vertical-align: middle; }
+.textarea{border-style: solid; border-width: 1px; border-color: #e2e7eb; border-radius: 3px; padding: 10px;  }
+.textarea > textarea{ width: 100%; height: 70px; border: 0;    }
+/* 리스트 체크리스트  (radio) */
+
+.lst_check {display:inline-block; overflow:hidden; vertical-align: middle;}
+.lst_check > span{ display: inline-block; *display: inline; *zoom: 1; position: relative; overflow: hidden; min-width:66px; border-radius: 2px; border: 1px solid #348fe2; color: #348fe2;   vertical-align:middle;}
+.lst_check > span.on{background-color: #348fe2;}
+.lst_check > span > label,.lst_check > span > input{ vertical-align: bottom; cursor: pointer; }
+.lst_check > span > label{min-width:66px; padding: 6px 8px; display: inline-block; *display: inline; *zoom: 1; color: #fff; text-align: center; color: #348fe2; }
+.lst_check > span.on  label{background-color: #348fe2; color: #fff;}
+.lst_check > span > input{ position: absolute; left: -50px; top: -50px;  }
+.lst_check.dash_btnbox{position:absolute; right:0; top:80px; z-index:99;}
+
+.lst_check.colorBar > span{ display: inline-block; *display: inline; *zoom: 1; position: relative; overflow: hidden; min-width:28px; width:28px; height: 28px; border-radius: 2px; border:0; color:#348fe2; background-repeat: no-repeat; background-image: url(/oktomato/images/bg/img_colorbar.jpg);   }
+.lst_check.colorBar > span > label{min-width:26px; width:26px; height: 26px; padding: 0; display: inline-block; *display: inline; *zoom: 1; color: #fff; text-align: center; color:#348fe2; text-indent: -9999px; overflow: hidden; }
+.lst_check.colorBar > span.on  label{background-color:transparent; min-width:24px; width:24px; height: 24px; border: 2px solid #348fe2;}
+
+.lst_check.colorBar > span.aColor1{background-position: 0 0;}
+.lst_check.colorBar > span.aColor2{background-position: -33px 0;}
+.lst_check.colorBar > span.aColor3{background-position: -66px 0;}
+.lst_check.colorBar > span.aColor4{background-position: -99px 0;}
+.lst_check.colorBar > span.aColor5{background-position: -132px 0;}
+.lst_check.colorBar > span.aColor6{background-position: -165px 0;}
+.lst_check.colorBar > span.aColor7{background-position: -198px 0;}
+.lst_check.colorBar > span.aColor8{background-position: -231px 0;}
+.lst_check.colorBar > span.aColor9{background-position: -264px 0;}
+.lst_check.colorBar > span.aColor10{background-position: -297px 0;}
+.lst_check.colorBar > span.aColor11{background-position: -330px 0;}
+.lst_check.colorBar > span.aColor12{background-position: -363px 0;}
+.lst_check.colorBar > span.aColor13{background-position: -396px 0;}
+.lst_check.colorBar > span.aColor14{background-position: -429px 0;}
+
+
+/* //리스트 체크리스트  (radio) */
+
+#mainInfoPopup.layer_popup1{width: 330px;}
+#RecommendedListPopup.layer_popup1{width: 330px;}
+#bbsType.layer_popup1 {width:420px}
+
+.layer_popup1{ padding: 20px; position: absolute; left: 0; top: 0; border: 5px solid #e2e7eb; background-color: #fff; z-index: 100; display: none;  }
+.layer_popup1 .close{position: absolute; right: 10px; top: 10px;}
+.layer_popup1 .searchBox{ margin-bottom: 20px; text-align: center;  }
+.layer_popup1 .cont > h1{ font-size: 16px; text-align: center;  margin-bottom: 20px; color: #333; font-weight: bold; }
+.layer_popup1 .scrollBox1{margin-bottom: 20px; background: url(/oktomato/images/bg/bg_dot_line.gif) 0 100% repeat-x; }
+.layer_popup1 .scrollBox1 > ul{padding-bottom: 20px; *zoom:1;}
+.layer_popup1 .scrollBox1 > ul:after{display: block;clear: both;content:"";height: 0; visibility: hidden;}
+.layer_popup1 .scrollBox1 > ul > li{padding-bottom: 10px; display: inline-block; *display: inline; *zoom: 1; width: 45%; padding-right: 1%; margin-right: 3%; margin-left: -5px; min-height: 20px; border-right: 1px solid #ededed; vertical-align: top; }
+.layer_popup1 .scrollBox1 > ul > li.rgh{ margin-right: 0; width: 50%; border-right: 0;}
+.layer_popup1 .scrollBox1 > ul > li button{ height: 20px; line-height: 20px; }
+
+.layer_popup1 .scrollBox2{margin-bottom: 20px; background: url(/oktomato/images/bg/bg_dot_line.gif) 0 100% repeat-x; }
+.layer_popup1 .scrollBox2 > ul{padding-bottom: 20px; *zoom:1;}
+.layer_popup1 .scrollBox2 > ul:after{display: block;clear: both;content:"";height: 0; visibility: hidden;}
+.layer_popup1 .scrollBox2 > ul > li{display: inline-block; *display: inline; *zoom: 1; width: 29%; padding-left: 3%; margin-bottom: 10px;}
+.layer_popup1 .scrollBox2 > ul > li button{ height: 20px; line-height: 20px; }
+
+.layer_popup1.trea {width:210px !important; padding-bottom:10px !important;}
+.layer_popup1.trea .scrollBox2 {background:none; }
+.layer_popup1.trea .scrollBox2 > ul {padding:0;}
+.layer_popup1.trea .scrollBox2 > ul > li {width:49px; text-align:center; padding:0; line-height:20px; vertical-align:middle;}
+
+#bbsType.layer_popup1 header h1 {text-align:left;  font-size: 16px;  margin-bottom: 20px; color: #333; font-weight: bold;}
+#bbsType.layer_popup1 ul.bbs_type_list {background:url(/oktomato/images/news/bg_dot_line.gif) 0 top repeat-x;}
+#bbsType.layer_popup1 ul.bbs_type_list li {background:url(/oktomato/images/news/bg_dot_line.gif) 0 bottom repeat-x; padding:7px; cursor:pointer;}
+#bbsType.layer_popup1 ul.bbs_type_list li:hover {background:#eff0f5;}
+#bbsType.layer_popup1 ul.bbs_type_list li p.tit {float:left;line-height:103px; color:#242a30; font-weight:bold; font-size:13px;}
+#bbsType.layer_popup1 ul.bbs_type_list li .img {display:block;margin-left:140px ; }
+
+
+/*layer_popup2 S 2016-02-11  LYT */
+.layer_popup2{ padding: 20px; position: absolute; right: 20px; top: 0; border: 5px solid #e2e7eb; background-color: #fff; z-index: 100; display: none;  }
+.layer_popup2 .close{position: absolute; right: 10px; top: 10px;}
+.layer_popup2 .searchBox{ margin-bottom: 20px; text-align: center;  }
+.layer_popup2 .cont > h1{ font-size: 16px; text-align: center;  margin-bottom: 20px; color: #333; font-weight: bold; }
+.layer_popup2 .scrollBox1{margin-bottom: 20px; background: url(/oktomato/images/bg/bg_dot_line.gif) 0 100% repeat-x; }
+.layer_popup2 .scrollBox1 > ul{padding-bottom: 20px; *zoom:1;}
+.layer_popup2 .scrollBox1 > ul:after{display: block;clear: both;content:"";height: 0; visibility: hidden;}
+.layer_popup2 .scrollBox1 > ul > li{padding-bottom: 10px; display: inline-block; *display: inline; *zoom: 1; width: 45%; padding-right: 1%; margin-right: 3%; margin-left: -5px; min-height: 20px; border-right: 1px solid #ededed; vertical-align: top; }
+.layer_popup2 .scrollBox1 > ul > li.rgh{ margin-right: 0; width: 50%; border-right: 0;}
+.layer_popup2 .scrollBox1 > ul > li button{ height: 20px; line-height: 20px; }
+
+.layer_popup2 .scrollBox2{margin-bottom: 20px; background: url(/oktomato/images/bg/bg_dot_line.gif) 0 100% repeat-x; }
+.layer_popup2 .scrollBox2 > ul{padding-bottom: 20px; *zoom:1;}
+.layer_popup2 .scrollBox2 > ul:after{display: block;clear: both;content:"";height: 0; visibility: hidden;}
+.layer_popup2 .scrollBox2 > ul > li{display: inline-block; *display: inline; *zoom: 1; width: 29%; padding-left: 3%; margin-bottom: 10px;}
+.layer_popup2 .scrollBox2 > ul > li button{ height: 20px; line-height: 20px; }
+
+.layer_popup2.trea {width:210px !important; padding-bottom:10px !important;}
+.layer_popup2.trea .scrollBox2 {background:none; }
+.layer_popup2.trea .scrollBox2 > ul {padding:0;}
+.layer_popup2.trea .scrollBox2 > ul > li {width:49px; text-align:center; padding:0; line-height:20px; vertical-align:middle;}
+/*layer_popup2 E 2016-02-11  LYT */
+
+
+
+/*button*/
+button.btn_switch{ min-width: 51px;  height: 29px; line-height: 29px; padding: 0 10px; border: 1px solid #2ba3f7; color: #2ba3f7; text-align: center; margin: 0 5px; border-radius: 4px; }
+button.btn_square{ min-width: 49px;  height: 29px; line-height: 29px; padding: 0 10px; border: 1px solid #2ba3f7; color: #2ba3f7; text-align: center; margin-left: 3px; font-size:inherit; font-family:Malgun Gothic, "맑은 고딕";}
+button.btn_square.bt_gray{border: 1px solid #9c9c9c !important; color: #9c9c9c !important; }
+button.btn_regist {line-height:26px; padding: 0 10px; border: 1px solid #2ba3f7; color: #2ba3f7; text-align: center;}
+button.btn_delete {line-height:26px; padding: 0 10px; border: 1px solid #9c9c9c; color: #9c9c9c; text-align: center; display:none;}
+button.btn_arrow {line-height:20px; padding:0 5px; border: 1px solid #2ba3f7; color: #2ba3f7; text-align: center;}
+/* //button*/
+
+/*datapiker*/
+span.datapiker{  display: inline-block; *display: inline; *zoom: 1; position: relative;  }
+span.datapiker .ui-datepicker-trigger{ position: absolute; right: 8px; top: 4px; cursor: pointer; }
+/* //datapiker*/
+
+div.fileImg {text-align:center;}
+span.fileImg{ vertical-align: middle; margin-right: 10px;}
+div.fileinputs {
+ position: relative; float: left;
+ width: 340px;
+}
+
+
+div.fakefile {
+ position: absolute;
+ top: 0px;
+ left: 0px;
+ z-index: 1;
+}
+div.fakefile input{ border: 1px solid #e2e7eb;  width: 260px;   height: 24px; line-height: 24px; margin-right: 5px;} 
+input.file {
+cursor: pointer;
+ width: 330px; 
+ height: 28px; line-height: 28px;
+ position: relative;
+ text-align: right;
+ -moz-opacity:0 ;
+ filter:alpha(opacity: 0);
+ opacity: 0;
+ z-index: 2;
+}
+.fileinputsDesign{
+    padding-left: 20px;
+    padding-right: 75px;
+    background: url(../images/btn/btn_upload_off.gif) 100% 50% no-repeat;
+    vertical-align: middle;
+}
+input.fileDesign {
+ vertical-align: middle;
+ border: 1px solid #e2e7eb;
+ cursor: pointer;
+ width: 150px; 
+ height: 26px; line-height: 26px;
+ position: relative;
+ z-index: 2;
+ 
+}
+
+/*검색목록 리셋 박스*/
+.resetBox .searchtag:first-child{margin-left: 0; padding-left: 0; border-left: 0;}
+.resetBox .searchtag{margin-left: 10px; padding-left: 10px; border-left: 1px solid #ededed;}
+.resetBox .searchtag button{ margin-left: 6px; width: 15px; height: 15px; overflow: hidden; text-indent: -9999px;  display: inline-block; background-image: url(/oktomato/images/bg/ico_common.png); background-repeat: no-repeat; background-position: -414px -17px;  }
+.resetBox .searchtag button:hover{background-position:-414px -40px;}
+.resetBox .reset{ margin-left: 20px; width: 79px; height: 15px; overflow: hidden; text-indent: -9999px;  display: inline-block; background-image: url(/oktomato/images/bg/ico_common.png); background-repeat: no-repeat; background-position: -314px -18px;}
+.resetBox .reset:hover{background-position: -314px -41px;}
+
+/* f select */
+select{
+    font-size:11px;
+    color:#a1a1a1;
+}
+ 
+/* select box title */
+span.selectbox_title{
+    min-width: 80px;
+    text-align:left;
+    padding:6px 15px 5px 3px;
+    border:1px solid #e2e7eb;
+    border-radius:2px;
+    background:#FFF url(/oktomato/images/bg/bg_select.jpg) no-repeat 100% 50%;
+    margin-right: 4px;
+
+}
+span.selectbox_title strong{
+    width:100%;
+    height:1em;
+    
+    font-weight:normal;
+    font-size:13px;
+    color:#666;
+    word-break:break-all;
+    line-height:1.2em;
+    padding:0px 0 3px;
+    _padding:1px 0 2px;
+    display:block;
+    overflow:hidden;
+}
+span.selectbox_title_focus{
+    border-color:#333;
+}
+span.selectbox_title_focus strong{
+    color:#000;
+}
+span.selectbox_title_disabled{
+    background-color:#EEE;
+}
+span.selectbox_title_disabled strong{
+    color:#999;
+}
+ 
+/* select box option */
+div.selectbox_option{
+    min-width: 97px;
+    border:1px solid #e2e7eb;
+    background:#FFF;
+    overflow:hidden;
+}
+div.selectbox_option li{
+    list-style:none;
+}
+div.selectbox_option a{
+    height:1em;
+    font-size:12px;
+    color:#888;
+    word-break:break-all;
+    line-height:1.4em;
+    text-decoration:none;
+    padding:2px 3px 5px;
+    _padding:3px 3px 4px;
+    display:block;
+    overflow:hidden;
+}
+div.selectbox_option a.on,
+div.selectbox_option a:hover{
+    color:#000;
+    background:#fff;
+}
+ 
+/* select box multiple */
+span.selectbox_multiple{
+    border:1px solid;
+    border-color:#999;
+    background:#FFF;
+    display:inline-block;
+    overflow:hidden;
+}
+span.selectbox_multiple ul li{
+    height:1em;
+    font-size:11px;
+    color:#666;
+    word-break:break-all;
+    line-height:1.4em;
+    padding:1px 3px 4px;
+    _padding:2px 3px 3px;
+    display:block;
+    overflow:hidden;
+}
+span.selectbox_multiple ul li.on{
+    color:#000;
+    background:#CCC;
+}
+span.selectbox_multiple_focus{
+    border-color:#333;
+}
+span.selectbox_multiple_focus ul li.on{
+    color:#000;
+    background:#BBB;
+}
+span.selectbox_multiple_disabled{
+    background-color:#EEE;
+}
+span.selectbox_multiple_disabled ul li{
+    color:#999;
+}
+/* //select*/
+
+textarea.txt_box{ border-style: solid; border-width: 1px; border-color: #ccc; height: 80px; line-height: 27px; padding: 0 10px;  font-size: 1em; color: #515151; width:96%;}
+
+/*selet_pop_btn */
+
+.pop_btn {display:inline-block; padding:6px 10px; text-align:left; padding-left:8px;padding-right:26px; border:1px solid #e2e7eb; color:#a1a1a1; min-width:140px; background:#FFF url(/oktomato/images/bg/bg_select.jpg) no-repeat 100% 50%;}
