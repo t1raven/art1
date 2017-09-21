@@ -12,9 +12,9 @@
 <meta property="og:url" content="<?php echo $PUBLIC['HOME'], $_SERVER['REQUEST_URI']; ?>" />
 <meta property="og:title" content="<?php echo (!empty($ogTitle)) ? $ogTitle : ''; ?>" />
 <meta property="og:description" content="<?php echo (!empty($ogDescription)) ? $ogDescription : '아트1은 아카이브 기반의 작가등록, 작품 판매, 미술뉴스, 갤러리 정보를 제공하는 새로운 아트플랫폼 입니다.'; ?>" />
-<meta property="og:image" content="<?php echo (!empty($ogImage)) ? $ogImage : 'http://www.art1.com/images/header/logo_1st.jpg'; ?>" />
-<link rel="image_src" href="<?php echo (!empty($ogImage)) ? $ogImage : 'http://www.art1.com/images/header/logo_1st.jpg'; ?>" />
-<meta name="naver-site-verification" content="d2dad7ab901a8d6d4da8b09189888679d9824714" />
+<meta property="og:image" content="<?php echo (!empty($ogImage)) ? $ogImage : 'http://www.art1.com/images/header/logo_for_link.jpg?ver=20170511'; ?>" />
+<link rel="image_src" href="<?php echo (!empty($ogImage)) ? $ogImage : 'http://www.art1.com/images/header/logo_for_link.jpg?ver=20170511'; ?>" />
+<!--<meta name="naver-site-verification" content="d2dad7ab901a8d6d4da8b09189888679d9824714" />-->
 <meta name="description" content="아트1은 아카이브 기반의 작가등록, 작품 판매, 미술뉴스, 갤러리 정보를 제공하는 새로운 아트플랫폼 입니다." />
 <title>아트1</title>
 <link rel="icon" href="http://www.art1.com/favicon.ico" type="image/x-icon">
@@ -62,7 +62,7 @@
 <section id="tmpView">
 </section>
 <div id="wrap">
-	<div id="img_for_other"><img src="/images/header/logo_for_link.jpg" alt="외부링크용로고"></div>
+	<div id="img_for_other"><img src="/images/header/logo_for_link.jpg?ver=20170511" alt="외부링크용로고"></div>
     <div id="art1guide">
       <div class="inner">
           <!-- <p class="img"><a href="/homeguide/guide.php"><img src="/images/header/img_artguide.jpg" alt="모두를 위한 아트1 사용팁 go"></a></p> -->
@@ -78,7 +78,7 @@ $(function(){
   //NProgress.start();
 });
 $( document ).ready(function() {
-  NProgress.done(); 
+  NProgress.done();
   $('.fade').removeClass('out');
 });
 function fixedPopupClose2(ur){
@@ -304,7 +304,7 @@ if(o == "shopping"){
                        "display":"block",
                        "opacity":0
                      });
-					
+
 
 
                     $("body").append(backgound);
@@ -314,8 +314,8 @@ if(o == "shopping"){
                       $(window).off("resize");
 
                     });
-					
-					
+
+
                      $(window).on("resize",function(){
                      	var winsize = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
                    		if(winsize <= 960){
@@ -324,7 +324,7 @@ if(o == "shopping"){
 	                        $(window).off("resize");
                         };
                      });
-					
+
 
 
 
@@ -401,7 +401,7 @@ if(o == "shopping"){
                       }
                     })//each
                     var fixedPopArea = $("#fixedPopupArea");
-                    
+
                 	//alert();
                     fixedPopArea.slideUp(400);
                     $("#header").stop().animate({"top":""},400);

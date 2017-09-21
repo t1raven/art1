@@ -3,18 +3,18 @@
   $categoriName = "art1";
   $pageName = "Contact";
   $pageNum = "1";
-  $subNum = "5";
+  $subNum = "6";
   $thirdNum = "0";
   $pathType = "b";
 ?>
 <? include "../inc/link.php"; ?>
 <? include "../inc/top.php"; ?>
-<? include "../inc/header.php"; ?> 
-<? include "../inc/spot_sub.php"; ?> 
+<? include "../inc/header.php"; ?>
+<? include "../inc/spot_sub.php"; ?>
 <link rel="stylesheet" type="text/css" href="/css/owen2.css">
   <section id="container_sub">
     <div class="container_inner">
-      <? include "../inc/path.php"; ?> 
+      <? include "../inc/path.php"; ?>
       <? include "tab_art1_2.php"; ?>
 		  <div id="contactArea" class="content-mediaBox margin1">
 				<section id="contact">

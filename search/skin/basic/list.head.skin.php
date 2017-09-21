@@ -3,7 +3,7 @@ if (!defined('OKTOMATO')) exit;
 
 $categoriName = 'Search Result';
 $pageName = 'Search Result';
-$pageNum = '5';
+$pageNum = '3';
 $subNum = '0';
 $thirdNum = '0';
 $pathType = 'a';

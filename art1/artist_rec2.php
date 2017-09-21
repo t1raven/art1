@@ -6,18 +6,18 @@
   $subNum = "1";
   $thirdNum = "0";
   $pathType = "b";
-  
+
   $idx = $_GET["idx"];
 ?>
 <? include "../inc/link.php"; ?>
 <? include "../inc/top.php"; ?>
-<? include "../inc/header.php"; ?> 
-<? include "../inc/spot_sub.php"; ?> 
+<? include "../inc/header.php"; ?>
+<? include "../inc/spot_sub.php"; ?>
 <link rel="stylesheet" type="text/css" href="/css/owen2.css">
 <script src="/js/jwplayer.js"></script>
 <section id="container_sub">
 	<div class="container_inner">
-		<? include "../inc/path.php"; ?> 
+		<? include "../inc/path.php"; ?>
 		<? include "tab_art1_2.php"; ?>
 		<? include "artist_rec_data.php"; ?>
 <?
@@ -59,7 +59,7 @@
 											<li class="swiper-slide">
 												<a href="http://art1.com/marketPlace/artist.php?idx=<?= $vData->arist[idx] ?>"><img src="<?= $value ?>" alt="" /></a>
 											</li>
-<?}?>											
+<?}?>
 										</ul>
 									</div>
 									<button class="pagi prev"><img src="/images/btn/btn_prev_op.png" alt="이전" /></button>
@@ -72,7 +72,7 @@
 										<li>
 											<section class="sect sec2 out_cover" onclick=''>
 												<img class="area_zoom ict_hide" src="<?= $vData->tile[0][img] ?>" alt="" />
-<? if($vData->tile[0][linkType] == 'url'){?>												
+<? if($vData->tile[0][linkType] == 'url'){?>
 												<a href="<?= $vData->tile[0][url] ?>" class="cover" <?php echo  substr($vData->tile[0][url],0,4)=='http' ? 'target="_blank"' : '' ?>>
 <? }else{?>
 												<a href="javascript:;" onclick="aristFn.showPop(<?= $vData->tile[0][url] ?>)" class="cover">
@@ -89,7 +89,7 @@
 										<li>
 											<section class="sect sec3 out_cover" onclick=''>
 												<img class="area_zoom ict_hide" src="<?= $vData->tile[1][img] ?>" alt="" />
-<? if($vData->tile[1][linkType] == 'url'){?>												
+<? if($vData->tile[1][linkType] == 'url'){?>
 												<a href="<?= $vData->tile[1][url] ?>" class="cover" <?php echo  substr($vData->tile[1][url],0,4)=='http' ? 'target="_blank"' : '' ?>>
 <? }else{?>
 												<a href="javascript:;" onclick="aristFn.showPop(<?= $vData->tile[1][url] ?>)" class="cover">
@@ -180,7 +180,7 @@
 								</li>
 							</ul>
 						</div>
-					</article>				
+					</article>
 				</section>
 			</section>
 <?}?>
@@ -209,13 +209,13 @@
 			</section>
 
 <script type="text/javascript">
-	
+
 	var aristFn = {
 		popScl : '',
 		showVideo : function(me){
 			var video = $(me).data('video');
 			var par = $(me).parent();
-			
+
 			if(isie7 || isie8){
 				$(me).remove();
 				par.append($("<div id='movFlv"+video+"'></div>"));
@@ -231,7 +231,7 @@
 		           file: "/video/"+video+".flv"
 		       });
 			}else{
-				if(par.find('video').length == 0){	
+				if(par.find('video').length == 0){
 				<?if($check_mobile === false){?>
 					$(me).remove();
 	          		par.append("<video controls=''><source src='/video/"+video+".mp4' type='video/mp4'><source src='/video/"+video+".ogv' type='video/ogv'></video>");
@@ -249,7 +249,7 @@
 				}
 				v_ele.play();
 			}
-				
+
 		},
 		showPop : function(o){
 			var t = $("#pop_artist_rec");
@@ -320,7 +320,7 @@
 					setTimeout(function(){
 						alignFn.setScrollBar();
 					},61)
-					
+
 				}else if(vw <= 767 && !this.area.hasClass('mobile')){
 					this.area.addClass('mobile').removeClass('pc');
 					iCutterOwen(["#arist_tiles .sect"]);
@@ -338,9 +338,9 @@
 			setScrollBar : function(){
 				var scroll_bar = $this.find(".iScrollVerticalScrollbar");
 				scroll_bar.css('display',scroll_bar.find(' > .iScrollIndicator').css('display'));
-			} 
+			}
 		}
-		
+
 		alignFn.setting();
 		$(window).resize(function(){
 			alignFn.setting();
@@ -348,11 +348,11 @@
 	});
 
 	iCutterOwen(["#arist_tiles .sect", '#arist_tiles .sec_profile .img', '#artist_list > .list .img']);
-	
+
 	$(function(){
 		//aristFn.showPop();
 	})
-	
+
 </script>
 		<div id="pop_common"></div>
 		<div id="pop_artist_rec" class="pop_type1">

@@ -9,12 +9,12 @@
 ?>
 <? include "../inc/link.php"; ?>
 <? include "../inc/top.php"; ?>
-<? include "../inc/header.php"; ?> 
-<? include "../inc/spot_sub.php"; ?> 
+<? include "../inc/header.php"; ?>
+<? include "../inc/spot_sub.php"; ?>
   <section id="container_sub">
     <div class="container_inner">
-      <? include "../inc/path.php"; ?> 
-      
+      <? include "../inc/path.php"; ?>
+
 	<div class="tabBox">
 		<ul>
 			<li><a href="index1.php">In brief</a></li>
@@ -42,13 +42,13 @@
                                   <a href="news_view.php">정부가 미술시장 활성화를 위한 거래정보 투명화와 작가들에 대한 보수기준 현실화에 나선다. 문화체육관광부(장관 김종덕)는 미술품 거래정보 온라인 제공시스템 구축과정부가 미술시장 활성화를 위한 거래정보 투명화와 작가들에 대한 보수기준 현실화에 나선다. 문화체육관광부(장관 김종덕)는 미술품 거래정보 온라인 제공시스템 구축과정부가 미술시장 활성화를 위한 거래정보 투명화와 작가들에 대한 보수기준 현실화에 나선다. 문화체육관광부(장관 김종덕)는 미술품 거래정보 온라인 제공시스템 구축과</a>
                                 </p><!-- text_cont -->
                                 <a href="#" class="more">더보기</a>
-                              </div><!-- //inner -->    
+                              </div><!-- //inner -->
                           </div><!-- cont -->
                       </section><!-- lst -->
                   </div><!-- //bbs_thumb_t6 -->
               </div>
 
-              
+
               <div class="focus">
                  <section class="bbs_thumb_t1">
                     <!-- <h1>Focus</h1> -->
@@ -66,9 +66,9 @@
                                       <strong>홍길동기자</strong>
                                       <span>2014.10.14</span>
                                     </div><!-- //user -->
-                                 </div> 
+                                 </div>
                               </div><!-- //cont -->
-                       </article><!-- //lst_thumb --> 
+                       </article><!-- //lst_thumb -->
                        <article class="lst_thumb">
                               <div class="thumb">
                                   <a href="#"><img src="/images/news/tmp_thumb2_re.jpg" alt=""></a>
@@ -83,9 +83,9 @@
                                       <strong>홍길동기자</strong>
                                       <span>2014.10.14</span>
                                     </div><!-- //user -->
-                                 </div> 
+                                 </div>
                               </div><!-- //cont -->
-                       </article><!-- //lst_thumb --> 
+                       </article><!-- //lst_thumb -->
                        <article class="lst_thumb">
                               <div class="thumb">
                                   <a href="#"><img src="/images/news/tmp_thumb3_re.jpg" alt=""></a>
@@ -100,9 +100,9 @@
                                       <strong>홍길동기자</strong>
                                       <span>2014.10.14</span>
                                     </div><!-- //user -->
-                                 </div> 
+                                 </div>
                               </div><!-- //cont -->
-                       </article><!-- //lst_thumb --> 
+                       </article><!-- //lst_thumb -->
                        <article class="lst_thumb">
                               <div class="thumb">
                                   <a href="#"><img src="/images/news/tmp_thumb4_re.jpg" alt=""></a>
@@ -117,9 +117,9 @@
                                       <strong>홍길동기자</strong>
                                       <span>2014.10.14</span>
                                     </div><!-- //user -->
-                                 </div> 
+                                 </div>
                               </div><!-- //cont -->
-                       </article><!-- //lst_thumb --> 
+                       </article><!-- //lst_thumb -->
                   </section><!-- //bbs_thumb_t1 -->
               </div><!-- //focus -->
           </div> <!-- //sec1    -->
@@ -139,7 +139,7 @@
                           <div class="banner_wrapper">
                               <div class="inner">
                                   <div class="motion">
-                                     
+
                                       <article class="lst">
                                           <div class="thumb">
                                               <a href="#"><img src="/images/news/tmp_thumb1_1.jpg" alt=""></a>
@@ -150,10 +150,10 @@
                                                     <div class="txt">
                                                       <a href="#">11프랑스 파리 서쪽 불로뉴 숲에 돛을 단 거대한 유리 배 모양의 대형미술관이 들어섰다. 프랑스 파22리 서쪽 불로뉴 숲에 돛을 단 거대한 유리 배 모양의 대형미술관이 들어섰다. 프랑스 파리 서쪽 불로뉴 숲에 돛을 단 거대한 유리 배 모양의 대형미술관이 들어섰다. 프랑스 파리 서쪽 불로33뉴 숲에 돛을 단 거대한 유리 배 모양의 대형미술관이 들어섰다.프랑스 파리 서쪽 불로뉴 숲에 돛을 단 거대한 유리 배 모양의 대형미술관이 들어섰다. 프랑스 파리 서쪽 불로뉴 숲에 돛44을 단 거대한 유리 배 모양의 대형미술관이 들어섰다. 프랑스 파리 서쪽 불로뉴 숲에 돛을 단 거대한 유리 배 모양의 대형미술관이 들어섰다. 프랑스 파리 서쪽 불로뉴 숲에 돛을 단 거대한 유리 배 모양의 대형미술관이 들어섰다.</a>
                                                     </div><!-- //txt -->
-                                               </div><!-- //inner -->  
+                                               </div><!-- //inner -->
                                            </div><!-- //cont -->
                                       </article><!-- //lst -->
-                                      
+
                                       <article class="lst" style="display: none;">
                                           <div class="thumb">
                                               <a href="#"><img src="/images/news/tmp_trend1_re.jpg" alt=""></a>
@@ -164,7 +164,7 @@
                                                     <div class="txt">
                                                       <a href="#">프랑스 파리 서쪽 불로뉴 숲에 돛을 단 거대한 유리 배 모양의 대형미술관이 들어섰다. 프랑스 파리 서쪽 불로뉴 숲에 돛을 단 거대한 유리 배 모양의 대형미술관이 들어섰다. 프랑스 파리 서쪽 불로뉴 숲에 돛을 단 거대한 유리 배 모양의 대형미술관이 들어섰다. 프랑스 파리 서쪽 불로뉴 숲에 돛을 단 거대한 유리 배 모양의 대형미술관이 들어섰다.</a>
                                                     </div><!-- //txt -->
-                                               </div><!-- //inner -->  
+                                               </div><!-- //inner -->
                                            </div><!-- //cont -->
                                       </article><!-- //lst -->
 
@@ -178,7 +178,7 @@
                                                     <div class="txt">
                                                       <a href="#">프랑스 파리 서쪽 불로뉴 숲에 돛을 단 거대한 유리 배 모양의 대형미술관이 들어섰다. 프랑스 파리 서쪽 불로뉴 숲에 돛을 단 거대한 유리 배 모양의 대형미술관이 들어섰다. 프랑스 파리 서쪽 불로뉴 숲에 돛을 단 거대한 유리 배 모양의 대형미술관이 들어섰다. 프랑스 파리 서쪽 불로뉴 숲에 돛을 단 거대한 유리 배 모양의 대형미술관이 들어섰다.</a>
                                                     </div><!-- //txt -->
-                                               </div><!-- //inner -->  
+                                               </div><!-- //inner -->
                                            </div><!-- //cont -->
                                       </article><!-- //lst -->
 
@@ -199,7 +199,7 @@
                         var controlBox = $this.find(".control"),
                               result = controlBox.find(".result"),
                               direction = controlBox.find(".prev , .next")
-                        
+
                         var lstPrev = lst.eq(activeNum);
                         lst.css("display","none");
                         lstPrev.css("display","block");
@@ -216,7 +216,7 @@
                           if(!action.is(":animated")){
                               var elemt = $(this);
                               if(elemt.hasClass("prev") == true){
-                                if(activeNum == 0 ) {activeNum = (total-1) }else{activeNum --;}           
+                                if(activeNum == 0 ) {activeNum = (total-1) }else{activeNum --;}
                                 boxAction(activeNum);
                               }else if(elemt.hasClass("next")){//next
                                 if(activeNum  >= (total-1) ){activeNum  = 0  }else{ activeNum ++;}
@@ -262,7 +262,7 @@
           </section>
 
         </section><!-- //newIndexArea -->
-      
+
     </div><!-- //container_inner -->
   </section><!-- //container_sub -->
   <script>
@@ -294,9 +294,9 @@
     doc = $(document),
     body = (navigator.userAgent.indexOf('AppleWebKit') !== -1) ? $('body') : $('html');
     var top = win.scrollTop() + win.height();
-    var endHeight = $("#newWrapper").offset().top + $("#newWrapper").outerHeight() +150;
+    var endHeight = $("#newWrapper").offset().top + $("#newWrapper").outerHeight();
 
-    if(top > endHeight ){
+    if(top > endHeight/1.2 ){
       startScroll();
     }
 
@@ -304,34 +304,34 @@
       if(!scrollNewsStartFlag){
         scrollNewsStartFlag = true;
         loadingStart($("#newWrapper").outerHeight());
-         getItemElement(); 
+         getItemElement();
 
       }//if
-      
+
     }
 
-    
 
-  
+
+
   };//scrollNewEvent
 
    $(window).on("scroll",function(){
      scrollNewEvent();
-     //getItemElement(); 
+     //getItemElement();
     })
-      
+
       var $container = $("#newWrapper");
 
       function ajaxData(num)
         {
-          
+
            $.ajax({
                type:"GET",
                url:"ajax-bbs1.php",
                ansync : false,
                dataType:"html",
                success : function(data) {
-                
+
                     var $container2;
                     $container.children().remove();
                       $("<div id='tmpData'></div>").html(data).appendTo($container);
@@ -367,7 +367,7 @@
 
                         });*/
 
-              
+
                   //imgLoad.on( 'done', onDone);
                },
                complete : function(data) {
@@ -388,7 +388,7 @@
           url:"ajax-bbs1.php",
           dataType:"html",
           success : function(data) {
-            
+
             loadingImg.animate({
                   "opacity":0
                 },500,function(){
@@ -403,8 +403,8 @@
                       scrollNewsStartFlag = false;
 
                 })//loading
-                  
-              
+
+
           },
            complete : function(data) {
 
@@ -421,7 +421,7 @@
   <script src="<?=$currentFolder?>/js/jquery.dotdotdot.min.js"></script>
   <script>
       iCutter(".thumb > a");
-      dotWindow(".bbs_thumb_t6 .lst > .cont .h , .bbs_thumb_t6  .lst .cont .txt , #newIndexArea .bbs_thumb_t1 .lst_thumb .cont .txt , #newIndexArea .bbs_thumb_t2 .banner_wrapper .lst > .cont .h , #newIndexArea .bbs_thumb_t2 .banner_wrapper .lst > .cont .txt , #newIndexArea .bbs_nomal_t1 > .lst > ul > li > a" , "window");    
+      dotWindow(".bbs_thumb_t6 .lst > .cont .h , .bbs_thumb_t6  .lst .cont .txt , #newIndexArea .bbs_thumb_t1 .lst_thumb .cont .txt , #newIndexArea .bbs_thumb_t2 .banner_wrapper .lst > .cont .h , #newIndexArea .bbs_thumb_t2 .banner_wrapper .lst > .cont .txt , #newIndexArea .bbs_nomal_t1 > .lst > ul > li > a" , "window");
   </script>
 
   <? include "../inc/footer.php"; ?>

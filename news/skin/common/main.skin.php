@@ -430,11 +430,11 @@ foreach($list as $row) {
                 </section>
               </div>
           </div> <!-- //sec2    -->
-          
+
 
           <!-- 배너 광고 -->
           <div class="bot_banner">
-          <?php 
+          <?php
 		   //메인 베너 S
 		  $banner = new Banner();
 		  $list = null;
@@ -450,7 +450,7 @@ foreach($list as $row) {
 				<img src="<?php echo $row['bannerUpFileName']; ?>" class="pc" alt="" />
 				<img src="<?php echo $row['bannerUpFileNameMobile']; ?>" class="mobile" alt="" />
 			</a>
-		  <?php 
+		  <?php
 				}
 			 $i++;
 		  }  //메인 베너 E
@@ -546,9 +546,11 @@ var at_tmp = '<?php echo $at_tmp;?>' ;
     doc = $(document),
     body = (navigator.userAgent.indexOf('AppleWebKit') !== -1) ? $('body') : $('html');
     var top = win.scrollTop() + win.height();
-    var endHeight = $("#newWrapper").offset().top + $("#newWrapper").outerHeight() +150;
+    var endHeight = $("#newWrapper").offset().top + $("#newWrapper").outerHeight();
 
-    if(top > endHeight ){
+    console.log(top, endHeight);
+
+    if(top > endHeight/1.2 ){
       startScroll();
     }
 
@@ -651,10 +653,10 @@ var at_tmp = '<?php echo $at_tmp;?>' ;
                       function onAlways( instance ) {
                         /*$container.find("img").fadeIn( 2000);*/
                             $container.isotope({
-	                        	getSortData: {
-								    type: '[data-type]',
-								},
-					         	sortBy : ['type'],
+	                        	  getSortData: {
+								                type: '[data-type]',
+								              },
+					         	          sortBy : ['type'],
 	                            itemSelector: '.newsBox',
                             });
                              var  isto = "<?=$isto?>";
@@ -768,7 +770,6 @@ var at_tmp = '<?php echo $at_tmp;?>' ;
   </script>
   <script src="<?=$currentFolder?>/js/jquery.dotdotdot.min.js"></script>
   <script>
-	console.log("aaass");
     var mainTimeOutSet;
     var WinWdith = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
       $(window).resize(function(){

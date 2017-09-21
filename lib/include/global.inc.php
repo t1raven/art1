@@ -84,21 +84,25 @@ define('galleriesArtistsUploadPath', UPLOAD_DIR.'galleries/artists/'); //-- 갤�
 define('galleriesArtworksUploadPath', UPLOAD_DIR.'galleries/artworks/'); //-- 갤러리즈 artworks 업로드 파일 저장소
 define('galleriesExhibitionsUploadPath', UPLOAD_DIR.'galleries/exhibitions/'); //-- 갤러리즈 exhibitions 업로드 파일 저장소
 define('galleriesArtFairsUploadPath', UPLOAD_DIR.'galleries/artfairs/'); //-- 갤러리즈 artfairs 업로드 파일 저장소
+define('galleriesVideosUploadPath', UPLOAD_DIR.'galleries/videos/'); //-- 갤러리즈 videos 업로드 파일 저장소
 define('galleriesAboutUploadPath', UPLOAD_DIR.'galleries/about/'); //-- 갤러리즈 about 업로드 파일 저장소
 define('galleriesBannerUploadPath', UPLOAD_DIR.'galleries/banner/'); //-- 갤러리즈 banner 업로드 파일 저장소
 
-
+// Articovery
+define('articoveryUploadPath', UPLOAD_DIR.'articovery/'); //--아티커버리 업로드 파일 저장소
+define('articoveryListImgUploadPath', UPLOAD_DIR.'articovery/list/'); //--아티커버리 목록 이미지 파일 저장소
+define('articoveryBigImgUploadPath', UPLOAD_DIR.'articovery/big/'); //--아티커버리 원본 이미지 파일 저장소
+define('articoveryMiddleImgUploadPath', UPLOAD_DIR.'articovery/middle/'); //--아티커버리 중간 이미지 파일 저장소
+define('articoverySmallImgUploadPath', UPLOAD_DIR.'articovery/small/'); //--아티커버리 최소 이미지 파일 저장소
+define('articoveryThumbImgUploadPath', UPLOAD_DIR.'articovery/thumb/'); //--아티커버리 섬네일 이미지 파일 저장소(300 * 비율)
+define('articoveryScaleImgUploadPath', UPLOAD_DIR.'articovery/scale/'); //--아티커버리 사이즈 비교를 위한 이미지 파일 저장소 //이용태
 
 define('PGLogPath', '../../pg/log/'); //-- PG Log 경로
-
 define('FAIL_CNT', 5);
 define('JOIN_PREFIX', 'join-');
-
 define('OKTOMATO', TRUE); // 개별 페이지 실행 금지
 //define('ARTWORKSLISTCOUNT', 13); // 작품 출력 갯수
 define('ARTWORKSLISTCOUNT', 30); // 작품 출력 갯수
-
-
 
 # SESSION & COOKIE
 ini_set('session.cookie_domain', DOM);
@@ -110,9 +114,11 @@ if($_REQUEST['SessionSwitch'] != 'OFF') Session_Start();
 
 
 # DATABASE CONNECTION
-$SITEDB['host'] = '119.205.211.196';
+//$SITEDB['host'] = '119.205.211.196';
+$SITEDB['host'] = 'localhost';
 $SITEDB['user'] = 'art1';
-$SITEDB['pass'] = 'i8q$p2nyzinj8@r';
+//$SITEDB['pass'] = 'i8q$p2nyzinj8@r';
+$SITEDB['pass'] = 'soy#oe31i043auz';
 $SITEDB['db'] = 'art1_com';
 //$SITEDB_CONNECT = mysql_connect($SITEDB['host'], $SITEDB['user'], $SITEDB['pass']) or die("FAILED CONNECTION DATABASE");
 //$SITEDB_MSD = mysql_select_db($SITEDB['db'], $SITEDB_CONNECT);
@@ -136,10 +142,6 @@ catch (PDOException $e)
 	die();
 }
 
-
-
-
-
 # INCLUDE FILE
 require_once ROOT.'/lib/class/util/Lib.php';			# STANDARD METHOD CLASS
 require_once ROOT.'/lib/class/util/Js.php';				# JAVASCRIPT CLASS
@@ -153,7 +155,6 @@ require_once ROOT.'/lib/class/util/AES256.php';	# AES256
 require_once ROOT.'/lib/class/util/XSS.php';	# XSS Filter
 require_once ROOT.'/lib/class/util/AntiXSS.php';	# XSS Filter
 require_once ROOT.'/lib/class/util/BasketCount.php';	# Basket ArtWorks Count
-
 
 # DEFAULT VALUE
 $DEFAULT['NumPerStart'] =  0; # START LIMITER
@@ -184,7 +185,7 @@ $MIME['IMG_PDF'] = 'image/png|image/jpeg|image/gif|application/pdf';
 
 
 # Controller Info
-$aCTL = array('list', 'write', 'update', 'delete', 'read', 'main', 'wish', 'address', 'download', 'complete', 'duplication', 'change', 'account', 'request', 'contact', 'excel_download', 'sort');
+$aCTL = array('list', 'alist', 'write', 'update', 'cupdate', 'delete', 'read', 'main', 'wish', 'address', 'download', 'complete', 'duplication', 'change', 'account', 'request', 'contact', 'excel_download', 'sort', 'join', 'pin', 'cancel', 'thumb', 'comment', 'end', 'finish');
 
 # 작품 카테고리
 $aMedium = array('회화', '사진', '디자인', '판화', '조각', '미디어', '설치', '기타');
@@ -231,8 +232,6 @@ else
 	$LOGIN_MEMBER_NAME = $_SESSION['LOGIN_MEMBER_NAME'];
 }
 
-
-
 $mobile_agent = array('iPhone', 'IPad', 'iPod', 'BlackBerry', 'Android', 'Windows CE', 'LG', 'MOT', 'SAMSUNG', 'SonyEricsson' );
 $check_mobile = false;
 $mobileCnt = count($mobile_agent);
@@ -255,8 +254,6 @@ for($i=0; $i<$ieAgentCnt; $i++){
   }
 }
 
-
 $basketCnt = BasketCount::getBasketCount($dbh);
-
 $aryURL = parse_url($_SERVER['HTTP_REFERER']);
 ?>

@@ -83,7 +83,7 @@ a .fc_blue:hover{ color: #348fe2; border-bottom: 1px solid #348fe2; }
 .sort_lst > li{ display: inline-block; *display: inline; *zoom: 1; margin-left: 5px; }
 .sort_lst > li:first-child{margin-left: 0;}
 .sort_lst dl.sort_box{color: #505050;  position: relative; z-index: 2; }
-.sort_lst dl.sort_box dt{position: relative; z-index: 2; display: table; border-style: solid; border-color: #dadada #dadada #dadada; border-width: 0 0 1px; min-width: 157px;  height: 36px; background: url(../images/ico/ico_arrbot_off.gif) 90% 50% no-repeat; background-color: #fff; }
+.sort_lst dl.sort_box dt{position: relative; z-index: 2; display: table; border-style: solid; border-color: #dadada #dadada #dadada; border-width: 0 0 1px; min-width: 175px;  height: 36px; background: url(../images/ico/ico_arrbot_off.gif) 90% 50% no-repeat; background-color: #fff; }
 .sort_lst dl.sort_box dt button{ display: table-cell; width: 100%; height: 34px; vertical-align: middle; text-align: left;  }
 .sort_lst dl.sort_box dt button span{ display: block; padding-left: 5px;  color: #505050; font-size: 13px; font-weight: 700; padding-right: 20px; }
 .sort_lst dl.sort_box dd{display: none;width: 84%;  min-width: 100px; padding: 20px 8% 20px 8%; display: none; position: absolute; left: 0; top: 36px; z-index: 1; border-style: solid; border-width: 1px; border-color:#dadada; background-color: #fff; text-align: left;}
@@ -258,7 +258,7 @@ a .fc_blue:hover{ color: #348fe2; border-bottom: 1px solid #348fe2; }
 .tabBox ul:after{display: block;clear: both;content:"";height: 0;visibility: hidden;}
 .tabBox ul li {display: inline-block; *display: inline; *zoom: 1; background:url(/images/bg/bg_tab_line.gif) 0 4px no-repeat;padding-left:25px; margin-left:20px;}
 .tabBox ul li:first-child {background:none; padding-left:0; margin-left:0;}
-.tabBox ul li a {color:#969595; font-size:15px; font-weight:bold;display:inline-block; padding-bottom:5px; border-bottom:2px solid #fff; }
+.tabBox ul li a {color:#969595; font-size:15px; font-weight:500;display:inline-block; padding-bottom:5px; border-bottom:2px solid #fff; }
 .tabBox ul li.on a,.tabBox ul li:hover a {border-bottom:2px solid #ed1949; color:#ed1949;}
 .tabBox ul li.black.on a, .tabBox ul li.black:hover a{border-color:#333;color: #333;}
 .tabBox ul li.blue.on a, .tabBox ul li.blue:hover a{border-color:#0068ea; color: #0068ea;}
@@ -824,6 +824,7 @@ button.btn_pack.radius.Inactive,button.btn_pack.radius.Inactive:hover{ backgroun
 #pop_common:nth-child(n){filter:none;}
 #pop_common.on{visibility:visible;opacity:1;}
 
+#modal_overlay,
 #pop_bg_common{
     position: fixed;width: 100%; height: 100%;  left: 0; top: 0; z-index: 30;background-color: rgba(0, 0, 0, 0.7); display:none;visibility:hidden;opacity:0;
     filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#cc000000, endColorstr=#cc000000);
@@ -833,7 +834,9 @@ button.btn_pack.radius.Inactive,button.btn_pack.radius.Inactive:hover{ backgroun
     -o-transition:visibility .3s ease-in-out, opacity .3s ease-in-out;
     transition:visibility .3s ease-in-out, opacity .3s ease-in-out;
 }
+#modal_overlay:nth-child(n),
 #pop_bg_common:nth-child(n){filter:none;}
+#modal_overlay.on,
 #pop_bg_common.on{visibility:visible;opacity:1;}
 
 
@@ -952,3 +955,6 @@ button.btn_pack.radius.Inactive,button.btn_pack.radius.Inactive:hover{ backgroun
   100% { transform: rotate(360deg); }
 }
 
+@media screen and (max-width: 959px){
+	.tabBox ul li a { font-size: 0.929em; }
+}

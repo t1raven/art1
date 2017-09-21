@@ -138,7 +138,7 @@ var soptSp = new Swiper("#gallery_spot > .bx_slide", {
 	paginationClickable : true,
 	cssWidthAndHeight : 'height',
 	loop : true,
-	autoplay : 5000,
+	autoplay : 3000,
 	onSwiperCreated : function(){
 		$("#gallery_spot > .bx_slide").addClass("show");
 	}
@@ -147,7 +147,7 @@ var soptSp = new Swiper("#gallery_spot > .bx_slide", {
 $(function(){
 	$("#gallery_spot > .bx_slide .pagination > button.prev").click(function(e){e.preventDefault();soptSp.swipePrev();});
 	$("#gallery_spot > .bx_slide .pagination > button.next").click(function(e){e.preventDefault();soptSp.swipeNext();});
-	
+
 	sortDesignMotion(".sort_box");
 	$(".sort_lst dl.sort_box dd > ul > li").on("mousedown",function(event){
 	});

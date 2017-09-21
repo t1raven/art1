@@ -39,6 +39,7 @@ else if (!empty($idx) && is_numeric($idx)) {
 		$logoImg = $init->getLogoImg($dbh);
 		$init = null;
 		unset($init);
+		$videosCnt = (int)$isContents['videosCnt'];
 		$exhibitionsCnt = (int)$isContents['exhibitionsCnt'];
 		$artistsCnt =  (int)$isContents['artistsCnt'];
 		$artworksCnt = (int)$isContents['artworksCnt'];

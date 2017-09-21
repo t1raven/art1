@@ -79,11 +79,30 @@ $main_title_3th_url = $currentFolder."market/artist/index.php";
 		$link_03_10 = $currentFolder."market/order";
 		$link_03_11 = $currentFolder."market/banner/?at=write";
 
-$main_title_4th = "Sponsorship";
-$main_title_4th_url = $currentFolder."sponsorship/order_management_list.php";
+
+$main_title_4th = "Articovery";
+//$main_title_4th_url = $currentFolder."artcovery/pin/order_management_list.php";
+$main_title_4th_url = $currentFolder."articovery/covery";
+
 		// 페이지 타이틀
-		$title_04_01th = "신청관리";
-		$link_04_01 = $currentFolder."order_management_list.php";
+		$title_04_01th = "아티커버리관리";
+		$title_04_02th = "작가관리";
+		$title_04_03th = "작품관리";
+		$title_04_04th = "POINT관리";
+		$title_04_05th = "POINT 댓글관리";
+		$title_04_06th = "PIN 응모자";
+		$title_04_07th = "POINT 응모자";
+
+		// 페이지 링크
+		$link_04_01 = $currentFolder."articovery/covery";
+		$link_04_02 = $currentFolder."articovery/artist";
+		$link_04_03 = $currentFolder."articovery/work";
+		$link_04_04 = $currentFolder."articovery/point";
+		$link_04_05 = $currentFolder."articovery/comment";
+		$link_04_06 = $currentFolder."articovery/pin";
+		$link_04_07 = $currentFolder."articovery/event";
+
+
 
 $main_title_5th = "Preview";
 //$main_title_5th_url = $currentFolder."exhibition/exhibition.php";

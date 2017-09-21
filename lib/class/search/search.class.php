@@ -55,7 +55,8 @@ class Search
 			$sold_out_state = $this->getAddslashes('sold_out_state');
 			$chkartist = $this->getAddslashes('chkartist');
 			$chkartwork = $this->getAddslashes('chkartwork');
-			$kword = !empty($this->getAddslashes('kword')) ? '%'.$this->getAddslashes('kword').'%' : null;
+			//$kword = !empty($this->getAddslashes('kword')) ? '%'.$this->getAddslashes('kword').'%' : null;
+			$kword = !empty($this->attr['kword']) ? '%'.htmlspecialchars(strip_tags(trim($this->attr['kword'])), ENT_QUOTES).'%' : null;
 			$goods_sell_price = $this->getAddslashes('goods_sell_price');
 
 			$list = null;

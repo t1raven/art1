@@ -105,7 +105,8 @@ else {
 }
 
 if($artWorkSize === 'cm') { //2016-05-12 LYT // 사이즈 값이 없으면 문구 처리
-	$artWorkSize = 'Variable dimensions';
+	//$artWorkSize = 'Variable dimensions';
+	$artWorkSize = 'Dimensions variable';
 }
 
 
@@ -164,7 +165,7 @@ $snsDescription = str_replace("\r\n", '', strip_tags($Work->attr['goods_descript
         <input type="hidden" name="order_cnt" value="1">
         </form>
           <header class="header">
-            <h1><?php echo $Work->attr['goods_name'];?> <span><?php echo $Work->attr['artist_name'];?></span></h1>
+            <h1><?php echo stripslashes($Work->attr['goods_name']);?> <span><?php echo $Work->attr['artist_name'];?></span></h1>
             <a href="/marketPlace/artist.php?idx=<?php echo $Work->attr['artist_idx'];?>" class="more">작가의 다른작품보기 +</a>
             <ul class="sns">
               <li><button type="button" onclick="shareFaceBook('<?php echo $snsUrl;?>','<?php echo $snsImg; ?>','<?php echo $snsTitle; ?>','<?php echo $snsDescription; ?>');"><img src="/images/market/btn_sns1_off.gif" alt="페이스북" onmouseover="$(this).imgConversion(true);" onmouseout="$(this).imgConversion(false);" ></button></li>
@@ -185,7 +186,7 @@ $snsDescription = str_replace("\r\n", '', strip_tags($Work->attr['goods_descript
                     <span class="sale"><img src="/images/market/ico_sale.png" alt="판매됨"></span>
                 <?php else: ?>
                     <?php if ($Work->attr['is_rental'] === 'Y'): ?>
-                    <span class="rental"><img src="/images/market/ico_rental.png" alt="랜탈됨"></span>
+                    <!-- <span class="rental"><img src="/images/market/ico_rental.png" alt="랜탈됨"></span> -->
                     <?php endif; ?>
                 <?php endif; ?>
                     <img src="<?php echo goodsBigImgUploadPath, $imgList[0]['goods_img'];?>" alt="">
@@ -200,12 +201,14 @@ $snsDescription = str_replace("\r\n", '', strip_tags($Work->attr['goods_descript
                           <span class="mon"> ₩ <?php if ($Work->attr['price_exchange_state'] === 'Y'){echo $Work->attr['price_exchange_text'];}else{echo number_format($Work->attr['goods_sell_price']);} ?></span>
                           <?php if ($Work->attr['goods_cnt'] === '0'): ?><span class="sale_end">- 판매완료</span><?php endif; ?>
 
-                          <span class="rantal">
+                          <!--
+						  <span class="rantal">
                               <span class="h">렌탈가</span>
                               <span class="mon">₩ <?php if ($Work->attr['rental_exchange_state'] === 'Y'){echo $Work->attr['rental_exchange_text'];}else{echo number_format($Work->attr['goods_rental_price']);} ?></span > <span class="moth">/ 월 (VAT 별도)</span>
                               <?php if ($Work->attr['is_rental'] === 'Y'): ?><span class="rantal_end">- 렌탈 중</span><?php endif; ?>
                           </span>
                           <?php if (trim($Work->attr['rental_exchange_text']) !== '렌탈불가') : ?><span class="info_rantal">(렌탈 기간에 따라 렌탈료가 할인됩니다. <a href="javascript:rental();" class="link">렌탈정책보기</a> )</span><?php endif; ?>
+						  -->
 
                     </p>
                     <ul class="details_list">
@@ -226,7 +229,7 @@ $snsDescription = str_replace("\r\n", '', strip_tags($Work->attr['goods_descript
                               <div class="close_pos"><button class="close"><img src="/images/market/ico_market_close1.gif" alt="닫기"></button></div>
                           </div>
                         <button type="button" id="btnBasket" class=" layerOpen cart"><span>CART</span></button>
-                        <button type="button" id="btnRental" class=""><span>RENTAL</span></button>
+                        <!-- <button type="button" id="btnRental" class=""><span>RENTAL</span></button> -->
                             <div class="layerPopupT1 cart"  style="display: none;">
                                 <div class="inner">
                                     <h3 class="tit">ADD TO CART</h3>
@@ -241,7 +244,7 @@ $snsDescription = str_replace("\r\n", '', strip_tags($Work->attr['goods_descript
                         <?php if ($Work->attr['goods_medium'] ==='4' || $Work->attr['goods_medium'] === '5'): ?>
                         <?php else: ?>
 
-                        <button class="viewRoom">@ View</button>
+                        <button class="viewRoomMenu">@ View</button>
                         <div class="lst_gal">
                            <ul>
                               <li><button data-type="gallery">Gallery</button></li>
@@ -290,7 +293,7 @@ $snsDescription = str_replace("\r\n", '', strip_tags($Work->attr['goods_descript
                       <tbody>
                       <tr>
                           <th scope="col">작품명</th>
-                          <td><?php echo $Work->attr['goods_name'];?></td>
+                          <td><?php echo stripslashes($Work->attr['goods_name']);?></td>
                           <th scope="col">사이즈</th>
                           <td><?php echo $artWorkSize; ?></td>
                       </tr>
@@ -445,25 +448,39 @@ $snsDescription = str_replace("\r\n", '', strip_tags($Work->attr['goods_descript
 					<?php endif; ?>
                   </ul>
               </div>
+<?php if (!empty($aAnnualArtworkYear[0])) : ?>
               <div class="lst_graph">
                     <ul>
-					<?php $j = 1; for($i = 0; $i < $aAnnualArtworkCnt; $i++):
-							if ((int)$aAnnualArtworkQty[$i] > 0) {
-								$px = floor((int)$aAnnualArtworkQty[$i] / (int)$aAnnualArtworkQtyMax * 100);
-							}
-							else {
-								$px = 0;
-							}
-					?>
+<?php
+				$j = 1;
+				for($i = 0; $i < $aAnnualArtworkCnt; $i++)
+				{
+					if (!empty($aAnnualArtworkYear[$i]))
+					{
+						if ((int)$aAnnualArtworkQty[$i] > 0)
+						{
+							$px = floor((int)$aAnnualArtworkQty[$i] / (int)$aAnnualArtworkQtyMax * 100);
+						}
+						else
+						{
+							$px = 0;
+						}
+?>
 
                        <li class="n<?php echo $j;?>">
                             <div class="bar" style="height:<?php echo $px;?>px"><span><?php echo (!empty($aAnnualArtworkQty[$i])) ? $aAnnualArtworkQty[$i] : 0;?></span></div>
                             <p class="year"><?php echo $aAnnualArtworkYear[$i];?></p>
                       </li>
-					<?php ++$j; endfor; ?>
+<?php
+					++$j;
+					}
+				}
+?>
                   </ul>
               </div>
-          </div><!-- //group_rgh -->
+<?php endif ; ?>
+
+          </div>
 
           </article><!-- //Artist -->
           <article id="Recommends"  class="proview_area2">
@@ -484,13 +501,13 @@ $snsDescription = str_replace("\r\n", '', strip_tags($Work->attr['goods_descript
 									<p class="circle"><img src="/images/ico/ico_red_circle.png" alt="판매불가"></p>
 								<?php else: ?>
 									<?php if ($row['is_rental'] === 'Y'): ?>
-										<p class="circle"><img src="/images/ico/ico_blue_circle.png" alt="렌탈불가"></p>
+										<!-- <p class="circle"><img src="/images/ico/ico_blue_circle.png" alt="렌탈불가"></p> -->
 									<?php endif; ?>
 								<?php endif; ?>
 									<a href="#" onclick="goods='<?php echo $row['goods_idx']; ?>'; marketViewMotion(); return false;"><img src="<?php echo goodsListImgUploadPath, $row['goods_list_img'];?>" alt=""></a></div>
                                   <div class="txt">
                                       <p class="writer"><?php echo $row['artist_name'];?></p>
-                                      <p class="art_tit"><?php echo $row['goods_name'];?></p>
+                                      <p class="art_tit"><?php echo stripslashes($row['goods_name']);?></p>
                                   </div>
                               </li>
 							<?php endforeach; ?>
@@ -513,14 +530,17 @@ $snsDescription = str_replace("\r\n", '', strip_tags($Work->attr['goods_descript
                   <ul>
                     <li class="n1">
                       <p>
-                        <strong>1:1 상담을 통한 렌탈 및 구매</strong>
+                        <!-- <strong>1:1 상담을 통한 렌탈 및 구매</strong> -->
+                        <strong>1:1 상담을 통한 구매</strong>
                         상담내용 기반으로 작품셀렉(약 2일 소요)  →  작가에게 인수인계  →  작가와 ‘아트1’ 전문가의 작품 컨디션 체크  →  ‘아트1’의 패키지에 안전하게 포장  →  art1 전문 배송업체를 통해 개별 배송  →  현장 컨디션 체크   →  설치
                       </p>
                     </li>
                     <li class="n2">
                       <p>
-                        <strong>사이트를 통한 직접 렌탈 및 구매</strong>
-                        구매/렌탈접수  →  작가에게 인수인계  →  ‘아트1’전문가의 컨디션 체크  →  ‘아트1’의 패키지에 안전하게 포장  →  ‘아트1’ 전문 배송업체를 통해 발송  →  현장 컨디션 체크  →  설치 <br>※ 작품 발송 후 배송까지 평균 2일 소요됩니다.
+                        <!-- <strong>사이트를 통한 직접 렌탈 및 구매</strong> -->
+                        <strong>사이트를 통한 직접 구매</strong>
+                        <!-- 구매/렌탈접수  →  작가에게 인수인계  →  ‘아트1’전문가의 컨디션 체크  →  ‘아트1’의 패키지에 안전하게 포장  →  ‘아트1’ 전문 배송업체를 통해 발송  →  현장 컨디션 체크  →  설치 <br>※ 작품 발송 후 배송까지 평균 2일 소요됩니다. -->
+                        구매접수  →  작가에게 인수인계  →  ‘아트1’전문가의 컨디션 체크  →  ‘아트1’의 패키지에 안전하게 포장  →  ‘아트1’ 전문 배송업체를 통해 발송  →  현장 컨디션 체크  →  설치 <br>※ 작품 발송 후 배송까지 평균 2일 소요됩니다.
 
                       </p>
                     </li>
@@ -596,8 +616,8 @@ var marketViewScroll;
   }
  });
 
-marketViewScroll.on('scroll', updatePosition);
-marketViewScroll.on('scrollEnd', updatePosition);
+//marketViewScroll.on('scroll', updatePosition);
+//marketViewScroll.on('scrollEnd', updatePosition);
 
 function updatePosition () {
 	if((this.y>>0 <= 0)){
@@ -616,17 +636,23 @@ function marketViewOpen(){
 
 	function resize(){
 		var winWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-            if($("#container_sub").length > 0){
+            /*if($("#container_sub").length > 0 && !$(".container_inner").hasClass('wide')){
                 var outsideSize = $(".container_inner").offset().left;
             }else{
                 var outsideSize = $("#header .header_inner").offset().left;
-            }
+            }*/
+
+            var outsideSize = $("#header .header_inner").offset().left;
 
             marketViewViewport.css({
               "display":"block"
               });
             marketViewViewportInner.css({
               "padding-top":$("#header").height()
+            });
+            marketViewViewport.find(".iScrollLoneScrollbar").css({
+              "top":$("#header").height()+10,
+              "bottom":5
             });
             marketViewViewportInner.find(".product_info").css({
                "padding-top":marketViewViewportInner.find(".header").height() + 50
@@ -638,6 +664,7 @@ function marketViewOpen(){
                   });
             /*marketViewViewport.find(".header").css("top",$("#header").height());*/
 		if(winWidth > 1250){
+      console.log(outsideSize);
 			marketViewViewport.stop().animate({"width":marketViewViewportInner.outerWidth(true) + outsideSize},500,function(){});
 			marketViewViewport.css("padding-right","");
 		}else if(winWidth <= 1250 && winWidth > 960  ){
@@ -651,7 +678,7 @@ function marketViewOpen(){
                       "width":winParsent(92)
                     });
                 marketViewViewport.stop().animate({
-                  "width":"92%"
+                  "width":"95%"
                 },500,function(){}).css({
 			"padding":"0 2% 2%"
 			});
@@ -864,67 +891,75 @@ function goLogin() {
 	}
 }
 
-  function viewInRoom(){
-    var win = $(window),
-    doc = $(document),
-    viewport = win.height(),
-    wrap = $("#wrap"),
-    body = (navigator.userAgent.indexOf('AppleWebKit') !== -1) ? $('body') : $('html');
-    var bigImg = $(".BigArea .img img").attr("src");
-    var oL = $(".BigArea").find(".img").offset().left;
-    var oT = $(".BigArea").find(".img").offset().top;
-    var btn = $(".viewRoom"),
-        lst = $(".lst_gal");
+function viewInRoom(){
+  var win = $(window),
+  doc = $(document),
+  viewport = win.height(),
+  wrap = $("#wrap"),
+  body = (navigator.userAgent.indexOf('AppleWebKit') !== -1) ? $('body') : $('html');
+  var bigImg = $(".BigArea .img img").attr("src");
+  var oL = $(".BigArea").find(".img").offset().left;
+  var oT = $(".BigArea").find(".img").offset().top;
+  var btn = $(".viewRoomMenu"),
+      lst = $(".lst_gal");
 
-    var marketBg = $("#marketBg"),
-      marketImg = marketBg.find(".img"),
-      close = marketBg.find(".btnClose button");
+  var marketBg = $("#marketBg"),
+    marketImg = marketBg.find(".img"),
+    close = marketBg.find(".btnClose button");
 
-    function viewMotion(){
-      var type = $(this).data("type");
-      var bigImg = $(".BigArea .img > img").attr("src");
-      var img = $("<img>").attr("src",bigImg)
-      .css({
-      "position":"absolute",
-      "left":oL,
-      "top":oT,
-      "z-index":10
-      })
-      .addClass("upImg").appendTo(marketBg);
-      viewport = win.height();
+  btn.off('click').click(function(){
+    console.log(1);
+    if(!$(this).hasClass('on')){
+      lst.css("display","block");
+      setTimeout(function(){ btn.addClass("on"); }, 300);
+    }else{
+      lst.css("display","");
+      setTimeout(function(){ btn.removeClass("on"); }, 300);
+    }
+  });
+
+  lst.find("button").off().on("click",viewMotion);
+
+  function viewMotion(){
+    var type = $(this).data("type");
+    var bigImg = $(".BigArea .img > img").attr("src");
+    var img = $("<img>").attr("src",bigImg)
+    .css({
+    "position":"absolute",
+    "left":oL,
+    "top":oT,
+    "z-index":10
+    })
+    .addClass("upImg").appendTo(marketBg);
+    viewport = win.height();
+    /*wrap.css({
+      "height":viewport,
+      "overflow":"hidden"
+    });*/
+    marketBg.css({"opacity":1,"display":"block"})
+    .find(".bg."+type).css({"display":"block","opacity":0})
+    .animate({"opacity":1},800).end()
+    .find("h3.h_"+type).css("display","block");
+
+    $(".upImg").delay(800).animate({
+      "left":"50%",
+      "top":178,
+      "width":230,
+      "margin-left":-115
+    },1000);
+    close.off().on("click",function(){
       /*wrap.css({
-        "height":viewport,
-        "overflow":"hidden"
+        "height":"",
+        "overflow":""
       });*/
-      marketBg.css({"opacity":1,"display":"block"})
-      .find(".bg."+type).css({"display":"block","opacity":0})
-      .animate({"opacity":1},800).end()
-      .find("h3.h_"+type).css("display","block");
-
-      $(".upImg").delay(800).animate({
-        "left":"50%",
-        "top":178,
-        "width":230,
-        "margin-left":-115
-      },1000);
-      close.off().on("click",function(){
-        /*wrap.css({
-          "height":"",
-          "overflow":""
-        });*/
-        marketBg.animate({"opacity":0},400,function(){
-          $(this).css({"display":"none"}).find(".bg."+type).css({"display":"none"}).end().find("h3.h_"+type).css("display","none");
-          $(".upImg").remove();
-        });
-
+      marketBg.animate({"opacity":0},400,function(){
+        $(this).css({"display":"none"}).find(".bg."+type).css({"display":"none"}).end().find("h3.h_"+type).css("display","none");
+        $(".upImg").remove();
       });
-    }///viewMotion
 
-    lst.find("button").off().on("click",viewMotion);
-    btn.on("click",function(){
-      lst.css("display",(lst.css("display") == "block") ? "none" : "block");
     });
-  };
+  }///viewMotion
+};
 
 
 function rollngbanner1(){
@@ -1063,124 +1098,122 @@ function rollngbanner1(){
   }//rollngbanner1
 
 function zoomMotion(){
-      var $wrap = $("#wrap");
-      var $zoomBox = $("#zoomBg");
-      var $bigImg = $(".BigArea .img");
-      var $zoomImg = $zoomBox.find(".photo");
-      var myScroll;
-      myScroll = new IScroll('#zoomBg .photo', {
-      	scrollX: false, freeScroll: true,
-    	mouseWheelSpeed:200,
-    	mouseWheel: true,
+  var $wrap = $("#wrap");
+  var $zoomBox = $("#zoomBg");
+  var $bigImg = $(".BigArea .img");
+  var $zoomImg = $zoomBox.find(".photo");
+  var myScroll;
+
+  myScroll = new IScroll('#zoomBg .photo', {
+  	scrollX: false, freeScroll: true,
+	   mouseWheelSpeed:200,
+	   mouseWheel: true,
+  });
+
+  $("#zoomBg .photo").on("mousedown mouseup",function(e){
+    if(e.type == "mousedown"){
+      $(this).css("cursor","url(/images/ico/closedhand.cur.ico) 7 5, url(/images/ico/closedhand.cur.ico), move");
+    }else{
+      $(this).css("cursor","url(/images/ico/openhand.cur.ico) 7 5, url(/images/ico/openhand.cur.ico), default");
+    };
+  });
+
+  $("button.zoom").click(function(){
+      console.log(2);
+      var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+      var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+      var windowTop = $(window).scrollTop();
+          var bigImgSrc = $bigImg.find("img").attr("src");
+          var onBox = $("<span>").addClass("on");
+          var backgound = $("<div>").attr({
+             "id": "cover"
+           }).css({
+            "position":"fixed",
+            "left":"0",
+            "top":0,
+            "width":"100%",
+             "height": "100%",
+             "z-index":11,
+             "cursor":"pointer",
+             "display":"none"
+           })
+          $("body").append(backgound);
+
+          //$zoomImg.find("img").attr("src",bigImgSrc);
+
+      $zoomBox.css({
+        "position":"fixed",
+        "left":"3%",
+        "top":"3%",
+        "width": "94%",
+        "height" : "94%",
+        "margin-left" : 0
       });
 
-$("#zoomBg .photo").on("mousedown mouseup",function(e){
-  if(e.type == "mousedown"){
-    $(this).css("cursor","url(/images/ico/closedhand.cur.ico) 7 5, url(/images/ico/closedhand.cur.ico), move");
-  }else{
-    $(this).css("cursor","url(/images/ico/openhand.cur.ico) 7 5, url(/images/ico/openhand.cur.ico), default");
-  };
+      fadePlayMotion($zoomBox , true , 400);
+      fadePlayMotion(backgound , true , 400);
+      $("#zoomBg .close , #cover").off("click").on("click",zoomClose);
+      $("#zoomBg .artSlide ul.list > li > a").off("click").on("click",zoomThumb);
+      $(window).on("resize",zoomClose);
+      myScroll.refresh();
 
-})
-$("button.zoom").click(function(){
-        var windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
-        var windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
-        var windowTop = $(window).scrollTop();
-            var bigImgSrc = $bigImg.find("img").attr("src");
-            var onBox = $("<span>").addClass("on");
-            var backgound = $("<div>").attr({
-               "id": "cover"
-             }).css({
-              "position":"fixed",
-              "left":"0",
-              "top":0,
-              "width":"100%",
-               "height": "100%",
-               "z-index":11,
-               "cursor":"pointer",
-               "display":"none"
-             })
-            $("body").append(backgound);
+  		/*이미지 썸네일 슬라이드 추가*/
+  		var artSl = $("#zoomBg .artSlide");
+  		var artSl_unit = $("#zoomBg .artSlide ul.list > li");
+  		var viewList = 6;
+  		artSl_unit.eq(0).addClass("top");
+  		if(artSl_unit.length < 7){
+  			artSl.find(" > button").hide();
+  		}else{
+  			artSl.find(" > button").on('click',function(){
+  				var top_unit = artSl.find(' ul.list > li.top');
+  				var next;
+  				if($(this).hasClass('up')){
+  					if(top_unit.index() <= 0){
+  						if(!artSl.find("ul.list").is(':animated')){
+  							artSl.find("ul.list").animate({'top':-(top_unit.position().top-20)},300,"easeOutQuad");
+  							artSl.find("ul.list").animate({'top':-(top_unit.position().top)},250, "easeInQuad");
+  						}
+  						return false;
+  					}
+  					next = top_unit.prev();
+  				}else{
+  					if(top_unit.index()+viewList >= artSl_unit.length){
+  						if(!artSl.find("ul.list").is(':animated')){
+  							artSl.find("ul.list").animate({'top':-(top_unit.position().top+20)},300,"easeOutQuad");
+  							artSl.find("ul.list").animate({'top':-(top_unit.position().top)},250, "easeInQuad");
+  						}
+  						return false;
+  					}
+  					next = top_unit.next();
+  				}
+  				artSl.find("ul.list").animate({'top':-(next.position().top)});
+  				next.siblings('.top').removeClass('top').end().addClass('top');
+  			});
+  		}
 
-            //$zoomImg.find("img").attr("src",bigImgSrc);
+      function zoomClose(){
 
-        $zoomBox.css({
-          "position":"fixed",
-          "left":"3%",
-          "top":"3%",
-          "width": "94%",
-          "height" : "94%",
-          "margin-left" : 0
+        fadePlayMotion($("#cover") , false , 400);
+        $zoomBox.fadeTo(400,0,function(){
+          $(this).css("display","none");
+          $("#cover").remove();
+        });
 
-        })
+        $("#zoomBg .close , #cover").off("click");
+        $(window).off("resize",zoomClose);
+      };//zoomClose
 
-          fadePlayMotion($zoomBox , true , 400);
-          fadePlayMotion(backgound , true , 400);
-          $("#zoomBg .close , #cover").off("click").on("click",zoomClose);
-          $("#zoomBg .artSlide ul.list > li > a").off("click").on("click",zoomThumb);
-          $(window).on("resize",zoomClose);
-          myScroll.refresh();
+      function zoomThumb(){
+          var bimg = $(this).data("img");
+          $("#zoomBg .artSlide ul.list > li > .on").remove();
+            $zoomImg.find("span > img").attr("src",bimg);
+            $(this).before(onBox);
+             myScroll.refresh();
+      };
+  });
 
-		/*이미지 썸네일 슬라이드 추가*/
-		var artSl = $("#zoomBg .artSlide");
-		var artSl_unit = $("#zoomBg .artSlide ul.list > li");
-		var viewList = 6;
-		artSl_unit.eq(0).addClass("top");
-		if(artSl_unit.length < 7){
-			artSl.find(" > button").hide();
-		}else{
-			artSl.find(" > button").on('click',function(){
-				var top_unit = artSl.find(' ul.list > li.top');
-				var next;
-				if($(this).hasClass('up')){
-					if(top_unit.index() <= 0){
-						if(!artSl.find("ul.list").is(':animated')){
-							artSl.find("ul.list").animate({'top':-(top_unit.position().top-20)},300,"easeOutQuad");
-							artSl.find("ul.list").animate({'top':-(top_unit.position().top)},250, "easeInQuad");
-						}
-						return false;
-					}
-					next = top_unit.prev();
-				}else{
-					if(top_unit.index()+viewList >= artSl_unit.length){
-						if(!artSl.find("ul.list").is(':animated')){
-							artSl.find("ul.list").animate({'top':-(top_unit.position().top+20)},300,"easeOutQuad");
-							artSl.find("ul.list").animate({'top':-(top_unit.position().top)},250, "easeInQuad");
-						}
-						return false;
-					}
-					next = top_unit.next();
-				}
-				artSl.find("ul.list").animate({'top':-(next.position().top)});
-				next.siblings('.top').removeClass('top').end().addClass('top');
-			});
-		}
-
-          function zoomClose(){
-
-          fadePlayMotion($("#cover") , false , 400);
-          $zoomBox.fadeTo(400,0,function(){
-            $(this).css("display","none");
-            $("#cover").remove();
-          });
-
-          $("#zoomBg .close , #cover").off("click");
-          $(window).off("resize",zoomClose);
-        };//zoomClose
-
-        function zoomThumb(){
-            var bimg = $(this).data("img");
-            $("#zoomBg .artSlide ul.list > li > .on").remove();
-              $zoomImg.find("span > img").attr("src",bimg);
-              $(this).before(onBox);
-               myScroll.refresh();
-        };
-
-
-
-      });
-
-  }//zoomMotion
+}//zoomMotion
 
 $(function(){
 	$("#btnRequest").off("click").on("click", function(){request();});
