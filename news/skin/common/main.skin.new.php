@@ -430,7 +430,7 @@ foreach($list as $row) {
                 </section>
               </div>
           </div> <!-- //sec2    -->
-
+          
 
           <!-- 배너 광고 -->
           <div class="bot_banner">
@@ -529,9 +529,9 @@ var at_tmp = '<?php echo $at_tmp;?>' ;
     doc = $(document),
     body = (navigator.userAgent.indexOf('AppleWebKit') !== -1) ? $('body') : $('html');
     var top = win.scrollTop() + win.height();
-    var endHeight = $("#newWrapper").offset().top + $("#newWrapper").outerHeight();
+    var endHeight = $("#newWrapper").offset().top + $("#newWrapper").outerHeight() +150;
 
-    if(top > endHeight/1.2 ){
+    if(top > endHeight ){
       startScroll();
     }
 

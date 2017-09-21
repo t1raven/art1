@@ -181,10 +181,6 @@
 												<div class="cont">약 180 sec</div>
 											</li>
 											<li>
-												<strong>Cost</strong>
-												<div class="cont">₩ 800,000 (VAT별도)</div>
-											</li>
-											<li>
 												<strong>Shooting time</strong>
 												<div class="cont">약 150 min</div>
 											</li>

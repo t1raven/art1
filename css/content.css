@@ -71,7 +71,6 @@ img.w100p{width:100% !important; height:auto !important;}
 .btn_pack1.purple{ background-color: #7762a7; }
 .btn_pack1.purple_on:hover{  background-color: #7762a7; transition: .4s ease; -moz-transition: .4s ease; -webkit-transition: .4s ease; -o-transition: .4s ease;}
 .btn_pack1.gray{background-color: #9c9c9c; }
-.btn_pack1.black{background-color: #353535; }
 .btn_pack1.sky{ background-color: #2ba3f7; }
 
 .photoUpload{ *zoom:1; }
@@ -337,8 +336,7 @@ label.dib.txt5{ width: 65px;    }
 #exhibitions_detail > .header{ text-align: center; margin-bottom: 30px; }
 #exhibitions_detail > .header > h1{ font-size: 32px; line-height: 38px; padding-bottom: 18px; font-weight: 700; margin-bottom: 18px; color: #333;  background: url(../images/market/bg_exhibitions_detail_line.gif) center bottom no-repeat; }
 #exhibitions_detail > .header > .t1{ font-size: 13px; line-height: 18px;  color: #333; }
-#exhibitions_detail .banner{margin-bottom: 20px; border: 1px solid #e7e7e7; overflow: hidden;}
-#exhibitions_detail .banner .photo { margin: -1px; }
+#exhibitions_detail .banner{margin-bottom: 20px;}
 #exhibitions_detail .banner img{max-width: 100%; text-align: center; }
 #exhibitions_detail .banner img.pc { display: block; }
 #exhibitions_detail .banner img.mobile { display: none }
@@ -623,14 +621,14 @@ label.dib.txt5{ width: 65px;    }
 #contactArea ul li.tels>div{display:inline-block;margin-right:20px;margin-bottom:5px;}
 
 /*마켓 재작업 : 상단 롤링배너*/
-#marketRView{ /* width: 1010px; */ width: 0; height: 100%;  /* overflow-y: scroll; */ overflow:hidden;  position: fixed; box-sizing: border-box;
+#marketRView{ /* width: 1010px; */ width: 0; height: 100%;  /* overflow-y: scroll; */ overflow:hidden;  position: fixed;
     right: 0; top: 0; z-index: 10;  background-color: #fff; text-align: left;  zoom:1; /*    -webkit-overflow-scrolling: touch; -webkit-transform: translateZ(0px);
     -webkit-transform: translate3d(0,0,0);
     -webkit-perspective: 1000; */ background-image: url(trg.png);}
 #marketRView:nth-child(n) { filter: none}
-#marketRView .inner_view{ margin-top: 0; /* margin-right: 40px;  */ padding: 20px; padding-bottom: 20px; margin-bottom: 40px; width: 850px;}
+#marketRView .inner_view{ margin-top: 0; margin-left: 40px; padding-bottom: 20px;   margin-bottom: 40px; width: 850px;}
 
-#marketArea{ }
+#marketArea{}
 #marketArea  .cover {  width: 100%; height: 100%; position: absolute; left: 0; top: 0; z-index: 4;
   background-color: rgba(0, 0, 0, 0.7);  background-image: url(trg.png);
    /* IE 5.5 - 7 */
@@ -652,10 +650,10 @@ label.dib.txt5{ width: 65px;    }
 #marketRView .header{ position: fixed; padding-top: 20px; padding-bottom: 23px; margin-bottom: 40px; border-style: solid; border-width: 0 0 1px; border-color: #dbdbdb; z-index: 10; max-width: 850px; width: 100%; background-color: #fff;}
 #marketRView .header .more{font-size: 12px;}
 #marketRView .header .more:hover{color:#ed1949;}
-#marketRView .header h1{ margin-bottom: 10px; width: 100%;color: #333; font-size: 23px; line-height: 24px; padding-right: 30px; box-sizing: border-box; }
+#marketRView .header h1{ margin-bottom: 10px; width: 75%;color: #333; font-size: 23px; line-height: 24px; }
 #marketRView .header h1 span{ margin-left: 10px; padding-left: 11px; position: relative; display: inline-block; *display: inline; *zoom: 1;  color: #666; font-size: 15px; vertical-align: 0px; color: #666;}
 #marketRView .header h1 span:after{position: absolute; left: 0; top: 6px; width: 1px; height: 13px; font-size: 0; line-height: 0; content:""; background-color: #c6c6c6; }
-#marketRView .header .sns{position: absolute; right: 0; top: 50px;}
+#marketRView .header .sns{position: absolute; right: 54px; top: 12px;}
 #marketRView .header .sns > li{float: left; margin-left: 10px;}
 #marketRView .header .sns > li button{display: block; padding: 5px;}
 #marketRView .header .close{position: absolute; right: 3px; top: 17px;transform:translateY(0px);}
@@ -696,9 +694,8 @@ label.dib.txt5{ width: 65px;    }
 #marketRView .product_info .product_des .group_rgh .util > button{ color: #fff; font-size: 13px; }
 #marketRView .product_info .product_des .group_rgh .util > button.viewRoom{ margin-left: 5px; padding-left: 5px; padding-bottom: 8px;}
 #marketRView .product_info .product_des .group_rgh .util .lst_gal{ display: none; background: url(../images/market/bg_viewroom.gif) 50% 0 no-repeat; position: absolute; right: -13px; top: 22px; padding-top: 10px;  }
-#marketRView .product_info .product_des .group_rgh .util .lst_gal > ul { background-color: #333; padding: 5px; box-sizing: border-box; }
 #marketRView .product_info .product_des .group_rgh .util .lst_gal > ul > li{margin-bottom: 3px;}
-#marketRView .product_info .product_des .group_rgh .util .lst_gal > ul > li > button{width: 68px; display: block; font-size: 12px; text-align: center; color: #fff; }
+#marketRView .product_info .product_des .group_rgh .util .lst_gal > ul > li > button{width: 68px; display: block; font-size: 12px; text-align: center;}
 
 #marketRView .tabBox{ margin-top: 60px; margin-bottom: 60px;}
 #marketRView .proview_area2{ border: 1px solid #ccc; padding:3% 5%; display: none; }
@@ -784,7 +781,7 @@ label.dib.txt5{ width: 65px;    }
 .lst_graph>ul>li .year{ color: #626262; font-size: 13px; margin-top: 10px; text-align: center; }
 
 
-#marketArea .marketVisual{ position: relative; overflow: hidden; max-width: 1180px;  margin: 0 auto; }
+#marketArea .marketVisual{ position: relative; overflow: hidden;}
 #marketArea .marketVisual .dmp-controls {display: block;}
 #marketArea .marketVisual .dmp-controls .pageing > * > img{  width: auto;  }
 #marketArea .marketVisual  .dmp-controls .pageing .prev, #marketArea .marketVisual  .dmp-controls .pageing .next{top: 240px;}
@@ -820,7 +817,7 @@ label.dib.txt5{ width: 65px;    }
 #marketArea .marketVisual .share dd > ul > li{ float: left; margin-right: 20px; display: none;  }
 
 /*마켓 재작업 : 카테고리*/
-#marketArea .categori{ margin-top: 30px; margin-bottom: 0; max-width: 1180px; margin: 0 auto; }
+#marketArea .categori{ margin-top: 30px; margin-bottom: 0; }
 #marketArea .categori .list > ul:after{display: block;clear: both;content:"";visibility: hidden; height: 0;}
 #marketArea .categori .list > ul > li{margin-bottom: 1.694915254237288%; float: left; position: relative; overflow: hidden;}
 #marketArea .categori .list > ul > li.n1{width: 32.20338983050847%;}
@@ -852,11 +849,11 @@ label.dib.txt5{ width: 65px;    }
 #marketArea .searchArea .inpBox{ margin-left: 18px;}
 
 /*마켓 재작업 : istop type*/
-#marketProductAjax{ width: auto; min-height: 400px; max-width: 1792px; margin: -2.5px auto; position: relative; }
-#marketProductAjax .newsBox{width:16.66666%; margin-bottom: 10px; background-color: #fff; box-sizing: border-box; position: absolute; display: block; left: 0; top: 0;}
+#marketProductAjax{ width: 1185px; min-height: 400px; margin-left: -10px; position: relative; }
+#marketProductAjax .newsBox{width:286px; margin-left: 10px; margin-bottom: 10px; background-color: #fff; position: absolute; left: 0; top: 0;}
 #marketProductAjax .newsBox.viewOn{ width: 1174px; }
 #marketProductAjax .newsBox img{width: 100%;}
-#marketProductAjax .newsBox .newsBox_inner{position: relative; margin: 5px; overflow: hidden; }
+#marketProductAjax .newsBox .newsBox_inner{position: relative;}
 #marketProductAjax .newsBox .newsBox_inner span img{max-width: 100%; width: auto;}
 #marketProductAjax .newsBox .newsBox_inner span.sale,
 #marketProductAjax .newsBox .newsBox_inner span.rental
@@ -1050,8 +1047,8 @@ label.dib.txt5{ width: 65px;    }
 #newIndexArea{}
 #newIndexArea .sec1,#newIndexArea .sec2,#newIndexArea .exbanner{ position: relative; *zoom:1;  }
 #newIndexArea .sec1:after,#newIndexArea .sec2:after,#newIndexArea .exbanner:after{ display: block;clear: both;content:"";height: 0;visibility: hidden; }
-#newIndexArea .sec2{ margin-top:15px;}
-#newIndexArea .exbanner{ width: 100%; margin: 0 auto; margin-top:15px; }
+#newIndexArea .sec2{ margin-top:15x;}
+#newIndexArea .exbanner{ margin-top:15px;}
 #newIndexArea  .brief,#newIndexArea  .news{ margin-right: 480px;   }
 #newIndexArea  .focus,#newIndexArea  .community{ position: absolute; right: 0; top: 0; width: 440px; }
 
@@ -1084,7 +1081,7 @@ label.dib.txt5{ width: 65px;    }
 #newIndexArea .bbs_thumb_t1 .lst_thumb .cont > .inner{ padding-left: 10px; padding-right: 10px;  padding-top:15px; padding-bottom: 15px;  }
 #newIndexArea .bbs_thumb_t1 .lst_thumb .cont .categori{ color: #db3451; font-size: 13px; line-height: 15px; }
 #newIndexArea .bbs_thumb_t1 .lst_thumb .cont .txt{margin-top: 6px; height: 20px; }
-#newIndexArea .bbs_thumb_t1 .lst_thumb .cont .txt a {overflow: hidden; white-space:nowrap; text-overflow:ellipsis;  width:100%; display:block; font-size: 1.154em; }
+#newIndexArea .bbs_thumb_t1 .lst_thumb .cont .txt a {overflow: hidden; white-space:nowrap; text-overflow:ellipsis;  width:100%; display:block;}
 #newIndexArea .bbs_thumb_t1 .lst_thumb .cont .user{margin-top: 8px; font-size: 12px; color: #979797; line-height: 14px;}
 #newIndexArea .bbs_thumb_t1 .lst_thumb .cont .user > *{display: inline-block; *display: inline; *zoom: 1; margin-right: 7px;  }
 #newIndexArea .bbs_thumb_t1 .lst_thumb .cont .user > strong{display: block; margin-bottom: 5px; }
@@ -1130,8 +1127,8 @@ label.dib.txt5{ width: 65px;    }
 
 
 /* news : istop type1 */
-#newWrapper{ width: auto; margin:-5px; }
-#newWrapper .newsBox{width:25%; padding: 5px; background-color: #fff; box-sizing: border-box;}
+#newWrapper{ width: 1185px; margin-left: -10px; }
+#newWrapper .newsBox{width:286px; margin-left: 10px; margin-bottom: 10px; background-color: #fff;}
 #newWrapper .newsBox img{width: 100%;}
 #newWrapper .newsBox .newsBox_inner{padding:10px 10px 20px ; border:1px solid #ccc; }
 
@@ -1148,7 +1145,7 @@ label.dib.txt5{ width: 65px;    }
 /* news : istop type2 */
 #bbs_list1_rwd{ border-bottom: 1px solid #e0e0e0;}
 
-#bbs_list1_rwd > ul > li{ height: 120px; padding-left: 230px;  border-top: 1px solid #e0e0e0; position: relative; overflow: hidden; }
+#bbs_list1_rwd > ul > li{ height: 120px; padding-left: 230px;  border-top: 1px solid #e0e0e0; position: relative; }
 #bbs_list1_rwd > ul > li .data{ position: absolute; top: 35px; left: 22px; }
 #bbs_list1_rwd > ul > li > .inner{ width: 100%; height: 120px;  text-align: left; display: table; }
 #bbs_list1_rwd > ul > li > .inner > .d-tc{ display: table-cell; vertical-align: middle; }
@@ -1157,7 +1154,7 @@ label.dib.txt5{ width: 65px;    }
 #bbs_list1_rwd > ul > li > .inner > .d-tc > .data .mon{ color: #7f7f7f; margin-left: 10px; font-size: 40px; font-family:"Nanum Myeongjo"; font-weight: 400; }
 #bbs_list1_rwd > ul > li .cont .h{  width: 85%; height: 27px; display: block; font-size: 22px; line-height: 26px; overflow: hidden; white-space:nowrap; text-overflow:ellipsis;}
 #bbs_list1_rwd > ul > li .cont .h a{color: #333; font-weight: 700;}
-#bbs_list1_rwd > ul > li .cont .txt{ width: 85%; max-width: 800px; line-height: 20px; margin-top: 5px;  color: #797878; height: 22px; overflow: hidden; white-space:nowrap; text-overflow:ellipsis;}
+#bbs_list1_rwd > ul > li .cont .txt{ width: 85%; line-height: 20px; margin-top: 5px;  color: #797878; height: 22px; overflow: hidden; white-space:nowrap; text-overflow:ellipsis;}
 #bbs_list1_rwd > ul > li.on{ background-color: #fbfbfb;  }
 
 /* news : type3 */
@@ -1178,16 +1175,18 @@ label.dib.txt5{ width: 65px;    }
 #bbs_thumb_t5 > ul > li:after{display: block;clear: both;content:"";height: 0; visibility: hidden;}
 #bbs_thumb_t5 > ul > li .thumb{ float: left; width: 200px; height: 150px; overflow: hidden; }
 #bbs_thumb_t5 > ul > li .thumb img{width: 100%; height: auto;}
-#bbs_thumb_t5 > ul > li .cont{ margin-left: 230px; padding-top: 10px; }
+#bbs_thumb_t5 > ul > li .cont{ margin-left: 260px; padding-top: 10px; }
 #bbs_thumb_t5 > ul > li .cont > h1{margin-top: 10px;}
-#bbs_thumb_t5 > ul > li .cont > h1 a{ font-size: 24px; line-height: 28px; font-weight: 700;  color: #333; height: 28px; overflow: hidden; display: block;  }
+#bbs_thumb_t5 > ul > li .cont > h1 a{ font-size: 24px; line-height: 28px; font-weight: 700;  color: #333;  }
 #bbs_thumb_t5 > ul > li .cont > .txt{ height: 40px; margin-top: 10px; font-size: 15px; line-height: 19px; overflow: hidden;  white-space:nowrap; text-overflow:ellipsis; }
 #bbs_thumb_t5 > ul > li .cont > .data{ margin-top: 10px; }
 
 /* news : type4 */
 #bbsType5{overflow: hidden;}
-#bbsType5 .bbs_thumb_t6{ margin: -1%; margin-top: -20px;}
-#bbsType5 .bbs_thumb_t6 .lst{ float: left; width:33.33333%; padding: 1%; margin-top: 20px; text-align: center;  position: relative; box-sizing: border-box;}
+#bbsType5 .bbs_thumb_t6{margin-left:0.8474576271186441%; margin-top: -30px;}
+#bbsType5 .bbs_thumb_t6 .lst{ float: left; width:49.32203389830508%; margin-left: 0.6779661016949153%; margin-top: 30px; text-align: center;  position: relative;}
+#bbsType5 .bbs_thumb_t6{margin-left: 0.44444%;}
+#bbsType5 .bbs_thumb_t6 .lst{margin-left: 0.4424778761%;width:32.89085546%;}
 
 #bbsType5 .bbs_thumb_t6 .lst .item{height: 0 !important; overflow: hidden;padding-bottom:100%;position: relative;}
 #bbsType5 .bbs_thumb_t6 .lst .item > a{display: block; border-style: solid; border-width: 0;position: absolute;top: 0;bottom: 0;left: 0;right: 0;}
@@ -1374,8 +1373,6 @@ Pagination Styles
 #bbs_view_ty1.write .bbs_write:after {display:block; clear:both; content:"";}
 #bbs_view_ty1.write .bbs_write div.lft {display:block; float:left; position:relative; top:5px; color:#333; font-size:15px;}
 #bbs_view_ty1.write .bbs_write div.rgh {display:block;  margin-left:95px;}
-
-#bbs_view_ty1 p { color: #000; }
 
 
 /*주문배송  :  배송지확인 */
@@ -1611,25 +1608,24 @@ Pagination Styles
 
 
 /* marketVisualArticle */
-#marketVisualArticle{overflow: hidden; padding-bottom: 35px;}
-#marketVisualArticle > .bx_slide{ position: relative;visibility: hidden; }
+#marketVisualArticle{overflow: hidden;}
+#marketVisualArticle > .bx_slide{overflow: hidden;position: relative;margin-left:-1px;margin-right:-1px;visibility: hidden;}
 #marketVisualArticle > .bx_slide{visibility: visible;}
 #marketVisualArticle > .bx_slide > ul{max-height: 590px;}
 #marketVisualArticle > .bx_slide > ul:after{content: '';display: block;clear: both;}
-#marketVisualArticle > .bx_slide > ul > li{float: left;width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box; }
-#marketVisualArticle > .bx_slide > ul > li a{display: block;position: relative;height: 0;padding-bottom:44.1%; margin: -1px;}
+#marketVisualArticle > .bx_slide > ul > li{float: left;width: 100%;-webkit-box-sizing: border-box;-moz-box-sizing: border-box;box-sizing: border-box;/* padding:0 1.2px; */}
+#marketVisualArticle > .bx_slide > ul > li a{display: block;position: relative;height: 0;padding-bottom:44.1%;}
 #marketVisualArticle > .bx_slide > ul > li a > img{max-width: 100%;position: absolute;top:0;left: 0;display: block; }
 #marketVisualArticle > .bx_slide > ul > li a > span.txt{display: block;position: absolute;left:0;right: 0;bottom:5.7692%;max-width: auto;text-align: center;color: #fff;}
 #marketVisualArticle > .bx_slide > ul > li a > span.txt > strong{display: block;font-size: 24px;padding-bottom: 30px;margin-bottom: 26px;position: relative;}
 #marketVisualArticle > .bx_slide > ul > li a > span.txt > strong:after{content: '';width: 31px;height: 3px;background-color: #fff;position: absolute;bottom:0;left:0;right:0;margin: auto;}
 #marketVisualArticle > .bx_slide > ul > li a > span.txt > span{display: block;font-size: 13px;}
-#marketVisualArticle > .bx_slide > ul > li .photo { border: 1px solid #e7e7e7; overflow: hidden; }
 #marketVisualArticle > .bx_slide button.btn_pagi{position: absolute;top:0;bottom:0;height:60px;margin:auto;}
 #marketVisualArticle > .bx_slide button.btn_pagi.prev{left:0;}
 #marketVisualArticle > .bx_slide button.btn_pagi.next{right:0;}
 #marketVisualArticle > .bx_slide .pagination { display: none; }
 #marketVisualArticle > .bx_slide.show .pagination { display: block; }
-#marketVisualArticle .pagination{text-align: center;margin-top: 10px; }
+#marketVisualArticle .pagination{text-align: center;margin-top: 10px;}
 #marketVisualArticle .pagination > *{vertical-align: middle;}
 #marketVisualArticle .pagination > .inner{display: inline-block;height:8px;}
 #marketVisualArticle .pagination > button{height: 0;width: 0;border-top: 4px solid transparent;border-bottom: 4px solid transparent;
@@ -1654,13 +1650,19 @@ Pagination Styles
 #newIndexArea .bot_banner > a img{width:100%;}
 #newIndexArea .bot_banner > a img.mobile{display: none;}
 
-#marketArea .bot_banner{max-width: 1180px; margin: 0 auto; margin-bottom:22px;  }
+#marketArea .bot_banner{margin-bottom:22px;}
 #marketArea .bot_banner > a{display: block;}
 #marketArea .bot_banner > a img{width:100%;}
 #marketArea .bot_banner > a img.mobile{display: none;}
 
 #container_sub.articovery_bg { background:url("/images/articovery/articovery_bg.jpg") right center no-repeat; background-size: cover; }
 #container_sub.articovery_bg .container_inner { display: table; max-width: 1580px; width: 100%; height: 100%; padding-bottom: 0; }
+#articovery_main { text-align: center; display: table-cell; vertical-align: middle; padding: 0 2%; }
+#articovery_main h1 { margin-bottom: 2em; }
+#articovery_main h1 img { max-width: 100%; }
+#articovery_main h3 { font-size: 1.375em; letter-spacing: 5px; font-weight: 400; margin: 0 auto; margin-bottom: 1.25em; color: #fff; max-width: 400px; padding: 0 15%; }
+#articovery_main h3 img { max-width: 100%; }
+#articovery_main p { font-size: 1.5em; letter-spacing: 5px; font-weight: 400; line-height: 1.3; color: #fff; }
 
 video::-internal-media-controls-download-button {
 display:none;
@@ -1724,8 +1726,7 @@ width: calc(100% + 30px);
       /*마켓 메인*/
       #marketArea .marketVisual .list > ul > li .photo{ height: 442px; }
       #marketArea .marketVisual .cont > ul > li .spec{ top: 140px; }
-      #marketProductAjax{width: 905px; margin: 0 auto; }
-      #marketProductAjax .newsBox { width: 25%; }
+      #marketProductAjax{width: 905px; margin-left: auto; margin-right: auto;}
 
       /*마켓 상품 뷰*/
       #marketView1 > .item{ width: 50.768924%; min-height: auto;}
@@ -1761,7 +1762,7 @@ width: calc(100% + 30px);
 
       .bbs_thumb_t6  .lst > .thumb {height: 277px;}
      #newIndexArea .bbs_thumb_t1 .lst_thumb .thumb{width: 158px;  height: 106px;}
-     #newWrapper{  }
+     #newWrapper{ width: auto; max-width: 905px; margin: 0 auto; }
      #newIndexArea .bbs_thumb_t1 .lst_thumb .cont{margin-left: 157px; border-style: solid; height: 104px; border-width:1px 1px 1px 0; border-color: #e2e2e2;  }
      #newIndexArea .bbs_thumb_t1 .lst_thumb .cont > .inner{ padding-left: 20px; padding-right: 10px;  padding-top: 5px; padding-bottom: 10px;  }
      #newIndexArea .bbs_thumb_t1 .lst_thumb .cont .user > br {display:block;}
@@ -1776,8 +1777,6 @@ width: calc(100% + 30px);
   /*갤러리즈 1230*/
   .marketPlace.top_btn,
   #area_gallery_index .top_btn{left:0;right:0;width:1004px;margin:auto;text-align: right;}
-
-  #newIndexArea .exbanner { width: 96%; }
 
 }
 
@@ -1985,7 +1984,7 @@ width: calc(100% + 30px);
        .mobileTableBox{ display: block; }
        .pcTable{display: none;}
       /*서브 비주얼*/
-      /* #spot_sub{ height: 90px;} */
+      #spot_sub{ height: 90px;}
       #spot_sub .img{ position: absolute; left: 50%; top: 0; width: 1280px;  margin-left: -640px; }
       #spot_sub .img img{ max-width:100%; }
       #spot_sub .cont{padding-top: 35px;}
@@ -2025,12 +2024,12 @@ width: calc(100% + 30px);
       .lst_horizontal.style2 .cont .t2{ margin-top: 6px;font-size: 14px; line-height: 16px; }
 
 
-      #marketRView .inner_view{margin: 0 auto; padding: 0; margin-bottom: 2%; padding-bottom:10px; width: auto;}
+      #marketRView .inner_view{margin-left: 0;   margin-bottom: 2%; padding-bottom:10px; width: auto;}
       #marketRView .follow_close{margin-left: 0;   margin-bottom: 2%; padding-bottom:10px; width: auto;padding-top:100px;max-width:none;}
       #marketRView .header{left: 0; width: 96%; padding-left: 2%; padding-right: 2%; max-width:2000px; padding-bottom: 5px; padding-top: 15px; margin-bottom: 5px;}
 /*       #marketRView .header h1 span{padding-left: 0; margin-left: 0; display: block;}
 #marketRView .header h1 span:after{display: none;} */
-      #marketRView .header h1{ display: block; margin-bottom: 10px;}
+      #marketRView .header h1{ width: 85%; display: block; margin-bottom: 10px;}
     #marketRView .header .close{position: absolute; right:0; top: 8px; z-index: 10;padding: 5px;display: block;}
       #marketRView .header .sns{position: absolute; right: 0; top: inherit;margin-top: 10px; text-align: right; padding-right: 0;bottom: 5px;}
       #marketRView .header .sns li{ float: none; display: inline-block;   *display: inline;   *zoom: 1;  margin-left: 2px;}
@@ -2102,8 +2101,8 @@ width: calc(100% + 30px);
        #newIndexArea .bbs_thumb_t2 .banner_wrapper.recent_news .lst > .thumb img.rec{display:none;} */
        #newIndexArea  .focus,#newIndexArea  .community{ margin-top: 10px; position: static; right: 0; top: 0; width: inherit; }
 
-      #bbsType5 .bbs_thumb_t6{  }
-      #bbsType5 .bbs_thumb_t6 .lst{ float: left; width:50%; text-align: center;  position: relative;}
+  #bbsType5 .bbs_thumb_t6{margin-left:0.8474576271186441%; margin-top: -30px;}
+  #bbsType5 .bbs_thumb_t6 .lst{ float: left; width:49.32203389830508%; margin-left: 0.6779661016949153%; margin-top: 30px; text-align: center;  position: relative;}
        /* news : istop type2 */
       #bbs_list1_rwd > ul > li{ height: auto; padding-bottom: 0; padding-left: 0;  border-top: 1px solid #e0e0e0;  }
       #bbs_list1_rwd > ul > li .plus{display: none !important;}
@@ -2123,47 +2122,37 @@ width: calc(100% + 30px);
      #marketArea .marketVisual .marketVisualArticle{width: 100%; height: 302px;}
       #marketArea .marketVisual .list > ul > li .photo{ height: 302px; }
       #marketArea .marketVisual .cont > ul > li .spec{ top: 140px; }
-
-      /* #marketArea .sort_lst > li{ width: 49%; margin-left: 0; }
+      #marketArea .sort_lst > li{ width: 49%; margin-left: 0; }
       #marketArea .sort_lst dl.sort_box dt{ width: 100%; min-width: 50;  height: 36px; background: url(../images/ico/ico_arrbot_off.gif) 97% 50% no-repeat; background-color: #fff; }
-      .sort_lst dl.sort_box dd{width: 96%; padding: 2%;} */
-
-      #marketArea .searchArea{height: auto !important; margin-bottom: 1em; }
-      #marketArea .searchArea .inner { width: 100%; }
-      #marketArea .searchArea .sort_lst { width: 100%; }
-      #marketArea .sort_lst { margin: -2.5px; }
-      #marketArea .sort_lst > li{ width: 25%; margin: 0; padding: 2.5px; float: left; box-sizing: border-box; }
-      #marketArea .sort_lst dl.sort_box dt{ width: 100%; min-width: 50px;  height: 36px; background: url(../images/ico/ico_arrbot_off.gif) 97% 50% no-repeat; background-color: #fff; }
       .sort_lst dl.sort_box dd{width: 96%; padding: 2%;}
-
+      #marketArea .searchArea{height: auto !important;}
       #marketArea .searchArea .btn_result{ display: none; width: 120px;  height: 36px; margin-left: 5px; font-size: 13px; line-height: 36px; background-color: #5c5c5c; color: #fff; text-align: center; text-transform: uppercase; }
 
       #marketArea .searchArea .search2{margin-top: 20px; display: none !important; position: static; }
 
 
       /*마켓 재작업 : istop type*/
-      #marketProductAjax{ width: 95%; max-width: 100%; }
-      #marketProductAjax .newsBox{ width: 33.333333%;}
+      #marketProductAjax{ width: 100%; max-width: 100%;  }
+      #marketProductAjax .newsBox{/* width:286px; */ width: 31.60220994475138%; margin-left: 1%;}
 
       /*마켓 작가 검색*/
       #artistInfo > header.header .total{ position: static; right: 0; top: 0;}
-      #artistInfo > header.header .total > li{margin-left: 0; margin-right: 10px; margin-bottom: 10px; font-size: 13px; }
+      #artistInfo > header.header .total > li{margin-left: 0; margin-right: 10px; font-size: 13px; }
 
       /* news */
 
-      .bbs_thumb_t6 .lst > .thumb,
-      .bbs_thumb_t6  .lst > .cont{ height: auto; }
+      .bbs_thumb_t6 .lst > .thumb,.bbs_thumb_t6  .lst > .cont{ height: auto; }
       .bbs_thumb_t6 .lst > .thumb  img{width: 100% !important; height: auto !important;}
       .bbs_thumb_t6  .lst > .cont > .inner {padding: 17px; }
       .bbs_thumb_t6  .lst > .cont  .h{ height: 22px;}
 
 
-      #newIndexArea .bbs_thumb_t1 .lst_thumb .cont > .inner{ padding-left: 5%; padding-right: 5%;  padding-top:15px; padding-bottom: 15px;  }
+      #newIndexArea .bbs_thumb_t1 .lst_thumb .cont > .inner{ padding-left: 10px; padding-right: 10px;  padding-top:15px; padding-bottom: 15px;  }
 
 
 
-      #newWrapper{ width: auto; margin: -5px; }
-      #newWrapper .newsBox{/* width:286px;  */ width: 33.33333%;}
+      #newWrapper{ width: inherit;  margin: 2%; }
+      #newWrapper .newsBox{/* width:286px;  */ width: 31.60220994475138%; margin-left: 1%;}
 
 
       /*맴버십 : 로그인*/
@@ -2334,8 +2323,6 @@ width: calc(100% + 30px);
       .title1{ border-color:#bdbdbd; border-width: 0 0 1px 0 ; border-style: solid; color: #333; font-size: 20px; line-height: 27px; margin-bottom: 10px; padding-left: 10px; padding-top: 10px; padding-bottom: 10px;  }
       #marketPlaceArea .issued > header > .tab_type2{position: static; right:inherit; top: 0; left: 0; }
 
-      #marketArea .marketVisual  { width: 95%; margin: 0 auto; }
-
       /* .tabType1{border-width:0}
       .tabType1 .h_tab{ display: block; }
 
@@ -2408,6 +2395,7 @@ width: calc(100% + 30px);
        {padding-top: 0;}
 
       #header .header_inner,.content-mediaBox.margin1, #newIndexArea .bot_banner{ width:auto; margin-left:3%; margin-right:3%; }
+      #marketProductAjax{ width:auto; margin-left:2%; margin-right:2%; }
       #artistInfo.content-mediaBox.margin1  { margin-left:0%; margin-right:0%; }
       #artistInfo.content-mediaBox.margin1 .header { width:auto; margin-left:3%; margin-right:3%; }
 
@@ -2451,13 +2439,8 @@ width: calc(100% + 30px);
       #art1_promotion > .article .pro_info .edittionbox > ul{width: 300px;}
       #art1_promotion > .article .pro_info .edittionbox .close{right: 10px; top: 10px;}
 
-      #marketRView .product_info .product_des { position: relative; }
       #marketRView .product_info .product_des .group_lft{ width: 50%; float: none; min-height: 100px; margin-top: 20px;}
-      #marketRView .product_info .product_des .group_rgh{ width: auto; float: none; position: static;}
-      #marketRView .product_info .product_des .group_rgh .btn { position: absolute; bottom: 4%; right: 3%; }
-      #marketRView .product_info .product_des .group_rgh .btn button { display: block; margin-bottom: 0.5em; }
-      #marketRView .product_info .product_des .group_rgh .btn > button:first-child { margin-left: 2px; }
-      #marketRView .product_info .product_des .group_rgh .util { top: 4%; right: 3%; }
+      #marketRView .product_info .product_des .group_rgh{ width: auto; float: none;}
 
       #art1_promotion > .article .pro_info .ex{ position:static; left: 0; top: 0; text-align: center; padding-top: 20px; }
       #art1_promotion > .article .pro_info2 .photo{ float: none; width:auto;margin-right:0; }
@@ -2487,16 +2470,14 @@ width: calc(100% + 30px);
 
 
       /*마켓재시안*/
-      #marketArea .categori { width: 95%; margin: 0 auto; }
-      #marketArea .categori .list > ul > li { margin-bottom: 2%; }
-      #marketArea .categori .list > ul > li.n1{width: 49%;}
-      #marketArea .categori .list > ul > li.n2{width: 49%; margin-left: 2%;}
-      #marketArea .categori .list > ul > li.n3{width: 49%; margin-left: 0;}
-      #marketArea .categori .list > ul > li.n4{width: 49%; margin-left: 2%;}
-      #marketArea .categori .list > ul > li.n5{width: 49%; margin-left: 0;}
-      #marketArea .categori .list > ul > li.n6{width: 49%; margin-left: 2%;}
-      #marketArea .categori .list > ul > li.n7{width: 49%; margin-left: 0;}
-      #marketArea .categori .list > ul > li.n8{width: 49%; margin-left: 2%;}
+      #marketArea .categori .list > ul > li.n1{width: 49.15254237288136%;}
+      #marketArea .categori .list > ul > li.n2{width: 49.15254237288136%; margin-left: 1.694915254237288%;}
+      #marketArea .categori .list > ul > li.n3{width: 49.15254237288136%; margin-left: 0;}
+      #marketArea .categori .list > ul > li.n4{width: 49.15254237288136%; margin-left: 1.694915254237288%;}
+      #marketArea .categori .list > ul > li.n5{width: 49.15254237288136%; margin-left:0;}
+      #marketArea .categori .list > ul > li.n6{width: 49.15254237288136%; margin-left: 1.694915254237288%;}
+      #marketArea .categori .list > ul > li.n7{width: 49.15254237288136%; margin-left: 0;}
+      #marketArea .categori .list > ul > li.n8{width: 49.15254237288136%; margin-left: 1.694915254237288%;}
       #marketArea .categori .list > ul > li.n4 .photo{ height: 260px; }
       #marketArea .categori .list > ul > li.n5 .photo{ height: 260px; }
 
@@ -2563,7 +2544,7 @@ width: calc(100% + 30px);
   #bbsType5 .bbs_thumb_t6 .lst .item {height:auto !important; overflow:visible; padding-bottom: 0;}
   #bbsType5 .bbs_thumb_t6 .lst .item > a { position: static; }
   #bbsType5 .bbs_thumb_t6 {width:95%; margin:0 auto;}
-  #bbsType5 .bbs_thumb_t6 .lst{ float:none; width:100%; margin-left: 0%; margin-top: 10px; padding: 0; text-align: center;  }
+  #bbsType5 .bbs_thumb_t6 .lst{ float:none; width:100%; margin-left: 0%; margin-top: 10px; text-align: center;  }
   #bbsType5 .bbs_thumb_t6 .lst img.pc { display: none; }
   #bbsType5 .bbs_thumb_t6 .lst img.mobile { display: block; }
 
@@ -2585,7 +2566,7 @@ width: calc(100% + 30px);
       /*뉴스 썸네일 리스트 게시판 */
       #bbs_thumb_t5 > ul > li .thumb{ width: 140px; height: 130px;}
       #bbs_thumb_t5 > ul > li .cont{ margin-left: 160px; padding-top: 0; }
-      #bbs_thumb_t5 > ul > li .cont > h1 a{ font-size: 15px; line-height: 22px; height: 22px; display: inline;}
+      #bbs_thumb_t5 > ul > li .cont > h1 a{ font-size: 15px; line-height: 22px;}
 
       #bbs_thumb_t5 > header.header .bbs_searchbox{ position: relative; right: 0; bottom: 0; margin-top: 10px; }
       #bbs_thumb_t5 > header.header { margin-bottom: 10px; }
@@ -2662,10 +2643,6 @@ width: calc(100% + 30px);
   #pop_artworks_view .gallery_artwork_view > .bx_left{width: auto;margin-bottom:50px;}
   #pop_artworks_view .gallery_artwork_view > .bx_right{width: auto;}
 
-  .gallery_list_video .con{padding:0px 15px 10px;}
-  .gallery_list_video .con > header{margin-bottom: 6px;}
-  .gallery_list_video .con > header > p{padding-top: 10px;}
-
   .key_feature table.tb_features,
   .key_feature table.tb_features > tbody,
   .key_feature table.tb_features > tbody > tr,
@@ -2685,8 +2662,6 @@ width: calc(100% + 30px);
   #apply_info_area .process_lst2 > .inner > ul > li > div .tip{margin-bottom:17px;}
 
   ul.link_share_btns > li{margin-left:10px;}
-
-  #newIndexArea .exbanner { width: 94%; }
 }
 
 
@@ -2701,11 +2676,10 @@ width: calc(100% + 30px);
 
   #marketArea .bot_banner > a img.pc{display: none;}
   #marketArea .bot_banner > a img.mobile{display: block;}
-  #marketArea .bot_banner{/* margin-left: -2%; margin-right: -2%; */}
+  #marketArea .bot_banner{margin-left: -2%; margin-right: -2%;}
 
   /* #marketRView .proview_area2 h1 { font-size: 18px; }
   #marketRView .proview_area2 h1 .ico { background-size: contain; height: 25px; line-height: 25px; } */
-  #marketArea .sort_lst > li { width: 50%; }
 }
 
 @media screen and (max-width: 639px){
@@ -2775,7 +2749,6 @@ width: calc(100% + 30px);
       #marketArea .marketVisual .list > ul > li .photo .mobile{display: block;}
       #marketArea .marketVisual .list > ul > li .photo .pc{display: none;}
 
-      #marketVisualArticle > .bx_slide > ul > li { /* border: 1px solid #333; */ }
       #marketVisualArticle > .bx_slide > ul > li .photo .mobile{display: block;}
       #marketVisualArticle > .bx_slide > ul > li .photo .pc{display: none;}
       #marketVisualArticle > .bx_slide > ul > li a{padding-bottom:93.7%;}
@@ -2785,6 +2758,7 @@ width: calc(100% + 30px);
       /*마켓 재작업 : 카테고리*/
       #marketArea .categori{ margin-top: 15px; margin-bottom: 15px; }
 
+      #newWrapper { margin: 0%;}
       #newWrapper .newsBox .newsBox_inner .news_cont{margin-top:18px;}
       #newWrapper .newsBox .newsBox_inner .news_cont .text_cont{margin-top:16px; margin-bottom:7px; }
 
@@ -2804,10 +2778,10 @@ width: calc(100% + 30px);
       .inpBox{display: block;  width: auto; height: 33px; margin-top: 15px; padding-right: 40px; padding-left: 4px;  border: 1px solid #d9d9d9; position: relative;}
       .inpBox input[type="text"]{width: 100%; height: 33px; line-height: 33px; padding: 0; border: 0; }
       /*마켓 재작업 : istop type*/
-      #marketProductAjax .newsBox{/* width:286px; */ width: 50%; }
+      #marketProductAjax .newsBox{/* width:286px; */ width: 48%; margin-left: 1%;}
 
       /* news */ /* 639  :  598*/
-      #newWrapper .newsBox{/* width:286px;  */ width: 50%; }
+      #newWrapper .newsBox{/* width:286px;  */ width: 49%; margin-left: 1%;}
 
       /*art1 Exhibition */
       #art1_exhibition .photographer{ margin-bottom: 60px;}
@@ -2966,8 +2940,6 @@ width: calc(100% + 30px);
 
   #wishListArea .lst_horizontal.style4 .btn > * { padding: 0; }
 
-  #bbs_view_ty1 .header { margin-bottom: 20px; }
-
 }
 
 @media screen and (max-width: 540px){
@@ -3003,11 +2975,6 @@ width: calc(100% + 30px);
   /*갤러리즈 540*/
   .gallery_list_exhi > ul{margin-left:0;}
   .gallery_list_exhi > ul > li{float: none;width: auto;margin-left: 0;}
-
-  .gallery_list_video.w3 > ul,
-  .gallery_list_video > ul{margin-left:0;}
-  .gallery_list_video.w3 > ul > li,
-  .gallery_list_video > ul > li{float: none;width: auto;margin-left: 0;}
 
   /*.gallery_list_aritst{overflow: hidden;position: relative;}*/
   .gallery_list_aritst > ul > li{width: 47.8441%;/*margin-bottom: 15px;*/}
@@ -3169,8 +3136,6 @@ width: calc(100% + 30px);
 
   #resevationArea .rgh_group > ul > li { width: 33.33333%; }
 
-  #marketVisualArticle > .bx_slide > ul > li .photo .mobile {  }
-
     /*#footer .company_info .contact ul{margin-left:auto;margin-right:auto;width:120px;}*/
   /*#footer .company_info .contact ul li.contact1, #footer .company_info .contact ul li.contact2, #footer .company_info .contact ul li.contact4{
    display:block;margin:0;
@@ -3178,7 +3143,7 @@ width: calc(100% + 30px);
 
 }
 @media(max-width:440px){
-  /* .tabBox>ul>li { width: 33.3333333333%; } */
+  .tabBox>ul>li { width: 33.3333333333%; }
 }
 
 /*

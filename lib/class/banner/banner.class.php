@@ -247,7 +247,6 @@ class Banner
 
 								linkUrl		= :linkUrl ,
 								target		= :target ,
-								isDisplay		= :isDisplay ,
 								regDate		= :regDate 
 
 							WHERE bannerIdx = :bannerIdx';
@@ -265,7 +264,6 @@ class Banner
 
 				$stmt->bindParam(':linkUrl',						$aLinkUrl[$i],				PDO::PARAM_STR, 255);
 				$stmt->bindParam(':target',						$aTarget[$i],				PDO::PARAM_INT, 4);
-				$stmt->bindParam(':isDisplay',						$aIsDisplay[$i],				PDO::PARAM_STR, 1);
 				$stmt->bindParam(':regDate',					$regDate,						PDO::PARAM_STR, 30);
 
 				$stmt->bindParam(':bannerIdx',				$aIdx[$i],						PDO::PARAM_INT, 10);

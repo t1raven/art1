@@ -10,7 +10,6 @@ sup.required{ color: #eb4839; }
 /* col */
 col.chkbox{ width: 60px; }
 col.no_1{ width:120px; }
-col.no_2{ width:60px; }
 col.name{ width:190px; }
 col.control1{ width:130px; }
 col.data{ width:130px; }
@@ -74,7 +73,6 @@ button.check_listbox{width: 24px; height: 24px; line-height: 24px;}
 .lst_table2> table thead th,.lst_table2> table tbody th{ text-align: center; color: #08214b; font-size: 1.167em; font-weight: 700; padding: 3px 0; }
 .lst_table2 > table tbody  td.colbox{ padding: 5px 5px 0; }
 .lst_table2 > table tbody  td.fc1{ color: #8b8b8b; }
-.lst_table2 > table tbody  td.opinion{ text-align:left; }
 .lst_table2 > table tbody  td.name a:hover {text-decoration:underline;}
 .lst_table2 > table tbody  td.left {text-align:left;}
 .lst_table2 > .add{ position: absolute; right: -61px; bottom: 8px; }

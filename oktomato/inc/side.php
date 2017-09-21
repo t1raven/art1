@@ -47,12 +47,7 @@
 <? } elseif ( $pageNum == "4") { ?>
     <ul class="snb">
       <li class="s1"><a href="<?=$link_04_01?>"><span>01/ <?=$title_04_01th?></span></a></li>
-      <li class="s2"><a href="<?=$link_04_02?>"><span>02/ <?=$title_04_02th?></span></a></li>
-      <li class="s3"><a href="<?=$link_04_03?>"><span>03/ <?=$title_04_03th?></span></a></li>
-      <li class="s4"><a href="<?=$link_04_04?>"><span>04/ <?=$title_04_04th?></span></a></li>
-      <li class="s5"><a href="<?=$link_04_05?>"><span>05/ <?=$title_04_05th?></span></a></li>
-      <li class="s6"><a href="<?=$link_04_06?>"><span>06/ <?=$title_04_06th?></span></a></li>
-      <li class="s7"><a href="<?=$link_04_07?>"><span>07/ <?=$title_04_07th?></span></a></li>
+      <li class="s2"></li>
     </ul>
 <? } elseif ( $pageNum == "5") { ?>
     <ul class="snb">

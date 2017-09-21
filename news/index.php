@@ -65,12 +65,6 @@ if (!empty($news_category_idx)){
 	$news_category_name = $Newstype->attr['news_category_name'];
 }
 
-if($cate == 15) {
-	$low_cnt = 3; //카드뉴스는 3개 씩 보여준다. (list.foot.skin.php 에서 처리)
-} else if($cate == 16) {
-	$low_cnt = 4; //포스트는 4개 씩 보여준다.
-}
-
 if ($news_skin_type == 'tile' && $_REQUEST['at']=='list'){ //tile 형은  ajax 로 목록을 만듬으로 별도의 list 로 만든다.
 	//echo '<script>console.log("news_skin_type : '.$news_skin_type.' ")</script>';
 	require('list.tile.php');

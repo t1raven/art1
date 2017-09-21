@@ -254,8 +254,14 @@ $(window).load(function(){
 
 <!--//로그인 레이어팝업 E-->
 
+
+
+
+
+
+
   <section id="container_sub">
-    <div class="container_inner wide">
+    <div class="container_inner">
       <?php include(ROOT.'inc/path.php'); ?>
       <div class="top_btn marketPlace">
         <a href="/artist" class="more"><button class="btnWhiteEdge">작가등록 +</button></a>
@@ -387,7 +393,7 @@ $(window).load(function(){
 
 	   <!-- 배너 광고 -->
        <div class="bot_banner">
-		<?php
+		<?php 
 		   //메인 베너 S
 		  $banner = new Banner();
 		  $list = null;
@@ -403,7 +409,7 @@ $(window).load(function(){
 			<img src="<?php echo $row['bannerUpFileName']; ?>" class="pc" alt="" />
 			<img src="<?php echo $row['bannerUpFileNameMobile']; ?>" class="mobile" alt="" />
           </a>
-		<?php
+		<?php 
 				}
 			 $i++;
 		  }  //메인 베너 E
@@ -509,7 +515,7 @@ $(window).load(function(){
           </a>
       </div>
       </section>
-
+      
       </div>
       <div class="btn_bot cen">
         <button class="more-ajax2" onClick="nextPage();" id="nextMore"  style="display:none"><img src="/images/btn/btn_ajaxmore.jpg" alt="더보기"></button>
@@ -571,15 +577,17 @@ var winWidth = window.innerWidth || document.documentElement.clientWidth || docu
     var marketImgLoad = imagesLoaded( $container );
     function onAlways( instance ) {
       $container.find("img").fadeIn( 2000);
-      $container.isotope({
-        getSortData: {
+          $container.isotope({
+            getSortData: {
           type: '[data-type]',
-        },
-        sortBy : ['type' ,'random'],
-        itemSelector: '.newsBox',
-
+      },
+           sortBy : ['type' ,'random'],
+           itemSelector: '.newsBox',
+            masonry : {
+            columnWidth : 1
+          }
        //    filter: '*'
-      });
+          });
           //$container.off("click.motionView").on( 'click.motionView', '.newsBox .Boximg > a',marketViewMotion);
     };
     marketImgLoad.on( 'always', onAlways );
@@ -615,7 +623,7 @@ function swiperSlideH(t) {
     }
     t.css('padding-bottom', slideH);
   }).resize();
-
+  
 }
 
 
@@ -658,8 +666,8 @@ function scrollNewEvent(w) {
   doc = $(document),
   body = (navigator.userAgent.indexOf('AppleWebKit') !== -1) ? $('body') : $('html');
   var top = win.scrollTop() + win.height();
-  var endHeight = $("#marketProductAjax").offset().top + $("#marketProductAjax").outerHeight();
-  if (top > endHeight/1.5 ) {
+  var endHeight = $("#marketProductAjax").offset().top + $("#marketProductAjax").outerHeight() +150;
+  if (top > endHeight ) {
     if (totalPage >= page) {
       startScroll();
     }
@@ -668,7 +676,7 @@ function scrollNewEvent(w) {
   function startScroll() {
     if (!scrollNewsStartFlag) {
       scrollNewsStartFlag = true;
-
+      
     nextPage(); //2016-04-27 업체요구 무한스크롤 처리 LYT
     /*
     if (page <= 3 ) {
@@ -919,7 +927,7 @@ function filterAjaxChange(){
                   $(this).css("opacity",1).remove();
                     $("<div id='tmpData'></div>").html(data).appendTo($container);
                       var count = $container.find("#tmpData .newsBox").length;
-                      var page2;
+                      var page2; 
                       (page < 10 ? page2 = '0'+page : page2 = page);
                       for(var j = 0 ; j < count ; j++ ){
                         $container.find("#tmpData .newsBox").attr("data-type","content"+page2);
@@ -936,7 +944,7 @@ function filterAjaxChange(){
                             //$container.off("click.motionView").on( 'click.motionView', '.newsBox',marketViewMotion);
                         });//imagesLoaded
                 })//loading
-
+                 
           },
            complete : function(data) {
 
@@ -952,6 +960,18 @@ function filterAjaxChange(){
 $(window).on("scroll",function(){
  scrollNewEvent();
 })
+
+
+
+
+
+
+
+
+
+
+
+
 
   var mainTimeOutSet;
     $(function(){
@@ -1044,7 +1064,7 @@ $(window).on("scroll",function(){
         fadePlayMotion(cover , true , speed);
 
       }//if
-
+    
     }//mouseClick
 
 
@@ -1097,7 +1117,7 @@ $(window).on("scroll",function(){
     <? if($check_mobile === false){ ?>
         $(".categori .list > ul > li ").on("mouseenter",mouseEnter).on("mouseleave",mouseLeave);
     <? }else{ ?>
-        $(".categori .list > ul > li ").on("click",mouseClick);
+        $(".categori .list > ul > li ").on("click",mouseClick);  
     <? } ?>
        var visualNum = 0;
        var marketVisualInterval;
@@ -1185,7 +1205,7 @@ $(window).on("scroll",function(){
                 inter = 0;
       }
       marketVisualRun();
-
+  
   $("#marketArea .marketVisualArticle").hover(function(){
     inter = 1;
     marketVisualStop();

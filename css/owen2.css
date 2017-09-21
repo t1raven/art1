@@ -91,7 +91,7 @@ span.h100{height:100%;vertical-align: middle;display: inline-block;}
 #arist_tiles .sec1 .pagi.next{right:0;}
 
 #arist_tiles .cover span.h100 + div{display: inline-block;vertical-align: middle;color: #fff;padding:0 25px;}
-#arist_tiles .cover span.h100 + div p{font-size: 15px; line-height:22px;font-weight: bold;max-height:88px;overflow: hidden;}
+#arist_tiles .cover span.h100 + div p{font-size: 15px; line-height:22px;font-weight: bold;max-height:66px;overflow: hidden;}
 
 #arist_tiles .sec_profile{position: relative;height:100%;text-align: center;}
 #arist_tiles .sec_profile .inner{position: relative;display: inline-block;vertical-align: middle;width:90%;}
