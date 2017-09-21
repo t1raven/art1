@@ -89,6 +89,7 @@ input.txt_point2{text-align:right;}
 #mainInfoPopup.layer_popup1{width: 330px;}
 #RecommendedListPopup.layer_popup1{width: 330px;}
 #bbsType.layer_popup1 {width:420px}
+#pointPopup.layer_popup1 {width:500px}
 
 .layer_popup1{ padding: 20px; position: absolute; left: 0; top: 0; border: 5px solid #e2e7eb; background-color: #fff; z-index: 100; display: none;  }
 .layer_popup1 .close{position: absolute; right: 10px; top: 10px;}

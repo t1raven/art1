@@ -56,6 +56,109 @@ class PageUtil
 		$this->attr[pageHtml] .= "</div>\n";
 	}
 
+	# PAGE LIMITER
+	function pageLimiter2($numPerPage, $numPerBlock, $totalArticle, $page,$PAGE_PARAM)
+	{
+		$this->attr[numPerPage] = $numPerPage;
+		$this->attr[numPerBlock] = $numPerBlock;
+		$this->attr[totalArticle] = $totalArticle;
+		$this->attr[page] = (empty($page) ) ? 1 : (int)$page;
+
+		if(!$this->attr[totalArticle])
+		{
+			$this->attr[first] = 1;
+			$this->attr[last] = 0;
+		}else{
+			$this->attr[first] = $this->attr[numPerPage]*($this->attr[page]-1);
+			$this->attr[last] = $this->attr[numPerPage]*$page;
+			$this->attr[isNext] = $this->attr[totalArticle] - $this->attr[last];
+			if($this->attr[isNext] > 0) $this->attr[last] -= 1;
+			else $this->attr[last] = $this->attr[totalArticle] - 1;
+		}
+		$this->attr[totalPage] = ceil($this->attr[totalArticle]/$this->attr[numPerPage]);
+		$this->attr[totalBlock] = ceil($this->attr[totalPage]/$this->attr[numPerBlock]);
+		$this->attr[block] = ceil($this->attr[page]/$this->attr[numPerBlock]);
+		$this->attr[firstPage] = ($this->attr[block]-1)*$this->attr[numPerBlock];
+		$this->attr[lastPage] = $this->attr[block]*$this->attr[numPerBlock];
+		if($this->attr[totalBlock] <= $this->attr[block]) $this->attr[lastPage] = $this->attr[totalPage];
+		$this->attr[pageHtml] = "<div class='paginate'>\n";
+		if($this->attr[block] > 1){
+			//$this->attr[pageHtml] .= "<a href='".PHP_SELF."?page=1&$PAGE_PARAM' class='btn'><img src='/images/paginate/btn_prev2.gif' alt='처음' /></a>\n";
+			//$this->attr[pageHtml] .= "<a href='".PHP_SELF."?page=$FirstPage&$PAGE_PARAM' class='btn prev'><img src='/images/paginate/btn_prev.gif' alt='이전' /></a>\n";
+			$this->attr[pageHtml] .= "<a href='".PHP_SELF."?page_n=1&$PAGE_PARAM' class='btn prev'>처음</a>\n";
+			//$this->attr[pageHtml] .= "<a href='".PHP_SELF."?page=$FirstPage&$PAGE_PARAM' class='btn prev2'>이전10페이지</a>\n";
+			$this->attr[pageHtml] .= "<a href='".PHP_SELF."?page_n=".$this->attr[firstPage]."&$PAGE_PARAM' class='btn prev2'>이전10페이지</a>\n";
+		}
+		for($x = $this->attr[firstPage]+1; $x <= $this->attr[lastPage]; $x++)
+		{
+			if($this->attr[page] == $x)
+				$this->attr[pageHtml] .= "<a href='".PHP_SELF."?page_n=$x&$PAGE_PARAM' class='num on'>". $x ."</a>\n";
+			else
+				$this->attr[pageHtml] .= "<a href='".PHP_SELF."?page_n=$x&$PAGE_PARAM' class='num'>". $x ."</a>\n";
+		}
+
+		if($this->attr[block] < $this->attr[totalBlock]){
+			//$this->attr[pageHtml] .= "<a href='".PHP_SELF."?page=". ($this->attr[lastPage]+1) ."&$PAGE_PARAM' class='btn next'><img src='/images/paginate/btn_next.gif' alt='다음' /></a>\n";
+			//$this->attr[pageHtml] .= "<a href='".PHP_SELF."?page=". ($this->attr[totalPage]) ."&$PAGE_PARAM' class='btn'><img src='/images/paginate/btn_next2.gif' alt='마지막' /></a>\n";
+			$this->attr[pageHtml] .= "<a href='".PHP_SELF."?page_n=". ($this->attr[lastPage]+1) ."&$PAGE_PARAM' class='btn next2'>다음10페이지</a>\n";
+			$this->attr[pageHtml] .= "<a href='".PHP_SELF."?page_n=". ($this->attr[totalPage]) ."&$PAGE_PARAM' class='btn next'>끝</a>\n";
+		}
+		$this->attr[pageHtml] .= "</div>\n";
+	}
+
+	# PAGE LIMITER
+	function pageLimiter3($numPerPage, $numPerBlock, $totalArticle, $page,$PAGE_PARAM)
+	{
+		$this->attr[numPerPage] = $numPerPage;
+		$this->attr[numPerBlock] = $numPerBlock;
+		$this->attr[totalArticle] = $totalArticle;
+		$this->attr[page] = (empty($page) ) ? 1 : (int)$page;
+
+		if(!$this->attr[totalArticle])
+		{
+			$this->attr[first] = 1;
+			$this->attr[last] = 0;
+		}else{
+			$this->attr[first] = $this->attr[numPerPage]*($this->attr[page]-1);
+			$this->attr[last] = $this->attr[numPerPage]*$page;
+			$this->attr[isNext] = $this->attr[totalArticle] - $this->attr[last];
+			if($this->attr[isNext] > 0) $this->attr[last] -= 1;
+			else $this->attr[last] = $this->attr[totalArticle] - 1;
+		}
+		$this->attr[totalPage] = ceil($this->attr[totalArticle]/$this->attr[numPerPage]);
+		$this->attr[totalBlock] = ceil($this->attr[totalPage]/$this->attr[numPerBlock]);
+
+		$this->attr[block] = ceil($this->attr[page]/$this->attr[numPerBlock]);
+		$this->attr[firstPage] = ($this->attr[block]-1)*$this->attr[numPerBlock];
+		$this->attr[lastPage] = $this->attr[block]*$this->attr[numPerBlock];
+		if($this->attr[totalBlock] <= $this->attr[block]) $this->attr[lastPage] = $this->attr[totalPage];
+		$this->attr[pageHtml] = '<ul class="pagination">'."\n";
+		if($this->attr[block] > 1){
+			$this->attr[pageHtml] .= '<li class="start"><a href="'.PHP_SELF.'?page=1&'.$PAGE_PARAM.'">Start</a></li>'."\n";
+			$this->attr[pageHtml] .= '<li class="prev"><a href="'.PHP_SELF.'?page='.$this->attr[firstPage].'&'.$PAGE_PARAM.'">prev 5p</a></li>'."\n";
+		}else{
+			//$this->attr[pageHtml] .= '<li class="start"><a href="#">Start</a></li>'."\n";
+			//$this->attr[pageHtml] .= '<li class="prev"><a href="#">prev 5p</a></li>'."\n";
+		}
+		for($x = $this->attr[firstPage]+1; $x <= $this->attr[lastPage]; $x++)
+		{
+			if($this->attr[page] == $x)
+				$this->attr[pageHtml] .= '<li class="active"><span>'. $x .'</span></li>'."\n";
+			else
+				$this->attr[pageHtml] .= '<li class=""><a href="'.PHP_SELF.'?page='.$x.'&'.$PAGE_PARAM.'" >'. $x .'</a></li>'."\n";
+		}
+
+		if($this->attr[block] < $this->attr[totalBlock]){
+			$this->attr[pageHtml] .= '<li class="next"><a href="'.PHP_SELF.'?page='. ($this->attr[lastPage]+1) .'&'.$PAGE_PARAM.'">next 5</a></li>'."\n";
+			$this->attr[pageHtml] .= '<li class="end"><a href="'.PHP_SELF.'?page='. ($this->attr[totalPage]) .'&'.$PAGE_PARAM.'">End</a></li>'."\n";
+		}else{
+			//$this->attr[pageHtml] .= '<li class="next"><a href="#">next 5</a></li>'."\n";
+			//$this->attr[pageHtml] .= '<li class="end"><a href="#">End</a></li>'."\n";
+		}
+		$this->attr[pageHtml] .= " </ul>";
+	}
+
+
 	function scriptPageLimiter($numPerPage, $numPerBlock, $totalArticle, $page)
 	{
 		$this->attr[numPerPage] = $numPerPage;

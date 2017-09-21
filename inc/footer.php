@@ -48,10 +48,10 @@
                         <li><a href="#">News</a></li>
                         <li><a href="#">Market</a></li>
                     </ul> -->
-                    
+
                     <address>
                         <p class="fw-b fc_white2">(주)아트1닷컴</p>
-                        <!-- <p>대표이사 : 강호빈</p> -->
+                        <p>대표이사 : 박종면</p>
                         <p>주소 : 서울시 중구 퇴계로 212-13(필동2가)</p>
                         <p>사업자등록번호 : 101-87-01278&nbsp;&nbsp;&nbsp;<a href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1018701278" title="새창" class="btn_sa"  onclick="onftcopen(); return false;" >사업자정보확인</a> </p>
                         <!-- <p>사업자등록번호 : 101-87-01278&nbsp;&nbsp;&nbsp;<a href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1018701278" title="새창"  onclick="onftcopen(); return false;" ><img src="/images/footer/btn_sa.gif" alt="사업자정보확인"></a> </p> -->

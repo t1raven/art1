@@ -158,3 +158,27 @@ button.pop_close:after {
 /* .pop_type1 > .inner .pop_header button.pop_close{position: absolute;top: 0px;right: 20px;z-index: 2;background-color: #cbcaca; border-radius: 100%;width: 38px;height: 38px;}
 .pop_type1 > .inner .pop_header button.pop_close:before, .pop_type1 > .inner .pop_header button.pop_close:after { background-color: #fff; right: 10px;left: 10px; } */
 .pop_type1 > .inner .pop_content { overflow-y: auto; overflow-x: hidden;min-height: 150px;}
+
+#tooltip {
+  color: #fff;
+  position: absolute;
+  top: 0;
+  visibility: hidden;
+  opacity: 0.5;
+  background: #212121;
+  transition: 0.25s opacity;
+  z-index: 2;
+  padding: 1ex;
+  border-radius: 3px;
+  max-width: 500px;
+}
+
+#tooltip:before {
+  border-color: #212121 transparent transparent transparent;
+  border-width: 1ex 1ex 0 1ex;
+  border-style: solid;
+  content: " ";
+  position: absolute;
+  left: calc(50% - .5em);
+  bottom: -.9ex;
+}

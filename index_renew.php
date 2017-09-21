@@ -12,8 +12,8 @@
 <? include "inc/top.php"; ?>
 <link rel="stylesheet" href="/css/main_renew.css" />
 <script src="/js/isotope.pkgd.min.js"></script>
-
 <? include "inc/header.php"; ?>
+
   <section id="container_main">
     <div class="container_inner">
 
@@ -23,8 +23,8 @@
 				<div class="bx_news">
 					<ul>
 						<li class="grid-sizer"></li>
-						<li class="w2 grid-item">
-							<div class="inner">
+						<li class="w2 grid-item" data-type="headline">
+							<div class="inner type_headline">
 							  <?php
 							  //메인 뉴스 1 (큰 베너 3개, 2:1 size)
 							  $banner = new Banner(); //베너 / 메인노출 뉴스
@@ -71,8 +71,8 @@
 						$banner->getRead($dbh);
 						$link = '/news/index.php?at=read&subm='.$banner->attr['news_category_idx'].'&idx='.$banner->attr['news_idx'];
 						?>
-						<li class="grid-item">
-							<div class="inner">
+						<li class="grid-item" data-type="news">
+							<div class="inner type_news">
 								<a href="<?php echo $link?>">
 									<div class="img"><img src="<?php echo newsUploadPath, $banner->attr['news_img']; ?>" alt="뉴스기사" /></div>
 									<dl class="con">
@@ -102,8 +102,8 @@
 						$banner->getRead($dbh);
 						$link = '/news/index.php?at=read&subm='.$banner->attr['news_category_idx'].'&idx='.$banner->attr['news_idx'];
 						?>
-						<li class="grid-item">
-							<div class="inner">
+						<li class="grid-item" data-type="news">
+							<div class="inner type_news">
 								<a href="<?php echo $link?>">
 									<div class="img"><img src="<?php echo newsUploadPath, $banner->attr['news_img']; ?>" alt="뉴스기사" /></div>
 									<dl class="con">
@@ -124,8 +124,8 @@
 							</div>
 						</li><!-- EPISODE -->
 
-						<li class="md_hide grid-item">
-							<div class="inner">
+						<li class="md_hide grid-item" data-type="news">
+							<div class="inner type_time">
 								<div class="bx_logo">
 									<div class="inner2">
 										<div id="news_timer" class="bx_time">
@@ -133,8 +133,8 @@
 											<h3>&nbsp;</h3>
 										</div>
 										<div class="logos">
-											<a href="/art1/quick_space_art1.php" target="_blank"><img src="/images/main/logo_space_art1.png" alt="space_art1" /></a>
-											<a href="/art1/quick_media_art1.php" target="_blank"><img src="/images/main/logo_media_art1.png" alt="media_art1" /></a>
+											<a href="/art1/quick_space_art1.php" target="_blank"><img src="/images/main/logo_space_art1_new.png" alt="space_art1" /></a>
+											<a href="/art1/quick_media_art1.php" target="_blank"><img src="/images/main/logo_media_art1_new.png" alt="media_art1" /></a>
 										</div>
 									</div>
 								</div>
@@ -150,8 +150,8 @@
 						$banner->getRead($dbh);
 						$link = '/news/index.php?at=read&subm='.$banner->attr['news_category_idx'].'&idx='.$banner->attr['news_idx'];
 						?>
-						<li class="md_hide grid-item">
-							<div class="inner card_news">
+						<li class="md_hide grid-item" data-type="news">
+							<div class="inner card_news type_news">
 								<div class="img"><a href="<?php echo $link?>"><img src="<?php echo newsUploadPath, $banner->attr['news_img']; ?>" alt="" /></a></div>
 							</div>
 						</li>
@@ -165,8 +165,8 @@
 						$banner->getRead($dbh);
 						$link = '/news/index.php?at=read&subm='.$banner->attr['news_category_idx'].'&idx='.$banner->attr['news_idx'];
 						?>
-						<li class="grid-item">
-							<div class="inner">
+						<li class="grid-item" data-type="news">
+							<div class="inner type_news">
 								<a href="<?php echo $link?>">
 									<div class="img"><img src="<?php echo newsUploadPath, $banner->attr['news_img']; ?>" alt="뉴스기사" /></div>
 									<dl class="con">
@@ -196,8 +196,8 @@
 						$banner->getRead($dbh);
 						$link = '/news/index.php?at=read&subm='.$banner->attr['news_category_idx'].'&idx='.$banner->attr['news_idx'];
 						?>
-						<li class="grid-item">
-							<div class="inner">
+						<li class="grid-item" data-type="news">
+							<div class="inner type_news">
 								<a href="<?php echo $link?>">
 									<div class="img"><img src="<?php echo newsUploadPath, $banner->attr['news_img']; ?>" alt="뉴스기사" /></div>
 									<dl class="con">
@@ -217,8 +217,8 @@
 								</a>
 							</div>
 						</li><!-- PEOPLE -->
-						<li class="w2 board grid-item">
-							<div class="inner">
+						<li class="w2 board grid-item" data-type="newslist">
+							<div class="inner type_newslist">
 								<div class="bx_bbs_list">
 									<div class="inner2">
 										<div class="list">
@@ -261,7 +261,7 @@
 					</ul>
 				</div>
 
-				<div class="bot_banner">
+				<div class="bot_banner" data-type="banner">
 					<?php
 					   //메인 베너 S
 					  $list = null;
@@ -273,7 +273,7 @@
 							if($row['isDisplay'] == 'Y')
 							{
 					?>
-						<div class="inner">
+						<div class="inner type_banner">
 							<a href="<?php echo $row['linkUrl']; ?>" target="_blank">
 								<img src="<?php echo $row['bannerUpFileName']; ?>" class="pc" alt="" />
 								<img src="<?php echo $row['bannerUpFileNameMobile']; ?>" class="mobile" alt="" />
@@ -296,75 +296,90 @@
 		<!--메인 퀵메뉴 S -->
 		<section id="main_quickmenu">
 			<div class="inner">
-				<ul class="menu">
-					<li class="item">
-						<a href="#">
-							<img src="/images/ico/ico_quick_m01.png">
-							<p>갤러리 일정 공유</p>
-						</a>
-					</li>
-					<li class="item">
-						<a href="#">
-							<img src="/images/ico/ico_quick_m02.png">
-							<p>아티스트 영상</p>
-						</a>
-					</li>
-					<li class="item">
-						<a href="#">
-							<img src="/images/ico/ico_quick_m03.png">
-							<p>갤러리 플렛폼</p>
-						</a>
-					</li>
-					<li class="item">
-						<a href="#">
-							<img src="/images/ico/ico_quick_m04.png">
-							<p>이달의 추천작</p>
-						</a>
-					</li>
-					<li class="item">
-						<a href="#">
-							<img src="/images/ico/ico_quick_m05.png">
-							<p>카드뉴스</p>
-						</a>
-					</li>
-					<li class="item">
-						<a href="#">
-							<img src="/images/ico/ico_quick_m06.png">
-							<p>스페이스아트1 대관</p>
-						</a>
-					</li>
-					<li class="item">
-						<a href="#">
-							<img src="/images/ico/ico_quick_m07.png">
-							<p>미디어아트1 이용</p>
-						</a>
-					</li>
-					<li class="item">
-						<a href="#">
-							<img src="/images/ico/ico_quick_m08.png">
-							<p>커뮤니티</p>
-						</a>
-					</li>
-					<li class="line"><span></span></li>
-				</ul>
-				<div id="rankSp">
-					<ul class="">
+				<div class="menu" id="quickmenu" data-type="quickmenu">
+					<ul>
+						<li class="item">
+							<a href="#">
+								<img src="/images/ico/ico_quick_m01.png">
+								<p>갤러리 일정 공유</p>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								<img src="/images/ico/ico_quick_m02.png">
+								<p>아티스트 영상</p>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								<img src="/images/ico/ico_quick_m03.png">
+								<p>갤러리 플렛폼</p>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								<img src="/images/ico/ico_quick_m04.png">
+								<p>이달의 추천작</p>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								<img src="/images/ico/ico_quick_m05.png">
+								<p>카드뉴스</p>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								<img src="/images/ico/ico_quick_m06.png">
+								<p>스페이스아트1 대관</p>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								<img src="/images/ico/ico_quick_m07.png">
+								<p>미디어아트1 이용</p>
+							</a>
+						</li>
+						<li class="item">
+							<a href="#">
+								<img src="/images/ico/ico_quick_m08.png">
+								<p>커뮤니티</p>
+							</a>
+						</li>
+						<li class="line"><span></span></li>
+					</ul>
+				</div>
+				<div id="rankSp" data-type="keyword">
+					<ul class="slider">
+<?php
+for($x=0; $x<10; $x++){
+?>
 						<li class="">
-							<span class="rank">1.</span>
-							<a href="#" class="text">스페이스 아트1 대관 안내</a>
+							<span class="rank"><?php echo $x+1?>.</span>
+							<span class="text">스페이스 아트1 대관 안내</span>
 							<span class="issue">new</span>
 						</li>
-						<li class="">
-							<span class="rank">2.</span>
-							<a href="#" class="text">스페이스 아트1 대관 안내</a>
-							<span class="issue">- 1</span>
-						</li>
-						<li class="">
-							<span class="rank">3.</span>
-							<a href="#" class="text">스페이스 아트1 대관 안내</a>
-							<span class="issue">+ 1</span>
-						</li>
+<?
+}
+?>
 					</ul>
+					<div class="layer">
+						<ul>
+<?php
+for($x=0; $x<10; $x++){
+?>
+							<li>
+								<a href="#">
+									<span class="rank"><?php echo $x+1?>.</span>
+									<span class="text">스페이스 아트1 대관 안내</span>
+									<span class="issue">+ 1</span>
+								</a>
+							</li>
+<?
+}
+?>
+						</ul>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -376,113 +391,108 @@
 				<div class="bx_news">
 					<ul>
 						<li class="grid-sizer"></li>
-						<li class="grid-item">
-							<div class="inner">
+						<li class="grid-item" data-type="mediaart1">
+							<div class="inner type_mediaart1">
 								<a href="#">
 									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>media art1</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
+									<div class="cover">
+										<div class="standard">
 											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
+												<p class="title">Choi Tea Hoon : Metal Marks</p>
 											</div>
-										</dd>
-									</dl>
+										</div>
+										<div class="hover">
+											<div class="inner">
+												<p class="icon"><img src="/images/main_edit/ico_ma_premium.png"></p>
+												<p class="spec">Type - Free / 3 minute</p>
+												<p class="price">￦ 1,500,000</p>
+											</div>
+										</div>
+									</div>
 								</a>
 							</div>
 						</li>
-						<li class="grid-item">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>galleries</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
+						<li class="grid-item" data-type="galleries">
+							<div class="inner type_galleries white">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="gallery">THE PAGE GALLERY</p>
+											<p class="exhibition">ABSOLUTENESS</p>
+											<p class="date">2016.12.03 ~ 2017.01.31</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"></a>
+							        	</div>
+						        	</div>
+						      	</div>
 							</div>
 						</li>
-						<li class="grid-item md_hide">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>market</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
+						<li class="grid-item md_hide" data-type="market">
+							<div class="inner type_market">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+									<div class="standard">
+										<div class="inner">
+											<p class="title"><span>김승수</span>위선</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"><img src="/images/btn/btn_more3.png" alt="더보기"></a>
+								        	<p class="title">위선</p>
+								        	<p class="artist">김승수 / 2016</p>
+								        	<p class="spec">Acrylic on canvas</p>
+								         	<p class="spec">90.9x72.7cm</p>
+							        	</div>
+						        	</div>
+						      	</div>
 							</div>
 						</li>
-						<li class="grid-item">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>market</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
+						<li class="grid-item" data-type="market">
+							<div class="inner type_market">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="title"><span>김승수</span>위선</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"><img src="/images/btn/btn_more3.png" alt="더보기"></a>
+								        	<p class="title">위선</p>
+								        	<p class="artist">김승수 / 2016</p>
+								        	<p class="spec">Acrylic on canvas</p>
+								         	<p class="spec">90.9x72.7cm</p>
+							        	</div>
+						        	</div>
+						      	</div>
 							</div>
 						</li>
-						<li class="grid-item md_hide">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>facebook</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
+						<li class="grid-item md_hide" data-type="sns">
+							<div class="inner type_sns facebook">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="icon">icon</p>
+								        	<p class="like">like</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"></a>
+							        	</div>
+						        	</div>
+						      	</div>
 							</div>
 						</li>
-						<li class="grid-item">
-							<div class="inner">
+						<li class="grid-item" data-type="link">
+							<div class="inner type_link">
 								<a href="#">
 									<div class="bx_link">
 										<div class="inner" style="background-color: #fff;border-color:#23b400">
@@ -502,90 +512,80 @@
 								</a>
 							</div>
 						</li>
-						<li class="grid-item w2 h2 stamp">
-							<div class="inner">
+						<li class="grid-item w2 h2 stamp" data-type="market">
+							<div class="inner type_market right">
 								<a href="#">
 									<div class="img"><img src="/images/main/main_temp_img2.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con right">
-										<dt>
-											<div class="bx_tit">
-												<h2>market</h2>
-												<h3>첫 외국인 현대미술관장 임명 미술계 반발...</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>미술계 "과거 정치검열 의혹에 명확한 해명 없다" vs 문체부 "능력 출중" 문화체육관광부(장관 김종덕)가 신임 국립현대미술관 관장에 '바르셀로나 현대미술관'(MACBA) 관장을 지냈던...</p>
-											</div>
-										</dd>
-									</dl>
+									<div class="cover">
+										<div class="inner">
+											<p class="artist">정서연</p>
+											<p class="title">Colony Blue Girl</p>
+											<p class="spec">2014, Mixed media, 91×73 cm</p>
+										</div>
+									</div>
 								</a>
 							</div>
 						</li>
-						<li class="grid-item w2">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img3.jpg" alt="뉴스기사"></div>
-									<dl class="con right black">
-										<dt>
-											<div class="bx_tit">
-												<h2>artist rec</h2>
-												<h3 class="video_tit">첫 외국인 현대미술관장 임명 미술계 반발...<img src="/images/ico/ico_video.png" class="ico_video"></h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>미술계 "과거 정치검열 의혹에 명확한 해명 없다" vs 문체부 "능력 출중" 문화체육관광부(장관 김종덕)가 신임 국립현대미술관 관장에 '바르셀로나 현대미술관'(MACBA) 관장을 지냈던...</p>
-											</div>
-										</dd>
-									</dl>
-								</a>
+						<li class="grid-item w2" data-type="video">
+							<div class="inner type_video">
+								<div class="img"><img src="/images/main/main_temp_img3.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="title">이민혜 - 자꾸 보고싶은 연인들의 감정</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<p class="sub_title">ARTIST<br/> REC#21</p>
+							        		<a href="#" class="play"><img src="images/main/btn_play.png" alt="play"></a>
+							        		<a href="/art1/artist_rec.php?idx=21" class="more"><img src="images/main/btn_share.png" alt="자세히 보기"></a>
+							        	</div>
+						        	</div>
+						      	</div>
 							</div>
 						</li>
-						<li class="grid-item md_hide">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>market</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
+						<li class="grid-item md_hide" data-type="market">
+							<div class="inner type_market">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="title"><span>김승수</span>위선</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"><img src="/images/btn/btn_more3.png" alt="더보기"></a>
+								        	<p class="title">위선</p>
+								        	<p class="artist">김승수 / 2016</p>
+								        	<p class="spec">Acrylic on canvas</p>
+								         	<p class="spec">90.9x72.7cm</p>
+							        	</div>
+						        	</div>
+						      	</div>
 							</div>
 						</li>
-						<li class="grid-item">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>instagram</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
+						<li class="grid-item" data-type="sns">
+							<div class="inner type_sns instagram">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="icon">icon</p>
+								        	<p class="like">like</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"></a>
+							        	</div>
+						        	</div>
+						      	</div>
 							</div>
 						</li>
-						<li class="grid-item">
-							<div class="inner">
+						<li class="grid-item" data-type="link">
+							<div class="inner type_link">
 								<a href="#">
 									<div class="bx_link">
 										<div class="inner" style="background-color: #092357;border-color:#092357">
@@ -607,8 +607,8 @@
 						</li>
 					</ul>
 				</div>
-				<div class="bot_banner">
-					<div class="inner">
+				<div class="bot_banner" data-type="banner">
+					<div class="inner type_banner">
 						<a href="http://www.lofficielhommes.co.kr/" target="_blank">
 							<img src="/images/main/main_temp_banner1.jpg" class="pc" alt="">
 							<img src="/images/main/main_temp_banner1.jpg" class="mobile" alt="">
@@ -625,49 +625,48 @@
 				<div class="bx_news">
 					<ul>
 						<li class="grid-sizer"></li>
-						<li class="grid-item w2 h2">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img2.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con right">
-										<dt>
-											<div class="bx_tit">
-												<h2>artist rec</h2>
-												<h3 class="video_tit">첫 외국인 현대미술관장 임명 미술계 반발...<img src="/images/ico/ico_video.png" class="ico_video"></h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>미술계 "과거 정치검열 의혹에 명확한 해명 없다" vs 문체부 "능력 출중" 문화체육관광부(장관 김종덕)가 신임 국립현대미술관 관장에 '바르셀로나 현대미술관'(MACBA) 관장을 지냈던...</p>
-											</div>
-										</dd>
-									</dl>
-								</a>
+						<li class="grid-item w2 h2" data-type="video">
+							<div class="inner type_video">
+								<div class="img"><img src="/images/main/main_temp_img2.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="title">이민혜 - 자꾸 보고싶은 연인들의 감정</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<p class="sub_title">ARTIST<br/> REC#21</p>
+							        		<a href="#" class="play"><img src="images/main/btn_play.png" alt="play"></a>
+							        		<a href="/art1/artist_rec.php?idx=21" class="more"><img src="images/main/btn_share.png" alt="자세히 보기"></a>
+							        	</div>
+						        	</div>
+						      	</div>
 							</div>
 						</li>
-						<li class="grid-item">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>market</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
+						<li class="grid-item" data-type="market">
+							<div class="inner type_market">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="title"><span>김승수</span>위선</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"><img src="/images/btn/btn_more3.png" alt="더보기"></a>
+								        	<p class="title">위선</p>
+								        	<p class="artist">김승수 / 2016</p>
+								        	<p class="spec">Acrylic on canvas</p>
+								         	<p class="spec">90.9x72.7cm</p>
+							        	</div>
+						        	</div>
+						      	</div>
 							</div>
 						</li>
-						<li class="grid-item">
-							<div class="inner">
+						<li class="grid-item" data-type="link">
+							<div class="inner type_link">
 								<a href="#">
 									<div class="bx_link">
 										<div class="inner" style="background-color: #fff;border-color:#ec0044">
@@ -687,113 +686,107 @@
 								</a>
 							</div>
 						</li>
-						<li class="grid-item md_hide">
-							<div class="inner">
+						<li class="grid-item md_hide" data-type="video">
+							<div class="inner type_video">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="title">이민혜 - 자꾸 보고싶은 연인들의 감정</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<p class="sub_title">ARTIST<br/> REC#21</p>
+							        		<a href="#" class="play"><img src="images/main/btn_play.png" alt="play"></a>
+							        		<a href="/art1/artist_rec.php?idx=21" class="more"><img src="images/main/btn_share.png" alt="자세히 보기"></a>
+							        	</div>
+						        	</div>
+						      	</div>
+							</div>
+						</li>
+						<li class="grid-item" data-type="market">
+							<div class="inner type_market">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="title"><span>김승수</span>위선</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"><img src="/images/btn/btn_more3.png" alt="더보기"></a>
+								        	<p class="title">위선</p>
+								        	<p class="artist">김승수 / 2016</p>
+								        	<p class="spec">Acrylic on canvas</p>
+								         	<p class="spec">90.9x72.7cm</p>
+							        	</div>
+						        	</div>
+						      	</div>
+							</div>
+						</li>
+						<li class="grid-item" data-type="galleries">
+							<div class="inner type_galleries black">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="gallery">THE PAGE GALLERY</p>
+											<p class="exhibition">ABSOLUTENESS</p>
+											<p class="date">2016.12.03 ~ 2017.01.31</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"></a>
+							        	</div>
+						        	</div>
+						      	</div>
+							</div>
+						</li>
+						<li class="grid-item md_hide" data-type="galleries">
+							<div class="inner type_galleries white">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="gallery">THE PAGE GALLERY</p>
+											<p class="exhibition">ABSOLUTENESS</p>
+											<p class="date">2016.12.03 ~ 2017.01.31</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"></a>
+							        	</div>
+						        	</div>
+						      	</div>
+							</div>
+						</li>
+						<li class="grid-item md_hide" data-type="spaceart1">
+							<div class="inner type_spaceart1 white">
 								<a href="#">
 									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>artist rec</h2>
-												<h3 class="video_tit">고통받는 이에게 '갑옷'을 입히다.<img src="/images/ico/ico_video.png" class="ico_video"></h3>
-											</div>
-										</dt>
-										<dd>
+									<div class="cover">
+							        	<div class="standard">
 											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
+												<p class="logo"></p>
+												<p class="Hashtag">#아이돌사진전 #프라이밋사인회장소</p>
 											</div>
-										</dd>
-									</dl>
+										</div>
+							        	<div class="hover">
+							        		<div class="inner">
+							        			<p class="logo"></p>
+												<p class="Hashtag">#아이돌사진전 #프라이밋사인회장소</p>
+								        	</div>
+							        	</div>
+							      	</div>
 								</a>
 							</div>
 						</li>
-						<li class="grid-item">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>market</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
-							</div>
-						</li>
-						<li class="grid-item">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>galleries</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
-							</div>
-						</li>
-						<li class="grid-item md_hide">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>galleries</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
-							</div>
-						</li>
-						<li class="grid-item md_hide">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>space art1</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
-							</div>
-						</li>
-						<li class="grid-item">
-							<div class="inner">
+						<li class="grid-item" data-type="link">
+							<div class="inner type_link">
 								<a href="#">
 									<div class="bx_link">
 										<div class="inner" style="background-color: #ad5961;border-color:#ad5961">
@@ -813,51 +806,49 @@
 								</a>
 							</div>
 						</li>
-						<li class="grid-item">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>market</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
+						<li class="grid-item" data-type="market">
+							<div class="inner type_market">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="title"><span>김승수</span>위선</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"><img src="/images/btn/btn_more3.png" alt="더보기"></a>
+								        	<p class="title">위선</p>
+								        	<p class="artist">김승수 / 2016</p>
+								        	<p class="spec">Acrylic on canvas</p>
+								         	<p class="spec">90.9x72.7cm</p>
+							        	</div>
+						        	</div>
+						      	</div>
 							</div>
 						</li>
-						<li class="grid-item w2">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img3.jpg" alt="뉴스기사"></div>
-									<dl class="con black">
-										<dt>
-											<div class="bx_tit">
-												<h2>facebook</h2>
-												<h3>첫 외국인 현대미술관장 임명 미술계 반발...</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>미술계 "과거 정치검열 의혹에 명확한 해명 없다" vs 문체부 "능력 출중" 문화체육관광부(장관 김종덕)가 신임 국립현대미술관 관장에 '바르셀로나 현대미술관'(MACBA) 관장을 지냈던...</p>
-											</div>
-										</dd>
-									</dl>
-								</a>
+						<li class="grid-item w2" data-type="sns">
+							<div class="inner type_sns instagram">
+								<div class="img"><img src="/images/main/main_temp_img3.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="icon">icon</p>
+								        	<p class="like">like</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"></a>
+							        	</div>
+						        	</div>
+						      	</div>
 							</div>
 						</li>
 					</ul>
 				</div>
-				<div class="bot_banner">
-					<div class="inner">
+				<div class="bot_banner" data-type="banner">
+					<div class="inner type_banner">
 						<a href="http://www.lofficielhommes.co.kr/" target="_blank">
 							<img src="/images/main/main_temp_banner2.jpg" class="pc" alt="">
 							<img src="/images/main/main_temp_banner2.jpg" class="mobile" alt="">
@@ -874,92 +865,89 @@
 				<div class="bx_news">
 					<ul>
 						<li class="grid-sizer"></li>
-						<li class="grid-item md_hide">
-							<div class="inner">
+						<li class="grid-item md_hide" data-type="market">
+							<div class="inner type_market">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="standard">
+										<div class="inner">
+											<p class="title"><span>김승수</span>위선</p>
+										</div>
+									</div>
+								<div class="cover">
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"><img src="/images/btn/btn_more3.png" alt="더보기"></a>
+								        	<p class="title">위선</p>
+								        	<p class="artist">김승수 / 2016</p>
+								        	<p class="spec">Acrylic on canvas</p>
+								         	<p class="spec">90.9x72.7cm</p>
+							        	</div>
+						        	</div>
+						      	</div>
+							</div>
+						</li>
+						<li class="grid-item" data-type="market">
+							<div class="inner type_market">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="title"><span>김승수</span>위선</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"><img src="/images/btn/btn_more3.png" alt="더보기"></a>
+								        	<p class="title">위선</p>
+								        	<p class="artist">김승수 / 2016</p>
+								        	<p class="spec">Acrylic on canvas</p>
+								         	<p class="spec">90.9x72.7cm</p>
+							        	</div>
+						        	</div>
+						      	</div>
+							</div>
+						</li>
+						<li class="grid-item" data-type="spaceart1">
+							<div class="inner type_spaceart1 black">
 								<a href="#">
 									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>market</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
+									<div class="cover">
+							        	<div class="standard">
 											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
+												<p class="logo"></p>
+												<p class="Hashtag">#아이돌사진전 #프라이밋사인회장소</p>
 											</div>
-										</dd>
-									</dl>
+										</div>
+							        	<div class="hover">
+							        		<div class="inner">
+							        			<p class="logo"></p>
+												<p class="Hashtag">#아이돌사진전 #프라이밋사인회장소</p>
+								        	</div>
+							        	</div>
+							      	</div>
 								</a>
 							</div>
 						</li>
-						<li class="grid-item">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>market</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
+						<li class="grid-item md_hide" data-type="sns">
+							<div class="inner type_sns instagram">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="icon">icon</p>
+								        	<p class="like">like</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"></a>
+							        	</div>
+						        	</div>
+						      	</div>
 							</div>
 						</li>
-						<li class="grid-item">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>space art1</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
-							</div>
-						</li>
-						<li class="grid-item md_hide">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>instagram</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
-							</div>
-						</li>
-						<li class="grid-item">
-							<div class="inner">
+						<li class="grid-item" data-type="link">
+							<div class="inner type_link">
 								<a href="#">
 									<div class="bx_link">
 										<div class="inner" style="background-color: #fff;border-color:#333">
@@ -979,90 +967,84 @@
 								</a>
 							</div>
 						</li>
-						<li class="grid-item">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>pinterest</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
+						<li class="grid-item" data-type="sns">
+							<div class="inner type_sns facebook">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="icon">icon</p>
+								        	<p class="like">like</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"></a>
+							        	</div>
+						        	</div>
+						      	</div>
 							</div>
 						</li>
-						<li class="grid-item w2 h2 stamp">
-							<div class="inner">
+						<li class="grid-item w2 h2 stamp" data-type="market">
+							<div class="inner type_market">
 								<a href="#">
 									<div class="img"><img src="/images/main/main_temp_img2.jpg" alt="뉴스기사" class="h100p"></div>
 									<dl class="con right">
 										<dt>
 											<div class="bx_tit">
-												<h2>market</h2>
-												<h3>첫 외국인 현대미술관장 임명 미술계 반발...</h3>
+												<h2>정서연</h2>
+												<h3>Colony Blue Girl</h3>
 											</div>
 										</dt>
 										<dd>
 											<div class="inner">
-												<p>미술계 "과거 정치검열 의혹에 명확한 해명 없다" vs 문체부 "능력 출중" 문화체육관광부(장관 김종덕)가 신임 국립현대미술관 관장에 '바르셀로나 현대미술관'(MACBA) 관장을 지냈던...</p>
+												<p>2014, Mixed media, 91×73 cm</p>
 											</div>
 										</dd>
 									</dl>
 								</a>
 							</div>
 						</li>
-						<li class="grid-item w2">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img3.jpg" alt="뉴스기사"></div>
-									<dl class="con black">
-										<dt>
-											<div class="bx_tit">
-												<h2>artist rec</h2>
-												<h3 class="video_tit">첫 외국인 현대미술관장 임명 미술계 반발...<img src="/images/ico/ico_video.png" class="ico_video"></h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>미술계 "과거 정치검열 의혹에 명확한 해명 없다" vs 문체부 "능력 출중" 문화체육관광부(장관 김종덕)가 신임 국립현대미술관 관장에 '바르셀로나 현대미술관'(MACBA) 관장을 지냈던...</p>
-											</div>
-										</dd>
-									</dl>
-								</a>
+						<li class="grid-item w2" data-type="video">
+							<div class="inner type_video">
+								<div class="img"><img src="/images/main/main_temp_img3.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="title">이민혜 - 자꾸 보고싶은 연인들의 감정</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<p class="sub_title">ARTIST<br/> REC#21</p>
+							        		<a href="#" class="play"><img src="images/main/btn_play.png" alt="play"></a>
+							        		<a href="/art1/artist_rec.php?idx=21" class="more"><img src="images/main/btn_share.png" alt="자세히 보기"></a>
+							        	</div>
+						        	</div>
+						      	</div>
 							</div>
 						</li>
-						<li class="grid-item">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>galleries</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
+						<li class="grid-item" data-type="galleries">
+							<div class="inner type_galleries black">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="gallery">THE PAGE GALLERY</p>
+											<p class="exhibition">ABSOLUTENESS</p>
+											<p class="date">2016.12.03 ~ 2017.01.31</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"></a>
+							        	</div>
+						        	</div>
+						      	</div>
 							</div>
 						</li>
-						<li class="grid-item">
-							<div class="inner">
+						<li class="grid-item" data-type="link">
+							<div class="inner type_link">
 								<a href="#">
 									<div class="bx_link">
 										<div class="inner" style="background-color: #1a1a1a;border-color:#1a1a1a">
@@ -1082,31 +1064,28 @@
 								</a>
 							</div>
 						</li>
-						<li class="grid-item md_hide">
-							<div class="inner">
-								<a href="#">
-									<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
-									<dl class="con">
-										<dt>
-											<div class="bx_tit">
-												<h2>instagram</h2>
-												<h3>고통받는 이에게 '갑옷'을 입히다, 시대를 관찰하는 손종준 작가</h3>
-											</div>
-										</dt>
-										<dd>
-											<div class="inner">
-												<p>"케이옥션은 사회적 책임감과 사회공헌에 대한 사명감을 가지고 문화를 통한 사회공헌활동을 이어갈 것입니다." <br><br>K옥션 이상규 대표(56)는 국내 미술품 경매사중 첫 사회공헌 회사라는 자부심이 강하다. <br><br>지난 2008년부터 매년 사랑나눔 자선경매를 이어오며 사회의 온기를 전하고 있다. 불황의 시대에 억소리나는 경매로 일반 사회와의 괴리감이 있지만, 연말이면 '미술품 기부' 행사로 지속적인 메세나활동을 펼치고 있다.</p>
-												<span class="view_more"><span>Read more &nbsp;&nbsp;</span><img src="/images/main/ico_read_more.png" alt=""></span>
-											</div>
-										</dd>
-									</dl>
-								</a>
+						<li class="grid-item md_hide" data-type="sns">
+							<div class="inner type_sns facebook">
+								<div class="img"><img src="/images/main/main_temp_img1.jpg" alt="뉴스기사" class="h100p"></div>
+								<div class="cover">
+						        	<div class="standard">
+										<div class="inner">
+											<p class="icon">icon</p>
+								        	<p class="like">like</p>
+										</div>
+									</div>
+						        	<div class="hover">
+						        		<div class="inner">
+							        		<a href="#" class="more"></a>
+							        	</div>
+						        	</div>
+						      	</div>
 							</div>
 						</li>
 					</ul>
 				</div>
-				<div class="bot_banner">
-					<div class="inner">
+				<div class="bot_banner" data-type="banner">
+					<div class="inner type_banner">
 						<a href="http://www.lofficielhommes.co.kr/" target="_blank">
 							<img src="/images/main/main_temp_banner3.jpg" class="pc" alt="">
 							<img src="/images/main/main_temp_banner3.jpg" class="mobile" alt="">
@@ -1173,11 +1152,65 @@
 							newsAni.flag = true;
 						});
 					})
+				},
+				hoverMotion : function(t){
+					var el = $(t);
+
+					el.each(function() {
+						var tl = new TimelineMax();
+						$(this).find('.standard').css({visibility: 'visible'});
+						$(this).find('.hover').css({visibility: 'visible'});
+
+						if($(this).hasClass('type_market')){
+							tl.pause()
+								.to($(this).find('.img'),0.5,{scale: 1.1})
+								.fromTo($(this).find('.standard'),0.5,{alpha: 1},{alpha: 0},'-=0.5')
+								.fromTo($(this).find('.hover'),0.5,{alpha: 0},{alpha: 1},'-=0.5');
+						}else if($(this).hasClass('type_galleries')){
+							tl.pause()
+								.to($(this).find('.img'),0.5,{scale: 1.1})
+								.fromTo($(this).find('.standard'),0.3,{alpha: 1},{alpha: 0, y: 20},'-=0.5')
+								.fromTo($(this).find('.hover'),0.5,{alpha: 0},{alpha: 1},'-=0.5');
+						}else if($(this).hasClass('type_mediaart1')){
+							tl.pause()
+								.to($(this).find('.img'),0.5,{scale: 1.1})
+								.fromTo($(this).find('.standard'),0.3,{alpha: 1},{alpha: 0},'-=0.5')
+								.fromTo($(this).find('.hover'),0.5,{alpha: 0},{alpha: 1},'-=0.5');
+						}else if($(this).hasClass('type_sns')){
+							tl.pause()
+								.to($(this).find('.img'),0.5,{scale: 1.1})
+								.fromTo($(this).find('.icon'),0.3,{y: 0},{y: -60},'-=0.5')
+								.fromTo($(this).find('.like'),0.3,{y: 0},{y: 60},'-=0.5')
+								.fromTo($(this).find('.hover'),0.5,{alpha: 0},{alpha: 1},'-=0.5');
+						}else if($(this).hasClass('type_video')){
+							tl.pause()
+								.fromTo($(this),0.5,{borderTopLeftRadius: 0},{borderTopLeftRadius: 35})
+								.fromTo($(this).find('.img>img'),0.5,{borderTopLeftRadius: 0},{borderTopLeftRadius: 35},'-=0.5')
+								.fromTo($(this).find('.standard'),0.3,{alpha: 1},{alpha: 0},'-=0.5')
+								.fromTo($(this).find('.title'),0.3,{y: 0},{y: -50},'-=0.5')
+								.fromTo($(this).find('.hover'),0.5,{alpha: 0},{alpha: 1},'-=0.5')
+								.fromTo($(this).find('.sub_title'),0.3,{y: -70},{y: 0},'-=0.5');
+						}else if($(this).hasClass('type_spaceart1')){
+							tl.pause()
+								.to($(this).find('.img'),0.5,{scale: 1.1})
+								.fromTo($(this).find('.standard'),0.5,{alpha: 1, y: 0},{alpha: 0, y: -100+'%'},'-=0.5')
+								.fromTo($(this).find('.hover'),0.3,{alpha: 0,y: 100+'%'},{alpha: 1,y: 0+'%'},'-=0.5');
+						}
+
+						$(this).hover(
+							function() {
+						    	tl.play();
+						  	}, function() {
+						  		tl.reverse();
+						  	}
+						);
+					});
 				}
 			}
 
 			iCutterOwen(["#NewsV2 .bx_news > ul > li.w2 ul.img.slide > li", "#NewsV2 .bx_news > ul > li:not(.w2) .img"]);
 			newsAni.swipe();
+			newsAni.hoverMotion('.grid-item > .inner');
 
 			function setNewsTime(){
 				var ww = WinWdith = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
@@ -1220,7 +1253,7 @@
 				}
 			});
 
-			$('#rankSp ul').bxSlider({
+			$('#rankSp .slider').bxSlider({
 				mode: 'vertical',
 				auto: true,
 				pause: 3000,
@@ -1228,10 +1261,10 @@
 				controls: false
 			});
 
-			$(".menu > li.item").on("mouseover",function() {
-				var idx = $(".menu > li.item").index($(this));
-				var pos = $(".menu > li.line").outerWidth()*idx;
-				TweenMax.to($(".menu > li.line"),0.5,{left:pos, ease: Power1.easeInOut});
+			$("#main_quickmenu .menu > ul > li.item").on("mouseover",function() {
+				var idx = $("#main_quickmenu .menu > ul > li.item").index($(this));
+				var pos = $("#main_quickmenu .menu > ul > li.line").outerWidth()*idx;
+				TweenMax.to($("#main_quickmenu .menu > ul > li.line"),0.5,{left:pos, ease: Power1.easeInOut});
 			});
 
 			$(".bx_slide > ul > li h3:not(.video_tit), .bx_slide > ul > li p, .bx_news dl.con h3:not(.video_tit), .bx_news dl.con p").dotdotdot();
@@ -1243,57 +1276,210 @@
 			});
 
 			if(getUrlParameter("mode") == "admin") {
-				$(".bx_news > ul > li").each(function(i) {
-					var _id = "s"+$(".main-grid").index($(this).closest(".main-grid"))+"_i"+$(this).parent().find("li").index($(this));
-					if(!$(this).hasClass("grid-sizer")) $(this).attr("id", _id)
-				});
 
-				$(".bot_banner").each(function(i) {
-					var _id = "s"+$(".main-grid").index($(this).closest(".main-grid"))+"_b"+(i+1);
-					$(this).attr("id", _id)
-				});
+				var mainEdit = {
+					data : {idx:'',type:'',size:'w1h1'},
+					init : function(){
+						$(".bx_news > ul > li").each(function(i) {
+							var _id = "s"+$(".main-grid").index($(this).closest(".main-grid"))+"_i"+$(this).parent().find("li").index($(this));
+							if(!$(this).hasClass("grid-sizer")) $(this).attr("id", _id)
+						});
 
-				$(".bx_news > ul > li > .inner, .bot_banner > .inner").each(function(i) {
-					var _id = $(this).parent().attr("id");
+						$(".bot_banner").each(function(i) {
+							var _id = "s"+$(".main-grid").index($(this).closest(".main-grid"))+"_b"+(i+1);
+							$(this).attr("id", _id)
+						});
 
-					if($(this).find(".bx_bbs_list").length < 1 && $(this).find(".bx_logo").length < 1){
-						$(this).append('<div class="util"><button class="btn_pack1 gray small" onclick="edit_cont(this);">EDIT</button></div>');
-						if($(this).parent().hasClass("w2")){
-							$(this).find(".util").prepend('<span class="colorChange"><input name="'+_id+'" type="radio" id="'+_id+'_c[w]" class="chkraido white" value="white"><label for="'+_id+'_c[w]"></label><input name="'+_id+'" type="radio" id="'+_id+'_c[b]" class="chkraido black" value="black"><label for="'+_id+'_c[b]"></label><span><select><option value="left">LEFT</option><option value="right">RIGHT</option></select>');
+						$(".bx_news > ul > li > .inner:not(.type_headline,.type_news), .bot_banner > .inner, #main_quickmenu .menu, #main_quickmenu #rankSp").each(function(i) {
+							var _id = $(this).parent().attr("id");
 
-							if($(this).closest(".grid-item").find(".con").hasClass("black")){
-								$(this).find(".util input[type='radio'].black").attr("checked", true);
-							}else{
-								$(this).find(".util input[type='radio'].white").attr("checked", true);
+							if(!$(this).hasClass("type_time") && !$(this).hasClass("type_newslist") && !$(this).hasClass("type_link")){
+								$(this).append('<div class="admin_util"></div>');
+								if($(this).hasClass("type_spaceart1")
+									||$(this).hasClass("type_market")
+									||$(this).hasClass("type_galleries")
+									||$(this).hasClass("type_video")
+									||$(this).hasClass("type_sns")
+									||$(this).hasClass("type_mediaart1")){
+									$(this).find('.admin_util').append('<button class="btn_pack1 small" onclick="mainEdit.show(this, 1);">작성</button>');
+								}
+								$(this).find('.admin_util').append('<button class="btn_pack1 small" onclick="mainEdit.show(this);">수정</button>');
 							}
+						});
+					},
+					show : function(t,n){
+						mainEdit.data = {};
+						var target = $(t).closest(".grid-item");
+						if($(t).closest(".bot_banner").length > 0)  target = $(t).closest(".bot_banner");
+						if($(t).closest("#quickmenu").length > 0)  target = $(t).closest("#quickmenu");
+						if($(t).closest("#rankSp").length > 0)  target = $(t).closest("#rankSp");
 
-							if($(this).closest(".grid-item").find(".con").hasClass("right")){
-								$(this).find(".util select").val("right");
-							}else{
-								$(this).find(".util select").val("left");
+						mainEdit.data['idx'] = target.attr("id");
+						mainEdit.data['type'] = target.data("type");
+
+						if(target.hasClass('w2')){
+							mainEdit.data['size'] = 'w2h1';
+							if(target.hasClass('h2')) mainEdit.data['size'] = 'w2h2';
+						}else{
+							mainEdit.data['size'] = 'w1h1';
+						}
+
+						var url = "/main_edit/__ajax_pop_"+mainEdit.data['type']+".php";
+						if(n) url = "/main_edit/__ajax_pop_type.php";
+
+						modalFn.show(url, {data:{idx:mainEdit.data['idx'], type:mainEdit.data['type'], size:mainEdit.data['size']}});
+					},
+					next : function(type){
+						mainEdit.data['type'] = type;
+						var url = "/main_edit/__ajax_pop_"+mainEdit.data['type']+".php";
+						modalFn.change(url, $('#pop_edit'), mainEdit.data, 'next');
+					},
+					search : function(t,type,url){
+						if(url == undefined){
+							if($(t).find('#searchTxt').val() == ''){
+								alert("검색어를 입력하세요!");
+								$(t).find('#searchTxt').focus();
+								return false;
 							}
+							var word = $(t).find('#searchTxt').val();
+							url = "/main_edit/__ajax_result_"+type+".php?word="+word
+						}
+
+						var resultArea = $(t).closest('.modal_content').find('.result_area');
+
+						$.ajax({
+					        url : url,
+					        type : "get",
+					        dataType : "html",
+					        success : function(data){
+					        	resultArea.html(data);
+					        	modalFn.resize($('#pop_edit'));
+					        	resultArea.find('.pagination a').on('click',function(e) {
+					        		e.preventDefault();
+					        		var pageUrl = $(this).attr('href');
+					        		mainEdit.search(t,type,pageUrl);
+					        	});
+					        },
+					        error : function(a,b,c){
+					            alert(b);
+					        }
+					    });
+					},
+					readFileOn : function(t) {
+						$(t).parent().find('.file').trigger('click');
+					},
+			        readFileURL : function(input, section){
+			            var isIE = (navigator.appName=="Microsoft Internet Explorer");
+			            var path = input.value;
+			            var ext = path.substring(path.lastIndexOf('.') + 1).toLowerCase();
+
+			            if(path == ""){
+			                $(input).val('');
+			                $('#imgArea_' + section).html('');
+			                $(window).resize();
+			                $('.previewImg').html('');
+			               return;
+			            }
+			            if($.inArray(ext, ['gif','png','jpg','jpeg']) == -1) {
+			                alert('gif,png,jpg,jpeg 파일만 업로드 할수 있습니다.');
+			                $(input).val('');
+			                 $('#imgArea_' + section).html('');
+			                 $(window).resize();
+			                return;
+			            }
+
+			            if(isIE) {
+			                var img = '<img src="'+path+'" class="img"/>'
+			                $('#imgArea_' + section).html(img);
+			                $(window).resize();
+			                $('.previewImg').html('<img src="'+path+'">');
+			                iCutterOwen([".previewImg"]);
+			            }else{
+			                 if (input.files && input.files[0]) {
+			                    var reader = new FileReader(); //파일을 읽기 위한 FileReader객체 생성
+			                    reader.onload = function (e) {
+			                        //파일 읽어들이기를 성공했을때 호출되는 이벤트 핸들러
+			                        var img = '<img src="'+e.target.result+'" class="img"/>'
+			                        $('#imgArea_' + section).html(img);
+			                        //이미지 Tag의 SRC속성에 읽어들인 File내용을 지정
+			                        //(아래 코드에서 읽어들인 dataURL형식)
+			                        $(window).resize();
+			                        $('.previewImg').html('<img src="'+e.target.result+'">');
+			                        iCutterOwen([".previewImg"]);
+			                    }
+			                    reader.readAsDataURL(input.files[0]);
+			                    //File내용을 읽어 dataURL형식의 문자열로 저장
+			                 }
+			            }
+
+			        },
+			        setPreview: function(){
+						var t = $('.preview_area');
+						t.find("[data-name]").each(function() {
+							var type = $(this).data('type'),
+								name = $(this).data('name');
+
+							switch(type) {
+							    case 'text':
+							       if(mainEdit.data[name] != undefined) $(this).text(mainEdit.data[name])
+							        break;
+							    case 'image':
+							    	if(mainEdit.data[name] != undefined) $(this).html('<img src="'+mainEdit.data[name]+'">')
+							        break;
+							    case 'link':
+							        if(mainEdit.data[name] != undefined) $(this).attr('href', mainEdit.data[name])
+							        break;
+							    case 'price':
+							        if(mainEdit.data[name] != undefined){
+							        	$(this).text(priceCommas(mainEdit.data[name]));
+							        }
+							        break;
+							    case 'classtype':
+							    	if(mainEdit.data[name] != undefined){
+							    		$(this).removeClass($(this).data('class')).addClass(mainEdit.data[name])
+							    	}
+							        break;
+							}
+						})
+					},
+			        editChangeData: function(){
+						var t = $('.edit_area').find('input');
+						t.change(function() {
+							var _key = $(this).attr('name'),
+								_val = $(this).val();
+							mainEdit.data[_key] = _val;
+							mainEdit.setPreview();
+						});
+					},
+					editSave : function(){
+						console.log(mainEdit.data);
+						var t = $('.edit_area').find('input'), chkVal = true;
+						t.each(function() {
+							var _key = $(this).attr('name'),
+								_val = $(this).val();
+							if(_val == ""){
+								if($(this).attr('type') == 'radio'){
+									alert("선택해 주세요!");
+								}else if($(this).attr('type') == 'file'){
+									alert("이미지를 등록해주세요!");
+								}else{
+									alert("내용을 입력헤주세요!");
+								}
+								$(this).focus();
+								return chkVal = false;
+							}
+							mainEdit.data[_key] = _val;
+						});
+
+						if(chkVal){
+							//console.log(mainEdit.data);
+							alert("저장되었습니다.");
+							//modalFn.hide($('#pop_edit'));
 						}
 					}
-				});
-
-				$(".util input[type='radio']").change(function(){
-					$(this).closest(".grid-item").find(".con").removeClass("black white").addClass($(this).val());
-				});
-
-				$(".util select").change(function(){
-					$(this).closest(".grid-item").find(".con").removeClass("left right").addClass($(this).val());
-				});
-
-				function edit_cont(t) {
-					/*popFn.show($("#pop_edit"), {
-						onLoad : function() {
-
-						}
-					});*/
-					var idx = $(t).closest(".grid-item").attr("id");
-						url = "/__ajax_pop_edit.php";
-					ajaxShowPopCont({url:url, data:{"idx":idx}});
 				}
+				mainEdit.init();
+
 			}
 
 		</script>

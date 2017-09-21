@@ -63,6 +63,7 @@ function fakeselect(v){
 	if(!v.option.zindex) v.option.zindex=1;
 
 	var sels=document.getElementsByTagName('select');
+	//var sels=document.getElementsByClassName('fakeSelect');
 	for(var i=0,max=sels.length; i<max; i++){
 		if(v.ignoreclassname && (new RegExp('\\b'+v.ignoreclassname+'\\b')).test(sels[i].className)) continue;
 		if(!v.targetclassname || (new RegExp('\\b'+v.targetclassname+'\\b')).test(sels[i].className)){
@@ -617,7 +618,7 @@ function fakeselect(v){
 		}
 		return true;
 	}
-	
+
 	function fireEvent(element, event){
 	    if (document.createEventObject){
 	    // dispatch for IE

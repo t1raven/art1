@@ -18,7 +18,8 @@
 .out_cover .cover div.detail_circle.big{width:86px;height:86px;}
 .out_cover .cover div.detail_circle.big > span{width:42px;height:4px;}
 .out_cover .cover div.detail_circle.big > span:after{width:4px;height:42px;top:-17px;}
-	
+.out_cover .cover div.detail_circle.play { border: 0; background: url(/images/ico/btn_play.png) center no-repeat; background-size: contain; }
+
 h2.g_tit1{position: relative;font-size: 24px;padding-bottom: 13px;border-bottom:2px solid #151515;margin-bottom: 30px;}
 h2.g_tit1 > span{color: #333333;vertical-align: bottom;}
 h2.g_tit1 .view_more{vertical-align: bottom;width: 20px;height: 20px;border:1px solid #B5B5B5;position: relative;margin-left:10px;display: inline-block;}
@@ -53,7 +54,7 @@ ul.g_sns_type1 > li > a> span > img{height:100%;}
 #bbs_thumb_t5.type_gallary > ul > li .cont > h1 > a > img{position: absolute;right: 0;top: 0;bottom:0;margin: auto;}
 #bbs_thumb_t5.type_gallary > ul > li .cont > .txt{white-space: nowrap;overflow: hidden;-ms-text-overflow: ellipsis;text-overflow: ellipsis;font-size: 13px;height: auto;margin-top:7px;}
 #bbs_thumb_t5.type_gallary > ul > li .cont > .data{font-size: 13px;white-space: nowrap;overflow: hidden;-ms-text-overflow: ellipsis;text-overflow: ellipsis;margin-top:7px;}
-	
+
 /*갤러리 메인*/
 
 #area_gallery_index .top_btn{position: absolute; right: 46px;top:127px;}
@@ -565,6 +566,22 @@ ul.link_share_btns.t2 .hv > .tail{bottom:inherit;border-top:0 solid transparent;
 .gallery_fair_view .bx_links ul.link_share_btns .hv > ul{right:0;}
 .gallery_fair_view .bx_links ul.link_share_btns .hv > .tail{margin-left:5px;}
 
+
+/*videos 리스트*/
+.gallery_list_video > ul{margin-left:-3.3898%}
+.gallery_list_video > ul:after{content: '';display: block;clear: both;}
+.gallery_list_video > ul > li{width:46.7213%;margin-left:3.2787%;margin-bottom:4.1736%;float: left;overflow: hidden;}
+.gallery_list_video.w3 > ul > li { width: 31.5848%; margin-left: 1.7485%; }
+.gallery_list_video .img{height: 0;padding-bottom:50%;position: relative;overflow: hidden;}
+.gallery_list_video .img > img{position: absolute;top:0;bottom: 0;left: 0;right: 0;}
+.gallery_list_video .con{background-color: #000;padding:0 21px 10px;color: #fff;position: relative;margin-top:-0.5px;}
+.gallery_list_video .con > header{margin-bottom:10px;}
+.gallery_list_video .con > header:after{content: '';display: block;clear: both;}
+.gallery_list_video .con > header > p{white-space: nowrap;-ms-text-overflow: ellipsis;text-overflow: ellipsis;overflow: hidden;font-size: 13px;color: #ffffff;font-weight: 400;padding-top:10px;}
+.gallery_list_video .con > h3{font-size: 17px;margin-bottom: 3px;white-space: nowrap;-ms-text-overflow: ellipsis;text-overflow: ellipsis;overflow: hidden;line-height: 20px;}
+.gallery_list_video .con > p{font-size: 13px;font-weight: 300;white-space: nowrap;-ms-text-overflow: ellipsis;text-overflow: ellipsis;overflow: hidden;line-height: 18px;}
+
+
 /*입점신청*/
 
 .key_feature{}
@@ -574,7 +591,7 @@ ul.link_share_btns.t2 .hv > .tail{bottom:inherit;border-top:0 solid transparent;
 .key_feature table.tb_features > tbody > tr > td{padding:38px 20px 38px 0;vertical-align: middle;background-color: #fff;}
 .key_feature table.tb_features > tbody > tr > td p{font-size: 15px;color: #666666;line-height: 25px;}
 .key_feature table.tb_features > tbody > tr > td p > strong{color: #333;}
-.key_feature table.tb_features > tbody > tr.gray > th, .key_feature table.tb_features > tbody > tr.gray > td{background-color: #f8f8f8;} 
+.key_feature table.tb_features > tbody > tr.gray > th, .key_feature table.tb_features > tbody > tr.gray > td{background-color: #f8f8f8;}
 
 #apply_info_area .process_lst2{margin-top:60px;}
 #apply_info_area .process_lst2 > .inner{position:relative;z-index:2;margin-top:50px;}
@@ -664,10 +681,11 @@ ul.link_share_btns.t2 .hv > .tail{bottom:inherit;border-top:0 solid transparent;
     .out_cover .cover div.detail_circle.big > span{width:24px;height:2px;}
     .out_cover .cover div.detail_circle.big > span:after{width:2px;height:24px;top:-10px;}
 
-    
+
 }
 
 @media screen and (max-width: 540px){
 	#area_gallery_index .top_btn .btnWhiteEdge{width:43px;height:20px;font-size: 7px;}
 	#area_gallery_index .top_btn .btnWhiteEdge .hv{line-height: 18px;}
+    .gallery_list_video .out_cover .cover { opacity: 1; visibility:visible; background-color: rgba(0,0,0,0.2); }
 }

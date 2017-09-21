@@ -3,18 +3,18 @@
   $categoriName = "art1";
   $pageName = "About us";
   $pageNum = "1";
-  $subNum = "4";
+  $subNum = "5";
   $thirdNum = "0";
   $pathType = "b";
 ?>
 <? include "../inc/link.php"; ?>
 <? include "../inc/top.php"; ?>
-<? include "../inc/header.php"; ?> 
-<? include "../inc/spot_sub.php"; ?> 
+<? include "../inc/header.php"; ?>
+<? include "../inc/spot_sub.php"; ?>
 <link rel="stylesheet" type="text/css" href="/css/owen2.css">
   <section id="container_sub">
     <div class="container_inner">
-      <? include "../inc/path.php"; ?> 
+      <? include "../inc/path.php"; ?>
       <? include "tab_art1_2.php"; ?>
          <!--  <img src="/images/tmp/sub1_4.jpg" style="max-width:100%;"alt=""> -->
 		<div id="area_about" class="content-mediaBox margin1">
@@ -121,7 +121,8 @@
 						<!-- <div class="bg"><img src="" alt="서비스 배경" /></div> -->
 						<div class="con">
 							<ul>
-								<li><img src="/images/art1/ico_service1.png" alt="아이콘" /><p>1. 온라인 작품 렌탈 및 구입 서비스</p></li>
+								<!-- <li><img src="/images/art1/ico_service1.png" alt="아이콘" /><p>1. 온라인 작품 렌탈 및 구입 서비스</p></li> -->
+								<li><img src="/images/art1/ico_service1.png" alt="아이콘" /><p>1. 온라인 작품 구입 서비스</p></li>
 								<li><img src="/images/art1/ico_service2.png" alt="아이콘" /><p>2. 국내외 미술뉴스 실시간 제공</p></li>
 								<li><img src="/images/art1/ico_service3.png" alt="아이콘" /><p>3. 작가·작품 디지털 아카이브</p></li>
 								<li><img src="/images/art1/ico_service4.png" alt="아이콘" /><p>4. 아트 컨설팅사업</p></li>
@@ -141,7 +142,8 @@
 						<h5>아트1은 작가에게 다양한 지원프로그램을 <br />제공합니다.</h5>
 						<ul>
 							<li>미술시장 사각지대에 있는 작가 발굴</li>
-							<li>판매 및 렌탈 서비스 대행</li>
+							<!-- <li>판매 및 렌탈 서비스 대행</li> -->
+							<li>판매 서비스 대행</li>
 							<li>차별화된 작가 중심 수수료 정책</li>
 							<li>최첨단 디지털 아카이브 구축 (작가가 직접 관리 가능)</li>
 							<li>온라인 / 오프라인 전시회 개최</li>
@@ -156,7 +158,7 @@
 						<ul>
 							<li>온라인 및 모바일에서 편리하게 작가와 작품 검색</li>
 							<li>재능있는 작가의 작품을 온라인 구매</li>
-							<li>합리적인 가격(5만원부터 시작)으로 작품 렌탈 가능</li>
+							<!-- <li>합리적인 가격(5만원부터 시작)으로 작품 렌탈 가능</li> -->
 							<li>1:1 상담을 통한 고객맞춤형 작품 추천</li>
 							<li>다양한 국내외 미술 뉴스 및 전시 소식 제공</li>
 						</ul>
@@ -177,7 +179,7 @@
 				<div class="art1_book">
 					<div class="inner">
 						<div id="flipbook">
-<?php for($i = 0 ; $i < 47 ; $i++){?>						
+<?php for($i = 0 ; $i < 47 ; $i++){?>
 							<div <?php echo $i == 0 || $i == 46 ? 'class="hard"' : '' ?>><img src="/images/art1/guide/guide<?= $i ?>.jpg" alt="" /></div>
 <?}?>
 						</div>
@@ -199,7 +201,7 @@ var bookFn = {
 		}else{
 			t.turn({page : 3,autoCenter: true, display : 'single'}).addClass('single');
 		}
-		
+
 	},
 	flip : function(dire){
 		var t = $("#flipbook");

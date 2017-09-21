@@ -48,7 +48,7 @@ include('../inc/spot_sub.php');
                 <ul  class="total">
                   <li>총 등록 작품 수 : <span><?php echo $eachArtWorkTotalCount;?></span></li>
                   <li>판매된 작품 수 : <span><?php echo $selledArtWorkCount;?></span></li>
-				  <li>렌탈 중인  작품 수 : <span><?php echo $rentaledArtWorkCount;?></span></li>
+				          <!-- <li>렌탈 중인  작품 수 : <span><?php echo $rentaledArtWorkCount;?></span></li> -->
                 </ul>
             </header>
             <article class="article">
@@ -77,7 +77,7 @@ include('../inc/spot_sub.php');
         $(window).on("scroll",function(){
            scrollNewEvent();
            //getItemElement();
-		  
+
           })
 
 
@@ -124,7 +124,7 @@ include('../inc/spot_sub.php');
                 scrollNewsStartFlag = true;
                 loadingStart($("#marketProductAjax").outerHeight());
 				//$("#marketProductAjax").addClass('clearfix');
-                 getItemElement();  
+                 getItemElement();
 
               }//if
 
@@ -228,7 +228,7 @@ include('../inc/spot_sub.php');
                           page += 1;
                           scrollNewsStartFlag = false;
                         });
-                          
+
 
                   })//loading
 
@@ -246,7 +246,7 @@ include('../inc/spot_sub.php');
         }//getItemElement
 
 
-		
+
         </script>
 <?php
 include '../inc/footer.php';

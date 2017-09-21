@@ -36,7 +36,7 @@
 							</div>
 						</li>
 						<li class="map yet">
-							<a href="javascript:;">Map</a>							
+							<a href="javascript:;">Map</a>
 							<div class="con">
 								<?php if (!empty($about->attr['companylatlng'])) : ?>
 								<div class="tabBox">
@@ -200,6 +200,63 @@
 
 			<?php endif ; ?>
 
+			<?php if ($_GET["wish"] == 'video') : ?>
+			<section id="sect_videos" class="area_lato">
+				<h2 class="g_tit1"><span>Videos</span> <a href="/galleries/videos/?idx=<?php echo $idx; ?>" class="view_all">View All (10) ▶</a></h2>
+				<div class="gallery_list_video">
+					<ul>
+						<li class="videoItem">
+							<div class="img out_cover">
+								<img class="area_zoom" src="/upload/galleries/exhibitions/1494659775YCRHNCSQQL.jpg" alt="Videos Image" />
+								<a class="cover" href="/video/Customizing-01.mp4" data-img="/upload/galleries/exhibitions/1494659775YCRHNCSQQL.jpg" data-idx="1" target="_blank">
+									<div class="detail_circle big play"></div>
+								</a>
+							</div>
+							<div class="con">
+								<header>
+									<p>2017.05.18 ~ 2017.06.25</p>
+								</header>
+								<h3>In Between</h3>
+								<p>LEE KYO JUN, ARTIST1, ARTIST2, ARTIST3</p>
+							</div>
+						</li>
+						<li class="videoItem">
+							<div class="img out_cover">
+								<img class="area_zoom" src="/upload/galleries/exhibitions/148818885182UTMNMDSU.jpg" alt="Videos Image" /">
+								<a class="cover" href="/video/Customizing-01.mp4" data-img="/upload/galleries/exhibitions/148818885182UTMNMDSU.jpg" data-idx="2" target="_blank">
+									<div class="detail_circle big play"></div>
+								</a>
+							</div>
+							<div class="con">
+								<header>
+									<p>2017.03.09 ~ 2017.05.14</p>
+								</header>
+								<h3>ABSOLUTENESS</h3>
+								<p>Chinese Gruop Exhibition, ARTIST1, ARTIST2, ARTIST3</p>
+							</div>
+						</li>
+					</ul>
+				</div>
+			</section>
+			<!-- 동영상 팝업 -->
+			<section id="mov_pop" onclick="closeMovPop();">
+				<div class="inner" onclick="donotClose(event);">
+					<a href="#" onclick="closeMovPop();return false" class="close_btn"><img src="/images/main/btn_close05.png" alt="동영상 닫기"/></a>
+					<div class="mov_box">
+						<div id="movFlv"></div>
+					</div>
+					<div class="remote">
+						<button class="prev"><img src="/images/main/btn_mov_prev.png" alt="이전 동영상으로"/></button>
+						<button id="playPause" onclick="playPause();"><img src="/images/main/btn_mov_play.png" alt="재생 버튼"/></button>
+						<button class="next"><img src="/images/main/btn_mov_next.png" alt="다음 동영상으로"/></button>
+						<button onclick="fullSize();"><img src="/images/main/btn_full.png" alt="전체 영상 버튼"/></button>
+					</div>
+				</div>
+			</section>
+			<!-- 동영상 팝업 -->
+
+			<?php endif ;  ?>
+
 			<?php if (is_array($aNewsList)) : ?>
 			<section id="sect_gallery_news">
 				<h2 class="g_tit1 area_lato"><span>News</span> <a href="/galleries/news/?idx=<?php echo $idx; ?>" class="view_all">View All (<?php echo number_format($newsCount);?>) ▶</a></h2>
@@ -302,14 +359,14 @@
 
 <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;region=KR&amp;sensor=false"></script>
 <script>
-iCutterOwen(["#gallery_spot > .bx_slide > ul > li > a", ".gallery_list_exhi .img", ".gallery_list_aritst .img", "#bbs_thumb_t5 > ul > li .thumb", ".gallery_list_fair .img"]);
+iCutterOwen(["#gallery_spot > .bx_slide > ul > li > a", ".gallery_list_exhi .img", ".gallery_list_aritst .img", "#bbs_thumb_t5 > ul > li .thumb", ".gallery_list_fair .img, .gallery_list_video .img"]);
 $(window).resize(function(){
 	iCutterOwen(["#bbs_thumb_t5 > ul > li .thumb"]);
 })
 function map_select(num)
 {
 	if(num == 1)
-	{		
+	{
 		$("#tab1").removeClass("on");
 		$("#tab2").removeClass("on");
 		$("#tab1").addClass("on");
@@ -331,8 +388,8 @@ function map_select(num)
 }
 $(function(){
 	$("#spot_gallery_about .bx_right > ul > li > a").click(function(){
-		aboutFn.toggle(this);		
-	});	
+		aboutFn.toggle(this);
+	});
 });
 var aboutFn = {
 	toggle : function(me){
@@ -345,9 +402,9 @@ var aboutFn = {
 			par.siblings('.on').removeClass('on').find('.con').slideUp();
 			par.addClass('on');
 			ans.slideDown(400,function(){
-				if(par.hasClass('map yet')){					
-					initialize();					
-					par.removeClass('yet');			
+				if(par.hasClass('map yet')){
+					initialize();
+					par.removeClass('yet');
 					map_select(1);
 				}
 			});
@@ -406,10 +463,10 @@ function initialize(){
 
 	google.maps.event.addListener(marker2, "click", function() { //리사이즈에 따른 마커 위치
 		window.open("https://maps.google.com/maps?q=<?php echo $companylatlng[0]; ?>,<?php echo $companylatlng[1]; ?>&ll=<?php echo $companylatlng[0]; ?>,<?php echo $companylatlng[1]; ?>&z=15", "gooeleMap", "");
-	});		
-	
+	});
+
 	<?php endif ; ?>
-	
+
 	/*
 	setTimeout(
 		function(){
@@ -422,5 +479,128 @@ function initialize(){
 }
 
 
+
+</script>
+
+<script type="text/javascript">
+var movList;
+var movTotal;
+var movStartNum;
+function itemMotion(num, endedFlag, me){
+    var ele = $(me);
+    var movBox = $("#sect1");
+	var videoTag = "movA1";
+	var thumbItems = $(".new_mov .m_tlie");
+	var soundSrc = me.attr('href');
+	var ImgSrc = me.attr('data-img');
+
+	<? if($check_mobile === false){ ?>
+	var videobox = $('<video id="'+videoTag+'" '+' controls volume="1" autoplay="true"></video>');
+	<? }else{ ?>
+	var videobox = $('<div class="video_cover" style=""></div><video id="'+videoTag+'" '+' controls volume="1" autoplay="true"  ></video>');
+	<? } ?>
+	var sourceMp4 = $('<source src="'+soundSrc+'" type="video/mp4">');
+
+	if($("#movFlv").find("#"+videoTag+"").length > 0){
+	    $("#movFlv #"+videoTag+"").remove();
+	}
+	$("#movFlv").html(videobox);
+	$("#movFlv #"+videoTag+"").append(sourceMp4);
+
+	<? if($check_mobile === true){ ?>
+	document.getElementById("movA1").oncanplay  = function() {
+			$(".video_cover").fadeOut();
+	};
+	document.getElementById("movA1").play();
+	<? } ?>
+	var video = document.getElementById(videoTag);
+
+	video.addEventListener("ended", function () {
+	if(movStartNum >=  1/*thumbItems.length+1*/ ){
+	   movStartNum--;
+	}else{
+	   movStartNum = movTotal;
+	}
+	itemMotion(movStartNum, true );
+
+	}, false);
+}
+
+function itemIeMotion(){
+	$("#movFlv video").remove();
+	$("#movFlv").html("<div class='noneMov'>ie9이하 버전은 동영상 플레이를 지원하지 않습니다.</div>");
+}
+
+function playPause() {
+	var mov = document.getElementById("movA1");
+    if (mov.paused)
+        mov.play();
+    else
+        mov.pause();
+}
+
+function fullSize(){
+	var mov = document.getElementById("movA1");
+	if (mov.requestFullscreen) {
+		mov.requestFullscreen();
+	} else if (mov.mozRequestFullScreen) {
+		mov.mozRequestFullScreen(); // Firefox
+	} else if (mov.webkitRequestFullscreen) {
+		mov.webkitRequestFullscreen(); // Chrome and Safari
+	}
+}
+
+function openMovPop(){
+	fadePlayMotion($("#mov_pop"), true, 400);
+	var movOffset = $(window).scrollTop() + (($(window).height() - $("#mov_pop > .inner").outerHeight())/2);
+	$("#mov_pop > .inner").css("margin-top", movOffset);
+	var WinWdith2 = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+	if(WinWdith2 < 845){
+		var movH =  Math.round($("#mov_pop > .inner > .mov_box").width()*0.5622);
+		$("#mov_pop > .inner > .mov_box").css("height",movH+"px");
+	}else{
+		$("#mov_pop > .inner > .mov_box").removeAttr("style");
+	}
+}
+
+function donotClose(e){
+	e.stopPropagation();
+}
+function closeMovPop(){
+	fadePlayMotion($("#mov_pop"), false, 400);
+	$("#mov_pop .remote").css("display", "block");
+	$("#movFlv>*").remove();
+}
+
+$(function(){
+	$('#mov_pop button.next').click(function(){
+		console.log(movStartNum);
+		(movStartNum < movTotal) ? movStartNum++ : movStartNum = 1;
+		//console.log(movStartNum);
+		itemMotion(movStartNum, true , movList.children(".videoItem").eq(movStartNum-1).find("a"));
+	});
+	$('#mov_pop button.prev').click(function(){
+		console.log(movStartNum);
+		(movStartNum > 1) ? movStartNum-- : movStartNum = movTotal;
+		//console.log(movStartNum);
+        itemMotion(movStartNum, true , movList.children(".videoItem").eq(movStartNum-1).find("a"));
+	});
+
+	$(".videoItem a").click(function(e) {
+		e.preventDefault();
+		openMovPop();
+		movList = $(this).closest('ul');
+		movStartNum = $(this).attr('data-idx');
+		movTotal = movList.children(".videoItem").length;
+        if(isie7 || isie8 || isie9){
+        	itemIeMotion();
+        }else{
+        	itemMotion(movStartNum, false, $(this));
+        }
+        if($(this).hasClass('play')) {
+        	$("#mov_pop .remote").css("display", "none");
+        }
+	});
+});
 
 </script>

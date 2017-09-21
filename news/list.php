@@ -8,8 +8,10 @@ if (!empty($news_skin_type))
 	$sz = isset($_GET['sz']) ? (int)$_GET['sz'] : 10;
 	$page = isset($_GET['page']) ? (int)$_GET['page'] : 1;
 
-	if( $news_category_idx==15 || $news_category_idx ==3 || $news_category_idx ==14 ){
+	if( $news_category_idx==15 || $news_category_idx ==3 || $news_category_idx ==14  ){
 		$sz = 12;
+	} else if($news_category_idx ==16) {
+		$sz = 4;
 	}
 
 	$cate =$news_category_idx;
@@ -26,18 +28,37 @@ if (!empty($news_skin_type))
 		$News->setAttr("cate", $cate);
 	}
 
-	$tmp = $News->getFrontList($dbh);
-	$list = $tmp[0];
-	$total_cnt = $tmp[1];
-	$total_all_cnt = $tmp[2];
+	if( $news_category_idx == 16 ) {
+		//post 뉴스일 경우 목록을 가져오는 형식이 다르다.
+		$tmp = $News->getFrontPostList1($dbh);
+		$list = $tmp[0];
+		$total_cnt = $tmp[1];
+		$total_all_cnt = $tmp[2];
 
-	// 페이지 처리
-	$pageUtil = new PageUtil();
-	$DEFAULT['NumPerPage'] = $sz; # NUMBER PER PAGE
-	$DEFAULT['NumPerStart'] = $DEFAULT['NumPerPage'] * ($page - 1);
-	$PAGE_UNCOUNT = $total_cnt - $DEFAULT['NumPerStart'];
-	$pageUtil->pageLimiter($DEFAULT['NumPerPage'], $DEFAULT['NumPerBlock'], $total_cnt, $page, $params);
-	$idCnt = 0;
+		// 페이지 처리
+		$pageUtil = new PageUtil();
+		$DEFAULT['NumPerPage'] = $sz; # NUMBER PER PAGE
+		$DEFAULT['NumPerStart'] = $DEFAULT['NumPerPage'] * ($page - 1);
+		$PAGE_UNCOUNT = $total_cnt - $DEFAULT['NumPerStart'];
+		$pageUtil->pageLimiter($DEFAULT['NumPerPage'], $DEFAULT['NumPerBlock'], $total_cnt, $page, $params);
+		$idCnt = 0;
+		
+		$total_cnt  = $total_all_cnt ;
+
+	} else {
+		$tmp = $News->getFrontList($dbh);
+		$list = $tmp[0];
+		$total_cnt = $tmp[1];
+		$total_all_cnt = $tmp[2];
+
+		// 페이지 처리
+		$pageUtil = new PageUtil();
+		$DEFAULT['NumPerPage'] = $sz; # NUMBER PER PAGE
+		$DEFAULT['NumPerStart'] = $DEFAULT['NumPerPage'] * ($page - 1);
+		$PAGE_UNCOUNT = $total_cnt - $DEFAULT['NumPerStart'];
+		$pageUtil->pageLimiter($DEFAULT['NumPerPage'], $DEFAULT['NumPerBlock'], $total_cnt, $page, $params);
+		$idCnt = 0;
+	}
 
 
 	require('skin/'.$news_skin_type.'/list.head.skin.php');

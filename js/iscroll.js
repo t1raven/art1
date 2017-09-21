@@ -1609,6 +1609,7 @@ IScroll.prototype = {
 		step();
 	},
 	handleEvent: function (e) {
+		if(e == undefined) return false;
 		switch ( e.type ) {
 			case 'touchstart':
 			case 'pointerdown':
